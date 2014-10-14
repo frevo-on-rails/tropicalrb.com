@@ -6,15 +6,40 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Use title if it's in the page YAML frontmatter -->
+
   <title><%= current_page.data.title || "Tropical Ruby 2015" %></title>
+
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- Facebook  -->
+  <meta property="og:type" content="business.business">
+  <meta property="og:url" content="http://tropicalruby.com">
+  <meta property="og:title" content="Tropical Ruby 2015">
+  <meta property="og:image" content="http://guava.com.br/img/guava-symbol-ca86ecca.png">
+  <meta property="og:image" content="http://guava.com.br/img/guava-promo-en-ad5cb12f.png">
+  <meta property="og:image" content="http://guava.com.br/img/guava-promo-pt-f3478ca1.png">
+  <meta property="og:description" content="The Tropical Ruby Conference">
 
-  <link rel="stylesheet" href="css/main.css">
-  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <!-- Twitter -->
+  <meta name="twitter:card" value="summary">
+  <meta name="twitter:creator" value="@tropicalrb">
+  <meta name="twitter:site" value="@tropicalrb">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="touch-icon@2x.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="touch-icon@2x.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad@2x.png">
+
+  <!-- Humans -->
+  <link type="text/plain" rel="author" href="http://tropicalruby.com/humans.txt" />
+
+  <!-- CSS -->
+  <%= stylesheet_link_tag 'css/main' %>
+
+  <!-- JS -->
+  <%= javascript_include_tag 'vendor/modernizr-2.6.2.min.js' %>
 </head>
 <body>
   <!--[if lt IE 7]>
