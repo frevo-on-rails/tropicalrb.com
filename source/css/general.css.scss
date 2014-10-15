@@ -12,40 +12,434 @@
 
 ::selection {
   text-shadow: none;
-  background: $black;
-  color: $red;
+  background: $dark;
+  color: $primary;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  background: $black;
-  color: $red;
+  background: $dark;
+  color: $primary;
 }
 
 ::-webkit-input-placeholder {
- color: $red;
+ color: $primary;
  text-transform: uppercase;
+ text-transform: none;
 }
 
 :-moz-placeholder {
-  color: $red;
+  color: $primary;
  text-transform: uppercase;
+ text-transform: none;
 }
 
 ::-moz-placeholder {
-  color: $red;
+  color: $primary;
  text-transform: uppercase;
+ text-transform: none;
 }
 
 :-ms-input-placeholder {
-  color: $red;
+  color: $primary;
  text-transform: uppercase;
-}
-
-a {
-  &:hover {
-    text-decoration: none;
-  }
+ text-transform: none;
 }
 
 html { font-size: $fs-root; }
+
+body {
+  width: 100%;
+  height: 100%;
+
+  background-image: image-url('bkg-sunrise-xs.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+//
+// Header
+//
+
+.logo-primary {
+  width: 200px;
+  height: 193px;
+  margin: 0 auto;
+  display: block;
+  text-indent: -999px;
+
+  background-image: image-url('logo-tropical@2x.png');
+  background-repeat: no-repeat;
+  background-size: 200px 193px;
+}
+
+//
+// Sections
+//
+
+// local
+.local-logo {
+  width: 300px;
+  height: 226px;
+  margin: 0 auto 20px auto;
+  display: block;
+
+  background-image: image-url('logo-porto@2x.png');
+  background-repeat: no-repeat;
+  background-size: 300px 226px;
+}
+
+.title-info {
+  color: $primary;
+  font-size: $fs-large;
+  font-family: $ff-general;
+  font-weight: $fw-semi-bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.description-info {
+  text-align: center;
+  font-size: $fs-medium;
+  font-family: $ff-general;
+  font-weight: $fw-light;
+  color: $primary;
+  width: 90%;
+  line-height: $fs-large;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+//
+// Social list
+//
+.social-list {
+  text-align: center;
+}
+
+.social-item {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin: 0 5px 0 5px;
+  background-image: image-url('icons/diamond-link@2x.png');
+  background-repeat: no-repeat;
+  background-size: 44px 44px;
+  @include transition(all, .2s, linear, 0s);
+
+  &:hover {
+    background-image: image-url('icons/diamond-link-hover@2x.png');
+
+    .social-link {
+      &.lanyrd{
+        background-image: image-url('icons/icon-small-lanyrd-hover@2x.png');
+      }
+
+      &.twitter {
+        background-image: image-url('icons/icon-small-twitter-hover@2x.png');
+      }
+
+      &.facebook {
+        background-image: image-url('icons/icon-small-facebook-hover@2x.png');
+      }
+
+      &.github {
+        background-image: image-url('icons/icon-small-github-hover@2x.png');
+      }
+    }
+  }
+}
+
+.social-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+  text-align: center;
+  @include transition(all, .3s, ease, .1s);
+
+  &.lanyrd{
+    @include bgimage('icons/icon-small-lanyrd@2x.png');
+  }
+
+  &.twitter {
+    @include bgimage('icons/icon-small-twitter@2x.png');
+  }
+
+  &.facebook {
+    @include bgimage('icons/icon-small-facebook@2x.png');
+  }
+
+  &.github {
+    @include bgimage('icons/icon-small-github@2x.png');
+  }
+}
+
+//
+// Past events
+//
+.past-events {
+  text-align: center;
+}
+
+.past-event-item {
+  display: inline-block;
+}
+
+.past-event-link {
+  color: $primary;
+  font-size: $fs-medium;
+  font-family: $ff-general;
+  font-weight: $fw-light;
+  margin: 15px 15px 20px 15px;
+  display: block;
+}
+
+//
+// Talks
+//
+.talks {
+  margin-top: 60px;
+  display: block;
+  text-align: center;
+}
+
+.talks-item {
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+  vertical-align: top;
+  width: 40%;
+  min-height: 180px;
+
+  &:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+.talks-link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none !important;
+}
+
+.talks-image {
+  width: 123px;
+  height: 123px;
+  background-size: 123px 123px;
+  background-repeat: no-repeat;
+
+  &.nick {
+    background-image: image-url('talks/avatar-medium-nick@2x.png');
+  }
+
+  &.gary {
+    background-image: image-url('talks/avatar-medium-gary@2x.png');
+  }
+}
+
+.talks-title {
+  font-family: $ff-general;
+  font-weight: $fw-semi-bold;
+  font-size: $fs-medium;
+  color: $primary;
+  margin: 5px 0 10px 0;
+}
+
+.talks-info {
+  font-size: $fs-small;
+  color: $primary;
+  font-family: $ff-general;
+  font-weight: $fw-light;
+  // width: 80%;
+  // background-color: green;
+}
+
+
+
+
+// IPAD
+@media only screen and (min-width : 768px) and (max-width : 1223px) {
+  body {
+    background-image: image-url('bkg-sunrise-lg.jpg');
+    background-size: auto 100%;
+  }
+
+  .logo-primary {
+    width: 280px;
+    height: 270px;
+    background-size: 280px 270px;
+  }
+
+  .title-info,
+  .description-info,
+  .social-list,
+  .past-events,
+  .form-send-email {
+    text-align: right;
+    margin-right: 15px;
+  }
+
+  .description-info {
+    width: 90%;
+  }
+
+  .title-talk,
+  .talks-list {
+    text-align: left;
+    margin-left: 15px;
+  }
+
+  .talks {
+    margin-top: 0;
+  }
+
+  .talks-item {
+    margin: 0 0 10px 0;
+    display: block;
+    width: 90%;
+    text-align: left;
+    min-height: 120px;
+  }
+
+  .talks-title {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .talks-image {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .box-info {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+// DESKTOP
+@media only screen and (min-width : 1224px) {
+  body {
+    background-image: image-url('bkg-sunrise-lg.jpg');
+    background-size: cover;
+  }
+
+  .logo-primary {
+    width: 280px;
+    height: 270px;
+    background-size: 280px 270px;
+  }
+
+  .local-logo {
+    margin-bottom: 15px;
+  }
+
+  .title-info,
+  .description-info,
+  .social-list,
+  .past-events,
+  .form-send-email {
+    text-align: right;
+  }
+
+  .description-info {
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .title-talk,
+  .talks-list {
+    text-align: left;
+  }
+
+  .talks {
+    margin-top: 0;
+  }
+
+  .talks-item {
+    margin: 0 0 10px 0;
+    display: block;
+    width: 90%;
+    text-align: left;
+    min-height: 120px;
+  }
+
+  .talks-title {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .talks-image {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .box-info {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+// LARGE
+@media only screen and (min-width : 1824px) {
+  body {
+    background-image: image-url('bkg-sunrise-lg.jpg');
+    background-size: cover;
+  }
+
+  .local-logo {
+    margin-bottom: 16px;
+  }
+
+  .title-info,
+  .description-info,
+  .social-list,
+  .past-events,
+  .form-send-email {
+    text-align: right;
+  }
+
+  .description-info {
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .title-talk,
+  .talks-list {
+    text-align: left;
+  }
+
+  .talks {
+    margin-top: 0;
+  }
+
+  .talks-item {
+    margin: 0 0 10px 0;
+    display: block;
+    width: 90%;
+    text-align: left;
+    min-height: 120px;
+  }
+
+  .talks-title {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .talks-image {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .box-info {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+}
