@@ -2,15 +2,19 @@
 //  Import all files
 // ———————————————-—-—-
 
-// reset
+// Reset
 @import 'reset';
 
-// libs
+// Libs
 @import 'vendor/bootstrap';
 
-// custom
+// Custom
 @import 'base';
 @import 'helpers';
 @import 'typography';
+@import 'form';
 @import 'general';
+@import 'components';
+
+// Structure
 @import 'structure';
