@@ -1,0 +1,144 @@
+// ——————————————————
+// Structure
+// ——————————————————
+
+.header-primary {
+  width: 100%;
+  min-height: 100px;
+  background-color: blue;
+}
+
+// Smartphones - XS
+// @media only screen and (min-width : 320px) and (max-width : 480px) {}
+
+.content {
+  display: flex;
+  display: -webkit-flex;
+
+  flex-flow: column;
+  -webkit-flex-flow: column;
+}
+
+.event-info {
+  width: 100%;
+  height: 330px;
+  &:nth-child(1) {
+    @extend %order2;
+    background-color: green;
+  }
+
+  &:nth-child(2) {
+    @extend %order1;
+    background-color: pink;
+  }
+
+  &:nth-child(3) {
+    @extend %order3;
+    background-color: orangered;
+  }
+}
+
+.organization {
+  width: 100%;
+  background-color: silver;
+  min-height: 50px;
+
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+
+
+
+
+
+// iPads - SM
+@media only screen and (min-width : 768px) and (max-width : 1223px) {
+  .header-primary {
+    background-color: black;
+  }
+
+  .content {
+    display: -webkit-box;
+    display: -moz-box;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .event-info {
+    &:nth-child(1) {
+      width: 50%;
+      -webkit-order: 2;
+      order: 2;
+    }
+
+    &:nth-child(2) {
+      width: 100%;
+      -webkit-order: 1;
+      order: 1;
+    }
+
+    &:nth-child(3) {
+      width: 50%;
+      -webkit-order: 3;
+      order: 3;
+    }
+  }
+}
+
+
+
+
+
+// Medium Desktops - MD
+@media only screen and (min-width : 1224px) {
+  .header-primary {
+    background-color: purple;
+  }
+
+ .content {
+    display: flex;
+    display: -webkit-flex;
+
+    flex-flow: wrap;
+    -webkit-flex-flow: wrap;
+  }
+
+  .event-info {
+    width: 33.3%;
+    flex: 1 1 1;
+    -webkit-flex: 1 1 1;
+
+    &:nth-child(1) {
+      -webkit-order: 1;
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      -webkit-order: 2;
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      -webkit-order: 3;
+      order: 3;
+    }
+  }
+}
+
+
+
+
+
+// Large Desktops - LG
+@media only screen and (min-width : 1824px) {
+  .header-primary {
+    background-color: gray;
+  }
+}
+
