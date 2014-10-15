@@ -1,0 +1,57 @@
+// ——————————————————
+//  General Styles
+// ——————————————————
+
+*,
+*:before,
+*:after {
+   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::selection {
+  text-shadow: none;
+  background: $black;
+  color: $red;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: $black;
+  color: $red;
+}
+
+::-webkit-input-placeholder {
+ color: $red;
+ text-transform: uppercase;
+}
+
+:-moz-placeholder {
+  color: $red;
+ text-transform: uppercase;
+}
+
+::-moz-placeholder {
+  color: $red;
+ text-transform: uppercase;
+}
+
+:-ms-input-placeholder {
+  color: $red;
+ text-transform: uppercase;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+html { font-size: $fs-root; }
+
+#main {
+  display: block;
+  position: relative;
+}
+
