@@ -9,10 +9,21 @@
 // Hexadecimals
 $red:           #981D25;
 $black:         #1A1A1A;
+$yellow:        #FFF7BD;
 
 // RGB
 $red-rgb:       rgb(152, 29, 37);
 $black-rgb:     rgb(26, 26, 26);
+$yellow-rgb:    rgb(255, 247, 189);
+
+// Names
+$primary:       $red;
+$dark:          $black;
+$light:         $yellow;
+
+$primary-rgb:   $red-rgb;
+$dark-rgb:      $black-rgb;
+$light-rgb:     $yellow-rgb;
 
 
 // —————————————————————————
@@ -35,11 +46,11 @@ $f-italic:         italic;
 $f-normal:         normal;
 
 // Weigth
-$fw-thin:          100;
+// $fw-thin:          100;
 $fw-light:         300;
-$fw-regular:       500;
-$fw-super-bold:    600;
-$fw-bold:          700;
+// $fw-regular:       500;
+$fw-semi-bold:    600;
+// $fw-bold:          700;
 
 
 // ——————————————————————
@@ -207,4 +218,12 @@ $fw-bold:          700;
       -ms-appearance: $value;
        -o-appearance: $value;
           appearance: $value;
+}
+
+// Social links
+@mixin bgimage($bg) {
+  background-image: image-url($bg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
 }
