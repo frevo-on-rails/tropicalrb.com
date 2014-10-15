@@ -1,0 +1,48 @@
+// ——————————————————
+//  Components Styles
+// ——————————————————
+
+//
+// Buttons
+//
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  color: $light;
+  font-size: $fs-medium;
+  font-family: $ff-general;
+  font-weight: $fw-light;
+  cursor: pointer;
+  @include bdr(3px);
+
+  &.large {
+    width: 280px;
+    height: 44px;
+  }
+
+  &.small {
+    width: 46px;
+    height: 44px;
+  }
+
+  &.send {
+    @include bgimage('icons/icon-small-mail@2x.png');
+  }
+}
+
+.icon-document {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: -5px 10px 0 0;
+
+  background-image: image-url('icons/icon-small-document@2x.png');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+.btn-primary { background-color: $primary; }
