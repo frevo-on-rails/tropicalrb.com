@@ -348,11 +348,29 @@ body {
 }
 
 // Footer
+.footer-primary {
+  position: relative;
+  bottom: 0;
+}
+
+//
+// Hit area for tap in coconut
+//
+
+.tap {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 230px;
+}
+
 .coconut {
   width: 265px;
   height: 350px;
-  position: absolute;
-  bottom: 70px;
+  position: relative;
+  bottom: 0;
   left: -105px;
 
   background-image: image-url('bkg-coconut-left@2x.png');
@@ -360,6 +378,31 @@ body {
   background-size: 265px 350px;
 }
 
+.coco {
+  width: 15px;
+  top: 125px;
+  left: 40px;
+  height: 15px;
+  position: absolute;
+  opacity: 0;
+  background-color: #2C97A4;
+
+  @include bdr(100%);
+  @include transition(top, 1s, linear, 0s);
+}
+
+.drop {
+  opacity: 1;
+  top: 100%;
+}
+
+.move {
+  @include animation(coconut .8s);
+}
+
+//
+// Center wave
+//
 .wave {
   width: 50%;
   position: absolute;
@@ -370,10 +413,12 @@ body {
   background-position: bottom right;
   background-size: 520px 200px;
 
-  // @include transition(all, 10s, linear, 0s);
   // @extend %continuos;
 }
 
+//
+// Right wave
+//
 .swell {
   width: 230px;
   height: 447px;
@@ -470,8 +515,12 @@ body {
 
   // Footer
   .coconut {
-    bottom: 88px;
+    bottom: 0;
     left: -109px;
+  }
+
+  .coco {
+    left: 37px;
   }
 
   .wave {
@@ -577,8 +626,12 @@ body {
 
   // Footer
   .coconut {
-    bottom: 70px;
+    bottom: 0;
     left: -75px;
+  }
+
+  .coco {
+    left: 70px;
   }
 
   .wave {
