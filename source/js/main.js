@@ -14,9 +14,9 @@ hammerPad.on("tap press swipeup swipedown", function(event){
 
     coconut.classList.toggle('move');
 
-    if (tap == 3) {
+    if (tap == 2) {
       console.log('YO!');
-      coco.classList.add('drop');
+      coco.classList.toggle('drop');
     }
   }
 
