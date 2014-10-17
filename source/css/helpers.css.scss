@@ -13,3 +13,25 @@
   -webkit-order: 3;
   order: 3;
 }
+
+%title-bar {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background-color: $primary;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+// Circle of years
+%circle {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: $primary;
+  position: absolute;
+  top: 21px;
+  right: -5px;
+  @include bdr(100%);
+}

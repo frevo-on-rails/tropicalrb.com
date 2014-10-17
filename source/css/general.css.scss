@@ -13,13 +13,13 @@
 ::selection {
   text-shadow: none;
   background: $dark;
-  color: $primary;
+  color: $yellow;
 }
 
 ::-moz-selection {
   text-shadow: none;
   background: $dark;
-  color: $primary;
+  color: $yellow;
 }
 
 ::-webkit-input-placeholder {
@@ -61,6 +61,10 @@ body {
 //
 // Header
 //
+
+.header-primary {
+  margin-top: 40px;
+}
 
 .logo-primary {
   width: 200px;
@@ -126,10 +130,12 @@ body {
   background-image: image-url('icons/diamond-link@2x.png');
   background-repeat: no-repeat;
   background-size: 44px 44px;
-  @include transition(all, .2s, linear, 0s);
+  @extend %transition;
+  @extend %rotate;
 
   &:hover {
     background-image: image-url('icons/diamond-link-hover@2x.png');
+    @extend %start-rotate;
 
     .social-link {
       &.lanyrd{
@@ -185,6 +191,19 @@ body {
 
 .past-event-item {
   display: inline-block;
+  position: relative;
+
+  &:nth-child(1) {
+    &::before {
+      @extend %circle;
+    }
+  }
+
+  &:nth-child(2) {
+    &::before {
+      @extend %circle;
+    }
+  }
 }
 
 .past-event-link {
@@ -200,7 +219,7 @@ body {
 // Talks
 //
 .talks {
-  margin-top: 60px;
+  margin: 60px 0;
   display: block;
   text-align: center;
 }
@@ -253,18 +272,131 @@ body {
   color: $primary;
   font-family: $ff-general;
   font-weight: $fw-light;
-  // width: 80%;
-  // background-color: green;
 }
 
+.organization {
+  text-align: center;
+  .title {
+    text-transform: uppercase;
+    color: $primary;
+    font-size: $fs-small;
+    text-align: center;
+    font-family: $ff-general;
+    font-weight: $fw-light;
+    position: relative;
+    margin-bottom: 10px;
 
+    &::after {
+      @extend %title-bar;
+      margin-left: 12px;
+    }
+
+    &::before {
+      @extend %title-bar;
+      margin-right: 12px;
+    }
+  }
+}
+
+// Brands
+.organized {
+  margin-bottom: 25px;
+}
+
+.brand {
+  width: 130px;
+  height: 100px;
+  margin: 0 auto;
+  display: inline-block;
+
+  &.block {
+    display: block;
+  }
+}
+
+.brand-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+
+  &.frevo {
+    display: block;
+    margin: 0 auto;
+    background-image: image-url('brands/brand-mono-medium-frevo@2x.png');
+    background-repeat: no-repeat;
+    background-size: 130px 100px;
+  }
+
+  &.guava {
+    background-image: image-url('brands/brand-mono-medium-guava@2x.png');
+    background-repeat: no-repeat;
+    background-size: 130px 100px;
+  }
+
+  &.eloquent {
+    background-image: image-url('brands/brand-mono-medium-eloquent@2x.png');
+    background-repeat: no-repeat;
+    background-size: 130px 100px;
+  }
+
+  &.ruby-central {
+    background-image: image-url('brands/brand-mono-medium-rubycentral@2x.png');
+    background-repeat: no-repeat;
+    background-size: 130px 100px;
+  }
+}
+
+// Footer
+.coconut {
+  width: 265px;
+  height: 350px;
+  position: absolute;
+  bottom: 70px;
+  left: -105px;
+
+  background-image: image-url('bkg-coconut-left@2x.png');
+  background-repeat: no-repeat;
+  background-size: 265px 350px;
+}
+
+.wave {
+  width: 50%;
+  position: absolute;
+  height: 200px;
+  bottom: -20px;
+  background-image: image-url('bkg-wave-tileable@2x.png');
+  background-repeat: repeat-x;
+  background-position: bottom right;
+  background-size: 520px 200px;
+
+  // @include transition(all, 10s, linear, 0s);
+  // @extend %continuos;
+}
+
+.swell {
+  width: 230px;
+  height: 447px;
+  position: absolute;
+  right: -70px;
+  bottom: -20px;
+
+  background-image: image-url('bkg-wave-right@2x.png');
+  background-repeat: no-repeat;
+  background-size: 230px 447px;
+}
 
 
 // IPAD
 @media only screen and (min-width : 768px) and (max-width : 1223px) {
   body {
     background-image: image-url('bkg-sunrise-lg.jpg');
-    background-size: auto 100%;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .header-primary {
+    margin-top: 10px;
   }
 
   .logo-primary {
@@ -293,7 +425,7 @@ body {
   }
 
   .talks {
-    margin-top: 0;
+    margin: 0;
   }
 
   .talks-item {
@@ -319,6 +451,38 @@ body {
     display: inline-block;
     vertical-align: middle;
   }
+
+  // Brands
+  .organization {
+    position: absolute;
+    left: 50%;
+    margin-left: -235px;
+    z-index: 10;
+  }
+
+  .brand {
+    margin-right: 25px;
+
+    &.block {
+      display: inline-block;
+    }
+  }
+
+  // Footer
+  .coconut {
+    bottom: 88px;
+    left: -109px;
+  }
+
+  .wave {
+    width: 83%;
+    bottom: -68px;
+  }
+
+  .swell {
+    right: -50px;
+    bottom: -82px;
+  }
 }
 
 // DESKTOP
@@ -326,6 +490,10 @@ body {
   body {
     background-image: image-url('bkg-sunrise-lg.jpg');
     background-size: cover;
+  }
+
+  .header-primary {
+    margin-top: 10px;
   }
 
   .logo-primary {
@@ -344,7 +512,7 @@ body {
   .past-events,
   .form-send-email {
     text-align: right;
-  }
+   }
 
   .description-info {
     width: 80%;
@@ -354,10 +522,10 @@ body {
   .title-talk,
   .talks-list {
     text-align: left;
-  }
+   }
 
   .talks {
-    margin-top: 0;
+    margin: 0;
   }
 
   .talks-item {
@@ -366,7 +534,7 @@ body {
     width: 90%;
     text-align: left;
     min-height: 120px;
-  }
+   }
 
   .talks-title {
     display: inline-block;
@@ -382,6 +550,45 @@ body {
   .box-info {
     display: inline-block;
     vertical-align: middle;
+  }
+
+  // Brands
+  .organization {
+    text-align: center;
+    margin-top: 70px;
+    position: absolute;
+    left: 50%;
+    margin-left: -320px;
+    z-index: 10;
+  }
+
+  .organized {
+    min-width: 300px;
+    margin-right: 100px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .support {
+    min-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  // Footer
+  .coconut {
+    bottom: 70px;
+    left: -75px;
+  }
+
+  .wave {
+    width: 89%;
+    bottom: -71px;
+  }
+
+  .swell {
+    right: -80px;
+    bottom: -74px;
   }
 }
 

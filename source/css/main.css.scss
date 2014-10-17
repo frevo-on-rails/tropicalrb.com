@@ -5,9 +5,6 @@
 // Reset
 @import 'reset';
 
-// Libs
-@import 'vendor/bootstrap';
-
 // Custom
 @import 'base';
 @import 'helpers';
@@ -15,6 +12,9 @@
 @import 'form';
 @import 'general';
 @import 'components';
+
+// Animations
+@import 'animations';
 
 // Structure
 @import 'structure';
