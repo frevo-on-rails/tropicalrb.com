@@ -84,32 +84,96 @@
 // Animation Wave
 //
 
+// Show wave when onload document
+%waveShow {
+  -webkit-animation-name: waveShow;
+  -webkit-animation-duration: 3s;
+  // -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-timing-function: linear;
+
+  -moz-animation-name: waveShow;
+  -moz-animation-duration: 3s;
+  // -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: normal;
+  -moz-animation-timing-function: linear;
+
+  -ms-animation-name: waveShow;
+  -ms-animation-duration: 3s;
+  // -ms-animation-iteration-count: infinite;
+  -ms-animation-direction: normal;
+  -ms-animation-timing-function: linear;
+
+  -o-animation-name: waveShow;
+  -o-animation-duration: 3s;
+  // -o-animation-iteration-count: infinite;
+  -o-animation-direction: normal;
+  -o-animation-timing-function: linear;
+
+  animation-name: waveShow;
+  animation-duration: 3s;
+  // animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+@keyframes waveShow {
+  from { width: 0; }
+  to { width: 100% }
+}
+
+@-webkit-keyframes waveShow {
+  from { width: 0; }
+  to { width: 100% }
+}
+
+@-moz-keyframes waveShow {
+  from { width: 0; }
+  to { width: 100% }
+}
+
+@-ms-keyframes waveShow {
+  from { width: 0; }
+  to { width: 100% }
+}
+
+@-o-keyframes waveShow {
+  from { width: 0; }
+  to { width: 100% }
+}
+
+// Continuos wave
 %continuos {
   -webkit-animation-name: continuos;
+  -webkit-animation-delay: 4s;
   -webkit-animation-duration: 130s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-direction: normal;
   -webkit-animation-timing-function: linear;
 
   -moz-animation-name: continuos;
+  -moz-animation-delay: 4s;
   -moz-animation-duration: 130s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-direction: normal;
   -moz-animation-timing-function: linear;
 
   -ms-animation-name: continuos;
+  -ms-animation-delay: 4s;
   -ms-animation-duration: 130s;
   -ms-animation-iteration-count: infinite;
   -ms-animation-direction: normal;
   -ms-animation-timing-function: linear;
 
   -o-animation-name: continuos;
+  -o-animation-delay: 4s;
   -o-animation-duration: 130s;
   -o-animation-iteration-count: infinite;
   -o-animation-direction: normal;
   -o-animation-timing-function: linear;
 
   animation-name: continuos;
+  animation-delay: 4s;
   animation-duration: 130s;
   animation-iteration-count: infinite;
   animation-direction: normal;
@@ -182,3 +246,63 @@
 }
 
 
+//
+// Animation Swell
+//
+
+%swellShow {
+  -webkit-animation-name: swellShow;
+  -webkit-animation-duration: 3s;
+  // -webkit-animation-delay: 2s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-timing-function: linear;
+
+  -moz-animation-name: swellShow;
+  -moz-animation-duration: 3s;
+  // -moz-animation-delay: 2s;
+  -moz-animation-direction: normal;
+  -moz-animation-timing-function: linear;
+
+  -ms-animation-name: swellShow;
+  -ms-animation-duration: 3s;
+  // -ms-animation-delay: 2s;
+  -ms-animation-direction: normal;
+  -ms-animation-timing-function: linear;
+
+  -o-animation-name: swellShow;
+  -o-animation-duration: 3s;
+  // -o-animation-delay: 2s;
+  -o-animation-direction: normal;
+  -o-animation-timing-function: linear;
+
+  animation-name: swellShow;
+  animation-duration: 3s;
+  // animation-delay: 2s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+@keyframes swellShow {
+  from { width: 0; }
+  to { width: 230px;}
+}
+
+@-webkit-keyframes swellShow {
+  from { width: 0; }
+  to { width: 230px;}
+}
+
+@-moz-keyframes swellShow {
+  from { width: 0; }
+  to { width: 230px;}
+}
+
+@-ms-keyframes swellShow {
+  from { width: 0; }
+  to { width: 230px;}
+}
+
+@-o-keyframes swellShow {
+  from { width: 0; }
+  to { width: 230px;}
+}

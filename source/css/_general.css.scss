@@ -484,6 +484,8 @@ body {
 // Center wave
 //
 .wave {
+  // @extend %waveShow;
+
   width: 50%;
   position: absolute;
   height: 200px;
@@ -492,14 +494,14 @@ body {
   background-repeat: repeat-x;
   background-position: bottom right;
   background-size: 520px 200px;
-
-  // @extend %continuos;
 }
 
 //
 // Right wave
 //
 .swell {
+  // @extend %swellShow;
+
   width: 230px;
   height: 447px;
   position: absolute;
