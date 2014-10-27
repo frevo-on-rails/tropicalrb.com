@@ -16,6 +16,7 @@
   font-family: $ff-general;
   font-weight: $fw-light;
   cursor: pointer;
+  text-decoration: none;
   @include bdr(3px);
 
   &.large {
@@ -45,4 +46,15 @@
   background-size: 16px 16px;
 }
 
-.btn-primary { background-color: $primary; }
+.btn-primary {
+  background-color: $primary;
+  @include transition(all, .2s, linear, 0s);
+
+  &:hover, &:focus {
+    @include scale(1.1);
+  }
+
+  &:active {
+    @include scale(.9);
+  }
+}
