@@ -159,18 +159,18 @@ body {
 
 .social-item {
   display: inline-block;
+  position: relative;
   width: 44px;
   height: 44px;
   margin: 0 5px 0 5px;
-  background-image: image-url('icons/diamond-link@2x.png');
-  background-repeat: no-repeat;
-  background-size: 44px 44px;
-  @extend %transition;
-  @extend %rotate;
 
   &:hover {
-    background-image: image-url('icons/diamond-link-hover@2x.png');
-    @extend %start-rotate;
+    &::before {
+      content: '';
+      z-index: 3;
+      background-image: image-url('icons/diamond-link-hover@2x.png');
+      @extend %start-rotate;
+    }
 
     .social-link {
       &.lanyrd{
@@ -190,6 +190,20 @@ body {
       }
     }
   }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 44px;
+    margin-left: -44px;
+    height: 44px;
+    background-image: image-url('icons/diamond-link@2x.png');
+    background-repeat: no-repeat;
+    background-size: 44px 44px;
+    @extend %transition;
+    @extend %rotate;
+  }
 }
 
 .social-link {
@@ -198,7 +212,8 @@ body {
   height: 100%;
   text-indent: -9999px;
   text-align: center;
-  @include transition(all, .3s, ease, .1s);
+  position: relative;
+  z-index: 4;
 
   &.lanyrd{
     @include bgimage('icons/icon-small-lanyrd@2x.png');
