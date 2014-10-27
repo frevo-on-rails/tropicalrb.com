@@ -397,12 +397,6 @@ body {
   }
 }
 
-// Footer
-.footer-primary {
-  position: relative;
-  bottom: 0;
-}
-
 //
 // Hit area for tap in coconut
 //
@@ -761,54 +755,8 @@ body {
     background-size: cover;
   }
 
-  .local-logo {
-    margin-bottom: 16px;
-  }
-
-  .title-info,
-  .description-info,
-  .social-list,
-  .past-events,
-  .form-send-email {
-    text-align: right;
-  }
-
-  .description-info {
-    width: 80%;
-    margin-right: 0;
-  }
-
-  .title-talk,
-  .talks-list {
-    text-align: left;
-  }
-
-  .talks {
-    margin-top: 0;
-  }
-
-  .talks-item {
-    margin: 0 0 10px 0;
-    display: block;
-    width: 90%;
-    text-align: left;
-    min-height: 120px;
-  }
-
-  .talks-title {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .talks-image {
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .box-info {
-    display: inline-block;
-    vertical-align: middle;
+  .wave {
+    width: 93%;
   }
 
 }
