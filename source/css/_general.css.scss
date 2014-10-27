@@ -636,6 +636,13 @@ body {
     right: -50px;
     bottom: -82px;
   }
+
+  .social-item {
+    &::before {
+      content: '';
+      margin-left: -44px;
+    }
+  }
 }
 
 // DESKTOP
