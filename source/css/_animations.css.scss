@@ -84,31 +84,6 @@
 // Animation Wave
 //
 
-@keyframes continuos {
-  from { background-position: 97px 0; }
-  to { background-position: -3000px 0; }
-}
-
-@-webkit-keyframes continuos {
-  from { background-position: 97px 0; }
-  to { background-position: -3000px 0; }
-}
-
-@-moz-keyframes continuos {
-  from { background-position: 97px 0; }
-  to { background-position: -3000px 0; }
-}
-
-@-ms-keyframes continuos {
-  from { background-position: 97px 0; }
-  to { background-position: -3000px 0; }
-}
-
-@-o-keyframes continuos {
-  from { background-position: 97px 0; }
-  to { background-position: -3000px 0; }
-}
-
 %continuos {
   -webkit-animation-name: continuos;
   -webkit-animation-duration: 130s;
@@ -139,6 +114,31 @@
   animation-iteration-count: infinite;
   animation-direction: normal;
   animation-timing-function: linear;
+}
+
+@keyframes continuos {
+  from { background-position: 97px 0; }
+  to { background-position: -3000px 0; }
+}
+
+@-webkit-keyframes continuos {
+  from { background-position: 97px 0; }
+  to { background-position: -3000px 0; }
+}
+
+@-moz-keyframes continuos {
+  from { background-position: 97px 0; }
+  to { background-position: -3000px 0; }
+}
+
+@-ms-keyframes continuos {
+  from { background-position: 97px 0; }
+  to { background-position: -3000px 0; }
+}
+
+@-o-keyframes continuos {
+  from { background-position: 97px 0; }
+  to { background-position: -3000px 0; }
 }
 
 
