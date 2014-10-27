@@ -473,7 +473,7 @@ body {
 
 .drop {
   opacity: 1;
-  top: 100%;
+  top: 70%;
 }
 
 .move {
@@ -536,7 +536,6 @@ body {
     }
   }
 }
-
 
 // SMALL DEVICES AND GREATER
 @media only screen and (min-width : 768px) {
@@ -660,6 +659,10 @@ body {
     left: -109px;
   }
 
+  .drop {
+    top: 75%;
+  }
+
   .coco {
     left: 37px;
   }
@@ -777,6 +780,10 @@ body {
     height: 350px;
     bottom: 0;
     left: -75px;
+  }
+
+  .drop {
+    top: 80%;
   }
 
   .coco {
