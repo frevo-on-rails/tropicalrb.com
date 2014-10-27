@@ -196,7 +196,7 @@ body {
     display: inline-block;
     position: absolute;
     width: 44px;
-    margin-left: -44px;
+    margin-left: -22px;
     height: 44px;
     background-image: image-url('icons/diamond-link@2x.png');
     background-repeat: no-repeat;
@@ -745,6 +745,13 @@ body {
   .swell {
     right: -80px;
     bottom: -74px;
+  }
+
+  .social-item {
+    &::before {
+      content: '';
+      margin-left: -44px;
+    }
   }
 }
 
