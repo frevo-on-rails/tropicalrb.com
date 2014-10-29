@@ -61,7 +61,6 @@ body {
   background-image: image-url('bkg-sunrise-xs.jpg');
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
 }
 
 //
@@ -105,7 +104,7 @@ body {
   height: 193px;
   margin: 0 auto;
   display: block;
-  text-indent: -999px;
+  text-indent: -9999px;
 
   background-image: image-url('logo-tropical@2x.png');
   background-repeat: no-repeat;
@@ -578,11 +577,10 @@ body {
   body {
     background-image: image-url('bkg-sunrise-lg.jpg');
     background-position: center top;
-    background-size: cover;
   }
 
   .header-primary {
-    margin-top: 10px;
+    margin-top: 48px;
   }
 
   .logo-primary {
@@ -692,11 +690,10 @@ body {
 @media only screen and (min-width : 1224px) {
   body {
     background-image: image-url('bkg-sunrise-lg.jpg');
-    background-size: cover;
   }
 
   .header-primary {
-    margin-top: 10px;
+    margin-top: 48px;
   }
 
   .logo-primary {
