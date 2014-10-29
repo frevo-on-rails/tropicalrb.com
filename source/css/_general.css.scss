@@ -72,22 +72,12 @@ body {
   right: 0;
   z-index: 1;
 
-  @include transition(all, .2s, linear, 0s);
-
-  &:hover, &:focus {
-    transform: scale(1.1) translate(-8px,8px);
-  }
-
-  &:active {
-    transform: scale(0.9) translate(9px,-9px);
-  }
-
   a {
     display: block;
     width: 100%;
     height: 100%;
 
-    color: white;
+    color: $yellow;
     font-family: $ff-general;
     font-size: $fs-medium;
     font-weight: $fw-light;
@@ -558,6 +548,16 @@ body {
 
     background-size: 100%;
     background-image: image-url('bkg-cfp@2x.png');
+
+    @include transition(all, .2s, linear, 0s);
+
+    &:hover, &:focus {
+      transform: scale(1.1) translate(-8px,8px);
+    }
+
+    &:active {
+      transform: scale(0.9) translate(9px,-9px);
+    }
 
     a {
       display: block;
