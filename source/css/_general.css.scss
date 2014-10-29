@@ -486,10 +486,11 @@ body {
 .wave {
   // @extend %waveShow;
 
-  width: 50%;
+  width: 100%;
   position: absolute;
   height: 200px;
   bottom: -20px;
+  right: 160px;
   background-image: image-url('bkg-wave-tileable@2x.png');
   background-repeat: repeat-x;
   background-position: bottom right;
@@ -670,8 +671,8 @@ body {
   }
 
   .wave {
-    width: 83%;
-    bottom: -68px;
+    bottom: -82px;
+    right: 180px;
   }
 
   .swell {
@@ -793,8 +794,8 @@ body {
   }
 
   .wave {
-    width: 89%;
-    bottom: -71px;
+    bottom: -74px;
+    right: 150px;
   }
 
   .swell {
@@ -810,21 +811,10 @@ body {
   }
 }
 
-@media only screen and (min-width : 1406px) {
-  .wave {
-    width: 90%;
-  }
-}
-
 // LARGE
 @media only screen and (min-width : 1824px) {
   body {
     background-image: image-url('bkg-sunrise-lg.jpg');
     background-size: cover;
   }
-
-  .wave {
-    width: 93%;
-  }
-
 }
