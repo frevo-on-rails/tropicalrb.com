@@ -72,6 +72,16 @@ body {
   right: 0;
   z-index: 1;
 
+  @include transition(all, .2s, linear, 0s);
+
+  &:hover, &:focus {
+    transform: scale(1.1) translate(-8px,8px);
+  }
+
+  &:active {
+    transform: scale(0.9) translate(9px,-9px);
+  }
+
   a {
     display: block;
     width: 100%;
