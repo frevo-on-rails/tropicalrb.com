@@ -1,3 +1,26 @@
+// —————————————————————————
+//     Typography
+// —————————————————————————
+
+// Size
+$fs-root:           62.5%;
+$fs-large:          2.4rem;
+$fs-medium:         1.8rem;
+$fs-small:          1.4rem;
+
+// Family
+$ff-general:        'Titillium Web', sans-serif;
+$ff-secondary:      'Xilosa';
+
+// Style
+$f-italic:          italic;
+$f-normal:          normal;
+
+// Weigth
+$fw-light:          300;
+$fw-semi-bold:      600;
+
+// Custom Font Face
 @font-face {
   font-family: 'Xilosa';
   src: url('http://www.fontsaddict.com/fontface/xilosa.ttf');
