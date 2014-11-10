@@ -57,6 +57,7 @@ html { font-size: $fs-root; }
 body {
   width: 100%;
   height: 100%;
+  position: relative;
 
   background-image: image-url('bkg-sunrise-xs.jpg');
   background-repeat: no-repeat;
@@ -241,20 +242,55 @@ body {
 // Past events
 //
 .past-events {
+  margin-top: 25px;
   text-align: center;
+
+  h4 {
+    text-transform: uppercase;
+    color: $primary;
+    font-family: $ff-general;
+    font-size: $fs-small;
+    font-weight: $fw-light;
+    display: block;
+  }
+
+  .credits {
+    color: $primary;
+    font-family: $ff-general;
+    font-size: $fs-small;
+    font-weight: $fw-light;
+    display: inline-block;
+    line-height: $fs-large;
+    position: relative;
+
+    &::before {
+      content: '';
+      background-color: $primary;
+      position: absolute;
+      left: 50%;
+      margin-left: -24px;
+      top: -8px;
+      width: 48px;
+      height: 1px;
+    }
+
+    a {
+      color: $primary;
+    }
+  }
 }
 
 .past-event-item {
   display: inline-block;
   position: relative;
 
-  &:nth-child(1) {
+  &:nth-child(2) {
     &::before {
       @extend %circle;
     }
   }
 
-  &:nth-child(2) {
+  &:nth-child(3) {
     &::before {
       @extend %circle;
     }
@@ -347,6 +383,7 @@ body {
   color: $primary;
   font-family: $ff-general;
   font-weight: $fw-light;
+  line-height: $fs-medium;
 }
 
 .organization {
@@ -437,7 +474,7 @@ body {
 //
 
 .tap {
-  z-index: 9;
+  z-index: 30;
   position: absolute;
   top: 0;
   left: 0;
@@ -484,6 +521,7 @@ body {
 //
 .wave {
   // @extend %waveShow;
+  // @extend %continuos;
 
   width: 100%;
   position: absolute;
@@ -602,10 +640,15 @@ body {
   .title-info,
   .description-info,
   .social-list,
-  .past-events,
   .form-send-email {
     text-align: right;
     margin-right: 15px;
+  }
+
+  .form-send-email {
+    .title-info {
+      margin-top: 30px;
+    }
   }
 
   .description-info {
@@ -616,6 +659,19 @@ body {
   .talks-list {
     text-align: left;
     margin-left: 15px;
+  }
+
+  .past-events {
+    h4 {
+      display: inline-block;
+    }
+  }
+
+  .credits {
+    div {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   .talks {
@@ -648,12 +704,6 @@ body {
   }
 
   // Brands
-  .organization {
-    position: absolute;
-    left: 50%;
-    margin-left: -235px;
-    z-index: 10;
-  }
 
   .brand {
     margin-right: 25px;
@@ -719,9 +769,14 @@ body {
   .title-info,
   .description-info,
   .social-list,
-  .past-events,
   .form-send-email {
     text-align: right;
+   }
+
+   .form-send-email {
+    .title-info {
+      margin: 16px 0;
+    }
    }
 
   .description-info {
@@ -763,20 +818,31 @@ body {
   }
 
   // Brands
-  .organization {
-    text-align: center;
-    margin-top: 70px;
-    position: absolute;
-    left: 50%;
-    margin-left: -320px;
-    z-index: 10;
-  }
-
   .organized {
     min-width: 300px;
     margin-right: 100px;
     display: inline-block;
     vertical-align: top;
+  }
+
+  .organized {
+    margin-bottom: 0;
+  }
+
+  .past-events {
+    margin-top: 0;
+  }
+
+  .past-events-list {
+    h4 {
+      display: inline-block;
+    }
+  }
+
+  .credits {
+    div {
+      display: inline-block;
+    }
   }
 
   .support {

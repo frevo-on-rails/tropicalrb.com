@@ -35,7 +35,9 @@
 }
 
 .organization {
+  position: relative;
   height: auto;
+  min-height: 950px;
 
   flex: 1;
   -webkit-flex: 1;
@@ -46,7 +48,7 @@
   width: 100%;
   height: 430px;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   bottom: 0;
 }
 
@@ -86,6 +88,10 @@
       -webkit-order: 3;
       order: 3;
     }
+  }
+
+  .organization {
+    min-height: 550px;
   }
 }
 
@@ -135,6 +141,12 @@
       -webkit-order: 3;
       order: 3;
     }
+  }
+
+  .organization {
+    margin-top: 70px;
+    min-height: 500px;
+    z-index: 10;
   }
 }
 
