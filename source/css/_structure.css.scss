@@ -34,22 +34,28 @@
   }
 }
 
+.main {
+  z-index: 10;
+}
+
 .organization {
   position: relative;
   height: auto;
   min-height: 950px;
-
+  z-index: 10;
   flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
 }
 
 .footer-primary {
+  @include linear-gradient-control(180deg, transparentize($yellow2-rgb,1), 0, $yellow2-rgb, 60%);
   width: 100%;
-  height: 430px;
+  height: 474px;
   overflow: hidden;
   position: absolute;
   bottom: 0;
+  z-index: 0;
 }
 
 
@@ -92,6 +98,13 @@
 
   .organization {
     min-height: 550px;
+    margin-bottom: -400px;
+  }
+
+  .footer-primary {
+    background-image: none;
+    position: relative;
+    height: 427px;
   }
 }
 
@@ -146,7 +159,11 @@
   .organization {
     margin-top: 70px;
     min-height: 500px;
-    z-index: 10;
+  }
+
+  .footer-primary {
+    background-image: none;
+    height: 435px;
   }
 }
 
