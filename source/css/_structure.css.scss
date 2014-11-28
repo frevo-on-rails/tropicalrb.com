@@ -49,7 +49,7 @@
 }
 
 .footer-primary {
-  @include linear-gradient-control(180deg, transparentize($yellow2-rgb,1), 0, $yellow2-rgb, 60%);
+  @include linear-gradient-control(180deg, transparentize($yellow2-rgb,1), 0, $yellow2-rgb, 30%);
   width: 100%;
   height: 474px;
   overflow: hidden;
