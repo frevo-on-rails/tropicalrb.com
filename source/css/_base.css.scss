@@ -42,7 +42,6 @@ $light-rgb:     $yellow-rgb;
 //
 // Gradient
 //
-
 @mixin linear-gradient ($angle, $startColor, $endColor) {
   background-color: $startColor;
   background-image: -webkit-linear-gradient($angle, $startColor, $endColor);
@@ -59,7 +58,6 @@ $light-rgb:     $yellow-rgb;
   background-image:     -ms-linear-gradient($angle, $colour $position, $colour2 $position2);
   background-image:      -o-linear-gradient($angle, $colour $position, $colour2 $position2);
   background-image:          linear-gradient($angle, $colour $position, $colour2 $position2);
- // background-image: linear-gradient(-87deg, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.08) 49%);
 }
 
 // Text Truncate
