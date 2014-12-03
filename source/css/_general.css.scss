@@ -64,37 +64,10 @@ body {
   background-position: center top;
 }
 
-//
-// CFP
-//
 
-.cfp {
-  top: 0;
-  right: 0;
-  z-index: 1;
-
-  a {
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    color: $yellow;
-    font-family: $ff-general;
-    font-size: $fs-medium;
-    font-weight: $fw-light;
-    text-decoration: none;
-    text-align: center;
-
-    .title {
-      font-weight: $fw-semi-bold;
-      margin-bottom: 0.5em;
-    }
-  }
-}
-
-//
-// Header
-//
+// ——————————————————
+//  Header
+// ——————————————————
 
 .header-primary {
   margin-top: 40px;
@@ -113,11 +86,12 @@ body {
   background-size: 200px 193px;
 }
 
-//
-// Sections
-//
 
-// local
+// ——————————————————
+//  Sections
+// ——————————————————
+
+// Local
 .local-logo {
   width: 300px;
   height: 226px;
@@ -152,18 +126,19 @@ body {
 
 .event-info {
   text-align: center;
+
   .prospectus {
     line-height: 44px;
     text-align: center;
   }
 }
 
-//
-// Social list
-//
-.social-list {
-  text-align: center;
-}
+
+// ——————————————————
+//  Social list
+// ——————————————————
+
+.social-list { text-align: center; }
 
 .social-item {
   display: inline-block;
@@ -181,21 +156,10 @@ body {
     }
 
     .social-link {
-      &.lanyrd{
-        background-image: image-url('icons/icon-small-lanyrd-hover@2x.png');
-      }
-
-      &.twitter {
-        background-image: image-url('icons/icon-small-twitter-hover@2x.png');
-      }
-
-      &.facebook {
-        background-image: image-url('icons/icon-small-facebook-hover@2x.png');
-      }
-
-      &.github {
-        background-image: image-url('icons/icon-small-github-hover@2x.png');
-      }
+      &.lanyrd{ background-image: image-url('icons/icon-small-lanyrd-hover@2x.png'); }
+      &.twitter { background-image: image-url('icons/icon-small-twitter-hover@2x.png'); }
+      &.facebook { background-image: image-url('icons/icon-small-facebook-hover@2x.png'); }
+      &.github { background-image: image-url('icons/icon-small-github-hover@2x.png'); }
     }
   }
 
@@ -214,9 +178,11 @@ body {
   }
 }
 
-//
-// Past events
-//
+
+// ——————————————————
+//  Past events
+// ——————————————————
+
 .past-events {
   margin-top: 25px;
   text-align: center;
@@ -250,9 +216,7 @@ body {
       height: 1px;
     }
 
-    a {
-      color: $primary;
-    }
+    a { color: $primary; }
   }
 }
 
@@ -261,15 +225,11 @@ body {
   position: relative;
 
   &:nth-child(2) {
-    &::before {
-      @extend %circle;
-    }
+    &::before { @extend %circle; }
   }
 
   &:nth-child(3) {
-    &::before {
-      @extend %circle;
-    }
+    &::before { @extend %circle; }
   }
 }
 
@@ -288,14 +248,14 @@ body {
     @include scale(1.3);
   }
 
-  &:active {
-    @include scale(.8);
-  }
+  &:active { @include scale(.8); }
 }
 
-//
-// Talks
-//
+
+// ——————————————————
+//  Talks
+// ——————————————————
+
 .talks {
   margin: 60px 0;
   display: block;
@@ -310,23 +270,13 @@ body {
   width: 40%;
   min-height: 130px;
 
-  &:nth-child(odd) {
-    margin-right: 30px;
-  }
+  &:nth-child(odd) { margin-right: 30px; }
 
   &:hover {
     .talks-image {
-      &.avdi {
-        background-image: image-url('talks/avatar-medium-avdi-hover@2x.png');
-      }
-
-      &.nick {
-        background-image: image-url('talks/avatar-medium-nick-hover@2x.png');
-      }
-
-      &.rodrigo {
-        background-image: image-url('talks/avatar-medium-rodrigo-hover@2x.png');
-      }
+      &.avdi { background-image: image-url('talks/avatar-medium-avdi-hover@2x.png'); }
+      &.nick { background-image: image-url('talks/avatar-medium-nick-hover@2x.png'); }
+      &.rodrigo { background-image: image-url('talks/avatar-medium-rodrigo-hover@2x.png'); }
     }
   }
 
@@ -366,10 +316,7 @@ body {
 
   &:hover {
     .talks-image { @include scale(1.1); }
-
-    .talks-info {
-      opacity: 1;
-    }
+    .talks-info { opacity: 1;}
   }
 
   &:active {
@@ -386,17 +333,9 @@ body {
   background-repeat: no-repeat;
   @include transition(all, .2s, linear, 0s);
 
-  &.avdi {
-    background-image: image-url('talks/avatar-medium-avdi@2x.png');
-  }
-
-  &.nick {
-    background-image: image-url('talks/avatar-medium-nick@2x.png');
-  }
-
-  &.rodrigo {
-    background-image: image-url('talks/avatar-medium-rodrigo@2x.png');
-  }
+  &.avdi { background-image: image-url('talks/avatar-medium-avdi@2x.png'); }
+  &.nick { background-image: image-url('talks/avatar-medium-nick@2x.png'); }
+  &.rodrigo { background-image: image-url('talks/avatar-medium-rodrigo@2x.png'); }
 }
 
 .box-info {
@@ -429,8 +368,14 @@ body {
   @include transition(opacity, .2s, linear, 0s);
 }
 
+
+// ——————————————————
+//  Organization
+// ——————————————————
+
 .organization {
   text-align: center;
+
   .title {
     text-transform: uppercase;
     color: $primary;
@@ -453,10 +398,12 @@ body {
   }
 }
 
-// Brands
-.organized {
-  margin-bottom: 25px;
-}
+.organized { margin-bottom: 25px;}
+
+
+// ——————————————————
+//  Brands
+// ——————————————————
 
 .brand {
   width: 130px;
@@ -465,18 +412,19 @@ body {
   display: inline-block;
   @include transition(all, .2s, linear, 0s);
 
-  &.block {
-    display: block;
-  }
+  &.block { display: block; }
 
   &:hover, &:focus {
     opacity: .5;
     @include scale(1.1);
   }
 
-  &:active {
-    @include scale(.9);
-  }
+  &:active { @include scale(.9); }
+}
+
+%bg-brand-link {
+  background-repeat: no-repeat;
+  background-size: 130px 100px;
 }
 
 .brand-link {
@@ -488,33 +436,30 @@ body {
   &.frevo {
     display: block;
     margin: 0 auto;
+    @extend %bg-brand-link;
     background-image: image-url('brands/brand-mono-medium-frevo@2x.png');
-    background-repeat: no-repeat;
-    background-size: 130px 100px;
   }
 
   &.guava {
+    @extend %bg-brand-link;
     background-image: image-url('brands/brand-mono-medium-guava@2x.png');
-    background-repeat: no-repeat;
-    background-size: 130px 100px;
   }
 
   &.eloquent {
+    @extend %bg-brand-link;
     background-image: image-url('brands/brand-mono-medium-eloquent@2x.png');
-    background-repeat: no-repeat;
-    background-size: 130px 100px;
   }
 
   &.ruby-central {
+    @extend %bg-brand-link;
     background-image: image-url('brands/brand-mono-medium-rubycentral@2x.png');
-    background-repeat: no-repeat;
-    background-size: 130px 100px;
   }
 }
 
-//
-// Hit area for tap in coconut
-//
+
+// ——————————————————
+//  Hit area for tap in coconut
+// ——————————————————
 
 .tap {
   z-index: 30;
@@ -555,34 +500,32 @@ body {
   top: 70%;
 }
 
-.move {
-  @include animation(coconut .8s);
-}
+.move { @include animation(coconut .8s); }
 
-//
+
+// ——————————————————
 // Center wave
-//
-.wave {
-  // @extend %waveShow;
-  // @extend %continuos;
+// ——————————————————
 
+.wave {
   width: 100%;
   position: absolute;
   height: 200px;
   bottom: -20px;
   right: 160px;
+
   background-image: image-url('bkg-wave-tileable@2x.png');
   background-repeat: repeat-x;
   background-position: bottom right;
   background-size: 520px 200px;
 }
 
-//
-// Right wave
-//
-.swell {
-  // @extend %swellShow;
 
+// ——————————————————
+// Right wave
+// ——————————————————
+
+.swell {
   width: 230px;
   height: 447px;
   position: absolute;
@@ -594,34 +537,18 @@ body {
   background-size: 230px 447px;
 }
 
-// EXTRA SMALL
-@media only screen and (max-width : 767px) {
+
+// ——————————————————
+// @media-queries
+// ——————————————————
+
+// iPads
+@media (min-width: 768px) {
   body {
-    padding-top: 70px;
-    background-position: center 70px;
+    background-image: image-url('bkg-sunrise-lg.jpg');
+    background-position: center top;
   }
 
-  .cfp {
-    position: absolute;
-    width: 100%;
-    height: 70px;
-
-    a {
-      background-color: $red;
-      padding: 0.75em;
-      width: 100%;
-
-      .title {
-        margin-bottom: 0.25em;
-
-        br { display: none; }
-      }
-    }
-  }
-}
-
-// SMALL DEVICES AND GREATER
-@media only screen and (min-width : 768px) {
   .cfp {
     position: fixed;
     width: 170px;
@@ -661,18 +588,6 @@ body {
       }
     }
   }
-}
-
-// IPAD
-@media (min-width: 768px) {
-  body {
-    background-image: image-url('bkg-sunrise-lg.jpg');
-    background-position: center top;
-  }
-
-  .header-primary {
-    margin-top: 48px;
-  }
 
   .logo-primary {
     width: 280px;
@@ -680,23 +595,20 @@ body {
     background-size: 280px 270px;
   }
 
-  .title-info,
-  .description-info,
-  .social-list,
-  .form-send-email {
+  .title-info, .description-info ,
+  .social-list, .form-send-email {
     text-align: right;
     margin-right: 15px;
   }
 
-  .form-send-email {
-    .title-info {
-      margin-top: 30px;
+  .social-item {
+    &::before {
+      content: '';
+      margin-left: -44px;
     }
   }
 
-  .description-info {
-    width: 90%;
-  }
+  .description-info { width: 90%; }
 
   .title-talk {
     text-align: left;
@@ -704,9 +616,7 @@ body {
   }
 
   .past-events {
-    h4 {
-      display: inline-block;
-    }
+    h4 { display: inline-block;}
   }
 
   .credits {
@@ -716,9 +626,7 @@ body {
     }
   }
 
-  .talks {
-    margin: 0;
-  }
+  .talks { margin: 0; }
 
   .talks-list {
     position: relative;
@@ -759,29 +667,17 @@ body {
     }
   }
 
-  // Brands
   .brand {
-    margin-right: 25px;
+    margin-right: 25px;;
 
-    &.block {
-      display: inline-block;
-    }
+    &.block { display: inline-block;}
   }
 
-  // Footer
-  .coconut {
-    height: 350px;
-    bottom: 0;
-    left: -109px;
-  }
+  .coconut { height: 350px;}
 
-  .drop {
-    top: 75%;
-  }
+  .drop { top: 75%; }
 
-  .coco {
-    left: 37px;
-  }
+  .coco {left: 37px;}
 
   .wave {
     bottom: -82px;
@@ -792,49 +688,18 @@ body {
     right: -50px;
     bottom: -82px;
   }
-
-  .social-item {
-    &::before {
-      content: '';
-      margin-left: -44px;
-    }
-  }
 }
 
-// DESKTOP
+
+// Desktops
 @media (min-width: 992px) {
-  body {
-    background-image: image-url('bkg-sunrise-lg.jpg');
-  }
-
-  .header-primary {
-    margin-top: 48px;
-  }
-
-  .logo-primary {
-    width: 280px;
-    height: 270px;
-    background-size: 280px 270px;
-  }
-
-  .local-logo {
-    margin-bottom: 15px;
-  }
+  .local-logo { margin-bottom: 15px; }
 
    .form-send-email {
-      .title-info {
-        margin: 16px 0;
-      }
+      .title-info { margin: 16px 0; }
    }
 
-  .description-info {
-    width: 80%;
-    margin-right: 0;
-  }
-
-  .talks {
-    margin: 0;
-  }
+  .description-info { width: 80%;}
 
   .talks-item {
     &.nick {
@@ -856,79 +721,36 @@ body {
     }
   }
 
-  // Brands
   .organized {
-    min-width: 300px;
-    margin-right: 100px;
     display: inline-block;
-    vertical-align: top;
+    margin: 0 100px 0 0;
   }
 
-  .organized {
-    margin-bottom: 0;
-  }
-
-  .past-events {
-    margin-top: 0;
-  }
-
-  .past-events-list {
-    h4 {
-      display: inline-block;
-    }
-  }
-
-  .credits {
-    div {
-      display: inline-block;
-    }
-  }
+  .past-events { margin-top: 0; }
 
   .support {
     min-width: 300px;
     display: inline-block;
-    vertical-align: top;
   }
 
-  // Footer
-  .coconut {
-    height: 350px;
-    bottom: 0;
-    left: -75px;
-  }
+  .coconut { left: -75px; }
 
-  .drop {
-    top: 80%;
-  }
+  .drop { top: 80%; }
 
-  .coco {
-    left: 70px;
-  }
+  .coco { left: 70px; }
 
-  .wave {
-    bottom: -74px;
-    right: 150px;
-  }
+  .wave { bottom: -74px; right: 150px; }
 
   .swell {
     right: -80px;
     bottom: -74px;
   }
-
-  .social-item {
-    &::before {
-      content: '';
-      margin-left: -44px;
-    }
-  }
 }
 
-// LARGE
+
+// Large desktops
 @media (min-width: 1800px) {
-  body {
-    background-image: image-url('bkg-sunrise-lg.jpg');
-    background-size: cover;
-  }
+  body { background-size: cover; }
 
   .talks-item {
     width: auto;

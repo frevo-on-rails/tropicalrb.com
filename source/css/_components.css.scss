@@ -2,9 +2,11 @@
 //  Components Styles
 // ——————————————————
 
-//
-// Buttons
-//
+
+// ——————————————————
+//  Buttons
+// ——————————————————
+
 .btn {
   display: block;
   margin: 0 auto;
@@ -58,9 +60,11 @@
   }
 }
 
-//
-// Huges buttons
-//
+
+// ——————————————————
+//  Huge buttons
+// ——————————————————
+
 .btn-huge {
   width: 128px;
   height: 128px;
@@ -156,9 +160,11 @@
   }
 }
 
-//
-// Social links
-//
+
+// ——————————————————
+//  Social link
+// ——————————————————
+
 .social-link {
   display: block;
   width: 100%;
@@ -185,6 +191,11 @@
   }
 }
 
+
+// ——————————————————
+//  @media-queries
+// ——————————————————
+
 // iPads
 @media (min-width: 768px) {
   .btn-huge {
@@ -195,10 +206,12 @@
   }
 }
 
+
 // Desktops
 @media (min-width: 992px) {
   .btn-huge { top: -545px; }
 }
+
 
 // Large desktops
 @media (min-width : 1800px) {
