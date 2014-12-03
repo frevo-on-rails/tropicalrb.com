@@ -98,14 +98,15 @@ body {
 
 .header-primary {
   margin-top: 40px;
+  text-align: center;
 }
 
 .logo-primary {
   width: 200px;
   height: 193px;
-  margin: 0 auto;
-  display: block;
+  display: inline-block;
   text-indent: -9999px;
+  vertical-align: middle;
 
   background-image: image-url('logo-tropical@2x.png');
   background-repeat: no-repeat;
@@ -150,6 +151,7 @@ body {
 }
 
 .event-info {
+  text-align: center;
   .prospectus {
     line-height: 44px;
     text-align: center;
@@ -209,32 +211,6 @@ body {
     background-size: 44px 44px;
     @extend %transition;
     @extend %rotate;
-  }
-}
-
-.social-link {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-indent: -9999px;
-  text-align: center;
-  position: relative;
-  z-index: 4;
-
-  &.lanyrd{
-    @include bgimage('icons/icon-small-lanyrd@2x.png');
-  }
-
-  &.twitter {
-    @include bgimage('icons/icon-small-twitter@2x.png');
-  }
-
-  &.facebook {
-    @include bgimage('icons/icon-small-facebook@2x.png');
-  }
-
-  &.github {
-    @include bgimage('icons/icon-small-github@2x.png');
   }
 }
 
@@ -332,10 +308,52 @@ body {
   margin-top: 30px;
   vertical-align: top;
   width: 40%;
-  min-height: 180px;
+  min-height: 130px;
 
   &:nth-child(odd) {
     margin-right: 30px;
+  }
+
+  &:hover {
+    .talks-image {
+      &.avdi {
+        background-image: image-url('talks/avatar-medium-avdi-hover@2x.png');
+      }
+
+      &.nick {
+        background-image: image-url('talks/avatar-medium-nick-hover@2x.png');
+      }
+
+      &.rodrigo {
+        background-image: image-url('talks/avatar-medium-rodrigo-hover@2x.png');
+      }
+    }
+  }
+
+  &.avdi {
+    .talks-title {
+      top: -35px;
+      left: 2px;
+    }
+  }
+
+  &.nick {
+    .talks-title {
+      top: -15px;
+      left: 4px;
+    }
+  }
+
+  &.rodrigo {
+    margin-top: 0;
+    margin-left: 27px;
+
+    .talks-title {
+      top: -20px;
+      left: 20px;
+    }
+
+    .talks-info { left: 30px; }
   }
 }
 
@@ -343,10 +361,15 @@ body {
   width: 100%;
   height: 100%;
   display: block;
+  position: relative;
   text-decoration: none !important;
 
   &:hover {
     .talks-image { @include scale(1.1); }
+
+    .talks-info {
+      opacity: 1;
+    }
   }
 
   &:active {
@@ -357,9 +380,9 @@ body {
 .talks-image {
   display: block;
   margin: 0 auto 10px;
-  width: 123px;
-  height: 123px;
-  background-size: 123px 123px;
+  width: 128px;
+  height: 128px;
+  background-size: 128px 128px;
   background-repeat: no-repeat;
   @include transition(all, .2s, linear, 0s);
 
@@ -370,22 +393,40 @@ body {
   &.nick {
     background-image: image-url('talks/avatar-medium-nick@2x.png');
   }
+
+  &.rodrigo {
+    background-image: image-url('talks/avatar-medium-rodrigo@2x.png');
+  }
+}
+
+.box-info {
+  position: absolute;
+  top: 70px;
 }
 
 .talks-title {
   font-family: $ff-general;
   font-weight: $fw-semi-bold;
   font-size: $fs-medium;
-  color: $primary;
+  color: #fff;
+  position: relative;
   margin: 5px 0 10px 0;
+  text-transform: uppercase;
 }
 
 .talks-info {
+  text-align: center;
   font-size: $fs-small;
-  color: $primary;
+  color: #fff;
+  width: 80%;
+  position: relative;
+  top: -40px;
+  left: 15px;
   font-family: $ff-general;
   font-weight: $fw-light;
   line-height: $fs-medium;
+  opacity: 0;
+  @include transition(opacity, .2s, linear, 0s);
 }
 
 .organization {
@@ -623,7 +664,7 @@ body {
 }
 
 // IPAD
-@media only screen and (min-width : 768px) and (max-width : 1223px) {
+@media (min-width: 768px) {
   body {
     background-image: image-url('bkg-sunrise-lg.jpg');
     background-position: center top;
@@ -657,8 +698,7 @@ body {
     width: 90%;
   }
 
-  .title-talk,
-  .talks-list {
+  .title-talk {
     text-align: left;
     margin-left: 15px;
   }
@@ -680,33 +720,46 @@ body {
     margin: 0;
   }
 
+  .talks-list {
+    position: relative;
+    margin-left: 15px;
+    text-align: left;
+  }
+
   .talks-item {
     margin: 0 0 10px 0;
-    display: block;
-    width: 90%;
+    width: 38%;
     text-align: left;
-    min-height: 120px;
-  }
 
-  .talks-title {
-    display: inline-block;
-    vertical-align: middle;
-  }
+    &.nick {
+      .talks-title { left: 52px; }
+      .talks-info { margin-left: 30px; }
+    }
 
-  .talks-image {
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-  }
+    &.avdi {
+      position: absolute;
+      top: 80px;
+      left: 140px;
 
-  .box-info {
-    display: inline-block;
-    vertical-align: middle;
-    width: 50%;
+      .talks-title {
+        top: -12px;
+        left: 48px;
+      }
+
+      .talks-info { margin-left: 7px; }
+    }
+
+    &.rodrigo {
+      position: absolute;
+      left: 0;
+      top: 145px;
+      margin-left: 0;
+
+      .talks-title { left: 33px; }
+    }
   }
 
   // Brands
-
   .brand {
     margin-right: 25px;
 
@@ -749,7 +802,7 @@ body {
 }
 
 // DESKTOP
-@media only screen and (min-width : 1224px) {
+@media (min-width: 992px) {
   body {
     background-image: image-url('bkg-sunrise-lg.jpg');
   }
@@ -768,17 +821,10 @@ body {
     margin-bottom: 15px;
   }
 
-  .title-info,
-  .description-info,
-  .social-list,
-  .form-send-email {
-    text-align: right;
-   }
-
    .form-send-email {
-    .title-info {
-      margin: 16px 0;
-    }
+      .title-info {
+        margin: 16px 0;
+      }
    }
 
   .description-info {
@@ -786,37 +832,28 @@ body {
     margin-right: 0;
   }
 
-  .title-talk,
-  .talks-list {
-    text-align: left;
-   }
-
   .talks {
     margin: 0;
   }
 
   .talks-item {
-    margin: 0 0 10px 0;
-    display: block;
-    width: 90%;
-    text-align: left;
-    min-height: 120px;
-   }
+    &.nick {
+      .talks-info { margin-left: 20px; }
+      .talks-title { left: 70px; }
+    }
 
-  .talks-title {
-    display: inline-block;
-    vertical-align: middle;
-  }
+    &.avdi {
+      .talks-info {
+        margin-left: 12px;
+        width: 70%;
+      }
+      .talks-title { left: 68px; }
+    }
 
-  .talks-image {
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .box-info {
-    display: inline-block;
-    vertical-align: middle;
+    &.rodrigo {
+      .talks-info { left: 50px; }
+      .talks-title { left: 53px; }
+    }
   }
 
   // Brands
@@ -887,9 +924,28 @@ body {
 }
 
 // LARGE
-@media only screen and (min-width : 1824px) {
+@media (min-width: 1800px) {
   body {
     background-image: image-url('bkg-sunrise-lg.jpg');
     background-size: cover;
+  }
+
+  .talks-item {
+    width: auto;
+
+    &.nick {
+      .talks-title { left: 50px; }
+    }
+
+    &.avdi {
+      .talks-title {
+        left: 48px;
+        top: -30px;
+      }
+    }
+
+    &.rodrigo {
+      .talks-title { left: 27px; }
+    }
   }
 }
