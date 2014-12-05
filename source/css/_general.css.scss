@@ -279,32 +279,6 @@ body {
       &.rodrigo { background-image: image-url('talks/avatar-medium-rodrigo-hover@2x.png'); }
     }
   }
-
-  &.avdi {
-    .talks-title {
-      top: -35px;
-      left: 2px;
-    }
-  }
-
-  &.nick {
-    .talks-title {
-      top: -15px;
-      left: 4px;
-    }
-  }
-
-  &.rodrigo {
-    margin-top: 0;
-    margin-left: 27px;
-
-    .talks-title {
-      top: -20px;
-      left: 20px;
-    }
-
-    .talks-info { left: 30px; }
-  }
 }
 
 .talks-link {
@@ -316,7 +290,6 @@ body {
 
   &:hover {
     .talks-image { @include scale(1.1); }
-    .talks-info { opacity: 1;}
   }
 
   &:active {
@@ -336,35 +309,52 @@ body {
   &.avdi { background-image: image-url('talks/avatar-medium-avdi@2x.png'); }
   &.nick { background-image: image-url('talks/avatar-medium-nick@2x.png'); }
   &.rodrigo { background-image: image-url('talks/avatar-medium-rodrigo@2x.png'); }
-}
 
-.box-info {
-  position: absolute;
-  top: 70px;
+  &:hover {
+    .talks-title {
+      transform: translateY(20px);
+
+      span {
+        display: block;
+      }
+    }
+
+    .talks-info {
+      opacity: 1;
+    }
+  }
 }
 
 .talks-title {
+  display: inline-block;
+  text-align: center;
   font-family: $ff-general;
-  font-weight: $fw-semi-bold;
+  font-weight: $fw-light;
   font-size: $fs-medium;
   color: #fff;
-  position: relative;
-  margin: 5px 0 10px 0;
+  transform: translateY(87px);
+  width: 128px;
   text-transform: uppercase;
+  text-shadow: 0 1px 0 #000;
+  @include transition(transform, .2s, linear, 0s);
+
+  span {
+    display: none;
+  }
 }
 
 .talks-info {
-  text-align: center;
   font-size: $fs-small;
   color: #fff;
-  width: 80%;
-  position: relative;
-  top: -40px;
-  left: 15px;
+  opacity: 0;
+  width: 120px;
   font-family: $ff-general;
   font-weight: $fw-light;
   line-height: $fs-medium;
-  opacity: 0;
+  margin-top: 22px;
+  margin-left: 4px;
+  text-align: center;
+  text-shadow: 0 1px 0 #000;
   @include transition(opacity, .2s, linear, 0s);
 }
 
@@ -639,22 +629,11 @@ body {
     width: 38%;
     text-align: left;
 
-    &.nick {
-      .talks-title { left: 52px; }
-      .talks-info { margin-left: 30px; }
-    }
 
     &.avdi {
       position: absolute;
       top: 80px;
       left: 140px;
-
-      .talks-title {
-        top: -12px;
-        left: 48px;
-      }
-
-      .talks-info { margin-left: 7px; }
     }
 
     &.rodrigo {
@@ -662,8 +641,6 @@ body {
       left: 0;
       top: 145px;
       margin-left: 0;
-
-      .talks-title { left: 33px; }
     }
   }
 
@@ -701,26 +678,6 @@ body {
 
   .description-info { width: 80%;}
 
-  .talks-item {
-    &.nick {
-      .talks-info { margin-left: 20px; }
-      .talks-title { left: 70px; }
-    }
-
-    &.avdi {
-      .talks-info {
-        margin-left: 12px;
-        width: 70%;
-      }
-      .talks-title { left: 68px; }
-    }
-
-    &.rodrigo {
-      .talks-info { left: 50px; }
-      .talks-title { left: 53px; }
-    }
-  }
-
   .organized {
     display: inline-block;
     margin: 0 100px 0 0;
@@ -754,20 +711,5 @@ body {
 
   .talks-item {
     width: auto;
-
-    &.nick {
-      .talks-title { left: 50px; }
-    }
-
-    &.avdi {
-      .talks-title {
-        left: 48px;
-        top: -30px;
-      }
-    }
-
-    &.rodrigo {
-      .talks-title { left: 27px; }
-    }
   }
 }
