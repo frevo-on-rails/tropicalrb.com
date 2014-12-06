@@ -212,6 +212,16 @@
   .btn-huge { top: -545px; }
 }
 
+@media (min-width: 992px) and (max-width: 1229px) {
+  .btn-huge {
+    &.buy-ticket { right: 290px; }
+    &.submit-talk {
+      top: -680px;
+      left: 290px;
+    }
+  }
+}
+
 
 // Large desktops
 @media (min-width : 1800px) {
