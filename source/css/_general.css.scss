@@ -262,12 +262,22 @@ body {
 .talks-item {
   display: inline-block;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   vertical-align: top;
   width: 40%;
   min-height: 130px;
 
   &:nth-child(odd) { margin-right: 30px; }
+
+  &:last-child {
+    margin-top: 5px;
+    margin-right: 0;
+
+    a {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 
   &:hover {
     .talks-image {
