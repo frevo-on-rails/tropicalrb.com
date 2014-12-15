@@ -395,7 +395,8 @@ body {
   }
 }
 
-.organized { margin-bottom: 25px;}
+.sponsors { margin-bottom: 25px; }
+.organized { margin-bottom: 25px; }
 
 
 // ——————————————————
@@ -419,6 +420,8 @@ body {
   &:active { @include scale(.9); }
 }
 
+.sponsors .brand { margin-right: auto; }
+
 %bg-brand-link {
   background-repeat: no-repeat;
   background-size: 130px 100px;
@@ -429,6 +432,13 @@ body {
   width: 100%;
   height: 100%;
   text-indent: -9999px;
+
+  &.github {
+    display: block;
+    margin: 0 auto;
+    @extend %bg-brand-link;
+    background-image: image-url('brands/brand-mono-medium-github@2x.png');
+  }
 
   &.frevo {
     display: block;
@@ -471,7 +481,7 @@ body {
   width: 265px;
   height: 330px;
   position: relative;
-  bottom: 0;
+  top: 400px;
   left: -105px;
   background-image: image-url('bkg-coconut-left@2x.png');
   background-repeat: no-repeat;
@@ -506,7 +516,7 @@ body {
   width: 100%;
   position: absolute;
   height: 200px;
-  bottom: -20px;
+  bottom: -120px;
   right: 160px;
   background-image: image-url('bkg-wave-tileable@2x.png');
   background-repeat: repeat-x;
@@ -524,7 +534,7 @@ body {
   height: 447px;
   position: absolute;
   right: -70px;
-  bottom: -20px;
+  bottom: -120px;
   background-image: image-url('bkg-wave-right@2x.png');
   background-repeat: no-repeat;
   background-size: 230px 447px;
@@ -619,10 +629,7 @@ body {
   }
 
   .talks { margin: 0; }
-
-  .talks-image {
-    margin-left: 15px;
-  }
+  .talks-image { margin-left: 15px; }
 
   .talks-list {
     position: relative;
@@ -656,7 +663,10 @@ body {
     &.block { display: inline-block;}
   }
 
-  .coconut { height: 350px;}
+  .coconut {
+    top: 150px;
+    height: 350px;
+  }
   .drop { top: 75%; }
   .coco {left: 37px;}
 
@@ -696,6 +706,10 @@ body {
       .title-info { margin: 16px 0; }
    }
 
+  .sponsors {
+    margin-bottom: 10px;
+  }
+
   .organized {
     display: inline-block;
     margin: 0 100px 0 0;
@@ -707,7 +721,7 @@ body {
   }
 
   .past-events { margin-top: 0; }
-  .coconut { left: -75px; }
+  .coconut { left: -120px; top: 0; }
   .drop { top: 80%; }
   .coco { left: 70px; }
   .wave { bottom: -74px; right: 150px; }
@@ -721,6 +735,7 @@ body {
 @media (min-width: 1200px) {
   .description-info { margin-bottom: 19px }
   .form-send-email { margin-top: 20px; }
+  .coconut { left: -75px; }
 }
 
 // Large desktops
