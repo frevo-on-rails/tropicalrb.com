@@ -1,1 +1,10 @@
 @import "vendors/bootstrap";
+
+@import "utils/helpers";
+@import "utils/mixins";
+@import "utils/variables";
+
+@import "base/typography";
+
+@import "layout/header";
+@import "layout/footer";
