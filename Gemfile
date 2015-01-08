@@ -18,3 +18,5 @@ gem "bootstrap-sass", "~> 3.3.1"
 gem "middleman-autoprefixer", "~> 2.3.0"
 
 gem "rails-assets-jquery", "~> 2.1.3"
+
+gem "middleman-deploy", "~> 1.0"
