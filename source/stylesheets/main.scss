@@ -1,10 +1,64 @@
-@import "vendors/bootstrap";
+// *************************************
+//
+//   Main
+//   ->
+//
+// *************************************
 
-@import "utils/helpers";
-@import "utils/mixins";
-@import "utils/variables";
+// -------------------------------------
+//   Vendors
+// -------------------------------------
 
-@import "base/typography";
+@import 'vendors/bootstrap';
 
-@import "layout/header";
-@import "layout/footer";
+// -------------------------------------
+//   Utils
+// -------------------------------------
+
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/keyframes';
+@import 'utils/mixins';
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+@import 'base/base';
+@import 'base/typography';
+
+// -------------------------------------
+//   Layout
+// -------------------------------------
+
+@import 'layout/header';
+@import 'layout/body';
+@import 'layout/footer';
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+// @import 'components/';
+
+// -------------------------------------
+//   Pages
+// -------------------------------------
+
+@import 'pages/index';
+@import 'pages/schedule';
+@import 'pages/sponsors';
+@import 'pages/tickets';
+@import 'pages/venue';
+
+// -------------------------------------
+//   Themes
+// -------------------------------------
+
+// @import 'themes/';
+
+// -------------------------------------
+//   Vendors Extensions
+// -------------------------------------
+
+@import 'vendors-extensions/bootstrap';

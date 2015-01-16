@@ -1,0 +1,28 @@
+// *************************************
+//
+//   Mixins
+//   ->
+//
+// *************************************
+
+// -------------------------------------
+//   Face
+// -------------------------------------
+
+@mixin face($size, $border-radius: 0, $display: block) {
+  @include square($size);
+  background-color: $bc-arch-linux-2;
+  border-radius: $border-radius;
+  display: $display;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    @include square($size);
+    top: 0;
+    left: 0;
+    border-radius: $border-radius;
+    display: block;
+    position: absolute;
+  }
+}

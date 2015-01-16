@@ -1,0 +1,75 @@
+// *************************************
+//
+//   Base
+//   ->
+//
+// *************************************
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $link;
+  transition: .3s color;
+
+  &:focus,
+  &:hover {
+    color: lighten($link, 10%);
+    outline: none;
+  }
+
+  &:active {
+    color: darken($link, 10%);
+  }
+}
+
+mark,
+::selection {
+  background: $brand-01 !important;
+  color: #fff !important;
+  text-shadow: darken($brand-01, 10%) 0 1px 3px;
+}
+
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
+textarea {
+  @include placeholder($placeholder);
+  color: $text-color;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+textarea {
+  @include resizable(vertical);
+}
+
+button,
+input[type='button'],
+input[type='file'],
+input[type='image'],
+input[type='reset'],
+input[type='submit'] {
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+
+  &:focus {
+    outline: none !important;
+  }
+}

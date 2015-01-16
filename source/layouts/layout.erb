@@ -1,6 +1,9 @@
 <!doctype html>
-<html>
+
+<html lang="pt-br">
+
   <head>
+
     <meta charset="utf-8">
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
@@ -9,11 +12,24 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Tropical Ruby 2015" %></title>
 
+    <meta name="description" content="">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="<%= current_page.data.title || 'Tropical Ruby 2015' %>">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <%= stylesheet_link_tag "main", (current_page.data.stylesheet ? current_page.data.stylesheet : {}) %>
-    <%= javascript_include_tag  "main" %>
+
+    <%= javascript_include_tag "main" %>
+
   </head>
 
   <body class="<%= page_classes %>">
+
     <%= yield %>
+
   </body>
+
 </html>
