@@ -8,3 +8,48 @@
 body {
   @include titillium-web;
 }
+
+  body.index {
+    background-color: $poly-07;
+    background-position: top center;
+
+    @media (max-width: 767px) {
+      background-image: url('#{$images}/bg-body-index-mobile.jpg');
+    }
+
+    @media (min-width: 768px) {
+      background-image: url('#{$images}/bg-body-index-desktop.jpg');
+    }
+  }
+
+  body.schedule {
+    background-color: $poly-01;
+
+    @media (max-width: 767px) { }
+
+    @media (min-width: 768px) { }
+  }
+
+  body.sponsors {
+    background-color: rgb(255,255,255);
+
+    @media (max-width: 767px) { }
+
+    @media (min-width: 768px) { }
+  }
+
+  body.tickets {
+    background-color: rgb(255,255,255);
+
+    @media (max-width: 767px) { }
+
+    @media (min-width: 768px) { }
+  }
+
+  body.venue {
+    background-color: rgb(255,255,255);
+
+    @media (max-width: 767px) { }
+
+    @media (min-width: 768px) { }
+  }

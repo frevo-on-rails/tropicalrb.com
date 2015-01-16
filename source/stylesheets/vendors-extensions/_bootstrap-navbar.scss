@@ -1,0 +1,505 @@
+// *************************************
+//
+//   Navbar
+//   ->
+//
+// *************************************
+
+.navbar {
+  margin-bottom: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+
+  @media (max-width: 767px) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Navbar Header ----- //
+
+.navbar-header {
+  position: relative;
+
+  @media (max-width: 767px) {
+    height: 66px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+  }
+
+  @media (min-width: 768px) { height: 82px; }
+}
+
+// Modifiers
+
+body.index {
+  .navbar-header {
+    @media (max-width: 767px) { border-bottom-color: $poly-11 !important; }
+  }
+}
+
+body.schedule {
+  .navbar-header {
+    @media (max-width: 767px) { border-bottom-color: $mono-10 !important; }
+  }
+}
+
+body.sponsors {
+  .navbar-header {
+    @media (max-width: 767px) { border-bottom-color: $mono-01 !important; }
+  }
+}
+
+body.tickets {
+  .navbar-header {
+    @media (max-width: 767px) { border-bottom-color: $mono-01 !important; }
+  }
+}
+
+body.venue {
+  .navbar-header {
+    @media (max-width: 767px) { border-bottom-color: $mono-01 !important; }
+  }
+}
+
+// ----- Navbar Toogle ----- //
+
+.navbar-toggle {
+  @include square(44px);
+  position: absolute;
+  z-index: 2;
+  top: 11px;
+  right: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0;
+  background-color: transparent !important;
+  background-size: 44px;
+  border: none;
+
+  .icon-bar {
+    position: absolute;
+    left: 14px;
+    width: 16px;
+    transition: .3s transform;
+
+    &.icon-bar-01 {
+      top: 21px;
+      transform: rotate(45deg);
+    }
+
+    &.icon-bar-02 {
+      top: 17px;
+      transform: rotate(45deg);
+    }
+
+    &.icon-bar-03 {
+      bottom: 21px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &.collapsed {
+
+    .icon-bar {
+
+      &.icon-bar-01 {
+        top: 15px;
+        transform: rotate(0deg);
+      }
+
+      &.icon-bar-02 {
+        top: 17px;
+        transform: rotate(0deg);
+      }
+
+      &.icon-bar-03 {
+        bottom: 15px;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+body.index {
+  .navbar-toggle {
+    background-image: url('#{$images}/bg-navbar-toggle-index.png');
+    .icon-bar {
+      background-color: $poly-11 !important;
+    }
+  }
+}
+
+body.schedule {
+  .navbar-toggle {
+    background-image: url('#{$images}/bg-navbar-toggle-schedule.png');
+    .icon-bar {
+      background-color: $mono-10 !important;
+    }
+  }
+}
+
+body.sponsors {
+  .navbar-toggle {
+    background-image: url('#{$images}/bg-navbar-toggle-sponsors.png');
+    .icon-bar {
+      background-color: $mono-01 !important;
+    }
+  }
+}
+
+body.tickets {
+  .navbar-toggle {
+    background-image: url('#{$images}/bg-navbar-toggle-tickets.png');
+    .icon-bar {
+      background-color: $mono-01 !important;
+    }
+  }
+}
+
+body.venue {
+  .navbar-toggle {
+    background-image: url('#{$images}/bg-navbar-toggle-venue.png');
+    .icon-bar {
+      background-color: $mono-01 !important;
+    }
+  }
+}
+
+// ----- Navbar Brand ----- //
+
+.navbar-brand {
+  @include molle;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  padding-top: 3px;
+  padding-left: 0;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    @include size(80px, 42px);
+    top: 12px;
+    left: 0;
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  @media (min-width: 768px) {
+    @include size(94px, 50px);
+    top: 16px;
+    left: 35px;
+    font-size: 24px;
+    line-height: 22px;
+  }
+
+  span { margin-left: 13px; }
+}
+
+// Modifiers
+
+body.index {
+  .navbar-brand {
+    color: $poly-11;
+    &:focus,
+    &:hover { color: lighten($poly-11, 10%); }
+    &:active { color: darken($poly-11, 10%); }
+  }
+}
+
+body.schedule {
+  .navbar-brand {
+    color: $mono-10;
+    &:focus,
+    &:hover { color: lighten($mono-10, 10%); }
+    &:active { color: darken($mono-10, 10%); }
+  }
+}
+
+body.sponsors {
+  .navbar-brand {
+    color: $mono-01;
+    &:focus,
+    &:hover { color: lighten($mono-01, 10%); }
+    &:active { color: darken($mono-01, 10%); }
+  }
+}
+
+body.tickets {
+  .navbar-brand {
+    color: $mono-01;
+    &:focus,
+    &:hover { color: lighten($mono-01, 10%); }
+    &:active { color: darken($mono-01, 10%); }
+  }
+}
+
+body.venue {
+  .navbar-brand {
+    color: $mono-01;
+    &:focus,
+    &:hover { color: lighten($mono-01, 10%); }
+    &:active { color: darken($mono-01, 10%); }
+  }
+}
+
+// ----- Navbar Collapse ----- //
+
+.navbar-collapse {
+  position: relative;
+
+  @media (max-width: 767px) {
+    @include square(100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 !important;
+    padding-top: 111px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+  }
+}
+
+// Modifiers
+
+body.index {
+  .navbar-collapse {
+    @media (max-width: 767px) { background-color: transparentize($poly-07, .4); }
+    @media (min-width: 768px) { border-bottom-color: $poly-11 !important; }
+  }
+}
+
+body.schedule {
+  .navbar-collapse {
+    @media (max-width: 767px) { background-color: transparentize($mono-10 , .4); }
+    @media (min-width: 768px) { border-bottom-color: $mono-10 !important; }
+  }
+}
+
+body.sponsors {
+  .navbar-collapse {
+    @media (max-width: 767px) { background-color: transparentize($mono-01, .4); }
+    @media (min-width: 768px) { border-bottom-color: $mono-01 !important; }
+  }
+}
+
+body.tickets {
+  .navbar-collapse {
+    @media (max-width: 767px) { background-color: transparentize($mono-01, .4); }
+    @media (min-width: 768px) { border-bottom-color: $mono-01 !important; }
+  }
+}
+
+body.venue {
+  .navbar-collapse {
+    @media (max-width: 767px) { background-color: transparentize($mono-01, .4); }
+    @media (min-width: 768px) { border-bottom-color: $mono-01 !important; }
+  }
+}
+
+// ----- Navbar Nav ----- //
+
+.navbar-nav {
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    margin-right: 0;
+  }
+
+  li {
+
+    a {
+      padding: 0 10px;
+      text-decoration: underline;
+      border-color: transparent;
+
+      @media (max-width: 767px) { display: inline-block; }
+
+      &:focus,
+      &:hover { text-decoration: underline; }
+
+      &.language {
+        font-size: 14px;
+
+        @media (max-width: 767px) {
+          height: 36px;
+          line-height: 34px;
+        }
+
+        @media (min-width: 768px) {
+          position: absolute;
+          top: 62px;
+          right: 0;
+          width: 77px;
+          height: 30px;
+          line-height: 28px;
+        }
+      }
+
+      &.square {
+        font-size: 18px;
+        border-style: solid;
+        border-radius: $border-radius-small;
+        border-width: 2px;
+        transition: .3s border-color, .3s color;
+
+        @media (max-width: 767px) {
+          height: 46px;
+          margin-bottom: 35px;
+          line-height: 44px;
+        }
+
+        @media (min-width: 768px) {
+          height: 36px;
+          margin-left: 14px;
+          line-height: 34px;
+        }
+      }
+    }
+  }
+}
+
+// Scaffolding
+
+.tickets {
+  position: relative;
+
+  &:after {
+    @include square(24px);
+    position: absolute;
+    bottom: -21px;
+    right: -21px;
+    display: block;
+    background-size: 24px;
+    content: '';
+  }
+}
+
+// Modifiers
+
+body.index {
+  .navbar-nav {
+    a {
+      color: $poly-11;
+      &.tickets {
+        border-color: $poly-11;
+        &:after {
+          background-image: url('#{$images}/icn-tag-index.png');
+        }
+      }
+      &:focus,
+      &:hover {
+        color: lighten($poly-11, 10%);
+        border-color: lighten($poly-11, 10%);
+      }
+      &:active {
+        color: darken($poly-11, 10%);
+        border-color: darken($poly-11, 10%);
+      }
+    }
+  }
+}
+
+body.schedule {
+  .navbar-nav {
+    a {
+      color: $mono-10;
+      &.tickets {
+        border-color: $mono-10;
+        &:after {
+          background-image: url('#{$images}/icn-tag-schedule.png');
+        }
+      }
+      &:focus,
+      &:hover {
+        color: lighten($poly-01, 10%);
+        border-color: lighten($poly-01, 10%);
+      }
+      &:active {
+        color: darken($poly-01, 10%);
+        border-color: darken($poly-01, 10%);
+      }
+    }
+  }
+}
+
+body.sponsors {
+  .navbar-nav {
+    a {
+      color: $mono-01;
+      &.tickets {
+        border-color: $mono-01;
+        &:after {
+          background-image: url('#{$images}/icn-tag-sponsors.png');
+        }
+      }
+      &:focus,
+      &:hover {
+        color: lighten($mono-01, 10%);
+        border-color: lighten($mono-01, 10%);
+      }
+      &:active {
+        color: darken($mono-01, 10%);
+        border-color: darken($mono-01, 10%);
+      }
+    }
+  }
+}
+
+body.tickets {
+  .navbar-nav {
+    a {
+      color: $mono-01;
+      &.tickets {
+        border-color: $mono-01;
+        &:after {
+          background-image: url('#{$images}/icn-tag-tickets.png');
+        }
+      }
+      &:focus,
+      &:hover {
+        color: lighten($mono-01, 10%);
+        border-color: lighten($mono-01, 10%);
+      }
+      &:active {
+        color: darken($mono-01, 10%);
+        border-color: darken($mono-01, 10%);
+      }
+    }
+  }
+}
+
+body.venue {
+  .navbar-nav {
+    a {
+      color: $mono-01;
+      &.tickets {
+        border-color: $mono-01;
+        &:after {
+          background-image: url('#{$images}/icn-tag-venue.png');
+        }
+      }
+      &:focus,
+      &:hover {
+        color: lighten($mono-01, 10%);
+        border-color: lighten($mono-01, 10%);
+      }
+      &:active {
+        color: darken($mono-01, 10%);
+        border-color: darken($mono-01, 10%);
+      }
+    }
+  }
+}
