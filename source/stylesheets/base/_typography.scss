@@ -4,3 +4,123 @@
 //   ->
 //
 // *************************************
+
+// -------------------------------------
+//   Molle
+// -------------------------------------
+
+// ----- FontFace ----- //
+
+@font-face {
+  font-family: 'Molle';
+  src: url('#{$fonts}/molle-regular.eot');
+  src: url('#{$fonts}/molle-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts}/molle-regular.woff') format('woff'),
+       url('#{$fonts}/molle-regular.ttf') format('truetype'),
+       url('#{$fonts}/molle-regular.svg#b20b02739244cefc6333f763418d04ef') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+// ----- Mixins ----- //
+
+@mixin molle {
+  font-family: 'Molle', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
+}
+
+// -------------------------------------
+//   Titillium Web
+// -------------------------------------
+
+// ----- FontFace ----- //
+
+@font-face {
+  font-family: 'Titillium Web Light';
+  src: url('#{$fonts}/titillium-web-light.eot');
+  src: url('#{$fonts}/titillium-web-light.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts}/titillium-web-light.woff') format('woff'),
+       url('#{$fonts}/titillium-web-light.ttf') format('truetype'),
+       url('#{$fonts}/titillium-web-light.svg#cdd87a94360686e1994175b4b172573a') format('svg');
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('#{$fonts}/titillium-web-regular.eot');
+  src: url('#{$fonts}/titillium-web-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts}/titillium-web-regular.woff') format('woff'),
+       url('#{$fonts}/titillium-web-regular.ttf') format('truetype'),
+       url('#{$fonts}/titillium-web-regular.svg#8f8cc378d5e27ff97ce375f0d4447023') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Titillium Web Semi Bold';
+  src: url('#{$fonts}/titillium-web-semi-bold.eot');
+  src: url('#{$fonts}/titillium-web-semi-bold.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts}/titillium-web-semi-bold.woff') format('woff'),
+       url('#{$fonts}/titillium-web-semi-bold.ttf') format('truetype'),
+       url('#{$fonts}/titillium-web-semi-bold.svg#da1b6ccc957018b7fbe97ccdb479c13b') format('svg');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Titillium Web Bold';
+  src: url('#{$fonts}/titillium-web-bold.eot');
+  src: url('#{$fonts}/titillium-web-bold.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts}/titillium-web-bold.woff') format('woff'),
+       url('#{$fonts}/titillium-web-bold.ttf') format('truetype'),
+       url('#{$fonts}/titillium-web-bold.svg#e883045892083b0cd9674c704cf89b47') format('svg');
+  font-style: normal;
+  font-weight: 700;
+}
+
+// ----- Mixins ----- //
+
+@mixin titillium-web-light {
+  font-family: 'Titillium Web Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 200;
+}
+
+@mixin titillium-web {
+  font-family: 'Titillium Web', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
+}
+
+@mixin titillium-semi-bold {
+  font-family: 'Titillium Web Semi Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 700;
+}
+
+@mixin titillium-bold {
+  font-family: 'Titillium Web Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 700;
+}
+
+// -------------------------------------
+//   Xilosa
+// -------------------------------------
+
+// ----- FontFace ----- //
+
+@font-face {
+  font-family: 'Xilosa';
+  src: url('#{$fonts}/xilosa-regular.eot');
+  src: url('#{$fonts}/xilosa-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$fonts}/xilosa-regular.woff') format('woff'),
+       url('#{$fonts}/xilosa-regular.ttf') format('truetype'),
+       url('#{$fonts}/xilosa-regular.svg#b5938315ae4290f3b726612d33ea5490') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+// ----- Mixins ----- //
+
+@mixin xilosa {
+  font-family: 'Xilosa', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
+}
