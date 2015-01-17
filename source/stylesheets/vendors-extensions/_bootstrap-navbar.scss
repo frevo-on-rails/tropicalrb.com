@@ -89,17 +89,17 @@ body.venue {
     width: 16px;
     transition: .3s top, .3s left, .3s transform;
 
-    &.icon-bar-01 {
+    &:nth-child(2) {
       top: 21px;
       transform: rotate(45deg);
     }
 
-    &.icon-bar-02 {
+    &:nth-child(3) {
       top: 17px;
       transform: rotate(45deg);
     }
 
-    &.icon-bar-03 {
+    &:nth-child(4) {
       bottom: 21px;
       transform: rotate(-45deg);
     }
@@ -109,17 +109,17 @@ body.venue {
 
     .icon-bar {
 
-      &.icon-bar-01 {
+      &:nth-child(2) {
         top: 15px;
         transform: rotate(0deg);
       }
 
-      &.icon-bar-02 {
+      &:nth-child(3) {
         top: 17px;
         transform: rotate(0deg);
       }
 
-      &.icon-bar-03 {
+      &:nth-child(4) {
         bottom: 15px;
         transform: rotate(0deg);
       }
