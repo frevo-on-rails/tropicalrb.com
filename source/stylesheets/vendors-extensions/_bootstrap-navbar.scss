@@ -127,6 +127,8 @@ body.venue {
   }
 }
 
+// Modifiers
+
 body.index {
   .navbar-toggle {
     background-image: url('#{$images}/bg-navbar-toggle-index.png');
@@ -207,7 +209,6 @@ body.venue {
 body.index {
   .navbar-brand {
     color: $poly-11;
-    &:focus,
     &:hover { color: lighten($poly-11, 10%); }
     &:active { color: darken($poly-11, 10%); }
   }
@@ -216,7 +217,6 @@ body.index {
 body.schedule {
   .navbar-brand {
     color: $mono-10;
-    &:focus,
     &:hover { color: lighten($mono-10, 10%); }
     &:active { color: darken($mono-10, 10%); }
   }
@@ -225,7 +225,6 @@ body.schedule {
 body.sponsors {
   .navbar-brand {
     color: $mono-01;
-    &:focus,
     &:hover { color: lighten($mono-01, 10%); }
     &:active { color: darken($mono-01, 10%); }
   }
@@ -234,7 +233,6 @@ body.sponsors {
 body.tickets {
   .navbar-brand {
     color: $mono-01;
-    &:focus,
     &:hover { color: lighten($mono-01, 10%); }
     &:active { color: darken($mono-01, 10%); }
   }
@@ -243,7 +241,6 @@ body.tickets {
 body.venue {
   .navbar-brand {
     color: $mono-01;
-    &:focus,
     &:hover { color: lighten($mono-01, 10%); }
     &:active { color: darken($mono-01, 10%); }
   }
@@ -327,26 +324,7 @@ body.venue {
 
       @media (max-width: 767px) { display: inline-block; }
 
-      &:focus,
       &:hover { text-decoration: underline; }
-
-      &.language {
-        font-size: 14px;
-
-        @media (max-width: 767px) {
-          height: 36px;
-          line-height: 34px;
-        }
-
-        @media (min-width: 768px) {
-          position: absolute;
-          top: 62px;
-          right: 0;
-          width: 77px;
-          height: 30px;
-          line-height: 28px;
-        }
-      }
 
       &.square {
         font-size: 18px;
@@ -367,23 +345,39 @@ body.venue {
           line-height: 34px;
         }
       }
+
+      &.tickets {
+        position: relative;
+
+        &:after {
+          @include square(24px);
+          position: absolute;
+          bottom: -21px;
+          right: -21px;
+          display: block;
+          background-size: 24px;
+          content: '';
+        }
+      }
+
+      &.language {
+        font-size: 14px;
+
+        @media (max-width: 767px) {
+          height: 36px;
+          line-height: 34px;
+        }
+
+        @media (min-width: 768px) {
+          position: absolute;
+          top: 62px;
+          right: 0;
+          width: 77px;
+          height: 30px;
+          line-height: 28px;
+        }
+      }
     }
-  }
-}
-
-// Scaffolding
-
-.tickets {
-  position: relative;
-
-  &:after {
-    @include square(24px);
-    position: absolute;
-    bottom: -21px;
-    right: -21px;
-    display: block;
-    background-size: 24px;
-    content: '';
   }
 }
 
@@ -399,7 +393,6 @@ body.index {
           background-image: url('#{$images}/icn-tag-index.png');
         }
       }
-      &:focus,
       &:hover {
         color: lighten($poly-11, 10%);
         border-color: lighten($poly-11, 10%);
@@ -422,7 +415,6 @@ body.schedule {
           background-image: url('#{$images}/icn-tag-schedule.png');
         }
       }
-      &:focus,
       &:hover {
         color: lighten($poly-01, 10%);
         border-color: lighten($poly-01, 10%);
@@ -445,7 +437,6 @@ body.sponsors {
           background-image: url('#{$images}/icn-tag-sponsors.png');
         }
       }
-      &:focus,
       &:hover {
         color: lighten($mono-01, 10%);
         border-color: lighten($mono-01, 10%);
@@ -468,7 +459,6 @@ body.tickets {
           background-image: url('#{$images}/icn-tag-tickets.png');
         }
       }
-      &:focus,
       &:hover {
         color: lighten($mono-01, 10%);
         border-color: lighten($mono-01, 10%);
@@ -491,7 +481,6 @@ body.venue {
           background-image: url('#{$images}/icn-tag-venue.png');
         }
       }
-      &:focus,
       &:hover {
         color: lighten($mono-01, 10%);
         border-color: lighten($mono-01, 10%);

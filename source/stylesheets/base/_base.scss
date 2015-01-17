@@ -13,7 +13,6 @@ a {
   color: $link;
   transition: .3s color;
 
-  &:focus,
   &:hover {
     color: lighten($link, 10%);
     outline: none;
