@@ -8,9 +8,9 @@ $(document).ready( function() {
 
   $('.navbar-toggle').bind('click', function() {
     if( !$('.navbar-collapse').hasClass('in') ) {
-      $('.navbar-brand').fadeIn(200);
+      $('.navbar-brand').addClass('active');
     } else {
-      $('.navbar-brand').fadeOut(300);
+      $('.navbar-brand').removeClass('active');
     }
   });
 
