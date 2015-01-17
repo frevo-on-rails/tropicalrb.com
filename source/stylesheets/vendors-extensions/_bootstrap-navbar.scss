@@ -87,7 +87,7 @@ body.venue {
     position: absolute;
     left: 14px;
     width: 16px;
-    transition: .3s transform;
+    transition: .3s top, .3s left, .3s transform;
 
     &.icon-bar-01 {
       top: 21px;
