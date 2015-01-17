@@ -22,8 +22,8 @@ body {
     color: $mono-10;
     background-color: $poly-01;
 
-    @media (max-width: 767px) { }
-    @media (min-width: 768px) { }
+    @media (max-width: 767px) { background-image: url('#{$images}/bkg-waterworld-xs.jpg'); }
+    @media (min-width: 768px) { background-image: url('#{$images}/bkg-waterworld-xlg.jpg'); }
   }
 
   body.sponsors {
