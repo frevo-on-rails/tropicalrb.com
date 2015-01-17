@@ -39,7 +39,8 @@
 //   Components
 // -------------------------------------
 
-// @import 'components/';
+@import 'components/hero';
+@import 'components/newsletter';
 
 // -------------------------------------
 //   Pages
@@ -61,4 +62,5 @@
 //   Vendors Extensions
 // -------------------------------------
 
+@import 'vendors-extensions/bootstrap-forms';
 @import 'vendors-extensions/bootstrap-navbar';

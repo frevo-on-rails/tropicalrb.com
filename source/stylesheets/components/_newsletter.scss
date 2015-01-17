@@ -1,0 +1,96 @@
+// *************************************
+//
+//   Newsletter
+//   ->
+//
+// *************************************
+
+.newsletter {
+
+  @media (max-width: 767px) {
+    max-width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 768px) { max-width: 330px; }
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Newsletter Email ----- //
+
+#newsletter-email {
+  padding-right: 58px;
+}
+
+// ----- Newsletter Submit ----- //
+
+.newsletter-submit {
+  @include size(46px, 42px);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-indent: -9999px;
+  border-style: solid;
+  border-width: 2px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &:before {
+    @include square(16px);
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
+    background-image: url('#{$images}/icon-small-mail-red@2x.png');
+    background-size: 16px;
+    content: '';
+  }
+}
+
+// Modifiers
+
+body.index {
+  .newsletter-submit {
+    color: $mono-10;
+    background-color: $poly-11;
+    border-color: $poly-11;
+  }
+}
+
+body.schedule {
+  .newsletter-submit {
+    color: $mono-10;
+    background-color: $mono-10;
+    border-color: $mono-10;
+  }
+}
+
+body.sponsors {
+  .newsletter-submit {
+    color: $mono-10;
+    background-color: $mono-01;
+    border-color: $mono-01;
+  }
+}
+
+body.tickets {
+  .newsletter-submit {
+    color: $mono-10;
+    background-color: $mono-01;
+    border-color: $mono-01;
+  }
+}
+
+body.venue {
+  .newsletter-submit {
+    color: $mono-10;
+    background-color: $mono-01;
+    border-color: $mono-01;
+  }
+}

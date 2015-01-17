@@ -10,46 +10,59 @@ body {
 }
 
   body.index {
+    color: $poly-11;
     background-color: $poly-07;
     background-position: top center;
 
-    @media (max-width: 767px) {
-      background-image: url('#{$images}/bg-body-index-mobile.jpg');
-    }
-
-    @media (min-width: 768px) {
-      background-image: url('#{$images}/bg-body-index-desktop.jpg');
-    }
+    @media (max-width: 767px) { background-image: url('#{$images}/bkg-sunrise-xs.jpg'); }
+    @media (min-width: 768px) { background-image: url('#{$images}/bkg-sunrise-xlg.jpg'); }
   }
 
   body.schedule {
+    color: $mono-10;
     background-color: $poly-01;
 
     @media (max-width: 767px) { }
-
     @media (min-width: 768px) { }
   }
 
   body.sponsors {
-    background-color: rgb(255,255,255);
+    color: $text-color;
+    background-color: $mono-10;
 
     @media (max-width: 767px) { }
-
     @media (min-width: 768px) { }
   }
 
   body.tickets {
-    background-color: rgb(255,255,255);
+    color: $text-color;
+    background-color: $mono-10;
 
     @media (max-width: 767px) { }
-
     @media (min-width: 768px) { }
   }
 
   body.venue {
-    background-color: rgb(255,255,255);
+    color: $text-color;
+    background-color: $mono-10;
 
     @media (max-width: 767px) { }
-
     @media (min-width: 768px) { }
   }
+
+h3 {
+  @include titillium-semi-bold;
+  margin-top: 0;
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+label {
+  @include titillium-semi-bold;
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}

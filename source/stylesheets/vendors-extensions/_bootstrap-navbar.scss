@@ -6,6 +6,7 @@
 // *************************************
 
 .navbar {
+  min-height: 0;
   margin-bottom: 0;
   background-color: transparent;
   border: none;
@@ -93,46 +94,36 @@
 
 body.index {
   .navbar-toggle {
-    background-image: url('#{$images}/bg-navbar-toggle-index.png');
-    .icon-bar {
-      background-color: $poly-11 !important;
-    }
+    background-image: url('#{$images}/octagon-small-red@2x.png');
+    .icon-bar { background-color: $poly-11 !important; }
   }
 }
 
 body.schedule {
   .navbar-toggle {
-    background-image: url('#{$images}/bg-navbar-toggle-schedule.png');
-    .icon-bar {
-      background-color: $mono-10 !important;
-    }
+    background-image: url('#{$images}/octagon-small-red@2x.png');
+    .icon-bar { background-color: $mono-10 !important; }
   }
 }
 
 body.sponsors {
   .navbar-toggle {
-    background-image: url('#{$images}/bg-navbar-toggle-sponsors.png');
-    .icon-bar {
-      background-color: $mono-01 !important;
-    }
+    background-image: url('#{$images}/octagon-small-red@2x.png');
+    .icon-bar { background-color: $mono-01 !important; }
   }
 }
 
 body.tickets {
   .navbar-toggle {
-    background-image: url('#{$images}/bg-navbar-toggle-tickets.png');
-    .icon-bar {
-      background-color: $mono-01 !important;
-    }
+    background-image: url('#{$images}/octagon-small-red@2x.png');
+    .icon-bar { background-color: $mono-01 !important; }
   }
 }
 
 body.venue {
   .navbar-toggle {
-    background-image: url('#{$images}/bg-navbar-toggle-venue.png');
-    .icon-bar {
-      background-color: $mono-01 !important;
-    }
+    background-image: url('#{$images}/octagon-small-red@2x.png');
+    .icon-bar { background-color: $mono-01 !important; }
   }
 }
 
@@ -142,6 +133,7 @@ body.venue {
   @include molle;
   display: block;
   position: absolute;
+  z-index: 2;
   padding-top: 3px;
   padding-left: 0;
   text-align: center;
@@ -154,7 +146,6 @@ body.venue {
     left: 0;
     font-size: 20px;
     line-height: 18px;
-    z-index: 1;
   }
 
   @media (min-width: 768px) {
@@ -232,6 +223,7 @@ body.venue {
     padding-left: 35px;
     text-align: center;
     border-top: none;
+    z-index: 1;
   }
 
   @media (min-width: 768px) {
@@ -245,35 +237,35 @@ body.venue {
 
 body.index {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($poly-07, .4); }
+    @media (max-width: 767px) { background-color: transparentize($poly-07, .1); }
     @media (min-width: 768px) { border-bottom-color: $poly-11 !important; }
   }
 }
 
 body.schedule {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($mono-10 , .4); }
+    @media (max-width: 767px) { background-color: transparentize($mono-10 , .1); }
     @media (min-width: 768px) { border-bottom-color: $mono-10 !important; }
   }
 }
 
 body.sponsors {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($mono-01, .4); }
+    @media (max-width: 767px) { background-color: transparentize($mono-01, .1); }
     @media (min-width: 768px) { border-bottom-color: $mono-01 !important; }
   }
 }
 
 body.tickets {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($mono-01, .4); }
+    @media (max-width: 767px) { background-color: transparentize($mono-01, .1); }
     @media (min-width: 768px) { border-bottom-color: $mono-01 !important; }
   }
 }
 
 body.venue {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($mono-01, .4); }
+    @media (max-width: 767px) { background-color: transparentize($mono-01, .1); }
     @media (min-width: 768px) { border-bottom-color: $mono-01 !important; }
   }
 }
@@ -292,6 +284,7 @@ body.venue {
     position: absolute;
     top: 22px;
     right: 20px;
+    z-index: 2;
     margin-right: 0;
   }
 
@@ -324,17 +317,6 @@ body.venue {
           height: 36px;
           margin-left: 14px;
           line-height: 34px;
-        }
-      }
-
-      &.venue {
-
-        span {
-
-        }
-
-        small {
-          text-transform: uppercase;
         }
       }
 
@@ -385,9 +367,7 @@ body.index {
       color: $poly-11;
       &.tickets {
         border-color: $poly-11;
-        &:after {
-          background-image: url('#{$images}/icn-tag-index.png');
-        }
+        &:after { background-image: url('#{$images}/icn-tag-index.png'); }
       }
       &:hover {
         color: lighten($poly-11, 10%);
@@ -408,9 +388,7 @@ body.schedule {
       color: $mono-10;
       &.tickets {
         border-color: $mono-10;
-        &:after {
-          background-image: url('#{$images}/icn-tag-schedule.png');
-        }
+        &:after { background-image: url('#{$images}/icn-tag-schedule.png'); }
       }
       &:hover {
         color: lighten($poly-01, 10%);
@@ -431,9 +409,7 @@ body.sponsors {
       color: $mono-01;
       &.tickets {
         border-color: $mono-01;
-        &:after {
-          background-image: url('#{$images}/icn-tag-sponsors.png');
-        }
+        &:after { background-image: url('#{$images}/icn-tag-sponsors.png'); }
       }
       &:hover {
         color: lighten($mono-01, 10%);
@@ -454,9 +430,7 @@ body.tickets {
       color: $mono-01;
       &.tickets {
         border-color: $mono-01;
-        &:after {
-          background-image: url('#{$images}/icn-tag-tickets.png');
-        }
+        &:after { background-image: url('#{$images}/icn-tag-tickets.png'); }
       }
       &:hover {
         color: lighten($mono-01, 10%);
@@ -477,9 +451,7 @@ body.venue {
       color: $mono-01;
       &.tickets {
         border-color: $mono-01;
-        &:after {
-          background-image: url('#{$images}/icn-tag-venue.png');
-        }
+        &:after { background-image: url('#{$images}/icn-tag-venue.png'); }
       }
       &:hover {
         color: lighten($mono-01, 10%);

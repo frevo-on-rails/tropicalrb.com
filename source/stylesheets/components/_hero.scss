@@ -1,0 +1,235 @@
+// *************************************
+//
+//   Hero
+//   ->
+//
+// *************************************
+
+.hero {
+  position: relative;
+
+  @media (max-width: 767px) {
+    padding-top: 260px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) { padding-top: 282px; }
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Hero Logo ----- //
+
+.hero-logo {
+  @include size(236px, 225px);
+  position: absolute;
+  left: 50%;
+  margin: 0 auto 0 -118px;
+  text-indent: -9999px;
+  background-image: url('#{$images}/logo-hero-logo.png');
+  background-size: 236px 225px;
+  animation: heroLogo 3s ease infinite;
+
+  @media (max-width: 767px) { top: 20px; }
+  @media (min-width: 768px) { top: 40px; }
+}
+
+// ----- Hero Data ----- //
+
+.hero-data {
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-indent: -9999px;
+
+  @media (max-width: 480px) { margin-bottom: 45px; }
+  @media (min-width: 481px) { margin-bottom: 40px; }
+
+  @media (max-width: 767px) {
+    @include size(258px, 211px);
+    background-image: url('#{$images}/logo-porto-vert@2x.png');
+    background-size: 258px 211px;
+  }
+
+  @media (min-width: 768px) {
+    @include size(531px, 155px);
+    background-image: url('#{$images}/logo-porto-horiz@2x.png');
+    background-size: 531px 155px;
+  }
+}
+
+// ----- Hero About ----- //
+
+.hero-about {
+  @include list-unstyled;
+  margin-bottom: 0;
+
+  @media (min-width: 768px) { text-align: right; }
+
+  h3 {
+    span {
+      @media (max-width: 320px) { display: block; }
+    }
+  }
+
+  p {
+    @media (min-width: 1200px) { padding-left: 130px; }
+  }
+}
+
+// ----- Hero Advantages ----- //
+
+.hero-advantages {
+  @include list-unstyled;
+  margin-bottom: 0;
+
+  @media (max-width: 767px) { margin-bottom: 40px }
+  @media (min-width: 768px) { text-align: right; }
+
+  li {
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+
+    @media (min-width: 992px) {
+      margin-left: 10px;
+      display: inline-block;
+    }
+
+    &:before {
+      @include square(24px);
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: -6px;
+      background-size: 24px;
+      content: '';
+    }
+
+    &:first-child {
+      &:before { background-image: url('#{$images}/icon-med-translation-red@2x.png'); }
+    }
+
+    &:last-child {
+      &:before { background-image: url('#{$images}/icon-med-transportation-red@2x.png'); }
+    }
+  }
+}
+
+// ----- Hero Social ----- //
+
+.hero-social {
+  @include clearfix;
+  @include list-unstyled;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) { margin-bottom: 20px; }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    margin-bottom: 36px;
+    padding-top: 30px;
+  }
+
+  li {
+
+    @media (max-width: 767px) {
+      display: inline-block;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    @media (min-width: 768px) {
+      float: left;
+      margin-right: 12px;
+    }
+
+    a {
+      @include square(44px);
+      position: relative;
+      display: block;
+      text-indent: -9999px;
+      background-image: url('#{$images}/octagon-small-red@2x.png');
+      background-size: 44px;
+      transform: scale(1);
+      transition: .3s transform;
+
+      &:before {
+        @include square(22px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        margin-top: -11px;
+        margin-left: -11px;
+        background-size: 22px;
+        content: '';
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+
+      &.email {
+        &:before { background-image: url('#{$images}/icon-med-transportation-red@2x.png'); }
+      }
+
+      &.facebook {
+        &:before { background-image: url('#{$images}/icon-small-facebook-red@2x.png'); }
+      }
+
+      &.github {
+        &:before { background-image: url('#{$images}/icon-small-github-red@2x.png'); }
+      }
+
+      &.lanyrd {
+        &:before { background-image: url('#{$images}/icon-small-lanyrd-red@2x.png'); }
+      }
+
+      &.twitter {
+        &:before { background-image: url('#{$images}/icon-small-twitter-red@2x.png'); }
+      }
+    }
+  }
+}
+
+// ----- Hero Form ----- //
+
+.hero-form {
+
+  label {
+
+  }
+
+  .form-control {
+
+  }
+
+  .btn {
+
+  }
+}
+
+// ----- Hero Form ----- //
+
+.hero-speaker {
+
+}
+
+// Scaffolding
+
+.hero-speaker-photo {
+
+}
+
+.hero-speaker-name {
+
+}

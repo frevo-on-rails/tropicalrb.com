@@ -1,0 +1,77 @@
+// *************************************
+//
+//   Forms
+//   ->
+//
+// *************************************
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Form Group ----- //
+
+.form-group {
+  @include clearfix;
+  position: relative;
+}
+
+// ----- Form Control ----- //
+
+.form-control {
+  @include titillium-web-light;
+  height: 42px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+// Modifiers
+
+body.index {
+  .form-control {
+    @include placeholder($poly-11);
+    color: $poly-11;
+    border-color: $poly-11;
+  }
+}
+
+body.schedule {
+  .form-control {
+    @include placeholder($mono-10);
+    color: $mono-10;
+    border-color: $mono-10;
+  }
+}
+
+body.sponsors {
+  .form-control {
+    @include placeholder($mono-01);
+    color: $mono-01;
+    border-color: $mono-01;
+  }
+}
+
+body.tickets {
+  .form-control {
+    @include placeholder($mono-01);
+    color: $mono-01;
+    border-color: $mono-01;
+  }
+}
+
+body.venue {
+  .form-control {
+    @include placeholder($mono-01);
+    color: $mono-01;
+    border-color: $mono-01;
+  }
+}
