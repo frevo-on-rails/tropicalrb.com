@@ -16,6 +16,10 @@
     padding-right: 20px;
     padding-left: 20px;
   }
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
 }
 
 // -------------------------------------
@@ -172,7 +176,7 @@ body.venue {
 body.index {
   .navbar-brand {
     color: $poly-11;
-    &:hover { color: lighten($poly-11, 10%); }
+    &:hover  { color: lighten($poly-11, 10%); }
     &:active { color: darken($poly-11, 10%); }
   }
 }
@@ -180,7 +184,7 @@ body.index {
 body.schedule {
   .navbar-brand {
     color: $mono-10;
-    &:hover { color: lighten($mono-10, 10%); }
+    &:hover  { color: lighten($mono-10, 10%); }
     &:active { color: darken($mono-10, 10%); }
   }
 }
@@ -188,7 +192,7 @@ body.schedule {
 body.sponsors {
   .navbar-brand {
     color: $mono-03;
-    &:hover { color: lighten($mono-03, 10%); }
+    &:hover  { color: lighten($mono-03, 10%); }
     &:active { color: darken($mono-03, 10%); }
   }
 }
@@ -196,7 +200,7 @@ body.sponsors {
 body.tickets {
   .navbar-brand {
     color: $mono-01;
-    &:hover { color: lighten($mono-01, 10%); }
+    &:hover  { color: lighten($mono-01, 10%); }
     &:active { color: darken($mono-01, 10%); }
   }
 }
@@ -204,7 +208,7 @@ body.tickets {
 body.venue {
   .navbar-brand {
     color: $mono-01;
-    &:hover { color: lighten($mono-01, 10%); }
+    &:hover  { color: lighten($mono-01, 10%); }
     &:active { color: darken($mono-01, 10%); }
   }
 }
@@ -391,12 +395,12 @@ body.schedule {
         &:after { background-image: url('#{$images}/icon-med-ticket-white@2x.png'); }
       }
       &:hover {
-        color: lighten($poly-01, 10%);
-        border-color: lighten($poly-01, 10%);
+        color: lighten($mono-10, 10%);
+        border-color: lighten($mono-10, 10%);
       }
       &:active {
-        color: darken($poly-01, 10%);
-        border-color: darken($poly-01, 10%);
+        color: darken($mono-10, 10%);
+        border-color: darken($mono-10, 10%);
       }
     }
   }
@@ -404,7 +408,7 @@ body.schedule {
 
 body.sponsors {
   .navbar-nav {
-    @media (max-width: 767px) { border-top-color: $mono-01 !important; }
+    @media (max-width: 767px) { border-top-color: $mono-03 !important; }
     a {
       color: $mono-03;
       &.tickets {

@@ -7,14 +7,13 @@
 
 .hero {
   position: relative;
-  overflow: hidden;
 
   @media (max-width: 767px) {
     padding-top: 260px;
     text-align: center;
   }
 
-  @media (min-width: 768px) { padding-top: 282px; }
+  @media (min-width: 768px) { padding-top: 240px; }
   @media (max-width: 991px) { margin-bottom: 40px; }
 }
 
@@ -34,8 +33,8 @@
   background-size: 236px 225px;
   animation: heroLogo 3s ease infinite;
 
-  @media (max-width: 767px) { top: 20px; }
-  @media (min-width: 768px) { top: 40px; }
+  @media (max-width: 767px) { top: 25px; }
+  @media (min-width: 768px) { top: -5px; }
 }
 
 // ----- Hero Data ----- //
