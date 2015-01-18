@@ -5,9 +5,7 @@
 //
 // *************************************
 
-body {
-  @include titillium-web;
-}
+body { @include titillium-web; }
 
   body.index {
     color: $poly-11;
@@ -84,13 +82,9 @@ h3 {
   font-size: 24px;
 }
 
-p {
-  font-size: 18px;
-}
+p { font-size: 18px; }
 
-strong {
-  @include titillium-semi-bold;
-}
+strong { @include titillium-semi-bold; }
 
 label {
   @include titillium-semi-bold;

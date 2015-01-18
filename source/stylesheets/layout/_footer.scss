@@ -6,8 +6,10 @@
 // *************************************
 
 .footer {
-  padding-bottom: 40px;
+  position: relative;
+  padding-bottom: 300px;
   text-align: center;
+  overflow: hidden;
 }
 
 // -------------------------------------
@@ -144,5 +146,58 @@ body.schedule {
       margin-right: 8px;
       margin-left: 8px;
     }
+  }
+}
+
+// ----- Footer Nature ----- //
+
+.coconut {
+  @include size(266px, 350px);
+  position: absolute;
+  left: -108px;
+  background-image: url('#{$images}/bkg-coconut-left@2x.png');
+  background-size: 266px 350px;
+
+  @media (max-width: 767px) {
+    bottom: 24px;
+  }
+
+  @media (min-width: 768px) {
+    bottom: 70px;
+  }
+
+  @media (min-width: 1199px) {
+    left: -60px;
+  }
+}
+
+.sea {
+  @include size(100%, 200px);
+  position: absolute;
+  bottom: -90px;
+  left: 0;
+  background-image: url('#{$images}/bkg-wave-tileable@2x.png');
+  background-position: left bottom;
+  background-size: 520px 200px;
+}
+
+.wave {
+  @include size(230px, 447px);
+  position: absolute;
+  background-image: url('#{$images}/bkg-wave-right@2x.png');
+  background-size: 230px 447px;
+
+  @media (max-width: 767px) {
+    right: -72px;
+    bottom: -136px;
+  }
+
+  @media (min-width: 768px) {
+    right: -88px;
+    bottom: -88px;
+  }
+
+  @media (min-width: 1199px) {
+    right: 0;
   }
 }
