@@ -33,17 +33,29 @@ body {
     @media (max-width: 767px) { background-image: url('#{$images}/bkg-waterworld-xs.jpg'); }
     @media (min-width: 768px) { background-image: url('#{$images}/bkg-waterworld-xlg.jpg'); }
 
+    a {
+      color: $mono-10;
+      &:hover { color: lighten($mono-10, 10%); }
+      &:active { color: darken($mono-10, 10%); }
+    }
+
     hr { border-top-color: $mono-10; }
   }
 
   body.sponsors {
-    color: $text-color;
-    background-color: $mono-10;
+    color: $mono-03;
+    background-color: $mono-09;
 
     @media (max-width: 767px) { background-image: url('#{$images}/bkg-whitesand-xs.jpg'); }
     @media (min-width: 768px) { background-image: url('#{$images}/bkg-whitesand-xlg.jpg'); }
 
-    hr { border-top-color: $text-color; }
+    a {
+      color: $mono-03;
+      &:hover { color: lighten($mono-03, 10%); }
+      &:active { color: darken($mono-03, 10%); }
+    }
+
+    hr { border-top-color: $mono-03; }
   }
 
   body.tickets {

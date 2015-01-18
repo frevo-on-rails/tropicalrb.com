@@ -23,11 +23,49 @@ a {
   }
 }
 
-mark,
-::selection {
-  background: $brand-01 !important;
-  color: #fff !important;
-  text-shadow: darken($brand-01, 10%) 0 1px 3px;
+body.index {
+  mark,
+  ::selection {
+    background: $poly-11 !important;
+    color: #fff !important;
+    text-shadow: darken($poly-11, 10%) 0 1px 3px;
+  }
+}
+
+body.schedule {
+  mark,
+  ::selection {
+    background: $poly-01 !important;
+    color: #fff !important;
+    text-shadow: darken($poly-01, 10%) 0 1px 3px;
+  }
+}
+
+body.sponsors {
+  mark,
+  ::selection {
+    background: $mono-03 !important;
+    color: #fff !important;
+    text-shadow: darken($mono-03, 10%) 0 1px 3px;
+  }
+}
+
+body.tickets {
+  mark,
+  ::selection {
+    background: $brand-01 !important;
+    color: #fff !important;
+    text-shadow: darken($brand-01, 10%) 0 1px 3px;
+  }
+}
+
+body.venue {
+  mark,
+  ::selection {
+    background: $brand-01 !important;
+    color: #fff !important;
+    text-shadow: darken($brand-01, 10%) 0 1px 3px;
+  }
 }
 
 input[type='color'],

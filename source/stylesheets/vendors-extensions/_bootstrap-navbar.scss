@@ -101,15 +101,15 @@ body.index {
 
 body.schedule {
   .navbar-toggle {
-    background-image: url('#{$images}/octagon-small-red@2x.png');
+    background-image: url('#{$images}/octagon-small-white@2x.png');
     .icon-bar { background-color: $mono-10 !important; }
   }
 }
 
 body.sponsors {
   .navbar-toggle {
-    background-image: url('#{$images}/octagon-small-red@2x.png');
-    .icon-bar { background-color: $mono-01 !important; }
+    background-image: url('#{$images}/octagon-small-grey@2x.png');
+    .icon-bar { background-color: $mono-03 !important; }
   }
 }
 
@@ -187,9 +187,9 @@ body.schedule {
 
 body.sponsors {
   .navbar-brand {
-    color: $mono-01;
-    &:hover { color: lighten($mono-01, 10%); }
-    &:active { color: darken($mono-01, 10%); }
+    color: $mono-03;
+    &:hover { color: lighten($mono-03, 10%); }
+    &:active { color: darken($mono-03, 10%); }
   }
 }
 
@@ -245,15 +245,15 @@ body.index {
 
 body.schedule {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($mono-10 , .1); }
+    @media (max-width: 767px) { background-color: transparentize($poly-01 , .1); }
     @media (min-width: 768px) { border-bottom-color: $mono-10 !important; }
   }
 }
 
 body.sponsors {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($mono-01, .1); }
-    @media (min-width: 768px) { border-bottom-color: $mono-01 !important; }
+    @media (max-width: 767px) { background-color: transparentize($mono-10, .1); }
+    @media (min-width: 768px) { border-bottom-color: $mono-03 !important; }
   }
 }
 
@@ -367,7 +367,7 @@ body.index {
       color: $poly-11;
       &.tickets {
         border-color: $poly-11;
-        &:after { background-image: url('#{$images}/icn-tag-index.png'); }
+        &:after { background-image: url('#{$images}/icon-med-ticket-red@2x.png'); }
       }
       &:hover {
         color: lighten($poly-11, 10%);
@@ -388,7 +388,7 @@ body.schedule {
       color: $mono-10;
       &.tickets {
         border-color: $mono-10;
-        &:after { background-image: url('#{$images}/icn-tag-schedule.png'); }
+        &:after { background-image: url('#{$images}/icon-med-ticket-white@2x.png'); }
       }
       &:hover {
         color: lighten($poly-01, 10%);
@@ -406,18 +406,18 @@ body.sponsors {
   .navbar-nav {
     @media (max-width: 767px) { border-top-color: $mono-01 !important; }
     a {
-      color: $mono-01;
+      color: $mono-03;
       &.tickets {
-        border-color: $mono-01;
-        &:after { background-image: url('#{$images}/icn-tag-sponsors.png'); }
+        border-color: $mono-03;
+        &:after { background-image: url('#{$images}/icon-med-ticket-grey@2x.png'); }
       }
       &:hover {
-        color: lighten($mono-01, 10%);
-        border-color: lighten($mono-01, 10%);
+        color: lighten($mono-03, 10%);
+        border-color: lighten($mono-03, 10%);
       }
       &:active {
-        color: darken($mono-01, 10%);
-        border-color: darken($mono-01, 10%);
+        color: darken($mono-03, 10%);
+        border-color: darken($mono-03, 10%);
       }
     }
   }
