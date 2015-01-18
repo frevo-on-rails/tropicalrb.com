@@ -40,8 +40,8 @@ body {
     color: $text-color;
     background-color: $mono-10;
 
-    @media (max-width: 767px) { }
-    @media (min-width: 768px) { }
+    @media (max-width: 767px) { background-image: url('#{$images}/bkg-whitesand-xs.jpg'); }
+    @media (min-width: 768px) { background-image: url('#{$images}/bkg-whitesand-xlg.jpg'); }
 
     hr { border-top-color: $text-color; }
   }
