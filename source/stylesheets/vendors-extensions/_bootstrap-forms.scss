@@ -41,6 +41,8 @@ body.index {
     @include placeholder($poly-11);
     color: $poly-11;
     border-color: $poly-11;
+    &:hover { border-color: lighten($poly-11, 10%); }
+    &:focus { border-color: darken($poly-11, 10%); }
   }
 }
 
@@ -49,6 +51,8 @@ body.schedule {
     @include placeholder($mono-10);
     color: $mono-10;
     border-color: $mono-10;
+    &:hover { border-color: lighten($mono-10, 10%); }
+    &:focus { border-color: darken($mono-10, 10%); }
   }
 }
 
@@ -57,6 +61,8 @@ body.sponsors {
     @include placeholder($mono-01);
     color: $mono-01;
     border-color: $mono-01;
+    &:hover { border-color: lighten($mono-01, 10%); }
+    &:focus { border-color: darken($mono-01, 10%); }
   }
 }
 
@@ -65,6 +71,8 @@ body.tickets {
     @include placeholder($mono-01);
     color: $mono-01;
     border-color: $mono-01;
+    &:hover { border-color: lighten($mono-01, 10%); }
+    &:focus { border-color: darken($mono-01, 10%); }
   }
 }
 
@@ -73,5 +81,7 @@ body.venue {
     @include placeholder($mono-01);
     color: $mono-01;
     border-color: $mono-01;
+    &:hover { border-color: lighten($mono-01, 10%); }
+    &:focus { border-color: darken($mono-01, 10%); }
   }
 }

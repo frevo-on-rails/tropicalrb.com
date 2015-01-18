@@ -69,6 +69,7 @@
   @media (min-width: 768px) { text-align: right; }
 
   h3 {
+
     span {
       @media (max-width: 320px) { display: block; }
     }
@@ -83,9 +84,8 @@
 
 .hero-advantages {
   @include list-unstyled;
-  margin-bottom: 0;
+  margin-bottom: 40px;
 
-  @media (max-width: 767px) { margin-bottom: 40px }
   @media (min-width: 768px) { text-align: right; }
 
   li {
@@ -94,8 +94,8 @@
     line-height: 24px;
 
     @media (min-width: 992px) {
-      margin-left: 10px;
       display: inline-block;
+      margin-left: 10px;
     }
 
     &:before {
@@ -170,13 +170,8 @@
         content: '';
       }
 
-      &:hover {
-        transform: scale(1.1);
-      }
-
-      &:active {
-        transform: scale(1);
-      }
+      &:hover { transform: scale(1.1); }
+      &:active { transform: scale(1); }
 
       &.email {
         &:before { background-image: url('#{$images}/icon-med-transportation-red@2x.png'); }
@@ -201,35 +196,95 @@
   }
 }
 
-// ----- Hero Form ----- //
+// ----- Hero Speakers ----- //
 
-.hero-form {
-
-  label {
-
-  }
-
-  .form-control {
-
-  }
-
-  .btn {
-
-  }
-}
-
-// ----- Hero Form ----- //
-
-.hero-speaker {
-
+.hero-speakers {
+  @include clearfix;
 }
 
 // Scaffolding
 
-.hero-speaker-photo {
+.hero-speaker {
+  text-align: center;
 
+  @media (max-width: 480px) { width: 50%; }
+  @media (min-width: 481px) { width: 25%; }
+  @media (max-width: 991px) { float: left; }
+
+  @media (min-width: 992px) {
+    width: 128px;
+    position: absolute;
+  }
+
+  &:nth-child(1) {
+
+    @media (max-width: 480px) { margin-bottom: 20px; }
+
+    @media (min-width: 992px) {
+      top: -54px;
+      left: 15px;
+    }
+
+    @media (min-width: 1200px) {
+      top: -184px;
+      left: 55px;
+    }
+  }
+
+  &:nth-child(2) {
+
+    @media (max-width: 480px) { margin-bottom: 20px; }
+
+    @media (min-width: 992px) {
+      top: -184px;
+      left: 133px;
+    }
+
+    @media (min-width: 1200px) {
+      top: -184px;
+      left: 233px;
+    }
+  }
+
+  &:nth-child(3) {
+
+    @media (min-width: 992px) {
+      top: -184px;
+      right: 133px;
+    }
+
+    @media (min-width: 1200px) {
+      top: -184px;
+      right: 233px;
+    }
+  }
+
+  &:nth-child(4) {
+
+    @media (min-width: 992px) {
+      top: -54px;
+      right: 15px;
+    }
+
+    @media (min-width: 1200px) {
+      top: -184px;
+      right: 55px;
+    }
+  }
+}
+
+.hero-speaker-photo {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+
+  @media (max-width: 480px) { @include square(80px); }
+  @media (min-width: 481px) { @include square(110px); }
 }
 
 .hero-speaker-name {
-
+  @include titillium-semi-bold;
+  font-size: 18px;
+  line-height: 18px;
 }
