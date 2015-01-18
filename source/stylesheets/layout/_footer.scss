@@ -4,3 +4,145 @@
 //   ->
 //
 // *************************************
+
+.footer {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Footer Title ----- //
+
+.footer-title {
+  @include titillium-web-light;
+  position: relative;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  &:before,
+  &:after {
+    @include size(48px, 1px);
+    position: absolute;
+    top: 8px;
+    content: '';
+  }
+
+  &:before { left: -60px; }
+  &:after  { right: -60px; }
+}
+
+// Modifiers
+
+body.index {
+  .footer-title {
+    &:before,
+    &:after { background-color: $poly-11; }
+  }
+}
+
+body.schedule {
+  .footer-title {
+    &:before,
+    &:after { background-color: $mono-10; }
+  }
+}
+
+// ----- Footer Brands ----- //
+
+.footer-brands {
+
+  a {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-indent: -9999px;
+    vertical-align: middle;
+
+    &.frevo-on-rails {
+      @include size(98px, 55px);
+      background-size: 98px 55px;
+    }
+
+    &.github {
+      @include size(150px, 100px);
+      background-size: 150px 100px;
+    }
+
+    &.guava-software {
+      @include size(98px, 55px);
+      background-size: 98px 55px;
+    }
+
+    &.ruby-central-inc {
+      @include size(98px, 55px);
+      background-size: 98px 55px;
+    }
+
+    &.studio-eloquent {
+      @include size(98px, 55px);
+      background-size: 98px 55px;
+    }
+  }
+
+  &.footer-brands-b,
+  &.footer-brands-c {
+
+    @media (max-width: 767px) { margin-bottom: 30px; }
+    @media (min-width: 768px) { margin-bottom: 20px; }
+  }
+}
+
+// Modifiers
+
+body.index {
+  .footer-brands {
+    .frevo-on-rails   { background-image: url('#{$images}/brand-small-for-red@2x.png'); }
+    .github           { background-image: url('#{$images}/brand-med-github-red@2x.png'); }
+    .guava-software   { background-image: url('#{$images}/brand-small-guava-red@2x.png'); }
+    .ruby-central-inc { background-image: url('#{$images}/brand-small-rubycentral-red@2x.png'); }
+    .studio-eloquent  { background-image: url('#{$images}/brand-small-eloquent-red@2x.png'); }
+  }
+}
+
+body.schedule {
+  .footer-brands {
+    .frevo-on-rails   { background-image: url('#{$images}/brand-small-for-white@2x.png'); }
+    .github           { background-image: url('#{$images}/brand-med-github-white@2x.png'); }
+    .guava-software   { background-image: url('#{$images}/brand-small-guava-white@2x.png'); }
+    .ruby-central-inc { background-image: url('#{$images}/brand-small-rubycentral-white@2x.png'); }
+    .studio-eloquent  { background-image: url('#{$images}/brand-small-eloquent-white@2x.png'); }
+  }
+}
+
+// ----- Footer Rights ----- //
+
+.footer-rights {
+  @include titillium-web-light;
+
+  .col-sm-6 {
+
+    &:nth-child(1) {
+      @media (min-width: 768px) { text-align: right; }
+    }
+
+    &:nth-child(2) {
+      @media (min-width: 768px) { text-align: left; }
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+
+    span {
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+  }
+}

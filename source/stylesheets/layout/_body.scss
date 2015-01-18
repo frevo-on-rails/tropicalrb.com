@@ -16,6 +16,14 @@ body {
 
     @media (max-width: 767px) { background-image: url('#{$images}/bkg-sunrise-xs.jpg'); }
     @media (min-width: 768px) { background-image: url('#{$images}/bkg-sunrise-xlg.jpg'); }
+
+    a {
+      color: $poly-11;
+      &:hover { color: lighten($poly-11, 10%); }
+      &:active { color: darken($poly-11, 10%); }
+    }
+
+    hr { border-top-color: $poly-11; }
   }
 
   body.schedule {
@@ -24,6 +32,8 @@ body {
 
     @media (max-width: 767px) { background-image: url('#{$images}/bkg-waterworld-xs.jpg'); }
     @media (min-width: 768px) { background-image: url('#{$images}/bkg-waterworld-xlg.jpg'); }
+
+    hr { border-top-color: $mono-10; }
   }
 
   body.sponsors {
@@ -32,6 +42,8 @@ body {
 
     @media (max-width: 767px) { }
     @media (min-width: 768px) { }
+
+    hr { border-top-color: $text-color; }
   }
 
   body.tickets {
@@ -40,6 +52,8 @@ body {
 
     @media (max-width: 767px) { }
     @media (min-width: 768px) { }
+
+    hr { border-top-color: $text-color; }
   }
 
   body.venue {
@@ -48,6 +62,8 @@ body {
 
     @media (max-width: 767px) { }
     @media (min-width: 768px) { }
+
+    hr { border-top-color: $text-color; }
   }
 
 h3 {
@@ -60,9 +76,18 @@ p {
   font-size: 18px;
 }
 
+strong {
+  @include titillium-semi-bold;
+}
+
 label {
   @include titillium-semi-bold;
   display: block;
   margin-bottom: 8px;
   text-transform: uppercase;
+}
+
+hr {
+  width: 48px;
+  margin-top: 15px;
 }

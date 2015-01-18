@@ -12,10 +12,10 @@ html {
 a {
   color: $link;
   transition: .3s color;
+  text-decoration: underline;
 
   &:hover {
     color: lighten($link, 10%);
-    outline: none;
   }
 
   &:active {
