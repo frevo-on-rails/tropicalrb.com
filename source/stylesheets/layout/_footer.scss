@@ -172,13 +172,22 @@ body.schedule {
 }
 
 .sea {
-  @include size(100%, 200px);
+  @include size(100%, 202px);
   position: absolute;
-  bottom: -90px;
-  left: 0;
+  bottom: -138px;
+  right: 158px;
   background-image: url('#{$images}/bkg-wave-tileable@2x.png');
-  background-position: left bottom;
+  background-position: right top;
   background-size: 520px 200px;
+
+  @media (min-width: 768px) {
+    bottom: -90px;
+    right: 142px;
+  }
+
+  @media (min-width: 1199px) {
+    right: 230px;
+  }
 }
 
 .wave {
