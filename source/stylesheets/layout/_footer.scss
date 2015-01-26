@@ -179,7 +179,11 @@ body.schedule {
 
 body.index {
   .footer {
-    padding-bottom: 300px;
+    padding-bottom: 370px;
+
+    @media (max-width: 767px) {
+      @include gradient-vertical-three-colors(transparentize($poly-08,1), $poly-08, 65%, $poly-08);
+    }
 
     @media (min-width: 768px) { padding-bottom: 200px; }
     @media (min-width: 1200px) { padding-bottom: 180px; }
