@@ -102,7 +102,6 @@
     }
 
     &:first-child {
-
       @media (max-width: 991px) { margin-bottom: 5px; }
 
       &:before { background-image: image-url('icon-med-translation-red@2x.png'); }
@@ -141,13 +140,12 @@
 
     a {
       @include square(44px);
+      @extend .hvr-wobble-vertical;
       position: relative;
       display: block;
       text-indent: -9999px;
       background-image: image-url('octagon-small-red@2x.png');
       background-size: 44px;
-      transform: scale(1);
-      transition: .3s transform;
 
       @media (max-width: 767px) {
         margin-right: 5px;
