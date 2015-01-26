@@ -38,15 +38,6 @@ body.sponsors {
   }
 }
 
-body.tickets {
-  mark,
-  ::selection {
-    background: $brand-01 !important;
-    color: #fff !important;
-    text-shadow: darken($brand-01, 10%) 0 1px 3px;
-  }
-}
-
 body.venue {
   mark,
   ::selection {

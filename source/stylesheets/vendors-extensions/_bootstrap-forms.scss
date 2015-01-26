@@ -53,16 +53,6 @@ body.sponsors {
   }
 }
 
-body.tickets {
-  .form-control {
-    @include placeholder($mono-01);
-    color: $mono-01;
-    border-color: $mono-01;
-    &:hover { border-color: lighten($mono-01, 10%); }
-    &:focus { border-color: darken($mono-01, 10%); }
-  }
-}
-
 body.venue {
   .form-control {
     @include placeholder($mono-01);
