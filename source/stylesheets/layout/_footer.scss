@@ -4,11 +4,8 @@
 
 .footer {
   position: relative;
-  padding-bottom: 300px;
   text-align: center;
   overflow: hidden;
-
-  @media (min-width: 1200px) { padding-bottom: 250px; }
 }
 
 /*... Scaffolding ...*/
@@ -156,52 +153,59 @@ body.schedule {
 /*... Index Footer — Background Graphics ...*/
 
 body.index {
-  .coconut {
-    @include size(266px, 350px);
-    position: absolute;
-    left: -108px;
-    background-image: image-url('bkg-coconut-left@2x.png');
-    background-size: 266px 350px;
+  .footer {
+    padding-bottom: 300px;
 
-    @media (max-width: 767px) { bottom: 24px; }
-    @media (min-width: 768px) { bottom: 70px; }
-    @media (min-width: 1199px) { left: -60px; }
-  }
+    @media (min-width: 768px) { padding-bottom: 200px; }
+    @media (min-width: 1200px) { padding-bottom: 180px; }
 
-  .sea {
-    @include size(100%, 202px);
-    position: absolute;
-    bottom: -138px;
-    right: 158px;
-    background-image: image-url('bkg-wave-tileable@2x.png');
-    background-position: right top;
-    background-size: 520px 200px;
+    .coconut {
+      @include size(266px, 350px);
+      position: absolute;
+      left: -108px;
+      background-image: image-url('bkg-coconut-left@2x.png');
+      background-size: 266px 350px;
 
-    @media (min-width: 768px) {
-      bottom: -90px;
-      right: 142px;
+      @media (max-width: 767px) { bottom: 24px; }
+      @media (min-width: 768px) { bottom: 70px; }
+      @media (min-width: 1199px) { left: -60px; }
     }
 
-    @media (min-width: 1199px) { right: 230px; }
-  }
+    .sea {
+      @include size(100%, 202px);
+      position: absolute;
+      bottom: -138px;
+      right: 158px;
+      background-image: image-url('bkg-wave-tileable@2x.png');
+      background-position: right top;
+      background-size: 520px 200px;
 
-  .wave {
-    @include size(230px, 447px);
-    position: absolute;
-    background-image: image-url('bkg-wave-right@2x.png');
-    background-size: 230px 447px;
+      @media (min-width: 768px) {
+        bottom: -90px;
+        right: 142px;
+      }
 
-    @media (max-width: 767px) {
-      right: -72px;
-      bottom: -136px;
+      @media (min-width: 1199px) { right: 230px; }
     }
 
-    @media (min-width: 768px) {
-      right: -88px;
-      bottom: -88px;
-    }
+    .wave {
+      @include size(230px, 447px);
+      position: absolute;
+      background-image: image-url('bkg-wave-right@2x.png');
+      background-size: 230px 447px;
 
-    @media (min-width: 1199px) { right: 0; }
+      @media (max-width: 767px) {
+        right: -72px;
+        bottom: -136px;
+      }
+
+      @media (min-width: 768px) {
+        right: -88px;
+        bottom: -88px;
+      }
+
+      @media (min-width: 1199px) { right: 0; }
+    }
   }
 }
 
