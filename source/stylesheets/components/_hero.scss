@@ -13,7 +13,7 @@
     text-align: center;
   }
 
-  @media (min-width: 768px) { padding-top: 240px; }
+  @media (min-width: 768px) { padding-top: 255px; }
   @media (max-width: 991px) { margin-bottom: 40px; }
 }
 
@@ -24,13 +24,13 @@
 // ----- Hero Logo ----- //
 
 .hero-logo {
-  @include size(236px, 225px);
+  @include size(234px,226px);
   position: absolute;
   left: 50%;
   margin: 0 auto 0 -118px;
   text-indent: -9999px;
-  background-image: url('#{$images}/logo-hero-logo.png');
-  background-size: 236px 225px;
+  background-image: image-url('logo-tropical@2x.png');
+  background-size: 234px 226px;
   animation: heroLogo 3s ease infinite;
 
   @media (max-width: 767px) { top: 25px; }
