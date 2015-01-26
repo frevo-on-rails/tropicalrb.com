@@ -7,6 +7,8 @@
   padding-bottom: 300px;
   text-align: center;
   overflow: hidden;
+
+  @media (min-width: 1200px) { padding-bottom: 250px; }
 }
 
 /*... Scaffolding ...*/
@@ -64,6 +66,7 @@ body.schedule {
     &.github {
       @include size(150px, 100px);
       background-size: 150px 100px;
+      margin-top: -10px;
     }
 
     &.guava-software {
@@ -82,8 +85,11 @@ body.schedule {
     }
   }
 
+  &.footer-brands-a { margin-bottom: 12px; }
+
   &.footer-brands-b,
   &.footer-brands-c {
+    margin-top: 10px;
 
     @media (max-width: 767px) { margin-bottom: 30px; }
     @media (min-width: 768px) { margin-bottom: 20px; }
@@ -114,17 +120,7 @@ body.schedule {
 
 .footer-rights {
   @include titillium-web-light;
-
-  .col-sm-6 {
-
-    &:nth-child(1) {
-      @media (min-width: 768px) { text-align: right; }
-    }
-
-    &:nth-child(2) {
-      @media (min-width: 768px) { text-align: left; }
-    }
-  }
+  margin-top: 20px;
 
   p {
     font-size: 14px;
@@ -133,6 +129,26 @@ body.schedule {
     span {
       margin-right: 8px;
       margin-left: 8px;
+    }
+  }
+
+  hr { margin-top: 10px; }
+
+  .footer-title {
+    margin-bottom: 10px;
+    line-height: 22px;
+
+    &:before,
+    &:after { display: none; }
+  }
+
+  .col-sm-6 {
+    &:nth-child(1) {
+      @media (min-width: 768px) { text-align: right; }
+    }
+
+    &:nth-child(2) {
+      @media (min-width: 768px) { text-align: left; }
     }
   }
 }
