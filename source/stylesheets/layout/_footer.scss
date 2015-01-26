@@ -8,6 +8,31 @@
   overflow: hidden;
 }
 
+.brands {
+  .organizers {
+    @include make-xs-column(12);
+    @include make-sm-column(5);
+    @include make-sm-column-offset(1);
+    @include make-md-column(6);
+    @include make-md-column-offset(1);
+    @include make-lg-column(5);
+    @include make-lg-column-offset(2);
+  }
+
+  .advisory {
+    @include make-xs-column(12);
+    @include make-sm-column(5);
+    @include make-md-column(3);
+  }
+}
+
+.copy {
+  .column {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+  }
+}
+
 /*... Scaffolding ...*/
 
 .footer-title {
@@ -115,7 +140,7 @@ body.schedule {
 
 /*... Copyright ...*/
 
-.footer-rights {
+.copy {
   @include titillium-web-light;
   margin-top: 20px;
 
@@ -139,7 +164,7 @@ body.schedule {
     &:after { display: none; }
   }
 
-  .col-sm-6 {
+  .column {
     &:nth-child(1) {
       @media (min-width: 768px) { text-align: right; }
     }
@@ -211,7 +236,7 @@ body.index {
 
 body.sponsors {
   .footer {
-    .brands {
+    .copy {
       display: none;
 
       &.footer-title, &.footer-brands, { display: none; }
