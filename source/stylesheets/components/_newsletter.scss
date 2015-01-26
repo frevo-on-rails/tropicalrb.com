@@ -1,9 +1,6 @@
-// *************************************
-//
-//   Newsletter
-//   ->
-//
-// *************************************
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+      Newsletter
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .newsletter {
   margin-bottom: 40px;
@@ -17,17 +14,9 @@
   @media (min-width: 768px) { max-width: 330px; }
 }
 
-// -------------------------------------
-//   Scaffolding
-// -------------------------------------
-
-// ----- Newsletter Email ----- //
-
 #newsletter-email {
   padding-right: 58px;
 }
-
-// ----- Newsletter Submit ----- //
 
 .newsletter-submit {
   @include size(46px, 42px);
@@ -53,8 +42,6 @@
     content: '';
   }
 }
-
-// Modifiers
 
 body.index {
   .newsletter-submit {

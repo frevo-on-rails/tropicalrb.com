@@ -1,21 +1,14 @@
-// *************************************
-//
-//   Variables
-//   ->
-//
-// *************************************
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+      Variables
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-// -------------------------------------
-//   Colors
-// -------------------------------------
-
-// ----- Brand ----- //
+/*... Colors ...*/
 
 $brand-01:  rgb(0,0,0);
 $brand-02:  rgb(0,0,0);
 $brand-03:  rgb(0,0,0);
 
-// ----- Monochromatic ----- //
+/*... Mono ...*/
 
 $mono-01:  rgb(26,26,26);
 $mono-02:  rgb(77,77,77);
@@ -28,9 +21,8 @@ $mono-08:  rgb(230,230,230);
 $mono-09:  rgb(242,242,242);
 $mono-10:  rgb(255,255,255);
 
-// ----- Polychromatic ----- //
 
-// Tropical Beach
+/*... Palette: Tropical Beach ...*/
 
 $poly-01:  rgb(1,121,145);    // Dark Turquoise
 $poly-02:  rgb(52,155,138);   // Easter Eggs
@@ -38,7 +30,7 @@ $poly-03:  rgb(196,104,115);  // Baby
 $poly-04:  rgb(242,158,112);  // Lala
 $poly-05:  rgb(253,208,125);  // Urgent
 
-// 50's Postcards
+/*... Palette: 50's postcards ...*/
 
 $poly-06:  rgb(194,255,232);  // Sky Blue Sky
 $poly-07:  rgb(255,247,189);  // Brachium
@@ -46,15 +38,13 @@ $poly-08:  rgb(255,220,163);  // Flow
 $poly-09:  rgb(255,178,122);  // Hardy
 $poly-10:  rgb(255,146,99);   // Milky Pink Apricot
 
-// Others
-
 $poly-11:  rgb(152,29,37);    // Blood
 
-// ----- Forms ----- //
+/*... Forms ...*/
 
 $placeholder:  lighten($text-color, 45%);
 
-// ----- Others ----- //
+/*... Others ...*/
 
 $body-bg:     rgb(255,255,255);
 $link:        $brand-01;

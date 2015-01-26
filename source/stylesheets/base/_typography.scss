@@ -1,15 +1,8 @@
-// *************************************
-//
-//   Typography
-//   ->
-//
-// *************************************
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+      Typography
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-// -------------------------------------
-//   Molle
-// -------------------------------------
-
-// ----- FontFace ----- //
+/*... Molle ...*/
 
 @font-face {
   font-family: 'Molle';
@@ -22,18 +15,12 @@
   font-weight: 400;
 }
 
-// ----- Mixins ----- //
-
 @mixin molle {
   font-family: 'Molle', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
 }
 
-// -------------------------------------
-//   Titillium Web
-// -------------------------------------
-
-// ----- FontFace ----- //
+/*... Titillium Web ...*/
 
 @font-face {
   font-family: 'Titillium Web Light';
@@ -79,8 +66,6 @@
   font-weight: 700;
 }
 
-// ----- Mixins ----- //
-
 @mixin titillium-web-light {
   font-family: 'Titillium Web Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 200;
@@ -101,11 +86,7 @@
   font-weight: 700;
 }
 
-// -------------------------------------
-//   Xilosa
-// -------------------------------------
-
-// ----- FontFace ----- //
+/*... Xilosa ...*/
 
 @font-face {
   font-family: 'Xilosa';
@@ -117,8 +98,6 @@
   font-style: normal;
   font-weight: 400;
 }
-
-// ----- Mixins ----- //
 
 @mixin xilosa {
   font-family: 'Xilosa', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;

@@ -1,9 +1,6 @@
-// *************************************
-//
-//   Footer
-//   ->
-//
-// *************************************
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+      Footer
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .footer {
   position: relative;
@@ -12,11 +9,7 @@
   overflow: hidden;
 }
 
-// -------------------------------------
-//   Scaffolding
-// -------------------------------------
-
-// ----- Footer Title ----- //
+/*... Scaffolding ...*/
 
 .footer-title {
   @include titillium-web-light;
@@ -39,8 +32,6 @@
   &:after  { right: -60px; }
 }
 
-// Modifiers
-
 body.index {
   .footer-title {
     &:before,
@@ -55,7 +46,7 @@ body.schedule {
   }
 }
 
-// ----- Footer Brands ----- //
+/*... Footer's Brands ...*/
 
 .footer-brands {
 
@@ -100,8 +91,6 @@ body.schedule {
   }
 }
 
-// Modifiers
-
 body.index {
   .footer-brands {
     .frevo-on-rails   { background-image: image-url('brand-small-for-red@2x.png'); }
@@ -122,7 +111,7 @@ body.schedule {
   }
 }
 
-// ----- Footer Rights ----- //
+/*... Copyright ...*/
 
 .footer-rights {
   @include titillium-web-light;
@@ -149,7 +138,7 @@ body.schedule {
   }
 }
 
-// ----- Footer Nature ----- //
+/*... Footer's Graphics ...*/
 
 .coconut {
   @include size(266px, 350px);

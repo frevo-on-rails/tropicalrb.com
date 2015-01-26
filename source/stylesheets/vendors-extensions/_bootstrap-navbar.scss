@@ -1,9 +1,6 @@
-// *************************************
-//
-//   Navbar
-//   ->
-//
-// *************************************
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+      Navbar
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .navbar {
   min-height: 0;
@@ -22,19 +19,13 @@
   }
 }
 
-// -------------------------------------
-//   Scaffolding
-// -------------------------------------
-
-// ----- Navbar Header ----- //
+/*... Scaffolding ...*/
 
 .navbar-header {
   position: relative;
 
   @media (min-width: 768px) { height: 82px; }
 }
-
-// ----- Navbar Toogle ----- //
 
 .navbar-toggle {
   @include square(44px);
@@ -75,7 +66,6 @@
   &.collapsed {
 
     .icon-bar {
-
       &:nth-child(2) {
         top: 15px;
         transform: rotate(0deg);
@@ -93,8 +83,6 @@
     }
   }
 }
-
-// Modifiers
 
 body.index {
   .navbar-toggle {
@@ -131,7 +119,7 @@ body.venue {
   }
 }
 
-// ----- Navbar Brand ----- //
+/*... Navbar (Brand) ...*/
 
 .navbar-brand {
   @include molle;
@@ -170,8 +158,6 @@ body.venue {
     }
   }
 }
-
-// Modifiers
 
 body.index {
   .navbar-brand {
@@ -213,10 +199,9 @@ body.venue {
   }
 }
 
-// ----- Navbar Collapse ----- //
+/*... Navbar (Collapse) ...*/
 
 .navbar-collapse {
-
   @media (max-width: 767px) {
     @include square(100%);
     position: fixed;
@@ -237,8 +222,6 @@ body.venue {
     border-bottom-width: 2px;
   }
 }
-
-// Modifiers
 
 body.index {
   .navbar-collapse {
@@ -275,7 +258,7 @@ body.venue {
   }
 }
 
-// ----- Navbar Nav ----- //
+/*... Navbar (Defaults) ...*/
 
 .navbar-nav {
 
@@ -294,7 +277,6 @@ body.venue {
   }
 
   li {
-
     a {
       border-color: transparent;
 
@@ -361,8 +343,6 @@ body.venue {
     }
   }
 }
-
-// Modifiers
 
 body.index {
   .navbar-nav {

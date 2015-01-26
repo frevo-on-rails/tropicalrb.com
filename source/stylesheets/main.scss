@@ -1,66 +1,39 @@
-// *************************************
-//
-//   Main
-//   ->
-//
-// *************************************
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+      Main
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-// -------------------------------------
-//   Vendors
-// -------------------------------------
-
+/*... Vendors ...*/
 @import 'vendors/bootstrap';
 
-// -------------------------------------
-//   Utils
-// -------------------------------------
-
+/*... Utils ...*/
 @import 'utils/variables';
 @import 'utils/functions';
 @import 'utils/keyframes';
 @import 'utils/mixins';
 
-// -------------------------------------
-//   Base
-// -------------------------------------
-
+/*... Base ...*/
 @import 'base/base';
 @import 'base/typography';
 
-// -------------------------------------
-//   Layout
-// -------------------------------------
-
+/*... Layout ...*/
 @import 'layout/header';
 @import 'layout/body';
 @import 'layout/footer';
 
-// -------------------------------------
-//   Components
-// -------------------------------------
-
+/*... Components ...*/
 @import 'components/hero';
 @import 'components/newsletter';
 
-// -------------------------------------
-//   Pages
-// -------------------------------------
-
+/*... Pages ...*/
 @import 'pages/index';
 @import 'pages/schedule';
 @import 'pages/sponsors';
 @import 'pages/tickets';
 @import 'pages/venue';
 
-// -------------------------------------
-//   Themes
-// -------------------------------------
-
+/*... Themes ...*/
 // @import 'themes/';
 
-// -------------------------------------
-//   Vendors Extensions
-// -------------------------------------
-
+/*... Vendors Extensions ...*/
 @import 'vendors-extensions/bootstrap-forms';
 @import 'vendors-extensions/bootstrap-navbar';
