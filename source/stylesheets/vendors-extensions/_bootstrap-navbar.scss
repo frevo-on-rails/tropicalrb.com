@@ -64,7 +64,6 @@
   }
 
   &.collapsed {
-
     .icon-bar {
       &:nth-child(2) {
         top: 15px;
@@ -254,6 +253,7 @@ body.venue {
   li {
     a {
       border-color: transparent;
+      transition: .2s border-color;
 
       @media (max-width: 767px) { display: inline-block; }
 
