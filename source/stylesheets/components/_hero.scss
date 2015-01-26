@@ -168,9 +168,6 @@
         content: '';
       }
 
-      &:hover { transform: scale(1.1); }
-      &:active { transform: scale(1); }
-
       &.email {
         &:before { background-image: image-url('icon-small-contact-red@2x.png'); }
       }
@@ -191,42 +188,42 @@
         &:before { background-image: image-url('icon-small-twitter-red@2x.png'); }
       }
     }
+  }
 
-    strong {
-      position: absolute;
-      display: block;
-      background-image: image-url('graph-hello-en@2x.png');
-      text-indent: -9999px;
+  .greetings {
+    position: absolute;
+    display: block;
+    background-image: image-url('graph-hello-en@2x.png');
+    text-indent: -9999px;
 
-      @media (max-width: 480px) {
-        top: -65px;
-        right: -15px;
-      }
-
-      @media (min-width: 481px) {
-        top: -65px;
-        right: -50px;
-      }
-
-      @media (max-width: 767px) {
-        @include size(92px, 56px);
-        background-size: 92px 56px;
-      }
-
-      @media (min-width: 768px) {
-        @include size(114px, 70px);
-        top: -50px;
-        right: 5px;
-        background-size: 114px 70px;
-      }
-
-      @media (min-width: 992px) {
-        top: -80px;
-        right: 115px;
-      }
-
-      @media (min-width: 1200px) { right: 215px; }
+    @media (max-width: 480px) {
+      top: -65px;
+      right: -15px;
     }
+
+    @media (min-width: 481px) {
+      top: -65px;
+      right: -50px;
+    }
+
+    @media (max-width: 767px) {
+      @include size(92px, 56px);
+      background-size: 92px 56px;
+    }
+
+    @media (min-width: 768px) {
+      @include size(114px, 70px);
+      top: -50px;
+      right: 5px;
+      background-size: 114px 70px;
+    }
+
+    @media (min-width: 992px) {
+      top: -80px;
+      right: 115px;
+    }
+
+    @media (min-width: 1200px) { right: 215px; }
   }
 }
 
