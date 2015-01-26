@@ -50,13 +50,13 @@
 
   @media (max-width: 767px) {
     @include size(258px, 211px);
-    background-image: url('#{$images}/logo-porto-vert@2x.png');
+    background-image: image-url('logo-porto-vert@2x.png');
     background-size: 258px 211px;
   }
 
   @media (min-width: 768px) {
     @include size(531px, 155px);
-    background-image: url('#{$images}/logo-porto-horiz@2x.png');
+    background-image: image-url('logo-porto-horiz@2x.png');
     background-size: 531px 155px;
   }
 }
@@ -112,11 +112,11 @@
 
       @media (max-width: 991px) { margin-bottom: 5px; }
 
-      &:before { background-image: url('#{$images}/icon-med-translation-red@2x.png'); }
+      &:before { background-image: image-url('icon-med-translation-red@2x.png'); }
     }
 
     &:last-child {
-      &:before { background-image: url('#{$images}/icon-med-transportation-red@2x.png'); }
+      &:before { background-image: image-url('icon-med-transportation-red@2x.png'); }
     }
   }
 }
@@ -154,7 +154,7 @@
       position: relative;
       display: block;
       text-indent: -9999px;
-      background-image: url('#{$images}/octagon-small-red@2x.png');
+      background-image: image-url('octagon-small-red@2x.png');
       background-size: 44px;
       transform: scale(1);
       transition: .3s transform;
@@ -182,30 +182,30 @@
       &:active { transform: scale(1); }
 
       &.email {
-        &:before { background-image: url('#{$images}/icon-small-contact-red@2x.png'); }
+        &:before { background-image: image-url('icon-small-contact-red@2x.png'); }
       }
 
       &.facebook {
-        &:before { background-image: url('#{$images}/icon-small-facebook-red@2x.png'); }
+        &:before { background-image: image-url('icon-small-facebook-red@2x.png'); }
       }
 
       &.github {
-        &:before { background-image: url('#{$images}/icon-small-github-red@2x.png'); }
+        &:before { background-image: image-url('icon-small-github-red@2x.png'); }
       }
 
       &.lanyrd {
-        &:before { background-image: url('#{$images}/icon-small-lanyrd-red@2x.png'); }
+        &:before { background-image: image-url('icon-small-lanyrd-red@2x.png'); }
       }
 
       &.twitter {
-        &:before { background-image: url('#{$images}/icon-small-twitter-red@2x.png'); }
+        &:before { background-image: image-url('icon-small-twitter-red@2x.png'); }
       }
     }
 
     strong {
       position: absolute;
       display: block;
-      background-image: url('#{$images}/graph-hello-en@2x.png');
+      background-image: image-url('graph-hello-en@2x.png');
       text-indent: -9999px;
 
       @media (max-width: 480px) {

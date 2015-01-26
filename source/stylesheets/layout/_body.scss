@@ -12,8 +12,8 @@ body { @include titillium-web; }
     background-color: $poly-07;
     background-position: top center;
 
-    @media (max-width: 767px) { background-image: url('#{$images}/bkg-sunrise-xs.jpg'); }
-    @media (min-width: 768px) { background-image: url('#{$images}/bkg-sunrise-xlg.jpg'); }
+    @media (max-width: 767px) { background-image: image-url('bkg-sunrise-xs.jpg'); }
+    @media (min-width: 768px) { background-image: image-url('bkg-sunrise-xlg.jpg'); }
 
     a {
       color: $poly-11;
@@ -28,8 +28,8 @@ body { @include titillium-web; }
     color: $mono-10;
     background-color: $poly-01;
 
-    @media (max-width: 767px) { background-image: url('#{$images}/bkg-waterworld-xs.jpg'); }
-    @media (min-width: 768px) { background-image: url('#{$images}/bkg-waterworld-xlg.jpg'); }
+    @media (max-width: 767px) { background-image: image-url('bkg-waterworld-xs.jpg'); }
+    @media (min-width: 768px) { background-image: image-url('bkg-waterworld-xlg.jpg'); }
 
     a {
       color: $mono-10;
@@ -44,8 +44,8 @@ body { @include titillium-web; }
     color: $mono-03;
     background-color: $mono-09;
 
-    @media (max-width: 767px) { background-image: url('#{$images}/bkg-whitesand-xs.jpg'); }
-    @media (min-width: 768px) { background-image: url('#{$images}/bkg-whitesand-xlg.jpg'); }
+    @media (max-width: 767px) { background-image: image-url('bkg-whitesand-xs.jpg'); }
+    @media (min-width: 768px) { background-image: image-url('bkg-whitesand-xlg.jpg'); }
 
     a {
       color: $mono-03;

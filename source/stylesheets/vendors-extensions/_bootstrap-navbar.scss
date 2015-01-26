@@ -98,35 +98,35 @@
 
 body.index {
   .navbar-toggle {
-    background-image: url('#{$images}/octagon-small-red@2x.png');
+    background-image: image-url('octagon-small-red@2x.png');
     .icon-bar { background-color: $poly-11 !important; }
   }
 }
 
 body.schedule {
   .navbar-toggle {
-    background-image: url('#{$images}/octagon-small-white@2x.png');
+    background-image: image-url('octagon-small-white@2x.png');
     .icon-bar { background-color: $mono-10 !important; }
   }
 }
 
 body.sponsors {
   .navbar-toggle {
-    background-image: url('#{$images}/octagon-small-grey@2x.png');
+    background-image: image-url('octagon-small-grey@2x.png');
     .icon-bar { background-color: $mono-03 !important; }
   }
 }
 
 body.tickets {
   .navbar-toggle {
-    background-image: url('#{$images}/octagon-small-red@2x.png');
+    background-image: image-url('octagon-small-red@2x.png');
     .icon-bar { background-color: $mono-01 !important; }
   }
 }
 
 body.venue {
   .navbar-toggle {
-    background-image: url('#{$images}/octagon-small-red@2x.png');
+    background-image: image-url('octagon-small-red@2x.png');
     .icon-bar { background-color: $mono-01 !important; }
   }
 }
@@ -371,7 +371,7 @@ body.index {
       color: $poly-11;
       &.tickets {
         border-color: $poly-11;
-        &:after { background-image: url('#{$images}/icon-med-ticket-red@2x.png'); }
+        &:after { background-image: image-url('icon-med-ticket-red@2x.png'); }
       }
       &:hover {
         color: lighten($poly-11, 10%);
@@ -392,7 +392,7 @@ body.schedule {
       color: $mono-10;
       &.tickets {
         border-color: $mono-10;
-        &:after { background-image: url('#{$images}/icon-med-ticket-white@2x.png'); }
+        &:after { background-image: image-url('icon-med-ticket-white@2x.png'); }
       }
       &:hover {
         color: lighten($mono-10, 10%);
@@ -413,7 +413,7 @@ body.sponsors {
       color: $mono-03;
       &.tickets {
         border-color: $mono-03;
-        &:after { background-image: url('#{$images}/icon-med-ticket-grey@2x.png'); }
+        &:after { background-image: image-url('icon-med-ticket-grey@2x.png'); }
       }
       &:hover {
         color: lighten($mono-03, 10%);
@@ -434,7 +434,7 @@ body.tickets {
       color: $mono-01;
       &.tickets {
         border-color: $mono-01;
-        &:after { background-image: url('#{$images}/icn-tag-tickets.png'); }
+        &:after { background-image: image-url('icon-tag-tickets.png'); }
       }
       &:hover {
         color: lighten($mono-01, 10%);
@@ -455,7 +455,7 @@ body.venue {
       color: $mono-01;
       &.tickets {
         border-color: $mono-01;
-        &:after { background-image: url('#{$images}/icn-tag-venue.png'); }
+        &:after { background-image: image-url('icon-tag-venue.png'); }
       }
       &:hover {
         color: lighten($mono-01, 10%);

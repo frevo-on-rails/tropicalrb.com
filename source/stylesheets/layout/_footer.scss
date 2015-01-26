@@ -104,21 +104,21 @@ body.schedule {
 
 body.index {
   .footer-brands {
-    .frevo-on-rails   { background-image: url('#{$images}/brand-small-for-red@2x.png'); }
-    .github           { background-image: url('#{$images}/brand-med-github-red@2x.png'); }
-    .guava-software   { background-image: url('#{$images}/brand-small-guava-red@2x.png'); }
-    .ruby-central-inc { background-image: url('#{$images}/brand-small-rubycentral-red@2x.png'); }
-    .studio-eloquent  { background-image: url('#{$images}/brand-small-eloquent-red@2x.png'); }
+    .frevo-on-rails   { background-image: image-url('brand-small-for-red@2x.png'); }
+    .github           { background-image: image-url('brand-med-github-red@2x.png'); }
+    .guava-software   { background-image: image-url('brand-small-guava-red@2x.png'); }
+    .ruby-central-inc { background-image: image-url('brand-small-rubycentral-red@2x.png'); }
+    .studio-eloquent  { background-image: image-url('brand-small-eloquent-red@2x.png'); }
   }
 }
 
 body.schedule {
   .footer-brands {
-    .frevo-on-rails   { background-image: url('#{$images}/brand-small-for-white@2x.png'); }
-    .github           { background-image: url('#{$images}/brand-med-github-white@2x.png'); }
-    .guava-software   { background-image: url('#{$images}/brand-small-guava-white@2x.png'); }
-    .ruby-central-inc { background-image: url('#{$images}/brand-small-rubycentral-white@2x.png'); }
-    .studio-eloquent  { background-image: url('#{$images}/brand-small-eloquent-white@2x.png'); }
+    .frevo-on-rails   { background-image: image-url('brand-small-for-white@2x.png'); }
+    .github           { background-image: image-url('brand-med-github-white@2x.png'); }
+    .guava-software   { background-image: image-url('brand-small-guava-white@2x.png'); }
+    .ruby-central-inc { background-image: image-url('brand-small-rubycentral-white@2x.png'); }
+    .studio-eloquent  { background-image: image-url('brand-small-eloquent-white@2x.png'); }
   }
 }
 
@@ -155,7 +155,7 @@ body.schedule {
   @include size(266px, 350px);
   position: absolute;
   left: -108px;
-  background-image: url('#{$images}/bkg-coconut-left@2x.png');
+  background-image: image-url('bkg-coconut-left@2x.png');
   background-size: 266px 350px;
 
   @media (max-width: 767px) {
@@ -176,7 +176,7 @@ body.schedule {
   position: absolute;
   bottom: -138px;
   right: 158px;
-  background-image: url('#{$images}/bkg-wave-tileable@2x.png');
+  background-image: image-url('bkg-wave-tileable@2x.png');
   background-position: right top;
   background-size: 520px 200px;
 
@@ -193,7 +193,7 @@ body.schedule {
 .wave {
   @include size(230px, 447px);
   position: absolute;
-  background-image: url('#{$images}/bkg-wave-right@2x.png');
+  background-image: image-url('bkg-wave-right@2x.png');
   background-size: 230px 447px;
 
   @media (max-width: 767px) {
