@@ -86,3 +86,9 @@ textarea {
     outline: none !important;
   }
 }
+
+.container {
+  @media (min-width: 320px) and (max-width: 767px) {
+    max-width: 420px;
+  }
+}

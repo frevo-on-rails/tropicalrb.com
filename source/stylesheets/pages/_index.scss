@@ -67,7 +67,7 @@
   }
 }
 
-.hero-about {
+.hero-description {
   @include make-xs-column(12);
   @include make-sm-column(6);
   margin-bottom: 0;
@@ -291,8 +291,8 @@
   margin-bottom: 10px;
   margin-left: auto;
 
-  @media (max-width: 480px) { @include square(80px); }
-  @media (min-width: 481px) { @include square(110px); }
+  @media (max-width: 767px) { @include square(80px); }
+  @media (min-width: 768px) { @include square(110px); }
 }
 
 .hero-speaker-name {
