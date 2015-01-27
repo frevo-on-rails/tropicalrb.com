@@ -1,3 +1,162 @@
 /*––––––––––––––––––––––––––––––––––––––––––––––––––
       Schedule
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+main.schedule {
+  @extend .container;
+  @media (max-width: 991px) { margin-bottom: 40px; }
+  h1 { display: none; }
+}
+
+.schedule-area { @include make-xs-column(12); }
+
+.nav-schedule {
+  @include clearfix();
+  display: block;
+  margin: 35px auto;
+  width: (70px * 4);
+  overflow: visible;
+  @media (min-width: 768px) { width: (126px * 4); }
+
+  ol { @include list-unstyled; }
+}
+
+.nav-event {
+  float: left;
+  width: 70px;
+  height: 133px;
+  overflow: visible;
+  z-index: 1;
+  @media (min-width: 768px) { @include square(126px); }
+
+  h4 {
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  &.two h4 { width: 140px; }
+
+  &.three {
+    margin-top: 23px;
+    h4 { display: none; }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    overflow: visible;
+
+    &:hover {
+      .icon-nav, .nav-event-time { @extend .motion-wobble-vertical; }
+    }
+  }
+}
+
+.icon-nav {
+  @include square(60px);
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: 768px) {
+    @include square(80px);
+    background-size: 80px 80px;
+  }
+}
+
+.icon-recife {
+  background-image: image-url('schedule-graph-mobi-recife@2x.png');
+  @media (min-width: 768px) {
+    background-image: image-url('schedule-graph-desk-recife@2x.png');
+  }
+}
+
+.icon-porto {
+  background-image: image-url('schedule-graph-mobi-porto@2x.png');
+  @media (min-width: 768px) {
+    background-image: image-url('schedule-graph-desk-porto@2x.png');
+  }
+}
+
+.graph-connector {
+  @include size(14px, 5px);
+  background-size: 14px 5px;
+  background-repeat: no-repeat;
+  background-image: image-url('schedule-graph-connector-mobi@2x.png');
+  display: block;
+  position: absolute;
+  top: (30px - 3px);
+
+  @media (min-width: 768px) {
+    @include size(52px, 10px);
+    background-image: image-url('schedule-graph-connector-desk@2x.png');
+    background-size: 52px 10px;
+    top: (40px - 6px);
+  }
+
+  &.end {
+    &.left {
+      background-image: image-url('schedule-graph-connector-mobi-end-left@2x.png');
+      @media (min-width: 768px) {
+        background-image: image-url('schedule-graph-connector-desk-end-left@2x.png');
+      }
+    }
+    &.right {
+      background-image: image-url('schedule-graph-connector-mobi-end-right@2x.png');
+      @media (min-width: 768px) {
+        background-image: image-url('schedule-graph-connector-desk-end-right@2x.png');
+      }
+    }
+  }
+
+  &.left {
+    left: -7px;
+    @media (min-width: 768px) { left: -26px; }
+  }
+  &.right {
+    right: -7px;
+    @media (min-width: 768px) { right: -26px; }
+  }
+}
+
+.icon-car {
+  @media (min-width: 768px) {
+    @include square(44px);
+    background-image: image-url('schedule-graph-car@2x.png');
+    background-size: 44px 44px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -19px;
+  }
+}
+
+.nav-event-time {
+  display: block;
+  font-size: 11px;
+  line-height: 15px;
+  margin-top: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 70px;
+
+  @media (min-width: 768px) { width: 126px; }
+
+  span {
+    @include titillium-semi-bold;
+    font-size: 18px;
+    display: inline-block;
+    text-transform: none;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    sup { font-size: 11px; }
+  }
+}
