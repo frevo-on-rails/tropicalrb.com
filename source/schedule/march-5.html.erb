@@ -4,50 +4,19 @@ stylesheet: pages/schedule
 ---
 
 <main class="schedule day-one">
-  <h1>Schedule: March 5h, Workshops</h1>
 
-  <header>
-    <ol>
-      <li>
-        <a href="#">
-          <h4>Workshops</h4>
-          <span class="icon-nav icon-recife"></span>
-          <time date="2015-03-5">March 5th</time>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h4>Activities &amp; Talks</h4>
-          <span class="icon-nav icon-porto"></span>
-          <time date="2015-03-6">March 6th</time>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h4>Activities &amp; Talks</h4>
-          <span class="icon-nav icon-porto"></span>
-          <time date="2015-03-7">March 7th</time>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <h4>Activity</h4>
-          <span class="icon-nav icon-porto"></span>
-          <time date="2015-03-8">March 8th</time>
-        </a>
-      </li>
-    </ol>
-  </header>
+  <h1>Schedule: March 5h, Workshops</h1>
+  <%= partial "schedule-nav" %>
 
   <article>
+
     <section class="workshops">
       <header>
         <h2>Workshops</h2>
         <span class="icon-small icon-calendar"></span><small><time date="2015-03-5">March 5th</time> • 00h and 00h</small>
         <span class="icon-small icon-geolocal"></span><address class="small"><a href="#">Address name</a></address>
       </header>
-
-      <ol class="events">
+      <ol class="schedule-events">
         <li class="event" id="author-name">
           <img class="event-image" src="#">
           <h3 class="event-title">The Greatest Event Of All Conference</h3>
@@ -57,5 +26,6 @@ stylesheet: pages/schedule
         </li>
       </ol>
     </section>
+
   </article>
 </main>
