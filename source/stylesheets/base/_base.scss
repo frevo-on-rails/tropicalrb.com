@@ -4,6 +4,8 @@
 
 html { -webkit-font-smoothing: antialiased; }
 
+*:focus { outline: none !important; }
+
 a {
   transition: .3s color;
   text-decoration: underline;

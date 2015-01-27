@@ -10,13 +10,52 @@
   border-radius: 0;
 
   @media (max-width: 767px) {
+    min-height: 64px;
     padding-right: 20px;
     padding-left: 20px;
   }
 
   @media (min-width: 768px) {
+    min-height: 36px;
     margin-bottom: 40px;
   }
+
+  hr {
+    border-top: 2px solid white;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    transition: .3s border-color;
+
+    @media (max-width: 767px) { top: 62px; }
+    @media (min-width: 768px) { display: none; }
+  }
+}
+
+body.index {
+  .navbar {
+    @media (max-width: 767px) {
+      min-height: 0;
+
+      hr { display: none; }
+    }
+
+    hr { border-top-color: $poly-11 !important; }
+  }
+}
+
+body.schedule {
+  .navbar hr { border-top-color: $mono-10 !important; }
+}
+body.sponsors {
+  .navbar hr { border-top-color: $mono-03 !important; }
+}
+body.tickets {
+  .navbar hr { border-top-color: $mono-01 !important; }
+}
+body.venue {
+  .navbar hr { border-top-color: $mono-01 !important; }
 }
 
 /*... Scaffolding ...*/
@@ -99,6 +138,7 @@ body.schedule {
   .navbar-collapse {
     .link-schedule {
       @include titillium-bold;
+      font-size: 18.6px;
       text-decoration: none;
     }
   }
@@ -113,6 +153,7 @@ body.sponsors {
   .navbar-collapse {
     .link-sponsors {
       @include titillium-bold;
+      font-size: 18.6px;
       text-decoration: none;
     }
   }
@@ -127,6 +168,7 @@ body.venue {
   .navbar-collapse {
     .link-venue {
       @include titillium-bold;
+      font-size: 18.6px;
       text-decoration: none;
     }
   }
@@ -139,57 +181,73 @@ body.venue {
   display: block;
   position: absolute;
   z-index: 2;
-  padding-top: 3px;
-  padding-left: 0;
   text-align: center;
   text-decoration: none;
   transition: .3s color, .3s opacity;
 
   @media (max-width: 767px) {
-    @include opacity(0);
     @include size(80px, 42px);
-    top: -42px;
+    top: 15px;
     left: 0;
+    padding: 0;
     font-size: 20px;
     line-height: 18px;
+
+    span { margin-left: 2px; }
   }
 
   @media (min-width: 768px) {
-    @include size(94px, 50px);
-    top: 16px;
-    left: 35px;
+    @include size(98px, 50px);
+    top: 17px;
+    left: 25px;
+    padding: 3px 0 0 0;
     font-size: 24px;
     line-height: 22px;
+
+    span { margin-left: 5px; }
   }
 
-  span { margin-left: 13px; }
-
   &.active {
-    @media (max-width: 767px) {
-      @include opacity(1);
-      top: 11px;
-    }
+    @media (max-width: 767px) { top: 15px; }
   }
 }
 
 body.index {
-  .navbar-brand,
-  .navbar-brand:hover { color: $poly-11; }
+  .navbar-brand {
+    color: $poly-11;
+
+    &:hover,
+    &:focus { color: $poly-11; }
+
+    @media (max-width: 767px) {
+      @include opacity(0);
+    }
+
+    &.active {
+      @media (max-width: 767px) {
+        @include opacity(1);
+        color: $poly-11;
+      }
+    }
+  }
 }
 
 body.schedule {
   .navbar-brand,
-  .navbar-brand:hover { color: $mono-10; }
+  .navbar-brand:hover,
+  .navbar-brand:focus { color: $mono-10; }
 }
 
 body.sponsors {
   .navbar-brand,
-  .navbar-brand:hover { color: $mono-03; }
+  .navbar-brand:hover,
+  .navbar-brand:focus { color: $mono-03; }
 }
 
 body.venue {
   .navbar-brand,
-  .navbar-brand:hover { color: $mono-01; }
+  .navbar-brand:hover,
+  .navbar-brand:focus { color: $mono-01; }
 }
 
 /*... Navbar (Collapse) ...*/
@@ -201,7 +259,7 @@ body.venue {
     top: 0;
     left: 0;
     margin: 0 !important;
-    padding-top: 54px;
+    padding-top: 61.5px;
     padding-right: 35px;
     padding-left: 35px;
     text-align: center;
@@ -237,13 +295,6 @@ body.sponsors {
   }
 }
 
-body.link-tickets {
-  .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($mono-01, .1); }
-    @media (min-width: 768px) { border-bottom-color: $mono-01 !important; }
-  }
-}
-
 body.venue {
   .navbar-collapse {
     @media (max-width: 767px) { background-color: transparentize($mono-01, .1); }
@@ -254,6 +305,8 @@ body.venue {
 /*... Navbar (Defaults) ...*/
 
 .navbar-nav {
+  margin-top: 0;
+
   @media (max-width: 767px) {
     padding-top: 35px;
     border-top-style: solid;
@@ -268,15 +321,15 @@ body.venue {
     margin-right: 0;
   }
 
-  li {
-    a {
+  > li {
+    > a {
       border-color: transparent;
       transition: .2s border-color;
 
       @media (max-width: 767px) { display: inline-block; }
 
       &:hover,
-      &:hover { text-decoration: underline; }
+      &:focus { text-decoration: underline; }
 
       &.square {
         padding: 0 10px;
@@ -345,7 +398,8 @@ body.index {
         border-color: $poly-11;
         &:after { background-image: image-url('icon-med-ticket-red@2x.png'); }
       }
-      &:hover { color: $poly-11; }
+      &:hover,
+      &:focus { color: $poly-11; }
     }
   }
 }
@@ -359,7 +413,8 @@ body.schedule {
         border-color: $mono-10;
         &:after { background-image: image-url('icon-med-ticket-white@2x.png'); }
       }
-      &:hover { color: $mono-10; }
+      &:hover,
+      &:focus { color: $mono-10; }
     }
   }
 }
@@ -373,7 +428,8 @@ body.sponsors {
         border-color: $mono-03;
         &:after { background-image: image-url('icon-med-ticket-grey@2x.png'); }
       }
-      &:hover { color: $mono-03; }
+      &:hover,
+      &:focus { color: $mono-03; }
     }
   }
 }
@@ -387,7 +443,8 @@ body.venue {
         border-color: $mono-01;
         &:after { background-image: image-url('icon-tag-venue.png'); }
       }
-      &:hover { color: $mono-01; }
+      &:hover,
+      &:focus { color: $mono-01; }
     }
   }
 }
