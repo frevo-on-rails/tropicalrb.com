@@ -152,19 +152,23 @@ body.venue {
 }
 
 body.index {
-  .navbar-brand { color: $poly-11; }
+  .navbar-brand,
+  .navbar-brand:hover { color: $poly-11; }
 }
 
 body.schedule {
-  .navbar-brand { color: $mono-10; }
+  .navbar-brand,
+  .navbar-brand:hover { color: $mono-10; }
 }
 
 body.sponsors {
-  .navbar-brand { color: $mono-03; }
+  .navbar-brand,
+  .navbar-brand:hover { color: $mono-03; }
 }
 
 body.venue {
-  .navbar-brand { color: $mono-01; }
+  .navbar-brand,
+  .navbar-brand:hover { color: $mono-01; }
 }
 
 /*... Navbar (Collapse) ...*/
@@ -320,10 +324,7 @@ body.index {
         border-color: $poly-11;
         &:after { background-image: image-url('icon-med-ticket-red@2x.png'); }
       }
-      &:hover {
-        color: $poly-11;
-        border-color: transparentize($poly-11, .4);
-      }
+      &:hover { color: $poly-11; }
     }
   }
 }
@@ -337,10 +338,7 @@ body.schedule {
         border-color: $mono-10;
         &:after { background-image: image-url('icon-med-ticket-white@2x.png'); }
       }
-      &:hover {
-        color: $mono-10;
-        border-color: transparentize($mono-10, .4);
-      }
+      &:hover { color: $mono-10; }
     }
   }
 }
@@ -354,10 +352,7 @@ body.sponsors {
         border-color: $mono-03;
         &:after { background-image: image-url('icon-med-ticket-grey@2x.png'); }
       }
-      &:hover {
-        color: $mono-03;
-        border-color: transparentize($mono-03, .4);
-      }
+      &:hover { color: $mono-03; }
     }
   }
 }
@@ -371,10 +366,7 @@ body.venue {
         border-color: $mono-01;
         &:after { background-image: image-url('icon-tag-venue.png'); }
       }
-      &:hover {
-        color: $mono-01;
-        border-color: transparentize($mono-01, .4);
-      }
+      &:hover { color: $mono-01; }
     }
   }
 }
