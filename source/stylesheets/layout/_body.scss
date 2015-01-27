@@ -4,49 +4,50 @@
 
 body { @include titillium-web; }
 
-  body.index {
-    color: $poly-11;
-    background-color: $poly-07;
-    background-position: top center;
+body.index {
+  color: $poly-11;
+  background-color: $poly-07;
+  background-position: top center;
+  background-repeat: no-repeat;
 
-    @media (max-width: 767px) { background-image: image-url('bkg-sunrise-xs.jpg'); }
-    @media (min-width: 768px) { background-image: image-url('bkg-sunrise-xlg.jpg'); }
+  @media (max-width: 767px) { background-image: image-url('bkg-sunrise-xs.jpg'); }
+  @media (min-width: 768px) { background-image: image-url('bkg-sunrise-xlg.jpg'); }
 
-    a { color: $poly-11; }
-    hr { border-top-color: $poly-11; }
-  }
+  a { color: $poly-11; }
+  hr { border-top-color: $poly-11; }
+}
 
-  body.schedule {
-    color: $mono-10;
-    background-color: $poly-01;
+body.schedule {
+  color: $mono-10;
+  background-color: $poly-01;
 
-    @media (max-width: 767px) { background-image: image-url('bkg-waterworld-xs.jpg'); }
-    @media (min-width: 768px) { background-image: image-url('bkg-waterworld-xlg.jpg'); }
+  @media (max-width: 767px) { background-image: image-url('bkg-waterworld-xs.jpg'); }
+  @media (min-width: 768px) { background-image: image-url('bkg-waterworld-xlg.jpg'); }
 
-    a { color: $mono-10; }
-    hr { border-top-color: $mono-10; }
-  }
+  a { color: $mono-10; }
+  hr { border-top-color: $mono-10; }
+}
 
-  body.sponsors {
-    color: $mono-03;
-    background-color: $mono-09;
+body.sponsors {
+  color: $mono-03;
+  background-color: $mono-09;
 
-    @media (max-width: 767px) { background-image: image-url('bkg-whitesand-xs.jpg'); }
-    @media (min-width: 768px) { background-image: image-url('bkg-whitesand-xlg.jpg'); }
+  @media (max-width: 767px) { background-image: image-url('bkg-whitesand-xs.jpg'); }
+  @media (min-width: 768px) { background-image: image-url('bkg-whitesand-xlg.jpg'); }
 
-    a { color: $mono-03; }
-    hr { border-top-color: $mono-03; }
-  }
+  a { color: $mono-03; }
+  hr { border-top-color: $mono-03; }
+}
 
-  body.venue {
-    color: $text-color;
-    background-color: $mono-10;
+body.venue {
+  color: $text-color;
+  background-color: $mono-10;
 
-    @media (max-width: 767px) { }
-    @media (min-width: 768px) { }
+  @media (max-width: 767px) { }
+  @media (min-width: 768px) { }
 
-    hr { border-top-color: $text-color; }
-  }
+  hr { border-top-color: $text-color; }
+}
 
 h3 {
   @include titillium-semi-bold;

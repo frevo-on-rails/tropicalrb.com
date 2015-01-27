@@ -46,6 +46,11 @@
   margin-left: auto;
   text-indent: -9999px;
 
+  address {
+    font-size: 0;
+    line-height: 0;
+  }
+
   @media (max-width: 480px) { margin-bottom: 45px; }
   @media (min-width: 481px) { margin-bottom: 40px; }
 
