@@ -4,22 +4,27 @@
 
 a { @extend .motion-wobble-vertical; }
 
-.motion-wobble-vertical {
+%motion-hacks {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-  transform: translate3d(0,0,0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.motion-wobble-vertical {
+  @extend %motion-hacks;
+  transform: translate3d(0,0,0);
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     animation-name: motion-wobble-vertical;
     animation-duration: .9s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
   }
 }
+
+/*... Keyframes ...*/
 
 @keyframes motion-wobble-vertical {
   16.65% { transform: translate3d(0,-4px,0); }

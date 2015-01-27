@@ -17,10 +17,9 @@
   border-style: solid;
   border-width: 2px;
   box-shadow: none;
+  transition: .3s font-family, .3s border-color;
 
-  &:focus {
-    box-shadow: none;
-  }
+  &:focus { box-shadow: none; }
 }
 
 body.index {
@@ -28,8 +27,8 @@ body.index {
     @include placeholder($poly-11);
     color: $poly-11;
     border-color: $poly-11;
-    &:hover { border-color: lighten($poly-11, 10%); }
-    &:focus { border-color: darken($poly-11, 10%); }
+    &:hover { border-color: transparentize($poly-11, .4); }
+    &:focus { @include titillium-semi-bold; }
   }
 }
 

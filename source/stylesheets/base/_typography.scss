@@ -52,7 +52,7 @@
        font-url('titillium-web-semi-bold.ttf') format('truetype'),
        font-url('titillium-web-semi-bold.svg#da1b6ccc957018b7fbe97ccdb479c13b') format('svg');
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @font-face {
@@ -78,7 +78,7 @@
 
 @mixin titillium-semi-bold {
   font-family: 'Titillium Web Semi Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @mixin titillium-bold {
