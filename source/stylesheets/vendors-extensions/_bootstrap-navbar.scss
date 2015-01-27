@@ -95,6 +95,13 @@ body.schedule {
     background-image: image-url('octagon-small-white@2x.png');
     .icon-bar { background-color: $mono-10 !important; }
   }
+
+  .navbar-collapse {
+    .link-schedule {
+      @include titillium-bold;
+      text-decoration: none;
+    }
+  }
 }
 
 body.sponsors {
@@ -102,12 +109,26 @@ body.sponsors {
     background-image: image-url('octagon-small-grey@2x.png');
     .icon-bar { background-color: $mono-03 !important; }
   }
+
+  .navbar-collapse {
+    .link-sponsors {
+      @include titillium-bold;
+      text-decoration: none;
+    }
+  }
 }
 
 body.venue {
   .navbar-toggle {
     background-image: image-url('octagon-small-red@2x.png');
     .icon-bar { background-color: $mono-01 !important; }
+  }
+
+  .navbar-collapse {
+    .link-venue {
+      @include titillium-bold;
+      text-decoration: none;
+    }
   }
 }
 
@@ -216,7 +237,7 @@ body.sponsors {
   }
 }
 
-body.tickets {
+body.link-tickets {
   .navbar-collapse {
     @media (max-width: 767px) { background-color: transparentize($mono-01, .1); }
     @media (min-width: 768px) { border-bottom-color: $mono-01 !important; }
@@ -277,7 +298,7 @@ body.venue {
         }
       }
 
-      &.tickets {
+      &.link-tickets {
         position: relative;
 
         &:after {
@@ -320,7 +341,7 @@ body.index {
     @media (max-width: 767px) { border-top-color: $poly-11 !important; }
     a {
       color: $poly-11;
-      &.tickets {
+      &.link-tickets {
         border-color: $poly-11;
         &:after { background-image: image-url('icon-med-ticket-red@2x.png'); }
       }
@@ -334,7 +355,7 @@ body.schedule {
     @media (max-width: 767px) { border-top-color: $mono-10 !important; }
     a {
       color: $mono-10;
-      &.tickets {
+      &.link-tickets {
         border-color: $mono-10;
         &:after { background-image: image-url('icon-med-ticket-white@2x.png'); }
       }
@@ -348,7 +369,7 @@ body.sponsors {
     @media (max-width: 767px) { border-top-color: $mono-03 !important; }
     a {
       color: $mono-03;
-      &.tickets {
+      &.link-tickets {
         border-color: $mono-03;
         &:after { background-image: image-url('icon-med-ticket-grey@2x.png'); }
       }
@@ -362,7 +383,7 @@ body.venue {
     @media (max-width: 767px) { border-top-color: $mono-01 !important; }
     a {
       color: $mono-01;
-      &.tickets {
+      &.link-tickets {
         border-color: $mono-01;
         &:after { background-image: image-url('icon-tag-venue.png'); }
       }
