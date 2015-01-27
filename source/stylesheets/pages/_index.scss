@@ -145,7 +145,7 @@
 
       a {
         @include square(44px);
-        @extend .hvr-wobble-vertical;
+        @extend .motion-wobble-vertical;
         position: relative;
         display: block;
         text-indent: -9999px;

@@ -2,11 +2,9 @@
       Animations
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-a {
-  @extend .hvr-wobble-vertical;
-}
+a { @extend .motion-wobble-vertical; }
 
-.hvr-wobble-vertical {
+.motion-wobble-vertical {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
@@ -16,14 +14,14 @@ a {
   &:hover,
   &:focus,
   &:active {
-    animation-name: hvr-wobble-vertical;
+    animation-name: motion-wobble-vertical;
     animation-duration: .9s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
   }
 }
 
-@keyframes hvr-wobble-vertical {
+@keyframes motion-wobble-vertical {
   16.65% { transform: translate3d(0,-4px,0); }
   33.3% { transform: translate3d(0,4px,0); }
   49.95% { transform: translate3d(0,-3px,0); }
