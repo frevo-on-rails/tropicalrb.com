@@ -63,7 +63,7 @@ main.schedule {
   display: block;
   margin: 0 auto;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
   @media (min-width: 768px) {
     @include square(80px);
@@ -82,6 +82,87 @@ main.schedule {
   background-image: image-url('schedule-graph-mobi-porto@2x.png');
   @media (min-width: 768px) {
     background-image: image-url('schedule-graph-desk-porto@2x.png');
+  }
+}
+
+%nav-event-active-bkg {
+    &:before {
+    @extend .motion-fade-in;
+    @include square(120px);
+    background-image: image-url('schedule-graph-mobi-bkg-active@2x.png');
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+
+    @media (min-width: 768px) {
+      @include square(160px);
+      background-image: image-url('schedule-graph-desk-bkg-active@2x.png');
+      background-size: 160px 160px;
+      top: -40px;
+      left: -40px;
+    }
+  }
+}
+
+main.schedule.day-one {
+  .nav-event.one {
+    .icon-recife {
+      @extend %nav-event-active-bkg;
+      background-image: image-url('schedule-graph-mobi-recife-active@2x.png');
+
+      @media (min-width: 768px) {
+        background-image: image-url('schedule-graph-desk-recife-active@2x.png');
+      }
+    }
+
+    h4, .nav-event-time { @include titillium-bold; }
+  }
+}
+
+main.schedule.day-two {
+  .nav-event.two {
+    .icon-porto {
+      @extend %nav-event-active-bkg;
+      background-image: image-url('schedule-graph-mobi-porto-active@2x.png');
+
+      @media (min-width: 768px) {
+        background-image: image-url('schedule-graph-desk-porto-active@2x.png');
+      }
+    }
+
+    h4, .nav-event-time { @include titillium-bold; }
+  }
+}
+
+main.schedule.day-three {
+  .nav-event.three {
+    .icon-porto {
+      @extend %nav-event-active-bkg;
+      background-image: image-url('schedule-graph-mobi-porto-active@2x.png');
+      @media (min-width: 768px) {
+        background-image: image-url('schedule-graph-desk-porto-active@2x.png');
+      }
+    }
+
+    h4, .nav-event-time { @include titillium-bold; }
+  }
+}
+
+main.schedule.day-four {
+  .nav-event.four {
+    .icon-porto {
+      @extend %nav-event-active-bkg;
+      background-image: image-url('schedule-graph-mobi-porto-active@2x.png');
+      @media (min-width: 768px) {
+        background-image: image-url('schedule-graph-desk-porto-active@2x.png');
+      }
+    }
+
+    h4, .nav-event-time { @include titillium-bold; }
   }
 }
 
