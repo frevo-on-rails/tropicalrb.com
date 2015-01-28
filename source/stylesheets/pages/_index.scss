@@ -89,31 +89,26 @@ main.hero {
     position: relative;
     height: 24px;
     line-height: 24px;
+    margin-bottom: 1px;
 
     @media (min-width: 992px) {
       display: inline-block;
       margin-left: 10px;
     }
 
-    &:before {
-      @include square(24px);
-      display: inline-block;
-      margin-right: 5px;
-      margin-bottom: -6px;
-      background-size: 24px;
-      content: '';
-    }
-
-    &:first-child {
-      @media (max-width: 991px) { margin-bottom: 5px; }
-      &:before { background-image: image-url('icon-med-translation-red@2x.png'); }
-    }
-
-    &:last-child {
-      &:before { background-image: image-url('icon-med-transportation-red@2x.png'); }
-    }
+    .icon-medium { margin-right: 5px; }
   }
 }
+
+.icon-medium {
+  @include square(24px);
+  background-size: 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-translation { background-image: image-url('icon-med-translation-red@2x.png'); }
+.icon-transportation { background-image: image-url('icon-med-transportation-red@2x.png'); }
 
 .hero-social {
   @include make-xs-column(12);
