@@ -95,8 +95,6 @@ main.hero {
       display: inline-block;
       margin-left: 10px;
     }
-
-    .icon-medium { margin-right: 5px; }
   }
 }
 
@@ -104,6 +102,7 @@ main.hero {
   @include square(24px);
   background-size: 24px;
   display: inline-block;
+  margin-right: 5px;
   vertical-align: middle;
 }
 
@@ -227,14 +226,12 @@ main.hero {
   }
 
   &:nth-child(1) {
-
     @media (max-width: 480px) { margin-bottom: 20px; }
 
     @media (min-width: 992px) {
       top: -284px;
       left: 15px;
     }
-
     @media (min-width: 1200px) {
       top: -412px;
       left: 55px;
@@ -248,7 +245,6 @@ main.hero {
       top: -412px;
       left: 133px;
     }
-
     @media (min-width: 1200px) {
       top: -412px;
       left: 233px;

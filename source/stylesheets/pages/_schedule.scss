@@ -18,6 +18,7 @@ main.schedule {
   margin: 35px auto 10px;
   width: (70px * 4);
   overflow: visible;
+
   @media (min-width: 768px) {
     width: (126px * 4);
     margin-top: 0;
@@ -276,4 +277,39 @@ main.schedule.day-four {
 
 /*... Schedule Area — All Events ...*/
 
+.schedule-area {
+  header {
+    margin: 20px auto;
+
+    @media (min-width: 768px) { margin-bottom: 15px; }
+  }
+}
+
+.schedule-subtitles {
+  text-align: center;
+  margin-top: 2px;
+}
+
+.schedule-subtitle {
+  display: inline-block;
+  height: 24px;
+  margin: 1px 10px;
+  font-size: 14px;
+  line-height: 24px;
+  vertical-align: middle;
+
+  address {
+    display: inline-block;
+    text-decoration: underline;
+    margin: 0;
+  }
+
+  .icon-translation {
+    background-image: image-url('icon-med-translation-white@2x.png');
+    margin-right: 6px;
+  }
+}
+
+.icon-calendar { background-image: image-url('icon-med-calendar@2x.png'); }
+.icon-geolocal { background-image: image-url('icon-med-geolocal@2x.png'); }
 
