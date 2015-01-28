@@ -1,30 +1,21 @@
-// *************************************
-//
-//   Bootstrap
-//   ->
-//
-// *************************************
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+      Bootstrap
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 @import 'bootstrap-sprockets';
 
-// -------------------------------------
-//   Core variables and mixins
-// -------------------------------------
+/*... Core variables and mixins ...*/
 
 @import 'bootstrap/variables';
 @import 'bootstrap/mixins';
 
-// -------------------------------------
-//   Reset and dependencies
-// -------------------------------------
+/*... Reset and dependencies ...*/
 
 @import 'bootstrap/normalize';
 @import 'bootstrap/print';
 // @import 'bootstrap/glyphicons';
 
-// -------------------------------------
-//   Core CSS
-// -------------------------------------
+/*... Core CSS ...*/
 
 @import 'bootstrap/scaffolding';
 @import 'bootstrap/type';
@@ -34,9 +25,7 @@
 @import 'bootstrap/forms';
 @import 'bootstrap/buttons';
 
-// -------------------------------------
-//   Components
-// -------------------------------------
+/*... Components ...*/
 
 @import 'bootstrap/component-animations';
 // @import 'bootstrap/dropdowns';
@@ -60,18 +49,14 @@
 // @import 'bootstrap/wells';
 // @import 'bootstrap/close';
 
-// -------------------------------------
-//   Components w/ JavaScript
-// -------------------------------------
+/*... Components w/ JavaScript ...*/
 
 // @import 'bootstrap/modals';
 // @import 'bootstrap/tooltip';
 // @import 'bootstrap/popovers';
 // @import 'bootstrap/carousel';
 
-// -------------------------------------
-//   Utility classes
-// -------------------------------------
+/*... Utility classes ...*/
 
 @import 'bootstrap/utilities';
 @import 'bootstrap/responsive-utilities';

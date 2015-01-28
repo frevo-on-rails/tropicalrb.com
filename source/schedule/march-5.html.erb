@@ -24,10 +24,15 @@ stylesheet: pages/schedule
           <%= image_tag 'event-workshop-noelia@2x.png', class: 'event-image' %>
           <h4 class="event-author"><a href="#">Awesome Author</a></h4>
           <time class="event-time">7<span>a.m.</span> to 9<span>a.m.</span></time>
-          <p class="event-description">Lorem ipum sit dolor amet<a class="accordion-trigger" href="#">More</a></p>
+          <p class="event-description">
+            <span class="first-words">Lorem ipum sit dolor amet hendrerit suspendisse purus sociosqu semper mollis adipiscing dui condimentum adipiscing a magnis convallis cubilia in dictumst</span> <span class="last-words">pulvinar cursus dis scelerisque magnis maecenas cum condimentum eu. Dignissim vestibulum eu adipiscing orci parturient sodales tellus suspendisse consectetur nisi cras orci eu parturient et nullam a nostra euismod per. Bibendum nostra in potenti condimentum parturient consectetur duis.</span>
+            <a class="expander" href="#author-name" data-alternative-label="Less">More</a>
+          </p>
         </li>
       </ol>
     </section>
 
   </article>
 </main>
+
+<%= javascript_include_tag 'schedule' %>

@@ -397,7 +397,7 @@ main.schedule.day-four {
 .event-description {
   margin-top: 10px;
 
-  .accordion-trigger {
+  .expander {
     @include titillium-semi-bold;
     display: inline-block;
     font-size: 10px;
@@ -407,3 +407,7 @@ main.schedule.day-four {
     vertical-align: baseline;
   }
 }
+
+.first-words:after { content: '…'; }
+.last-words { display: none; }
+.event.expanded .first-words:after { content: ''; }
