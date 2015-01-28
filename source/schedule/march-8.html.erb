@@ -13,8 +13,10 @@ stylesheet: pages/schedule
     <section class="activities">
       <header>
         <h2>Activity</h2>
-        <span class="icon-medium icon-calendar"></span><small><time date="2015-03-5">March 8th</time> • 00h and 00h</small>
-        <span class="icon-medium icon-geolocal"></span><address class="small"><a href="#">Address name</a></address>
+          <div class="schedule-subtitles">
+            <small class="schedule-subtitle"><span class="icon-medium icon-calendar"></span><time date="2015-03-8">March 8th • 00h and 00h</time></small>
+            <a class="schedule-subtitle" href="#"><span class="icon-medium icon-geolocal"></span><address>Address name</address></a>
+          </div>
       </header>
       <ol class="schedule-events">
         <li class="event" id="author-name">
@@ -23,7 +25,7 @@ stylesheet: pages/schedule
           <h4 class="event-author">Awesome Author</h4>
           <time class="event-time">8<span>a.m.</span> to 9<span>a.m.</span></time>
           <a class="event-local" href="#">Leaving at Local</a>
-          <p class="event-description">Lorem ipum sit dolor amet<a href="smaller">More</a></p>
+          <p class="event-description">Lorem ipum sit dolor amet<a href="#">More</a></p>
         </li>
       </ol>
     </section>
