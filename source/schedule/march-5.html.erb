@@ -20,11 +20,11 @@ stylesheet: pages/schedule
       </header>
       <ol class="schedule-events">
         <li class="event" id="author-name">
-          <img class="event-image" src="#">
           <h3 class="event-title">The Greatest Event Of All Conference</h3>
-          <h4 class="event-author">Awesome Author</h4>
+          <%= image_tag 'event-workshop-noelia@2x.png', class: 'event-image' %>
+          <h4 class="event-author"><a href="#">Awesome Author</a></h4>
           <time class="event-time">7<span>a.m.</span> to 9<span>a.m.</span></time>
-          <p class="event-description">Lorem ipum sit dolor amet<a href="#">More</a></p>
+          <p class="event-description">Lorem ipum sit dolor amet<a class="accordion-trigger" href="#">More</a></p>
         </li>
       </ol>
     </section>

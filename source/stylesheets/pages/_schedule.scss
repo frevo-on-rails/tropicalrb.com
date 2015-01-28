@@ -275,7 +275,7 @@ main.schedule.day-four {
   }
 }
 
-/*... Schedule Area — All Events ...*/
+/*... Schedule Area ...*/
 
 .schedule-area {
   header {
@@ -284,6 +284,8 @@ main.schedule.day-four {
     @media (min-width: 768px) { margin-bottom: 15px; }
   }
 }
+
+/*... Schedule Header ...*/
 
 .schedule-subtitles {
   text-align: center;
@@ -313,3 +315,95 @@ main.schedule.day-four {
 .icon-calendar { background-image: image-url('icon-med-calendar@2x.png'); }
 .icon-geolocal { background-image: image-url('icon-med-geolocal@2x.png'); }
 
+/*... Schedule Timeline (Events) ...*/
+
+.schedule-events { @include list-unstyled; }
+
+.event {
+  @include clearfix();
+  padding-top: 34px;
+  position: relative;
+}
+
+.event-title {
+  @include titillium-semi-bold;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.event-image {
+  @include square(60px);
+  float: left;
+  margin-right: 10px;
+
+  @media (min-width: 768px) { @include square(110px); }
+}
+
+.event-author {
+  @include size(210px,60px);
+  @include titillium-semi-bold;
+  font-size: 18px;
+  line-height: 18px;
+  height: 60px;
+  margin: 0 0 0 70px;
+  padding-top: 12px;
+  vertical-align: middle;
+}
+
+.event-time {
+  @include titillium-semi-bold;
+  @include opacity(.75);
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 2px;
+  display: inline-block;
+  height: 24px;
+  padding: 0 6px;
+  line-height: 22px;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+  }
+
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 110px;
+    margin-left: -55px;
+
+    &:before, &:after {
+      @include size(48px,1px);
+      content: '';
+      background-color: rgba(255,255,255,.5);
+      display: inline;
+      position: absolute;
+      vertical-align: middle;
+      top: 11px;
+    }
+
+    &:before { left: -58px; }
+    &:after { right: -58px; }
+  }
+}
+
+.event-description {
+  margin-top: 10px;
+
+  .accordion-trigger {
+    @include titillium-semi-bold;
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+  }
+}
