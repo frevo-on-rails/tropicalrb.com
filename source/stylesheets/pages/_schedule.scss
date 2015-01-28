@@ -321,8 +321,10 @@ main.schedule.day-four {
 
 .event {
   @include clearfix();
-  padding-top: 34px;
   position: relative;
+  margin-bottom: 25px;
+
+  @media (max-width: 767px) { padding-top: 34px; }
 }
 
 .event-title {
@@ -330,6 +332,7 @@ main.schedule.day-four {
   font-size: 24px;
   line-height: 24px;
   text-align: center;
+  margin-bottom: 5px;
   width: 100%;
 }
 
@@ -395,7 +398,7 @@ main.schedule.day-four {
 }
 
 .event-description {
-  margin-top: 10px;
+  margin-top: 5px;
 
   .expander {
     @include titillium-semi-bold;
