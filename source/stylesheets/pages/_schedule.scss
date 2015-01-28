@@ -13,21 +13,26 @@ main.schedule {
 .nav-schedule {
   @include clearfix();
   display: block;
-  margin: 35px auto;
+  margin: 35px auto 10px;
   width: (70px * 4);
   overflow: visible;
-  @media (min-width: 768px) { width: (126px * 4); }
+  @media (min-width: 768px) {
+    width: (126px * 4);
+    margin-top: 0;
+  }
 
-  ol { @include list-unstyled; }
+  ol {
+    @include list-unstyled;
+    @include clearfix();
+  }
 }
 
 .nav-event {
+  @include size(70px, 128px);
   float: left;
-  width: 70px;
-  height: 133px;
   overflow: visible;
   z-index: 1;
-  @media (min-width: 768px) { @include square(126px); }
+  @media (min-width: 768px) { @include size(126px, 149px); }
 
   h4 {
     height: 18px;
@@ -36,13 +41,38 @@ main.schedule {
     margin-top: 0;
     margin-bottom: 5px;
     text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+      height: 36px;
+      margin-bottom: 10px;
+    }
   }
 
-  &.two h4 { width: 140px; }
+  &.one h4,
+  &.four h4 {
+    @media (min-width: 768px) {
+      height: 18px;
+      margin-top: 18px;
+    }
+  }
+
+  &.two h4 {
+    width: 140px;
+
+    @media (min-width: 768px) { width: 126px; }
+  }
 
   &.three {
     margin-top: 23px;
+    height: 105px;
     h4 { display: none; }
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+      height: 149px;
+      h4 { display: block; }
+    }
   }
 
   a {
