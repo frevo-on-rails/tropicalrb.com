@@ -103,3 +103,29 @@
   font-family: 'Xilosa', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 400;
 }
+
+/*... Typographic Settings ...*/
+
+h2, .h2 {
+  @include molle;
+  font-size: 48px;
+  line-height: 48px;
+  margin-top: 0;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 51px;
+    line-height: 51px;
+
+    &:before, &:after {
+      @include size(110px, 2px);
+      content: '';
+      background-color: white;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:before { margin-right: 18px; }
+    &:after { margin-left: 20px; }
+  }
+}

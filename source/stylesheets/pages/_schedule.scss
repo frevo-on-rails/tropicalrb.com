@@ -10,6 +10,8 @@ main.schedule {
 
 .schedule-area { @include make-xs-column(12); }
 
+/*... Navigation ...*/
+
 .nav-schedule {
   @include clearfix();
   display: block;
@@ -271,3 +273,7 @@ main.schedule.day-four {
     sup { font-size: 11px; }
   }
 }
+
+/*... Schedule Area — All Events ...*/
+
+
