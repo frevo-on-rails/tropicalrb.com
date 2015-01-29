@@ -180,11 +180,11 @@ main.schedule.day-three {
         background-image: image-url('schedule-graph-desk-porto-active@2x.png');
       }
     }
-    .nav-event-time { @include titillium-bold; }
+    h4, .nav-event-time { @include titillium-bold; }
   }
 
-  .nav-event.two {
-    h4 { @include titillium-bold; }
+  @media (max-width: 767px) {
+    .nav-event.two h4 { @include titillium-bold; }
   }
 }
 
@@ -284,7 +284,7 @@ main.schedule.day-four {
   header {
     margin: 20px auto;
 
-    @media (min-width: 768px) { margin-bottom: 15px; }
+    @media (min-width: 768px) { margin-bottom: 30px; }
   }
 }
 
@@ -323,8 +323,10 @@ main.schedule.day-four {
 .schedule-events { @include list-unstyled; }
 
 .event {
+  @include make-xs-column(12);
+  @include make-sm-column(9);
+  @include make-sm-column-offset(3);
   @include clearfix();
-  position: relative;
   margin-bottom: 25px;
 
   @media (max-width: 767px) { padding-top: 34px; }
@@ -337,6 +339,9 @@ main.schedule.day-four {
   text-align: center;
   margin-bottom: 5px;
   width: 100%;
+
+  @media (min-width: 768px) { margin-bottom: 10px; }
+  @media (min-width: 768px) and (max-width: $screen-sm-max) { text-align: left; }
 }
 
 .event-image {
@@ -345,6 +350,11 @@ main.schedule.day-four {
   margin-right: 10px;
 
   @media (min-width: 768px) { @include square(110px); }
+  @media (min-width: 768px) and (max-width: $screen-sm-max) {
+    position: absolute;
+    left: -120px;
+    top: 5px;
+  }
 }
 
 .event-author {
@@ -356,12 +366,20 @@ main.schedule.day-four {
   margin: 0 0 0 70px;
   padding-top: 12px;
   vertical-align: middle;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    width: auto;
+    height: 24px;
+    margin-left: 0;
+    padding-top: 0;
+  }
 }
 
 .event-time {
   @include titillium-semi-bold;
   @include opacity(.75);
-  border: 1px solid rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.75);
   border-radius: 2px;
   display: inline-block;
   height: 24px;
@@ -398,6 +416,17 @@ main.schedule.day-four {
     &:before { left: -58px; }
     &:after { right: -58px; }
   }
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    height: 24px;
+    margin-left: 10px;
+  }
+}
+
+.event-local {
+  line-height: 24px;
+  height: 24px;
 }
 
 .event-description {
