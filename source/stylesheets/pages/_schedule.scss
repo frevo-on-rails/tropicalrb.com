@@ -339,6 +339,7 @@ main.schedule.day-four {
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     margin-bottom: 30px;
     padding-right: 50px;
+    min-height: 111px;
   }
   @media (min-width: $screen-md-min) {
     margin-bottom: 5px;
@@ -360,17 +361,18 @@ main.schedule.day-four {
       width: 43.8%;
       margin-left: 56.2%;
 
-      .event-image {
-        left: -115px;
-        top: 0;
-        margin-right: 0;
-      }
+      .event-image { margin-right: 0; }
       .event-title { text-align: left; }
-      .time-line:before, .time-line:after { left: -61px; }
+      .time-line:before, .time-line:after { left: -65px; }
+    }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      .event-image { left: -118px; }
     }
     @media (min-width: $screen-lg-min) {
       width: 44.8%;
       margin-left: 55.2%;
+
+      .event-image { left: -119px; }
     }
   }
 
@@ -382,22 +384,25 @@ main.schedule.day-four {
       text-align: right;
 
       .event-title { text-align: right; }
-      .event-image {
-        right: -127px;
-        top: 0;
-      }
+      .event-image { margin-right: 0; }
       .event-author, .event-local {
         @include clearfix();
         float: right;
         margin-right: 0;
         margin-left: 10px;
       }
-      .time-line:before, .time-line:after { right: -63px; }
+    }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      .time-line:before, .time-line:after { right: -58px; }
+      .event-image { right: -113px; }
     }
     @media (min-width: $screen-lg-min) {
       width: 44.8%;
       margin-left: 0;
       margin-right: 55.2%;
+
+      .time-line:before, .time-line:after { right: -59px; }
+      .event-image { right: -113px; }
     }
   }
 }
@@ -423,11 +428,9 @@ main.schedule.day-four {
   @media (min-width: $screen-sm-min) {
     @include square(110px);
     position: absolute;
+    top: -1px
   }
-  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    left: -120px;
-    top: 0;
-  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { left: -120px; }
 }
 
 .event-author {
