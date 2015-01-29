@@ -6,12 +6,16 @@ main.schedule {
   @extend .container;
   margin-bottom: 0;
 
-  @media (min-width: $screen-sm-min) { margin-bottom: 30px; }
+  @media (min-width: $screen-sm-min) { margin-bottom: 15px; }
+  @media (min-width: $screen-md-min) { margin-bottom: 30px; }
 
   h1 { display: none; }
 }
 
-.schedule-area { @include make-xs-column(12); }
+.schedule-area {
+  @include make-xs-column(12);
+  padding: 0;
+}
 
 /*... Navigation ...*/
 
@@ -332,20 +336,23 @@ main.schedule.day-four {
   @include clearfix();
   margin-bottom: 25px;
 
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { margin-bottom: 30px; }
   @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { margin-bottom: 5px; }
-
   @media (max-width: $screen-xs-max) { padding-top: 34px; }
+
+  &:last-child {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { margin-bottom: 15px; }
+  }
 
   &:nth-child(odd) {
     @media (min-width: $screen-md-min) {
-      width: 43.5%;
-      margin-left: 56.5%;
+      width: 43.8%;
+      margin-left: 56.2%;
     }
     @media (min-width: $screen-lg-min) {
-      width: 44.7%;
-      margin-left: 55.3%;
+      width: 44.8%;
+      margin-left: 55.2%;
     }
-
     @media (min-width: $screen-md-min) {
       .event-image {
         left: -115px;
@@ -359,16 +366,15 @@ main.schedule.day-four {
 
   &:nth-child(even) {
     @media (min-width: $screen-md-min) {
-      width: 43.5%;
+      width: 43.8%;
       margin-left: 0;
-      margin-right: 56.5%;
+      margin-right: 56.2%;
     }
     @media (min-width: $screen-lg-min) {
-      width: 44.7%;
+      width: 44.8%;
       margin-left: 0;
-      margin-right: 55.3%;
+      margin-right: 55.2%;
     }
-
     @media (min-width: $screen-md-min) {
       text-align: right;
 
@@ -377,8 +383,7 @@ main.schedule.day-four {
         top: 5px;
       }
       .event-time { margin-right: 10px; }
-      .event-author,
-      .event-local {
+      .event-author, .event-local {
         @include clearfix();
         float: right;
       }
@@ -420,15 +425,17 @@ main.schedule.day-four {
   line-height: 18px;
   height: 60px;
   margin: 0 0 0 70px;
-  padding-top: 12px;
+  padding-top: 20px;
   vertical-align: middle;
+
+  &.long { padding-top: 12px; }
 
   @media (min-width: $screen-sm-min) {
     display: inline-block;
     width: auto;
     height: 24px;
     margin-left: 0;
-    padding-top: 0;
+    padding-top: 1px;
   }
 }
 
