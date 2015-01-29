@@ -336,7 +336,10 @@ main.schedule.day-four {
   @include clearfix();
   margin-bottom: 25px;
 
-  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { margin-bottom: 30px; }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    margin-bottom: 30px;
+    padding-right: 50px;
+  }
   @media (min-width: $screen-md-min) { margin-bottom: 5px; }
   @media (max-width: $screen-xs-max) { padding-top: 34px; }
 
