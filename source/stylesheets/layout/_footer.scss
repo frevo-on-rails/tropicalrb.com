@@ -181,7 +181,7 @@ body.index {
   .footer {
     padding-bottom: 370px;
 
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
       @include gradient-vertical-three-colors(transparentize($poly-08,1), $poly-08, 65%, $poly-08);
     }
 
