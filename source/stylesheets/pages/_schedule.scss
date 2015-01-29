@@ -375,6 +375,7 @@ main.schedule.day-four {
       margin-right: 56.2%;
       text-align: right;
 
+      .event-title { text-align: right; }
       .event-image {
         right: -127px;
         top: 0;
@@ -382,8 +383,9 @@ main.schedule.day-four {
       .event-author, .event-local {
         @include clearfix();
         float: right;
+        margin-right: 0;
+        margin-left: 10px;
       }
-      .event-time { margin-right: 10px; }
       .time-line:before, .time-line:after { right: -63px; }
     }
     @media (min-width: $screen-lg-min) {
@@ -432,7 +434,9 @@ main.schedule.day-four {
   padding-top: 20px;
   vertical-align: middle;
 
-  &.long { padding-top: 12px; }
+  &.long {
+    @media (max-width: $screen-xs-max) { padding-top: 12px; }
+  }
 
   @media (min-width: $screen-sm-min) {
     display: inline-block;
@@ -440,6 +444,7 @@ main.schedule.day-four {
     height: 24px;
     margin-left: 0;
     padding-top: 1px;
+    margin-right: 10px;
   }
 }
 
@@ -487,13 +492,13 @@ main.schedule.day-four {
   @media (min-width: $screen-sm-min) {
     display: inline-block;
     height: 24px;
-    margin-left: 10px;
   }
 }
 
 .event-local {
   line-height: 24px;
   height: 24px;
+  margin-right: 10px;
 }
 
 .event-description {
