@@ -113,7 +113,7 @@ h2, .h2 {
   margin: 0;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     font-size: 51px;
     line-height: 51px;
 

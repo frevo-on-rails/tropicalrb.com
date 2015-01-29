@@ -5,13 +5,13 @@
 .newsletter {
   margin-bottom: 40px;
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     max-width: 280px;
     margin-right: auto;
     margin-left: auto;
   }
 
-  @media (min-width: 768px) { max-width: 330px; }
+  @media (min-width: $screen-sm-min) { max-width: 330px; }
 }
 
 #newsletter-email {

@@ -4,7 +4,7 @@
 
 main.schedule {
   @extend .container;
-  @media (max-width: 991px) { margin-bottom: 40px; }
+  @media (max-width: $screen-sm-max) { margin-bottom: 40px; }
   h1 { display: none; }
 }
 
@@ -19,7 +19,7 @@ main.schedule {
   width: (70px * 4);
   overflow: visible;
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     width: (126px * 4);
     margin-top: 0;
   }
@@ -35,7 +35,7 @@ main.schedule {
   float: left;
   overflow: visible;
   z-index: 1;
-  @media (min-width: 768px) { @include size(126px, 149px); }
+  @media (min-width: $screen-sm-min) { @include size(126px, 149px); }
 
   h4 {
     height: 18px;
@@ -45,7 +45,7 @@ main.schedule {
     margin-bottom: 5px;
     text-align: center;
 
-    @media (min-width: 768px) {
+    @media (min-width: $screen-sm-min) {
       font-size: 18px;
       height: 36px;
       margin-bottom: 10px;
@@ -54,7 +54,7 @@ main.schedule {
 
   &.one h4,
   &.four h4 {
-    @media (min-width: 768px) {
+    @media (min-width: $screen-sm-min) {
       height: 18px;
       margin-top: 18px;
     }
@@ -63,7 +63,7 @@ main.schedule {
   &.two h4, {
     width: 140px;
 
-    @media (min-width: 768px) { width: 126px; }
+    @media (min-width: $screen-sm-min) { width: 126px; }
   }
 
   &.three {
@@ -71,7 +71,7 @@ main.schedule {
     height: 105px;
     h4 { display: none; }
 
-    @media (min-width: 768px) {
+    @media (min-width: $screen-sm-min) {
       margin-top: 0;
       height: 149px;
       h4 { display: block; }
@@ -98,7 +98,7 @@ main.schedule {
   position: relative;
   z-index: 3;
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     @include square(80px);
     background-size: 80px 80px;
   }
@@ -106,14 +106,14 @@ main.schedule {
 
 .icon-recife {
   background-image: image-url('schedule-graph-mobi-recife@2x.png');
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     background-image: image-url('schedule-graph-desk-recife@2x.png');
   }
 }
 
 .icon-porto {
   background-image: image-url('schedule-graph-mobi-porto@2x.png');
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     background-image: image-url('schedule-graph-desk-porto@2x.png');
   }
 }
@@ -131,7 +131,7 @@ main.schedule {
     top: -30px;
     left: -30px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $screen-sm-min) {
       @include square(160px);
       background-image: image-url('schedule-graph-desk-bkg-active@2x.png');
       background-size: 160px 160px;
@@ -147,7 +147,7 @@ main.schedule.day-one {
       @extend %nav-event-active-bkg;
       background-image: image-url('schedule-graph-mobi-recife-active@2x.png');
 
-      @media (min-width: 768px) {
+      @media (min-width: $screen-sm-min) {
         background-image: image-url('schedule-graph-desk-recife-active@2x.png');
       }
     }
@@ -162,7 +162,7 @@ main.schedule.day-two {
       @extend %nav-event-active-bkg;
       background-image: image-url('schedule-graph-mobi-porto-active@2x.png');
 
-      @media (min-width: 768px) {
+      @media (min-width: $screen-sm-min) {
         background-image: image-url('schedule-graph-desk-porto-active@2x.png');
       }
     }
@@ -176,14 +176,14 @@ main.schedule.day-three {
     .icon-porto {
       @extend %nav-event-active-bkg;
       background-image: image-url('schedule-graph-mobi-porto-active@2x.png');
-      @media (min-width: 768px) {
+      @media (min-width: $screen-sm-min) {
         background-image: image-url('schedule-graph-desk-porto-active@2x.png');
       }
     }
     h4, .nav-event-time { @include titillium-bold; }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     .nav-event.two h4 { @include titillium-bold; }
   }
 }
@@ -193,7 +193,7 @@ main.schedule.day-four {
     .icon-porto {
       @extend %nav-event-active-bkg;
       background-image: image-url('schedule-graph-mobi-porto-active@2x.png');
-      @media (min-width: 768px) {
+      @media (min-width: $screen-sm-min) {
         background-image: image-url('schedule-graph-desk-porto-active@2x.png');
       }
     }
@@ -211,7 +211,7 @@ main.schedule.day-four {
   position: absolute;
   top: (30px - 3px);
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     @include size(52px, 10px);
     background-image: image-url('schedule-graph-connector-desk@2x.png');
     background-size: 52px 10px;
@@ -221,13 +221,13 @@ main.schedule.day-four {
   &.end {
     &.left {
       background-image: image-url('schedule-graph-connector-mobi-end-left@2x.png');
-      @media (min-width: 768px) {
+      @media (min-width: $screen-sm-min) {
         background-image: image-url('schedule-graph-connector-desk-end-left@2x.png');
       }
     }
     &.right {
       background-image: image-url('schedule-graph-connector-mobi-end-right@2x.png');
-      @media (min-width: 768px) {
+      @media (min-width: $screen-sm-min) {
         background-image: image-url('schedule-graph-connector-desk-end-right@2x.png');
       }
     }
@@ -235,16 +235,16 @@ main.schedule.day-four {
 
   &.left {
     left: -7px;
-    @media (min-width: 768px) { left: -26px; }
+    @media (min-width: $screen-sm-min) { left: -26px; }
   }
   &.right {
     right: -7px;
-    @media (min-width: 768px) { right: -26px; }
+    @media (min-width: $screen-sm-min) { right: -26px; }
   }
 }
 
 .icon-car {
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     @include square(44px);
     background-image: image-url('schedule-graph-car@2x.png');
     background-size: 44px 44px;
@@ -264,7 +264,7 @@ main.schedule.day-four {
   text-transform: uppercase;
   width: 70px;
 
-  @media (min-width: 768px) { width: 126px; }
+  @media (min-width: $screen-sm-min) { width: 126px; }
 
   span {
     @include titillium-semi-bold;
@@ -284,7 +284,7 @@ main.schedule.day-four {
   header {
     margin: 20px auto;
 
-    @media (min-width: 768px) { margin-bottom: 30px; }
+    @media (min-width: $screen-sm-min) { margin-bottom: 30px; }
   }
 }
 
@@ -329,7 +329,7 @@ main.schedule.day-four {
   @include clearfix();
   margin-bottom: 25px;
 
-  @media (max-width: 767px) { padding-top: 34px; }
+  @media (max-width: $screen-xs-max) { padding-top: 34px; }
 }
 
 .event-title {
@@ -340,8 +340,8 @@ main.schedule.day-four {
   margin-bottom: 5px;
   width: 100%;
 
-  @media (min-width: 768px) { margin-bottom: 10px; }
-  @media (min-width: 768px) and (max-width: $screen-sm-max) { text-align: left; }
+  @media (min-width: $screen-sm-min) { margin-bottom: 10px; }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { text-align: left; }
 }
 
 .event-image {
@@ -349,8 +349,8 @@ main.schedule.day-four {
   float: left;
   margin-right: 10px;
 
-  @media (min-width: 768px) { @include square(110px); }
-  @media (min-width: 768px) and (max-width: $screen-sm-max) {
+  @media (min-width: $screen-sm-min) { @include square(110px); }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     position: absolute;
     left: -120px;
     top: 5px;
@@ -367,7 +367,7 @@ main.schedule.day-four {
   padding-top: 12px;
   vertical-align: middle;
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     display: inline-block;
     width: auto;
     height: 24px;
@@ -396,7 +396,7 @@ main.schedule.day-four {
     vertical-align: baseline;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     position: absolute;
     top: 0;
     left: 50%;
@@ -417,7 +417,7 @@ main.schedule.day-four {
     &:after { right: -58px; }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     display: inline-block;
     height: 24px;
     margin-left: 10px;

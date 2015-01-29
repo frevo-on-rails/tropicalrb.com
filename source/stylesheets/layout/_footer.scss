@@ -113,8 +113,8 @@ body.schedule {
   &.footer-brands-c {
     margin-top: 10px;
 
-    @media (max-width: 767px) { margin-bottom: 30px; }
-    @media (min-width: 768px) { margin-bottom: 20px; }
+    @media (max-width: $screen-xs-max) { margin-bottom: 30px; }
+    @media (min-width: $screen-sm-min) { margin-bottom: 20px; }
   }
 }
 
@@ -166,11 +166,11 @@ body.schedule {
 
   .column {
     &:nth-child(1) {
-      @media (min-width: 768px) { text-align: right; }
+      @media (min-width: $screen-sm-min) { text-align: right; }
     }
 
     &:nth-child(2) {
-      @media (min-width: 768px) { text-align: left; }
+      @media (min-width: $screen-sm-min) { text-align: left; }
     }
   }
 }
@@ -181,12 +181,12 @@ body.index {
   .footer {
     padding-bottom: 370px;
 
-    @media (max-width: 767px) {
+    @media (max-width: $screen-xs-max) {
       @include gradient-vertical-three-colors(transparentize($poly-08,1), $poly-08, 65%, $poly-08);
     }
 
-    @media (min-width: 768px) { padding-bottom: 200px; }
-    @media (min-width: 1200px) { padding-bottom: 180px; }
+    @media (min-width: $screen-sm-min) { padding-bottom: 200px; }
+    @media (min-width: $screen-lg-min) { padding-bottom: 180px; }
 
     .coconut {
       @include size(266px, 350px);
@@ -195,9 +195,9 @@ body.index {
       background-image: image-url('bkg-coconut-left@2x.png');
       background-size: 266px 350px;
 
-      @media (max-width: 767px) { bottom: 24px; }
-      @media (min-width: 768px) { bottom: 70px; }
-      @media (min-width: 1199px) { left: -60px; }
+      @media (max-width: $screen-xs-max) { bottom: 24px; }
+      @media (min-width: $screen-sm-min) { bottom: 70px; }
+      @media (min-width: $screen-lg-min) { left: -60px; }
     }
 
     .sea {
@@ -209,12 +209,12 @@ body.index {
       background-position: right top;
       background-size: 520px 200px;
 
-      @media (min-width: 768px) {
+      @media (min-width: $screen-sm-min) {
         bottom: -90px;
         right: 142px;
       }
 
-      @media (min-width: 1199px) { right: 230px; }
+      @media (min-width: $screen-lg-min) { right: 230px; }
     }
 
     .wave {
@@ -223,17 +223,17 @@ body.index {
       background-image: image-url('bkg-wave-right@2x.png');
       background-size: 230px 447px;
 
-      @media (max-width: 767px) {
+      @media (max-width: $screen-xs-max) {
         right: -72px;
         bottom: -136px;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: $screen-sm-min) {
         right: -88px;
         bottom: -88px;
       }
 
-      @media (min-width: 1199px) { right: 0; }
+      @media (min-width: $screen-lg-min) { right: 0; }
     }
   }
 }

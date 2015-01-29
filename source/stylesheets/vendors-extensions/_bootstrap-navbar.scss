@@ -9,13 +9,13 @@
   border: none;
   border-radius: 0;
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     min-height: 64px;
     padding-right: 20px;
     padding-left: 20px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     min-height: 36px;
     margin-bottom: 40px;
   }
@@ -28,14 +28,14 @@
     width: 100%;
     transition: .3s border-color;
 
-    @media (max-width: 767px) { top: 62px; }
-    @media (min-width: 768px) { display: none; }
+    @media (max-width: $screen-xs-max) { top: 62px; }
+    @media (min-width: $screen-sm-min) { display: none; }
   }
 }
 
 body.index {
   .navbar {
-    @media (max-width: 767px) {
+    @media (max-width: $screen-xs-max) {
       min-height: 0;
 
       hr { display: none; }
@@ -63,7 +63,7 @@ body.venue {
 .navbar-header {
   position: relative;
 
-  @media (min-width: 768px) { height: 82px; }
+  @media (min-width: $screen-sm-min) { height: 82px; }
 }
 
 .navbar-toggle {
@@ -185,7 +185,7 @@ body.venue {
   text-decoration: none;
   transition: .3s color, .3s opacity;
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     @include size(80px, 42px);
     top: 15px;
     left: 0;
@@ -196,7 +196,7 @@ body.venue {
     span { margin-left: 2px; }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     @include size(98px, 50px);
     top: 17px;
     left: 25px;
@@ -208,7 +208,7 @@ body.venue {
   }
 
   &.active {
-    @media (max-width: 767px) { top: 15px; }
+    @media (max-width: $screen-xs-max) { top: 15px; }
   }
 }
 
@@ -219,12 +219,12 @@ body.index {
     &:hover,
     &:focus { color: $poly-11; }
 
-    @media (max-width: 767px) {
+    @media (max-width: $screen-xs-max) {
       @include opacity(0);
     }
 
     &.active {
-      @media (max-width: 767px) {
+      @media (max-width: $screen-xs-max) {
         @include opacity(1);
         color: $poly-11;
       }
@@ -253,7 +253,7 @@ body.venue {
 /*... Navbar (Collapse) ...*/
 
 .navbar-collapse {
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     @include square(100%);
     position: fixed;
     top: 0;
@@ -267,7 +267,7 @@ body.venue {
     z-index: 1;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     position: relative;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -276,29 +276,29 @@ body.venue {
 
 body.index {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($poly-07, .1); }
-    @media (min-width: 768px) { border-bottom-color: $poly-11 !important; }
+    @media (max-width: $screen-xs-max) { background-color: transparentize($poly-07, .1); }
+    @media (min-width: $screen-sm-min) { border-bottom-color: $poly-11 !important; }
   }
 }
 
 body.schedule {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($poly-01 , .1); }
-    @media (min-width: 768px) { border-bottom-color: $mono-10 !important; }
+    @media (max-width: $screen-xs-max) { background-color: transparentize($poly-01 , .1); }
+    @media (min-width: $screen-sm-min) { border-bottom-color: $mono-10 !important; }
   }
 }
 
 body.sponsors {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($mono-10, .1); }
-    @media (min-width: 768px) { border-bottom-color: $mono-03 !important; }
+    @media (max-width: $screen-xs-max) { background-color: transparentize($mono-10, .1); }
+    @media (min-width: $screen-sm-min) { border-bottom-color: $mono-03 !important; }
   }
 }
 
 body.venue {
   .navbar-collapse {
-    @media (max-width: 767px) { background-color: transparentize($mono-01, .1); }
-    @media (min-width: 768px) { border-bottom-color: $mono-01 !important; }
+    @media (max-width: $screen-xs-max) { background-color: transparentize($mono-01, .1); }
+    @media (min-width: $screen-sm-min) { border-bottom-color: $mono-01 !important; }
   }
 }
 
@@ -307,13 +307,13 @@ body.venue {
 .navbar-nav {
   margin-top: 0;
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     padding-top: 35px;
     border-top-style: solid;
     border-top-width: 2px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     position: absolute;
     top: 22px;
     right: 20px;
@@ -326,7 +326,7 @@ body.venue {
       border-color: transparent;
       transition: .2s border-color;
 
-      @media (max-width: 767px) { display: inline-block; }
+      @media (max-width: $screen-xs-max) { display: inline-block; }
 
       &:hover,
       &:focus { text-decoration: underline; }
@@ -338,13 +338,13 @@ body.venue {
         border-radius: $border-radius-small;
         border-width: 2px;
 
-        @media (max-width: 767px) {
+        @media (max-width: $screen-xs-max) {
           height: 46px;
           margin-bottom: 35px;
           line-height: 44px;
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: $screen-sm-min) {
           height: 36px;
           margin-left: 14px;
           line-height: 34px;
@@ -369,13 +369,13 @@ body.venue {
         font-size: 14px;
         text-align: center;
 
-        @media (max-width: 767px) {
+        @media (max-width: $screen-xs-max) {
           height: 36px;
           padding: 0 10px;
           line-height: 34px;
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: $screen-sm-min) {
           position: absolute;
           top: 62px;
           right: 0;
@@ -391,7 +391,7 @@ body.venue {
 
 body.index {
   .navbar-nav {
-    @media (max-width: 767px) { border-top-color: $poly-11 !important; }
+    @media (max-width: $screen-xs-max) { border-top-color: $poly-11 !important; }
     a {
       color: $poly-11;
       &.link-tickets {
@@ -406,7 +406,7 @@ body.index {
 
 body.schedule {
   .navbar-nav {
-    @media (max-width: 767px) { border-top-color: $mono-10 !important; }
+    @media (max-width: $screen-xs-max) { border-top-color: $mono-10 !important; }
     a {
       color: $mono-10;
       &.link-tickets {
@@ -421,7 +421,7 @@ body.schedule {
 
 body.sponsors {
   .navbar-nav {
-    @media (max-width: 767px) { border-top-color: $mono-03 !important; }
+    @media (max-width: $screen-xs-max) { border-top-color: $mono-03 !important; }
     a {
       color: $mono-03;
       &.link-tickets {
@@ -436,7 +436,7 @@ body.sponsors {
 
 body.venue {
   .navbar-nav {
-    @media (max-width: 767px) { border-top-color: $mono-01 !important; }
+    @media (max-width: $screen-xs-max) { border-top-color: $mono-01 !important; }
     a {
       color: $mono-01;
       &.link-tickets {

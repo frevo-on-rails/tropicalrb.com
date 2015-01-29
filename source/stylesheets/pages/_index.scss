@@ -6,13 +6,13 @@ main.hero {
   @extend .container;
   position: relative;
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     padding-top: 275px;
     text-align: center;
   }
 
-  @media (min-width: 768px) { padding-top: 270px; }
-  @media (max-width: 991px) { margin-bottom: 40px; }
+  @media (min-width: $screen-sm-min) { padding-top: 270px; }
+  @media (max-width: $screen-sm-max) { margin-bottom: 40px; }
 }
 
 .hero-area { @include make-xs-column(12); }
@@ -25,14 +25,14 @@ main.hero {
   text-indent: -9999px;
   background-image: image-url('logo-tropical@2x.png');
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     @include size(220px,212px);
     background-size: 220px 212px;
     margin: 0 auto 0 -110px;
     top: 34px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     @include size(234px,226px);
     background-size: 234px 226px;
     margin: 0 auto 0 -118px;
@@ -54,13 +54,13 @@ main.hero {
   @media (max-width: 480px) { margin-bottom: 45px; }
   @media (min-width: 481px) { margin-bottom: 40px; }
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     @include size(258px, 211px);
     background-image: image-url('logo-porto-vert@2x.png');
     background-size: 258px 211px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $screen-sm-min) {
     @include size(531px, 155px);
     background-image: image-url('logo-porto-horiz@2x.png');
     background-size: 531px 155px;
@@ -72,9 +72,9 @@ main.hero {
   @include make-sm-column(6);
   margin-bottom: 0;
 
-  @media (min-width: 768px) { text-align: right; }
+  @media (min-width: $screen-sm-min) { text-align: right; }
 
-  @media (min-width: 1200px) {
+  @media (min-width: $screen-lg-min) {
     p {  padding-left: 130px; }
   }
 }
@@ -83,7 +83,7 @@ main.hero {
   @include list-unstyled;
   margin-bottom: 40px;
 
-  @media (min-width: 768px) { text-align: right; }
+  @media (min-width: $screen-sm-min) { text-align: right; }
 
   li {
     position: relative;
@@ -91,7 +91,7 @@ main.hero {
     line-height: 24px;
     margin-bottom: 1px;
 
-    @media (min-width: 992px) {
+    @media (min-width: $screen-md-min) {
       display: inline-block;
       margin-left: 10px;
     }
@@ -117,7 +117,7 @@ main.hero {
     @include list-unstyled;
     @include clearfix();
 
-    @media (max-width: 767px) {
+    @media (max-width: $screen-xs-max) {
       width: 289px;
       margin-right: auto;
       margin-bottom: 40px;
@@ -126,16 +126,16 @@ main.hero {
       text-align: center;
     }
 
-    @media (min-width: 768px) { margin-bottom: 20px; }
+    @media (min-width: $screen-sm-min) { margin-bottom: 20px; }
 
-    @media (min-width: 768px) and (max-width: 991px) {
+    @media (min-width: $screen-sm-min) and (max-width: 991px) {
       margin-bottom: 36px;
       padding-top: 30px;
     }
 
     li {
-      @media (max-width: 767px) { display: inline-block; }
-      @media (min-width: 768px) { float: left; }
+      @media (max-width: $screen-xs-max) { display: inline-block; }
+      @media (min-width: $screen-sm-min) { float: left; }
 
       a {
         @include square(44px);
@@ -146,12 +146,12 @@ main.hero {
         background-image: image-url('octagon-small-red@2x.png');
         background-size: 44px;
 
-        @media (max-width: 767px) {
+        @media (max-width: $screen-xs-max) {
           margin-right: 5px;
           margin-left: 5px;
         }
 
-        @media (min-width: 768px) { margin-right: 12px; }
+        @media (min-width: $screen-sm-min) { margin-right: 12px; }
 
         &:before {
           @include square(22px);
@@ -190,24 +190,24 @@ main.hero {
       right: 0;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: $screen-xs-max) {
       @include size(92px, 56px);
       background-size: 92px 56px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $screen-sm-min) {
       @include size(114px, 70px);
       top: -50px;
       right: 5px;
       background-size: 114px 70px;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: $screen-md-min) {
       top: -80px;
       right: 115px;
     }
 
-    @media (min-width: 1200px) { right: 215px; }
+    @media (min-width: $screen-lg-min) { right: 215px; }
   }
 }
 
@@ -218,9 +218,9 @@ main.hero {
 
   @media (max-width: 480px) { width: 50%; }
   @media (min-width: 481px) { width: 25%; }
-  @media (max-width: 991px) { float: left; }
+  @media (max-width: $screen-sm-max) { float: left; }
 
-  @media (min-width: 992px) {
+  @media (min-width: $screen-md-min) {
     width: 128px;
     position: absolute;
   }
@@ -228,11 +228,11 @@ main.hero {
   &:nth-child(1) {
     @media (max-width: 480px) { margin-bottom: 20px; }
 
-    @media (min-width: 992px) {
+    @media (min-width: $screen-md-min) {
       top: -284px;
       left: 15px;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: $screen-lg-min) {
       top: -412px;
       left: 55px;
     }
@@ -241,35 +241,35 @@ main.hero {
   &:nth-child(2) {
     @media (max-width: 480px) { margin-bottom: 20px; }
 
-    @media (min-width: 992px) {
+    @media (min-width: $screen-md-min) {
       top: -412px;
       left: 133px;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: $screen-lg-min) {
       top: -412px;
       left: 233px;
     }
   }
 
   &:nth-child(3) {
-    @media (min-width: 992px) {
+    @media (min-width: $screen-md-min) {
       top: -412px;
       right: 133px;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: $screen-lg-min) {
       top: -412px;
       right: 233px;
     }
   }
 
   &:nth-child(4) {
-    @media (min-width: 992px) {
+    @media (min-width: $screen-md-min) {
       top: -284px;
       right: 15px;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: $screen-lg-min) {
       top: -412px;
       right: 55px;
     }
@@ -282,8 +282,8 @@ main.hero {
   margin-bottom: 10px;
   margin-left: auto;
 
-  @media (max-width: 767px) { @include square(80px); }
-  @media (min-width: 768px) { @include square(110px); }
+  @media (max-width: $screen-xs-max) { @include square(80px); }
+  @media (min-width: $screen-sm-min) { @include square(110px); }
 }
 
 .hero-speaker-name {
