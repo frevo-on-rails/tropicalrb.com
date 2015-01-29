@@ -505,9 +505,16 @@ main.schedule.day-four {
 }
 
 .event-local {
+  display: inline-block;
+  padding-top: 15px;
   line-height: 24px;
-  height: 24px;
+  height: 60px;
   margin-right: 10px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 24px;
+    padding-top: 0;
+  }
 }
 
 .event-description {
@@ -546,13 +553,55 @@ main.schedule.day-four {
       top: 0;
     }
 
-    &:after {
-      height: 30px;
-      top: 100%;
-    }
+    &:after { top: 100%; }
   }
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     &:before, &:after { left: -66px; }
+    &:after { height: 30px; }
+  }
+
+  @media (min-width: $screen-md-min) {
+    &:after { height: 10px; }
+  }
+}
+
+.event-minor {
+  margin-top: 5px;
+
+  @media (max-width: $screen-xs-max) {
+    .event-image {
+      @include square(80px);
+      float: none;
+      display: block;
+      margin: -7px auto 0;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .event-image { margin-top: -16px; }
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    min-height: 90px;
+
+    .time-line {
+      &:before { display: none; }
+      &:after {
+        top: 76px;
+        height: 44px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    min-height: 105px;
+
+    .time-line {
+      &:before {
+        top: 76px;
+        height: 29px;
+      }
+    }
   }
 }
