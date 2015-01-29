@@ -15,7 +15,7 @@ main.schedule {
 .nav-schedule {
   @include clearfix();
   display: block;
-  margin: 35px auto 10px;
+  margin: 35px auto 0;
   width: (70px * 4);
   overflow: visible;
 
@@ -282,9 +282,9 @@ main.schedule.day-four {
 
 .schedule-area {
   header {
-    margin: 20px auto;
+    margin: 20px auto 25px;
 
-    @media (min-width: $screen-sm-min) { margin-bottom: 30px; }
+    @media (min-width: $screen-sm-min) { margin: 30px auto; }
   }
 }
 
@@ -329,7 +329,49 @@ main.schedule.day-four {
   @include clearfix();
   margin-bottom: 25px;
 
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { margin-bottom: 5px; }
+
   @media (max-width: $screen-xs-max) { padding-top: 34px; }
+
+  &:nth-child(odd) {
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      width: 43.5%;
+      margin-left: 56.5%;
+    }
+
+    @media (min-width: $screen-md-min) {
+      .event-image {
+        left: -115px;
+        top: 5px;
+        margin-right: 0;
+      }
+
+      .event-title { text-align: left; }
+    }
+  }
+
+  &:nth-child(even) {
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      width: 43.5%;
+      margin-left: 0;
+      margin-right: 56.5%;
+    }
+
+    @media (min-width: $screen-md-min) {
+      text-align: right;
+
+      .event-image {
+        right: -127px;
+        top: 5px;
+      }
+      .event-time { margin-right: 10px; }
+      .event-author,
+      .event-local {
+        @include clearfix();
+        float: right;
+      }
+    }
+  }
 }
 
 .event-title {
@@ -349,9 +391,11 @@ main.schedule.day-four {
   float: left;
   margin-right: 10px;
 
-  @media (min-width: $screen-sm-min) { @include square(110px); }
-  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  @media (min-width: $screen-sm-min) {
+    @include square(110px);
     position: absolute;
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     left: -120px;
     top: 5px;
   }
@@ -431,6 +475,7 @@ main.schedule.day-four {
 
 .event-description {
   margin-top: 5px;
+  margin-bottom: 0;
 
   .expander {
     @include titillium-semi-bold;
