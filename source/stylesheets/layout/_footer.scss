@@ -6,31 +6,37 @@
   position: relative;
   text-align: center;
   overflow: hidden;
+
+  .brands {
+    .organizers {
+      @include make-xs-column(12);
+      @include make-sm-column(5);
+      @include make-sm-column-offset(1);
+      @include make-md-column(6);
+      @include make-md-column-offset(1);
+      @include make-lg-column(5);
+      @include make-lg-column-offset(2);
+    }
+
+    .advisory {
+      @include make-xs-column(12);
+      @include make-sm-column(5);
+      @include make-md-column(3);
+    }
+  }
+
+  .copy {
+    .column {
+      @include make-xs-column(12);
+      @include make-sm-column(6);
+    }
+  }
 }
 
-.brands {
-  .organizers {
-    @include make-xs-column(12);
-    @include make-sm-column(5);
-    @include make-sm-column-offset(1);
-    @include make-md-column(6);
-    @include make-md-column-offset(1);
-    @include make-lg-column(5);
-    @include make-lg-column-offset(2);
-  }
-
-  .advisory {
-    @include make-xs-column(12);
-    @include make-sm-column(5);
-    @include make-md-column(3);
-  }
-}
-
-.copy {
-  .column {
-    @include make-xs-column(12);
-    @include make-sm-column(6);
-  }
+body.schedule,
+body.venue,
+body.sponsors {
+  .footer { padding-bottom: 50px; }
 }
 
 /*... Scaffolding ...*/
