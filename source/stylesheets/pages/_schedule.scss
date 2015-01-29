@@ -60,7 +60,7 @@ main.schedule {
     }
   }
 
-  &.two h4 {
+  &.two h4, {
     width: 140px;
 
     @media (min-width: 768px) { width: 126px; }
@@ -119,7 +119,7 @@ main.schedule {
 }
 
 %nav-event-active-bkg {
-    &:before {
+  &:before {
     @extend .motion-fade-in;
     @include square(120px);
     background-image: image-url('schedule-graph-mobi-bkg-active@2x.png');
@@ -180,8 +180,11 @@ main.schedule.day-three {
         background-image: image-url('schedule-graph-desk-porto-active@2x.png');
       }
     }
+    .nav-event-time { @include titillium-bold; }
+  }
 
-    h4, .nav-event-time { @include titillium-bold; }
+  .nav-event.two {
+    h4 { @include titillium-bold; }
   }
 }
 
