@@ -342,25 +342,29 @@ main.schedule.day-four {
 
   &:last-child {
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { margin-bottom: 15px; }
+    @media (min-width: $screen-sm-min) {
+      .time-line {
+        &:before, &:after { display: none !important; }
+      }
+    }
   }
 
   &:nth-child(odd) {
     @media (min-width: $screen-md-min) {
       width: 43.8%;
       margin-left: 56.2%;
+
+      .event-image {
+        left: -115px;
+        top: 0;
+        margin-right: 0;
+      }
+      .event-title { text-align: left; }
+      .time-line:before, .time-line:after { left: -61px; }
     }
     @media (min-width: $screen-lg-min) {
       width: 44.8%;
       margin-left: 55.2%;
-    }
-    @media (min-width: $screen-md-min) {
-      .event-image {
-        left: -115px;
-        top: 5px;
-        margin-right: 0;
-      }
-
-      .event-title { text-align: left; }
     }
   }
 
@@ -369,24 +373,23 @@ main.schedule.day-four {
       width: 43.8%;
       margin-left: 0;
       margin-right: 56.2%;
+      text-align: right;
+
+      .event-image {
+        right: -127px;
+        top: 0;
+      }
+      .event-author, .event-local {
+        @include clearfix();
+        float: right;
+      }
+      .event-time { margin-right: 10px; }
+      .time-line:before, .time-line:after { right: -63px; }
     }
     @media (min-width: $screen-lg-min) {
       width: 44.8%;
       margin-left: 0;
       margin-right: 55.2%;
-    }
-    @media (min-width: $screen-md-min) {
-      text-align: right;
-
-      .event-image {
-        right: -127px;
-        top: 5px;
-      }
-      .event-time { margin-right: 10px; }
-      .event-author, .event-local {
-        @include clearfix();
-        float: right;
-      }
     }
   }
 }
@@ -407,6 +410,7 @@ main.schedule.day-four {
   @include square(60px);
   float: left;
   margin-right: 10px;
+  z-index: 3;
 
   @media (min-width: $screen-sm-min) {
     @include square(110px);
@@ -414,7 +418,7 @@ main.schedule.day-four {
   }
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     left: -120px;
-    top: 5px;
+    top: 0;
   }
 }
 
@@ -510,3 +514,31 @@ main.schedule.day-four {
 .first-words:after { content: '…'; }
 .last-words { display: none; }
 .event.expanded .first-words:after { content: ''; }
+
+.time-line {
+  z-index: 1;
+
+  @media (min-width: $screen-sm-min) {
+    &:before, &:after {
+      background-color: rgba(255,255,255,.65);
+      content: '';
+      display: block;
+      position: absolute;
+      width: 2px;
+    }
+
+    &:before {
+      height: 100%;
+      top: 0;
+    }
+
+    &:after {
+      height: 30px;
+      top: 100%;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    &:before, &:after { left: -66px; }
+  }
+}
