@@ -13,43 +13,79 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
       <header>
         <h2>Workshops</h2>
           <div class="schedule-subtitles">
-            <small class="schedule-subtitle"><span class="icon-medium icon-calendar"></span><time date="2015-03-5">March 5th • 00h and 00h</time></small>
-            <a class="schedule-subtitle" href="#"><span class="icon-medium icon-geolocal"></span><address>Address name</address></a>
+            <small class="schedule-subtitle">
+              <span class="icon-medium icon-calendar"></span><time date="2015-03-05">March 5th • All Day</time>
+            </small>
+            <a class="schedule-subtitle" href="https://goo.gl/maps/YaXoz" title="View it in Google Maps." target="_blank">
+              <span class="icon-medium icon-geolocal"></span><address>Bairro do Recife</address>
+            </a>
           </div>
       </header>
       <ol class="schedule-events row">
 
-        <li class="event" id="author-name">
-          <h3 class="event-title">The Greatest Event Of All Conference</h3>
-          <%= image_tag 'event-workshop-noelia@2x.png', class: 'event-image' %>
-          <h4 class="event-author"><a href="#">Awesome Author</a></h4>
-          <time class="event-time">7<span>a.m.</span> to 9<span>a.m.</span></time>
+        <!-- Julio Faerman & Rafael Lopes -->
+        <li class="event" id="julio-faerman-and-rafael-lopes">
+          <h3 class="event-title">Reactive Development and Operations in Ruby</h3>
+          <%= image_tag 'event-workshop-rafael-julio@2x.png', class: 'event-image' %>
+          <h4 class="event-author">
+            <a href="http://lanyrd.com/2015/tropicalrb/sdhfyk/" title="See Julio and Rafael at Lanyrd." target="_blank">Julio Faerman &amp; Rafael Lopes</a>
+          </h4>
+          <time class="event-time">8<span>am</span> to 6<span>pm</span></time>
           <p class="event-description">
-            <span class="first-words">Lorem ipum sit dolor amet hendrerit suspendisse purus sociosqu semper mollis adipiscing dui condimentum adipiscing a magnis convallis cubilia in dictumst</span> <span class="last-words">pulvinar cursus dis scelerisque magnis maecenas cum condimentum eu. Dignissim vestibulum eu adipiscing orci parturient sodales tellus suspendisse consectetur nisi cras orci eu parturient et nullam a nostra euismod per. Bibendum nostra in potenti condimentum parturient consectetur duis.</span>
+            <span class="first-words">
+              Reactive Programming, as stated in its manifesto, proposes the development of systems that are "Responsive, Resilient, Elastic and Message Oriented". Considering these properties desirable to any software, why not apply them to operations software as we do to applications?
+            </span>
+            <span class="last-words">
+              This is a tutorial about reactive development and infrastructure as code. It assumes only a basic understanding of the Ruby programming language and fundamental AWS services, such as S3 and EC2. Understanding of Reactive Programming with the Rx.rb library is also helpful, but you can pick it up as you go.
+              <br/>
+              There are four sections in this tutorial. First, we'll write a simple reactive application and the deployment scripts to publish it to Amazon S3 and Amazon EC2. Then we'll improve the administration of the system using Elastic Beanstalk. Afterwards, we'll add a reactive and scalable data tier using DynamoDB. Then it's time to move beyond EC2 to managed services, such as Amazon Kinesis. Finally, we'll conclude with takeaways and followups.
+              <br/>
+              Concluding this tutorial, you will have the practice and the code to deploy responsive, resilient, elastic and message oriented applications using Ruby. From dev to ops.
+            </span>
             <a class="expander" href="#author-name" data-alternative-label="Less">More</a>
           </p>
           <span class="time-line"></span>
         </li>
 
-        <li class="event" id="author-name">
-          <h3 class="event-title">The Greatest Event Of All Conference</h3>
+        <!-- Noelia Cabane -->
+        <li class="event" id="noelia-cabane">
+          <h3 class="event-title">The Path to Modular UI</h3>
           <%= image_tag 'event-workshop-noelia@2x.png', class: 'event-image' %>
-          <h4 class="event-author"><a href="#">Awesome Author</a></h4>
-          <time class="event-time">7<span>a.m.</span> to 9<span>a.m.</span></time>
+          <h4 class="event-author">
+            <a href="http://lanyrd.com/2015/tropicalrb/sdhfyh/" title="See Noelia at Lanyrd." target="_blank">Noelia Cabane</a>
+          </h4>
+          <time class="event-time">8<span>am</span> to 12<span>pm</span></time>
           <p class="event-description">
-            <span class="first-words">Lorem ipum sit dolor amet hendrerit suspendisse purus sociosqu semper mollis adipiscing dui condimentum adipiscing a magnis convallis cubilia in dictumst</span> <span class="last-words">pulvinar cursus dis scelerisque magnis maecenas cum condimentum eu. Dignissim vestibulum eu adipiscing orci parturient sodales tellus suspendisse consectetur nisi cras orci eu parturient et nullam a nostra euismod per. Bibendum nostra in potenti condimentum parturient consectetur duis.</span>
+            <span class="first-words">
+              Why a CSS refactor? Does it involve redesign? Does all your CSS ends up in the junk drawer? You have SASS in your project but the CSS output sucks? Worry Not! You still have some hope!
+              <br/>
+              Take the pain out of CSS/HTML refactors by learning some modular principles in design and front-end.
+            </span>
+            <span class="last-words">
+              <br/>
+              You will learn to identify design patterns and to build a stronger system of building blocks to reuse in all your project.
+            </span>
             <a class="expander" href="#author-name" data-alternative-label="Less">More</a>
           </p>
           <span class="time-line"></span>
         </li>
 
-        <li class="event" id="author-name">
-          <h3 class="event-title">The Greatest Event Of All Conference</h3>
-          <%= image_tag 'event-workshop-noelia@2x.png', class: 'event-image' %>
-          <h4 class="event-author"><a href="#">Awesome Author</a></h4>
-          <time class="event-time">7<span>a.m.</span> to 9<span>a.m.</span></time>
+        <!-- Celso Fernandes & Nick Sutterer -->
+        <li class="event" id="celso-fernandes-and-nick-sutterer">
+          <h3 class="event-title">Architecture Matters: An Appetizing Introduction to Trailblazer</h3>
+          <%= image_tag 'event-workshop-nick-celso@2x.png', class: 'event-image' %>
+          <h4 class="event-author">
+            <a href="http://lanyrd.com/2015/tropicalrb/sdhgxx/" title="See Celso and Nick at Lanyrd." target="_blank">Celso Fernandes &amp; Nick Sutterer</a>
+          </h4>
+          <time class="event-time">2<span>pm</span> to 6<span>pm</span></time>
           <p class="event-description">
-            <span class="first-words">Lorem ipum sit dolor amet hendrerit suspendisse purus sociosqu semper mollis adipiscing dui condimentum adipiscing a magnis convallis cubilia in dictumst</span> <span class="last-words">pulvinar cursus dis scelerisque magnis maecenas cum condimentum eu. Dignissim vestibulum eu adipiscing orci parturient sodales tellus suspendisse consectetur nisi cras orci eu parturient et nullam a nostra euismod per. Bibendum nostra in potenti condimentum parturient consectetur duis.</span>
+            <span class="first-words">
+              Trailblazer is an extension framework on top of Rails. It provides desperately needed, new abstraction layers, decent encapsulation and a better maintainable architecture. In this workshop we're gonna learn the basics about designing your domain, encapsulating business logic in operations, form objects and view models, and a different take on the persistence layer.
+            </span>
+            <span class="last-words">
+              <br/>
+              After a compact introducing presentation by Celso Fernandes and Nick Sutterer, we'll dive into the code, write a small Trailblazer/Rails app and learn all the nice things about this alternative architecture over a cold bottle of beer.
+            </span>
             <a class="expander" href="#author-name" data-alternative-label="Less">More</a>
           </p>
           <span class="time-line"></span>
