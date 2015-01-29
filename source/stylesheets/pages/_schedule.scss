@@ -4,7 +4,10 @@
 
 main.schedule {
   @extend .container;
-  @media (max-width: $screen-sm-max) { margin-bottom: 40px; }
+  margin-bottom: 0;
+
+  @media (min-width: $screen-sm-min) { margin-bottom: 30px; }
+
   h1 { display: none; }
 }
 
@@ -334,9 +337,13 @@ main.schedule.day-four {
   @media (max-width: $screen-xs-max) { padding-top: 34px; }
 
   &:nth-child(odd) {
-    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    @media (min-width: $screen-md-min) {
       width: 43.5%;
       margin-left: 56.5%;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: 44.7%;
+      margin-left: 55.3%;
     }
 
     @media (min-width: $screen-md-min) {
@@ -351,10 +358,15 @@ main.schedule.day-four {
   }
 
   &:nth-child(even) {
-    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    @media (min-width: $screen-md-min) {
       width: 43.5%;
       margin-left: 0;
       margin-right: 56.5%;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: 44.7%;
+      margin-left: 0;
+      margin-right: 55.3%;
     }
 
     @media (min-width: $screen-md-min) {
