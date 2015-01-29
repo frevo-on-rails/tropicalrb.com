@@ -340,7 +340,10 @@ main.schedule.day-four {
     margin-bottom: 30px;
     padding-right: 50px;
   }
-  @media (min-width: $screen-md-min) { margin-bottom: 5px; }
+  @media (min-width: $screen-md-min) {
+    margin-bottom: 5px;
+    min-height: 140px;
+  }
   @media (max-width: $screen-xs-max) { padding-top: 34px; }
 
   &:last-child {
