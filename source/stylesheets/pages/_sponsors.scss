@@ -140,11 +140,10 @@ body.sponsors {
     &.supporters {
       .sponsors-brand {
         img {
-          @include transform-origin(center);
+          @include transform-origin(50%);
 
           @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
             @include scale(.65);
-            @include transform-origin(center);
           }
           @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
             @include scale(.8);
