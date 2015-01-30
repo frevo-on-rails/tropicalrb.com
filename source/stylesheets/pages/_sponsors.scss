@@ -1,3 +1,168 @@
 /*––––––––––––––––––––––––––––––––––––––––––––––––––
       Sponsors
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+body.sponsors {
+  .navbar {
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-sm-min) { margin-bottom: 40px; }
+  }
+}
+
+.sponsors-area {
+  @extend .motion-fade-in;
+  @extend .container;
+
+  section {
+    header {
+      @include make-xs-column(12);
+      margin-bottom: 15px;
+    }
+
+    &.gold header {
+      margin-top: 45px;
+      margin-bottom: 0;
+    }
+    &.silver header { margin-top: 50px; }
+    &.bronze header { margin-top: 50px; }
+    &.organizers header { margin-top: 50px; }
+    &.supporters header { margin-top: 50px; }
+  }
+}
+
+.prospectus {
+  @include size(200px, 36px);
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  border: 2px solid $mono-03;
+  border-radius: 3px;
+  margin: 0 auto;
+  padding: 4px 4px 4px 10px;
+}
+
+.icon-fist-bump {
+  background-image: image-url('icon-med-fist-bump@2x.png');
+  margin-right: 6px;
+}
+
+.sponsors-brand {
+  a {
+    @include size(100%, auto);
+    display: block;
+    margin: 0 auto;
+    text-indent: -9999px;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.sponsors-area {
+  section {
+    &.gold {
+      .sponsors-brand {
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+
+        img { @include size(389px, 188px); }
+      }
+    }
+
+    &.silver {
+      header {
+        @media (min-width: $screen-sm-min) { margin-bottom: 30px; }
+      }
+
+      .sponsors-brand {
+        @include make-xs-column(8);
+        @include make-xs-column-offset(2);
+        @include make-sm-column(4);
+        @include make-sm-column-offset(0);
+
+        img { @include size(252px, 134px); }
+      }
+    }
+
+    &.bronze {
+      header {
+        @media (min-width: $screen-sm-min) {
+          margin-bottom: 30px;
+          margin-top: 80px;
+        }
+      }
+
+      .sponsors-brand {
+        @include make-xs-column(6);
+        @include make-sm-column(3);
+
+        img {
+          @include size(184px, 89px);
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    &.organizers {
+      header {
+        @media (min-width: $screen-sm-min) {
+          margin-bottom: 30px;
+        }
+      }
+
+      .sponsors-brand {
+        @include make-xs-column(8);
+        @include make-xs-column-offset(2);
+        @include make-sm-column(4);
+        @include make-sm-column-offset(0);
+
+        img { @include size(252px, 134px); }
+      }
+    }
+
+    &.supporters {
+      .sponsors-brand {
+        @include make-xs-column(4);
+        @include make-xs-column-offset(2);
+        @include make-sm-column(2);
+        @include make-sm-column-offset(0);
+      }
+    }
+
+    &.gold,
+    &.silver,
+    &.bronze,
+    &.organizers,
+    &.supporters {
+      .sponsors-brand {
+        img {
+          transform-origin: center center 0;
+
+          @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+            @include scale(.65);
+          }
+          @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            @include scale(.8);
+          }
+        }
+      }
+    }
+
+    &.gold {
+      .sponsors-brand {
+        @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+          height: 140px;
+
+          img { margin-top: -30px; }
+
+          &.engine-yard img { margin-top: -40px; }
+        }
+      }
+    }
+  }
+}

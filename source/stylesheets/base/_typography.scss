@@ -106,6 +106,14 @@
 
 /*... Typographic Settings ...*/
 
+main {
+  &.schedule,
+  &.venue,
+  &.sponsors {
+    h1 { display: none; }
+  }
+}
+
 h2, .h2 {
   @include molle;
   font-size: 48px;
@@ -127,6 +135,16 @@ h2, .h2 {
 
     &:before { margin-right: 18px; }
     &:after { margin-left: 20px; }
+  }
+}
+
+main {
+  &.sponsors {
+    h2, .h2 {
+      color: $mono-03;
+
+      &:before, &:after { background-color: $mono-03; }
+    }
   }
 }
 

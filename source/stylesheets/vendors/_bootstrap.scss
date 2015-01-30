@@ -9,6 +9,8 @@
 @import 'bootstrap/variables';
 @import 'bootstrap/mixins';
 
+$screen-xs-min: 320px;
+
 /*... Reset and dependencies ...*/
 
 @import 'bootstrap/normalize';

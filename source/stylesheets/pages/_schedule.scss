@@ -3,13 +3,12 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 main.schedule {
+  @extend .motion-fade-in;
   @extend .container;
   margin-bottom: 0;
 
   @media (min-width: $screen-sm-min) { margin-bottom: 15px; }
   @media (min-width: $screen-md-min) { margin-bottom: 30px; }
-
-  h1 { display: none; }
 }
 
 .schedule-area {
@@ -129,6 +128,7 @@ main.schedule {
   &:before {
     @extend .motion-fade-in;
     @include square(120px);
+    animation-delay: .2s;
     background-image: image-url('schedule-graph-mobi-bkg-active@2x.png');
     background-size: 120px 120px;
     background-repeat: no-repeat;
