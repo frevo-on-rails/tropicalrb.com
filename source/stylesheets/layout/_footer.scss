@@ -8,6 +8,9 @@
   overflow: hidden;
 
   .brands {
+    .gold { @include make-xs-column(12); }
+    .silver { @include make-xs-column(12); }
+
     .organizers {
       @include make-xs-column(12);
       @include make-sm-column(5);
@@ -49,6 +52,7 @@ body.sponsors {
   margin-bottom: 0;
   font-size: 14px;
   text-transform: uppercase;
+  z-index: 3;
 
   &:before,
   &:after {
@@ -78,69 +82,97 @@ body.schedule {
 
 /*... Footer's Brands ...*/
 
-.footer-brands {
-  a {
-    display: inline-block;
-    margin-right: 20px;
-    margin-left: 20px;
-    text-indent: -9999px;
-    vertical-align: middle;
-
-    &.frevo-on-rails {
-      @include size(98px, 55px);
-      background-size: 98px 55px;
+.footer {
+  .brands {
+    a {
+      display: inline-block;
+      margin-right: 20px;
+      margin-left: 20px;
+      text-indent: -9999px;
+      vertical-align: middle;
+      z-index: 1;
     }
 
-    &.github {
-      @include size(150px, 100px);
-      background-size: 150px 100px;
-      margin-top: -10px;
+    .gold {
+      a {
+        @include size(240px, 130px);
+        background-size: 240px 130px;
+        margin-top: -15px;
+      }
     }
 
-    &.guava-software {
-      @include size(98px, 55px);
-      background-size: 98px 55px;
+    .silver {
+      a {
+        @include size(150px, 100px);
+        background-size: 150px 100px;
+        margin-top: -5px;
+      }
     }
 
-    &.ruby-central-inc {
-      @include size(98px, 55px);
-      background-size: 98px 55px;
+    .organizers, .advisory {
+      a {
+        @include size(98px, 55px);
+        background-size: 98px 55px;
+      }
+
+      .footer-brands {
+        margin-top: 10px;
+
+        @media (max-width: $screen-xs-max) { margin-bottom: 30px; }
+        @media (min-width: $screen-sm-min) { margin-bottom: 20px; }
+      }
     }
 
-    &.studio-eloquent {
-      @include size(98px, 55px);
-      background-size: 98px 55px;
+    .organizers {
+      margin-top: 15px;
+
+      @media (min-width: $screen-sm-min) { margin-top: 10px; }
     }
-  }
 
-  &.footer-brands-a { margin-bottom: 12px; }
+    .advisory {
+      margin-top: 0;
 
-  &.footer-brands-b,
-  &.footer-brands-c {
-    margin-top: 10px;
-
-    @media (max-width: $screen-xs-max) { margin-bottom: 30px; }
-    @media (min-width: $screen-sm-min) { margin-bottom: 20px; }
+      @media (min-width: $screen-sm-min) { margin-top: 10px; }
+    }
   }
 }
 
 body.index {
   .footer-brands {
-    .frevo-on-rails   { background-image: image-url('brand-small-for-red@2x.png'); }
+    .engine-yard      { background-image: image-url('brand-big-engineyard-red@2x.png'); }
+    .nic              { background-image: image-url('brand-big-nic-red@2x.png'); }
+    .cers             { background-image: image-url('brand-med-cers-red@2x.png'); }
     .github           { background-image: image-url('brand-med-github-red@2x.png'); }
     .guava-software   { background-image: image-url('brand-small-guava-red@2x.png'); }
-    .ruby-central-inc { background-image: image-url('brand-small-rubycentral-red@2x.png'); }
     .studio-eloquent  { background-image: image-url('brand-small-eloquent-red@2x.png'); }
+    .frevo-on-rails   { background-image: image-url('brand-small-for-red@2x.png'); }
+    .ruby-central-inc { background-image: image-url('brand-small-rubycentral-red@2x.png'); }
   }
 }
 
 body.schedule {
   .footer-brands {
-    .frevo-on-rails   { background-image: image-url('brand-small-for-white@2x.png'); }
+    .engine-yard      { background-image: image-url('brand-big-engineyard-white@2x.png'); }
+    .nic              { background-image: image-url('brand-big-nic-white@2x.png'); }
+    .cers             { background-image: image-url('brand-med-cers-white@2x.png'); }
     .github           { background-image: image-url('brand-med-github-white@2x.png'); }
     .guava-software   { background-image: image-url('brand-small-guava-white@2x.png'); }
-    .ruby-central-inc { background-image: image-url('brand-small-rubycentral-white@2x.png'); }
     .studio-eloquent  { background-image: image-url('brand-small-eloquent-white@2x.png'); }
+    .frevo-on-rails   { background-image: image-url('brand-small-for-white@2x.png'); }
+    .ruby-central-inc { background-image: image-url('brand-small-rubycentral-white@2x.png'); }
+  }
+}
+
+body.venue {
+  .footer-brands {
+    .engine-yard      { background-image: image-url('brand-big-engineyard-yellow@2x.png'); }
+    .nic              { background-image: image-url('brand-big-nic-yellow@2x.png'); }
+    .cers             { background-image: image-url('brand-med-cers-yellow@2x.png'); }
+    .github           { background-image: image-url('brand-med-github-yellow@2x.png'); }
+    .guava-software   { background-image: image-url('brand-small-guava-yellow@2x.png'); }
+    .studio-eloquent  { background-image: image-url('brand-small-eloquent-yellow@2x.png'); }
+    .frevo-on-rails   { background-image: image-url('brand-small-for-yellow@2x.png'); }
+    .ruby-central-inc { background-image: image-url('brand-small-rubycentral-yellow@2x.png'); }
   }
 }
 
@@ -188,7 +220,7 @@ body.index {
     padding-bottom: 370px;
 
     @media (max-width: $screen-sm-max) {
-      @include gradient-vertical-three-colors(transparentize($poly-08,1), $poly-08, 65%, $poly-08);
+      @include gradient-vertical-three-colors(transparentize($poly-08,1), $poly-08, 55%, $poly-08);
     }
 
     @media (min-width: $screen-sm-min) { padding-bottom: 200px; }
