@@ -6,7 +6,7 @@ body.sponsors {
   .navbar {
     margin-bottom: 30px;
 
-    @media (min-width: $screen-sm-min) { margin-bottom: 35px; }
+    @media (min-width: $screen-sm-min) { margin-bottom: 40px; }
   }
 }
 
@@ -19,11 +19,14 @@ body.sponsors {
       margin-bottom: 15px;
     }
 
-    &.gold header { margin-top: 30px; }
-    &.silver header { margin-top: 60px; }
-    &.bronze header { margin-top: 60px; }
-    &.organizers header { margin-top: 60px; }
-    &.supporters header { margin-top: 60px; }
+    &.gold header {
+      margin-top: 45px;
+      margin-bottom: 0;
+    }
+    &.silver header { margin-top: 50px; }
+    &.bronze header { margin-top: 50px; }
+    &.organizers header { margin-top: 50px; }
+    &.supporters header { margin-top: 50px; }
   }
 }
 
@@ -35,16 +38,16 @@ body.sponsors {
   border: 2px solid $mono-03;
   border-radius: 3px;
   margin: 0 auto;
-  padding: 4px;
+  padding: 4px 4px 4px 10px;
 }
 
 .icon-fist-bump {
   background-image: image-url('icon-med-fist-bump@2x.png');
-  margin-right: 4px;
+  margin-right: 6px;
 }
 
 .sponsors-brand {
-  a, a img {
+  a {
     @include size(100%, auto);
     display: block;
     margin: 0 auto;
@@ -52,47 +55,114 @@ body.sponsors {
     font-size: 0;
     line-height: 0;
   }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .sponsors-area {
-  .gold {
-    .sponsors-brand {
-      @include make-xs-column(12);
-      @include make-sm-column(6);
-    }
-  }
+  section {
+    &.gold {
+      .sponsors-brand {
+        @include make-xs-column(12);
+        @include make-sm-column(6);
 
-  .silver {
-    .sponsors-brand {
-      @include make-xs-column(8);
-      @include make-xs-column-offset(2);
-      @include make-sm-column(4);
-      @include make-sm-column-offset(0);
+        img { @include size(389px, 188px); }
+      }
     }
-  }
 
-  .bronze {
-    .sponsors-brand {
-      @include make-xs-column(6);
-      @include make-sm-column(3);
+    &.silver {
+      header {
+        @media (min-width: $screen-sm-min) { margin-bottom: 30px; }
+      }
+
+      .sponsors-brand {
+        @include make-xs-column(8);
+        @include make-xs-column-offset(2);
+        @include make-sm-column(4);
+        @include make-sm-column-offset(0);
+
+        img { @include size(252px, 134px); }
+      }
     }
-  }
 
-  .organizers {
-    .sponsors-brand {
-      @include make-xs-column(8);
-      @include make-xs-column-offset(2);
-      @include make-sm-column(4);
-      @include make-sm-column-offset(0);
+    &.bronze {
+      header {
+        @media (min-width: $screen-sm-min) {
+          margin-bottom: 30px;
+          margin-top: 80px;
+        }
+      }
+
+      .sponsors-brand {
+        @include make-xs-column(6);
+        @include make-sm-column(3);
+
+        img {
+          @include size(184px, 89px);
+          margin-bottom: 30px;
+        }
+      }
     }
-  }
 
-  .supporters {
-    .sponsors-brand {
-      @include make-xs-column(4);
-      @include make-xs-column-offset(2);
-      @include make-sm-column(2);
-      @include make-sm-column-offset(0);
+    &.organizers {
+      header {
+        @media (min-width: $screen-sm-min) {
+          margin-bottom: 30px;
+        }
+      }
+
+      .sponsors-brand {
+        @include make-xs-column(8);
+        @include make-xs-column-offset(2);
+        @include make-sm-column(4);
+        @include make-sm-column-offset(0);
+
+        img { @include size(252px, 134px); }
+      }
+    }
+
+    &.supporters {
+      .sponsors-brand {
+        @include make-xs-column(4);
+        @include make-xs-column-offset(2);
+        @include make-sm-column(2);
+        @include make-sm-column-offset(0);
+      }
+    }
+
+    &.gold,
+    &.silver,
+    &.bronze,
+    &.organizers,
+    &.supporters {
+      .sponsors-brand {
+        img {
+          @include transform-origin(center);
+
+          @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+            @include scale(.65);
+            @include transform-origin(center);
+          }
+          @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            @include scale(.8);
+          }
+        }
+      }
+    }
+
+    &.gold {
+      .sponsors-brand {
+        @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+          height: 140px;
+
+          img { margin-top: -30px; }
+
+          &.engine-yard img { margin-top: -40px; }
+        }
+      }
     }
   }
 }
