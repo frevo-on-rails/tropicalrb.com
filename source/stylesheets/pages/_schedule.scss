@@ -3,6 +3,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 main.schedule {
+  @extend .motion-fade-in;
   @extend .container;
   margin-bottom: 0;
 
@@ -127,6 +128,7 @@ main.schedule {
   &:before {
     @extend .motion-fade-in;
     @include square(120px);
+    animation-delay: .2s;
     background-image: image-url('schedule-graph-mobi-bkg-active@2x.png');
     background-size: 120px 120px;
     background-repeat: no-repeat;

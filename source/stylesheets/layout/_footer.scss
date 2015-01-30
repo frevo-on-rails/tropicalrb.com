@@ -3,6 +3,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .footer {
+  @extend .motion-fade-in;
   position: relative;
   text-align: center;
   overflow: hidden;

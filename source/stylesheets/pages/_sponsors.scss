@@ -11,6 +11,7 @@ body.sponsors {
 }
 
 .sponsors-area {
+  @extend .motion-fade-in;
   @extend .container;
 
   section {
@@ -140,7 +141,7 @@ body.sponsors {
     &.supporters {
       .sponsors-brand {
         img {
-          @include transform-origin(50%);
+          transform-origin: center center 0;
 
           @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
             @include scale(.65);

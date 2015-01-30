@@ -3,6 +3,7 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 main.hero {
+  @extend .motion-fade-in;
   @extend .container;
   position: relative;
 
