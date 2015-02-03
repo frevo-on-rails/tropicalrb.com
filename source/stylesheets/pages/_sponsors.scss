@@ -166,8 +166,26 @@ body.sponsors {
 .blurb {
   font-size: 14px;
   line-height: 18px;
-  padding: 0 40px;
+  padding: 0;
   text-align: center;
+
+  @media (min-width: $screen-md-min) { padding: 0 40px; }
+
+  a {
+    @include size(auto,auto);
+    color: $mono-03;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: underline;
+    text-indent: 0;
+  }
+}
+
+.silver {
+  .blurb {
+    @media (min-width: $screen-md-min) { padding: 0 20px; }
+  }
 }
 
 /*... Specific Layouting ...*/
