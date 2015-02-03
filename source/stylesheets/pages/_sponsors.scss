@@ -47,6 +47,8 @@ body.sponsors {
   margin-right: 6px;
 }
 
+/*... Brands Scaffold ...*/
+
 .sponsors-brand {
   a {
     @include size(100%, auto);
@@ -70,7 +72,13 @@ body.sponsors {
         @include make-xs-column(12);
         @include make-sm-column(6);
 
-        img { @include size(389px, 188px); }
+        img {
+          @media (max-width: $screen-sm-max) {
+            @include size(280px,135px);
+            margin: 10px auto;
+          }
+          @media (min-width: $screen-md-min) { @include size(389px, 188px); }
+        }
       }
     }
 
@@ -85,7 +93,13 @@ body.sponsors {
         @include make-sm-column(4);
         @include make-sm-column-offset(0);
 
-        img { @include size(252px, 134px); }
+        img {
+          @media (max-width: $screen-sm-max) {
+            @include size(182px,97px);
+            margin: 5px auto;
+          }
+          @media (min-width: $screen-md-min) { @include size(252px,134px); }
+        }
       }
     }
 
@@ -102,8 +116,10 @@ body.sponsors {
         @include make-sm-column(3);
 
         img {
-          @include size(184px, 89px);
           margin-bottom: 30px;
+
+          @media (max-width: $screen-sm-max) { @include size(132px,63px); }
+          @media (min-width: $screen-md-min) { @include size(184x,89px); }
         }
       }
     }
@@ -121,7 +137,10 @@ body.sponsors {
         @include make-sm-column(4);
         @include make-sm-column-offset(0);
 
-        img { @include size(252px, 134px); }
+        img {
+          @media (max-width: $screen-sm-max) { @include size(182px,97px); }
+          @media (min-width: $screen-md-min) { @include size(252px,134px); }
+        }
       }
     }
 
@@ -131,36 +150,13 @@ body.sponsors {
         @include make-xs-column-offset(2);
         @include make-sm-column(2);
         @include make-sm-column-offset(0);
-      }
-    }
 
-    &.gold,
-    &.silver,
-    &.bronze,
-    &.organizers,
-    &.supporters {
-      .sponsors-brand {
         img {
-          transform-origin: center center 0;
-
-          @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-            @include scale(.65);
+          @media (max-width: $screen-sm-max) { @include size(83px,40px); }
+          @media (min-width: $screen-md-min) {
+            @include size(116px,56px);
+            margin-bottom: 30px;
           }
-          @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-            @include scale(.8);
-          }
-        }
-      }
-    }
-
-    &.gold {
-      .sponsors-brand {
-        @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-          height: 140px;
-
-          img { margin-top: -30px; }
-
-          &.engine-yard img { margin-top: -40px; }
         }
       }
     }
@@ -172,4 +168,19 @@ body.sponsors {
   line-height: 18px;
   padding: 0 40px;
   text-align: center;
+}
+
+/*... Specific Layouting ...*/
+
+.sponsors-area {
+  section {
+    &.bronze {
+      .impacthub {
+        @include make-xs-column(6);
+        @include make-xs-column-offset(3);
+        @include make-sm-column(3);
+        @include make-sm-column-offset(4);
+      }
+    }
+  }
 }
