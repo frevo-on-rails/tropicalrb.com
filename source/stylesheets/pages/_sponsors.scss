@@ -26,7 +26,7 @@ body.sponsors {
     }
     &.silver header { margin-top: 50px; }
     &.bronze header { margin-top: 50px; }
-    &.organizers header { margin-top: 50px; }
+    &.organizers header { margin-top: 40px; }
     &.supporters header { margin-top: 50px; }
   }
 }
@@ -84,19 +84,20 @@ body.sponsors {
 
     &.silver {
       header {
+        margin-bottom: 5px;
+
         @media (min-width: $screen-sm-min) { margin-bottom: 30px; }
       }
 
       .sponsors-brand {
-        @include make-xs-column(8);
-        @include make-xs-column-offset(2);
+        @include make-xs-column(12);
         @include make-sm-column(4);
         @include make-sm-column-offset(0);
 
         img {
           @media (max-width: $screen-sm-max) {
             @include size(182px,97px);
-            margin: 5px auto;
+            margin: 15px auto 5px;
           }
           @media (min-width: $screen-md-min) { @include size(252px,134px); }
         }
@@ -105,10 +106,7 @@ body.sponsors {
 
     &.bronze {
       header {
-        @media (min-width: $screen-sm-min) {
-          margin-bottom: 30px;
-          margin-top: 80px;
-        }
+        @media (min-width: $screen-sm-min) { margin-bottom: 30px; }
       }
 
       .sponsors-brand {
@@ -138,7 +136,11 @@ body.sponsors {
         @include make-sm-column-offset(0);
 
         img {
-          @media (max-width: $screen-sm-max) { @include size(182px,97px); }
+          @media (max-width: $screen-sm-max) {
+            @include size(182px,97px);
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
           @media (min-width: $screen-md-min) { @include size(252px,134px); }
         }
       }
@@ -147,16 +149,33 @@ body.sponsors {
     &.supporters {
       .sponsors-brand {
         @include make-xs-column(4);
-        @include make-xs-column-offset(2);
         @include make-sm-column(2);
         @include make-sm-column-offset(0);
 
         img {
-          @media (max-width: $screen-sm-max) { @include size(83px,40px); }
-          @media (min-width: $screen-md-min) {
-            @include size(116px,56px);
+          @media (max-width: $screen-sm-max) {
+            @include size(83px,63px);
             margin-bottom: 30px;
           }
+          @media (min-width: $screen-md-min) {
+            @include size(116px,89px);
+            margin-bottom: 20px;
+          }
+        }
+
+        h4 {
+          @include titillium-web;
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          margin: 20px auto 10px;
+          font-size: 11px;
+          line-height: 14px;
+          height: 28px;
+          text-align: center;
+          text-transform: uppercase;
+          vertical-align: middle;
+          z-index: 3;
         }
       }
     }
@@ -198,6 +217,27 @@ body.sponsors {
         @include make-xs-column-offset(3);
         @include make-sm-column(3);
         @include make-sm-column-offset(4);
+      }
+    }
+
+    &.supporters {
+      .supporters-special {
+        margin: 0;
+        .ruby-central { @include make-sm-column-offset(3); }
+
+        @media (max-width: $screen-xs-max) {
+          .sponsors-brand {
+            padding: 0;
+
+            &:first-child { padding-left: 15px; }
+            &:last-child { padding-right: 15px; }
+          }
+        }
+      }
+
+      .say2me {
+        @include make-xs-column-offset(4);
+        @include make-sm-column-offset(0);
       }
     }
   }
