@@ -113,16 +113,15 @@ main.hero {
 .hero-social {
   @include make-xs-column(12);
   @include make-sm-column(6);
+  @media (max-width: $screen-xs-max) { padding: 0; }
 
   ul {
     @include list-unstyled;
     @include clearfix();
 
     @media (max-width: $screen-xs-max) {
-      width: 289px;
-      margin-right: auto;
-      margin-bottom: 40px;
-      margin-left: auto;
+      width: 280px;
+      margin: 5px auto 35px;
       padding-right: 2px;
       text-align: center;
     }
@@ -148,8 +147,8 @@ main.hero {
         background-size: 44px;
 
         @media (max-width: $screen-xs-max) {
-          margin-right: 5px;
-          margin-left: 5px;
+          margin-right: 3px;
+          margin-left: 3px;
         }
 
         @media (min-width: $screen-sm-min) { margin-right: 12px; }
@@ -182,7 +181,7 @@ main.hero {
     text-indent: -9999px;
 
     @media (max-width: 480px) {
-      top: -65px;
+      top: -55px;
       right: 0;
     }
 
