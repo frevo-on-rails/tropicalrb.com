@@ -64,25 +64,3 @@ body.venue {
 
   hr { border-top-color: $text-color; }
 }
-
-h3 {
-  @include titillium-semi-bold;
-  margin-top: 0;
-  font-size: 24px;
-}
-
-p { font-size: 18px; }
-
-strong { @include titillium-semi-bold; }
-
-label {
-  @include titillium-semi-bold;
-  display: block;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-
-hr {
-  width: 48px;
-  margin-top: 15px;
-}

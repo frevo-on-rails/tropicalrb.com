@@ -138,6 +138,31 @@ h2, .h2 {
   }
 }
 
+h3, .h3 {
+  @include titillium-semi-bold;
+  margin-top: 0;
+  font-size: 24px;
+}
+
+p, .p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+strong { @include titillium-semi-bold; }
+
+label {
+  @include titillium-semi-bold;
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+hr {
+  width: 48px;
+  margin-top: 15px;
+}
+
 main {
   &.sponsors {
     h2, .h2 {
@@ -148,4 +173,3 @@ main {
   }
 }
 
-p, .p { line-height: 24px; }
