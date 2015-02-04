@@ -1,0 +1,37 @@
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+      Appendix
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+body.code-of-conduct,
+body.colophon {
+  .navbar {
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-sm-min) { margin-bottom: 40px; }
+  }
+}
+
+main.appendix {
+  @extend .motion-fade-in;
+  @extend .container;
+
+  section { margin-bottom: 40px; }
+}
+
+.wall-of-text {
+  @include make-xs-column(12);
+  @include make-sm-column(8);
+  @include make-sm-column-offset(2);
+
+  @media (min-width: $screen-lg-min) {
+    padding: 0 50px;
+  }
+
+  p, h2, ol { margin-bottom: 32px; }
+
+  ol {
+    list-style-type: lower-roman;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

@@ -51,11 +51,11 @@ body.schedule {
 body.sponsors {
   .navbar hr { border-top-color: $mono-03 !important; }
 }
-body.tickets {
-  .navbar hr { border-top-color: $mono-01 !important; }
-}
 body.venue {
   .navbar hr { border-top-color: $mono-01 !important; }
+}
+body.index {
+  .navbar hr { border-top-color: $poly-11 !important; }
 }
 
 /*... Scaffolding ...*/
@@ -122,7 +122,9 @@ body.venue {
   }
 }
 
-body.index {
+body.index,
+body.code-of-conduct,
+body.colophon {
   .navbar-toggle {
     background-image: image-url('octagon-small-red@2x.png');
     .icon-bar { background-color: $poly-11 !important; }
@@ -212,7 +214,9 @@ body.venue {
   }
 }
 
-body.index {
+body.index,
+body.code-of-conduct,
+body.colophon {
   .navbar-brand {
     color: $poly-11;
 
@@ -274,7 +278,9 @@ body.venue {
   }
 }
 
-body.index {
+body.index,
+body.code-of-conduct,
+body.colophon {
   .navbar-collapse {
     @media (max-width: $screen-xs-max) { background-color: transparentize($poly-07, .1); }
     @media (min-width: $screen-sm-min) { border-bottom-color: $poly-11 !important; }
@@ -389,7 +395,9 @@ body.venue {
   }
 }
 
-body.index {
+body.index,
+body.code-of-conduct,
+body.colophon {
   .navbar-nav {
     @media (max-width: $screen-xs-max) { border-top-color: $poly-11 !important; }
     a {

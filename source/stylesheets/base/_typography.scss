@@ -109,14 +109,15 @@
 main {
   &.schedule,
   &.venue,
-  &.sponsors {
+  &.sponsors,
+  &.appendix {
     h1 { display: none; }
   }
 }
 
-h2, .h2 {
+h2 {
   @include molle;
-  font-size: 48px;
+  font-size: 46px;
   line-height: 48px;
   margin: 0;
   text-align: center;
@@ -126,25 +127,27 @@ h2, .h2 {
     line-height: 51px;
 
     &:before, &:after {
-      @include size(110px, 2px);
+      @include size(100px, 2px);
       content: '';
       background-color: white;
       display: inline-block;
+      position: absolute;
       vertical-align: middle;
+      margin-top: 22px;
     }
 
-    &:before { margin-right: 18px; }
+    &:before { margin-left: -118px; }
     &:after { margin-left: 20px; }
   }
 }
 
-h3, .h3 {
+h3 {
   @include titillium-semi-bold;
   margin-top: 0;
   font-size: 24px;
 }
 
-p, .p {
+p {
   font-size: 18px;
   line-height: 24px;
 }
@@ -165,10 +168,16 @@ hr {
 
 main {
   &.sponsors {
-    h2, .h2 {
+    h2 {
       color: $mono-03;
 
       &:before, &:after { background-color: $mono-03; }
+    }
+  }
+
+  &.appendix {
+    h2 {
+      &:before, &:after { background-color: $poly-11; }
     }
   }
 }

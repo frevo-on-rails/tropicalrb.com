@@ -39,7 +39,9 @@
 
 body.schedule,
 body.venue,
-body.sponsors {
+body.sponsors,
+body.code-of-conduct,
+body.colophon {
   .footer { padding-bottom: 50px; }
 }
 
@@ -67,7 +69,9 @@ body.sponsors {
   &:after  { right: -60px; }
 }
 
-body.index {
+body.index,
+body.code-of-conduct,
+body.colophon {
   .footer-title {
     &:before,
     &:after { background-color: $poly-11; }
@@ -138,7 +142,9 @@ body.schedule {
   }
 }
 
-body.index {
+body.index,
+body.code-of-conduct,
+body.colophon {
   .footer-brands {
     .engine-yard      { background-image: image-url('brand-big-engineyard-red@2x.png'); }
     .nic              { background-image: image-url('brand-big-nic-red@2x.png'); }

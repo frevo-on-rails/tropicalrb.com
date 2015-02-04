@@ -26,7 +26,6 @@ body.index {
 
 body.schedule {
   color: $mono-10;
-  background-attachment: fixed;
   background-color: $poly-01;
   background-size: cover;
 
@@ -53,6 +52,28 @@ body.sponsors {
 
   a { color: $mono-03; }
   hr { border-top-color: $mono-03; }
+}
+
+body.code-of-conduct,
+body.colophon {
+  @include titillium-web-light;
+  color: $poly-11;
+  background-color: $poly-07;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; // Temporary
+
+  @media (max-width: $screen-xs-max) {
+    background-image: image-url('bkg-fire-xs.jpg');
+  }
+  @media (min-width: $screen-sm-min) {
+    // It causes flickering to the background. Oh god why?!
+    // background-image: image-url('bkg-fire-lg.jpg'), linear-gradient(to bottom, transparentize($poly-09,1) 0%, $poly-09 70%, $poly-09 100%);
+    background-image: image-url('bkg-fire-lg.jpg');
+  }
+
+  a { color: $poly-11; }
+  hr { border-top-color: $poly-11; }
 }
 
 body.venue {
