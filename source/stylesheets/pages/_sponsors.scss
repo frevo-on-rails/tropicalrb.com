@@ -212,12 +212,7 @@ body.sponsors {
 .sponsors-area {
   section {
     &.bronze {
-      .impacthub {
-        @include make-xs-column(6);
-        @include make-xs-column-offset(3);
-        @include make-sm-column(3);
-        @include make-sm-column-offset(4);
-      }
+      .dnsimple { @include make-sm-column-offset(3); }
     }
 
     &.supporters {
@@ -234,6 +229,8 @@ body.sponsors {
           }
         }
       }
+
+      .aws { @include make-sm-column-offset(2); }
 
       .say2me {
         @include make-xs-column-offset(4);
