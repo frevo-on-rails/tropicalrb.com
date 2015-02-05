@@ -27,17 +27,21 @@ body.index {
 body.schedule {
   color: $mono-10;
   background-color: $poly-01;
-  background-size: cover;
+  background-attachment: fixed;
 
   @media (max-width: $screen-xs-max) {
     background-image: image-url('bkg-waterworld-xs.jpg');
+    background-size: 768px 1536px;
   }
   @media (min-width: $screen-sm-min) and (max-width: 1440px) {
     background-image: image-url('bkg-waterworld-lg.jpg');
+    background-size: 1440px 1080px;
   }
   @media (min-width: 1441px) {
     background-image: image-url('bkg-waterworld-xlg.jpg');
+    background-size: 1980px 1485px;
   }
+  @media (min-width: 1981px) { background-size: cover; }
 
   a { color: $mono-10; }
   hr { border-top-color: $mono-10; }
@@ -61,11 +65,8 @@ body.colophon {
   background-color: $poly-07;
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover; // Temporary
 
-  @media (max-width: $screen-xs-max) {
-    background-image: image-url('bkg-fire-xs.jpg');
-  }
+  @media (max-width: $screen-xs-max) { background-image: image-url('bkg-fire-xs.jpg'); }
   @media (min-width: $screen-sm-min) {
     // It causes flickering to the background. Oh god why?!
     // background-image: image-url('bkg-fire-lg.jpg'), linear-gradient(to bottom, transparentize($poly-09,1) 0%, $poly-09 70%, $poly-09 100%);
