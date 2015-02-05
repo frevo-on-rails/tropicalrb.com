@@ -48,14 +48,14 @@ body.schedule {
 }
 
 body.sponsors {
-  color: $mono-03;
+  color: $mono-04;
   background-color: $mono-09;
 
   @media (max-width: $screen-xs-max) { background-image: image-url('bkg-whitesand-xs.jpg'); }
   @media (min-width: $screen-sm-min) { background-image: image-url('bkg-whitesand-xlg.jpg'); }
 
-  a { color: $mono-03; }
-  hr { border-top-color: $mono-03; }
+  a { color: $mono-04; }
+  hr { border-top-color: $mono-04; }
 }
 
 body.code-of-conduct,

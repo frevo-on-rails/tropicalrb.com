@@ -49,7 +49,7 @@ body.schedule {
   .navbar hr { border-top-color: $mono-10 !important; }
 }
 body.sponsors {
-  .navbar hr { border-top-color: $mono-03 !important; }
+  .navbar hr { border-top-color: $mono-04 !important; }
 }
 body.venue {
   .navbar hr { border-top-color: $mono-01 !important; }
@@ -149,7 +149,7 @@ body.schedule {
 body.sponsors {
   .navbar-toggle {
     background-image: image-url('octagon-small-grey@2x.png');
-    .icon-bar { background-color: $mono-03 !important; }
+    .icon-bar { background-color: $mono-04 !important; }
   }
 
   .navbar-collapse {
@@ -245,7 +245,7 @@ body.schedule {
 body.sponsors {
   .navbar-brand,
   .navbar-brand:hover,
-  .navbar-brand:focus { color: $mono-03; }
+  .navbar-brand:focus { color: $mono-04; }
 }
 
 body.venue {
@@ -297,7 +297,7 @@ body.schedule {
 body.sponsors {
   .navbar-collapse {
     @media (max-width: $screen-xs-max) { background-color: transparentize($mono-10, .1); }
-    @media (min-width: $screen-sm-min) { border-bottom-color: $mono-03 !important; }
+    @media (min-width: $screen-sm-min) { border-bottom-color: $mono-04 !important; }
   }
 }
 
@@ -429,15 +429,15 @@ body.schedule {
 
 body.sponsors {
   .navbar-nav {
-    @media (max-width: $screen-xs-max) { border-top-color: $mono-03 !important; }
+    @media (max-width: $screen-xs-max) { border-top-color: $mono-04 !important; }
     a {
-      color: $mono-03;
+      color: $mono-04;
       &.link-tickets {
-        border-color: $mono-03;
+        border-color: $mono-04;
         &:after { background-image: image-url('icon-med-ticket-grey@2x.png'); }
       }
       &:hover,
-      &:focus { color: $mono-03; }
+      &:focus { color: $mono-04; }
     }
   }
 }

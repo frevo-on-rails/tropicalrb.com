@@ -36,7 +36,7 @@ body.sponsors {
   display: block;
   font-size: 18px;
   line-height: 24px;
-  border: 2px solid $mono-03;
+  border: 2px solid $mono-04;
   border-radius: 3px;
   margin: 0 auto;
   padding: 4px 4px 4px 10px;
@@ -192,7 +192,7 @@ body.sponsors {
 
   a {
     @include size(auto,auto);
-    color: $mono-03;
+    color: $mono-04;
     display: inline-block;
     font-size: 14px;
     line-height: 18px;
