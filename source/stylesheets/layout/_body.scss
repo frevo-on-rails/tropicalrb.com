@@ -65,6 +65,7 @@ body.colophon {
   background-color: $poly-07;
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (max-width: $screen-xs-max) { background-image: image-url('bkg-fire-xs.jpg'); }
   @media (min-width: $screen-sm-min) {
