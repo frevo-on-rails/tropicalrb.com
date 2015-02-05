@@ -11,27 +11,118 @@ body.colophon {
   }
 }
 
-main.appendix {
+.appendix {
   @extend .motion-fade-in;
   @extend .container;
 
-  section { margin-bottom: 40px; }
+  section {
+    @include titillium-web;
+    margin-bottom: 50px;
+
+    &.wall-of-text {
+      @include make-xs-column(12);
+      @include make-sm-column(8);
+      @include make-sm-column-offset(2);
+
+      @media (min-width: $screen-md-min) { padding-left: 55px; }
+      @media (min-width: $screen-lg-min) {
+        padding-left: 105px;
+        padding-right: 45px;
+      }
+    }
+
+    &.credits { @include make-xs-column(12); }
+  }
 }
 
 .wall-of-text {
-  @include make-xs-column(12);
-  @include make-sm-column(8);
-  @include make-sm-column-offset(2);
-
-  @media (min-width: $screen-lg-min) {
-    padding: 0 50px;
-  }
-
   p, h2, ol { margin-bottom: 32px; }
 
   ol {
     list-style-type: lower-roman;
     font-size: 18px;
     line-height: 24px;
+  }
+}
+
+.credits {
+  h2 { margin-bottom: 32px; }
+  h4, p, small, ol, ol li { text-align: center; }
+  p, p a, small, small a, dl, dt, dd, dd a, ol, ol li {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  h4 {
+    margin-top: 48px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 3;
+
+    &:before,
+    &:after {
+      @include size(48px, 1px);
+      content: '';
+      display: inline-block;
+      background-color: $poly-11;
+      position: absolute;
+      margin-top: 8px;
+    }
+
+    &:before { margin-left: -60px; }
+    &:after  { margin-left: 10px; }
+
+    &+dl, &+ol {
+      margin-top: 18px;
+    }
+  }
+
+  p {
+    width: 100%;
+    text-transform: uppercase;
+    a { @include titillium-semi-bold; }
+  }
+
+  dl {
+    @extend .dl-horizontal;
+    width: 100%;
+
+    dt, dt { width: 50%; }
+
+    dt {
+      @include titillium-semi-bold;
+      font-size: 14px;
+      padding-right: 9px;
+      text-transform: uppercase;
+
+      a {
+        font-size: 14px;
+        min-height: 24px;
+      }
+    }
+
+    dd {
+      padding-left: 9px;
+      margin-bottom: 7px;
+    }
+
+    hr {
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
+  }
+
+  small {
+    display: block;
+    margin-bottom: 18px;
+    text-align: center;
+    width: 100%;
+  }
+
+  ol {
+    padding-left: 0;
+    list-style: none;
   }
 }

@@ -35,6 +35,10 @@
       @include make-sm-column(6);
     }
   }
+
+  .guava-signature ~ a {
+    display: inline-block;
+    margin-top: 8px; }
 }
 
 body.schedule,
