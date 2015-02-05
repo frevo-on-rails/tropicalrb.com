@@ -16,7 +16,6 @@ body.colophon {
   @extend .container;
 
   section {
-    @include titillium-web;
     margin-bottom: 50px;
 
     &.wall-of-text {
@@ -36,6 +35,7 @@ body.colophon {
 }
 
 .wall-of-text {
+  @include titillium-web-light;
   p, h2, ol { margin-bottom: 32px; }
 
   ol {
@@ -46,6 +46,8 @@ body.colophon {
 }
 
 .credits {
+  @include titillium-web;
+
   h2 { margin-bottom: 32px; }
   h4, p, small, ol, ol li { text-align: center; }
   p, p a, small, small a, dl, dt, dd, dd a, ol, ol li {
@@ -97,6 +99,11 @@ body.colophon {
       padding-right: 9px;
       text-transform: uppercase;
 
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+        text-align: center;
+      }
+
       a {
         font-size: 14px;
         min-height: 24px;
@@ -106,6 +113,12 @@ body.colophon {
     dd {
       padding-left: 9px;
       margin-bottom: 7px;
+
+      @media (max-width: $screen-xs-max) {
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 12px;
+      }
     }
 
     hr {

@@ -119,20 +119,30 @@ h2 {
   @include molle;
   font-size: 46px;
   line-height: 48px;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
+  width: 250px;
+
+  &:before, &:after {
+    @include size(25px, 2px);
+    content: '';
+    background-color: white;
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+    margin-top: 19px;
+  }
+
+  &:before { margin-left: -33px; }
+  &:after { margin-left: 10px; }
 
   @media (min-width: $screen-sm-min) {
     font-size: 51px;
     line-height: 51px;
+    width: 100%;
 
     &:before, &:after {
       @include size(100px, 2px);
-      content: '';
-      background-color: white;
-      display: inline-block;
-      position: absolute;
-      vertical-align: middle;
       margin-top: 22px;
     }
 
