@@ -224,7 +224,7 @@ body.sponsors {
     &.supporters {
       .supporters-special {
         margin: 0;
-        .ruby-central { @include make-sm-column-offset(3); }
+        .ruby-central { @include make-sm-column-offset(2); }
 
         @media (max-width: $screen-xs-max) {
           .sponsors-brand {

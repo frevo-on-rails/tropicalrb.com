@@ -25,7 +25,8 @@
     .advisory {
       @include make-xs-column(12);
       @include make-sm-column(5);
-      @include make-md-column(3);
+      @include make-md-column(4);
+      @media (min-width: $screen-lg-min) { padding: 0 60px 0 0; }
     }
   }
 
@@ -153,12 +154,13 @@ body.colophon {
     .engine-yard      { background-image: image-url('brand-big-engineyard-red@2x.png'); }
     .nic              { background-image: image-url('brand-big-nic-red@2x.png'); }
     .github           { background-image: image-url('brand-med-github-red@2x.png'); }
-    .tempest           { background-image: image-url('brand-med-tempest-red@2x.png'); }
+    .tempest          { background-image: image-url('brand-med-tempest-red@2x.png'); }
     .cers             { background-image: image-url('brand-med-cers-red@2x.png'); }
     .guava-software   { background-image: image-url('brand-small-guava-red@2x.png'); }
     .eloquent-studio  { background-image: image-url('brand-small-eloquent-red@2x.png'); }
     .frevo-on-rails   { background-image: image-url('brand-small-for-red@2x.png'); }
     .ruby-central-inc { background-image: image-url('brand-small-rubycentral-red@2x.png'); }
+    .impact-hub       { background-image: image-url('brand-small-impacthub-red@2x.png'); }
   }
 }
 
@@ -167,12 +169,13 @@ body.schedule {
     .engine-yard      { background-image: image-url('brand-big-engineyard-white@2x.png'); }
     .nic              { background-image: image-url('brand-big-nic-white@2x.png'); }
     .github           { background-image: image-url('brand-med-github-white@2x.png'); }
-    .tempest           { background-image: image-url('brand-med-tempest-white@2x.png'); }
+    .tempest          { background-image: image-url('brand-med-tempest-white@2x.png'); }
     .cers             { background-image: image-url('brand-med-cers-white@2x.png'); }
     .guava-software   { background-image: image-url('brand-small-guava-white@2x.png'); }
     .eloquent-studio  { background-image: image-url('brand-small-eloquent-white@2x.png'); }
     .frevo-on-rails   { background-image: image-url('brand-small-for-white@2x.png'); }
     .ruby-central-inc { background-image: image-url('brand-small-rubycentral-white@2x.png'); }
+    .impact-hub       { background-image: image-url('brand-small-impacthub-white@2x.png'); }
   }
 }
 
@@ -181,12 +184,13 @@ body.venue {
     .engine-yard      { background-image: image-url('brand-big-engineyard-yellow@2x.png'); }
     .nic              { background-image: image-url('brand-big-nic-yellow@2x.png'); }
     .github           { background-image: image-url('brand-med-github-yellow@2x.png'); }
-    .tempest           { background-image: image-url('brand-med-tempest-yellow@2x.png'); }
+    .tempest          { background-image: image-url('brand-med-tempest-yellow@2x.png'); }
     .cers             { background-image: image-url('brand-med-cers-yellow@2x.png'); }
     .guava-software   { background-image: image-url('brand-small-guava-yellow@2x.png'); }
     .eloquent-studio  { background-image: image-url('brand-small-eloquent-yellow@2x.png'); }
     .frevo-on-rails   { background-image: image-url('brand-small-for-yellow@2x.png'); }
     .ruby-central-inc { background-image: image-url('brand-small-rubycentral-yellow@2x.png'); }
+    .impact-hub       { background-image: image-url('brand-small-impacthub-yellow@2x.png'); }
   }
 }
 
