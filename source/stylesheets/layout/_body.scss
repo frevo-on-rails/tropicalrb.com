@@ -27,21 +27,16 @@ body.index {
 body.schedule {
   color: $mono-10;
   background-color: $poly-01;
-  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
 
   @media (max-width: $screen-xs-max) {
     background-image: image-url('bkg-waterworld-xs.jpg');
-    background-size: 768px 1536px;
   }
-  @media (min-width: $screen-sm-min) and (max-width: 1440px) {
-    background-image: image-url('bkg-waterworld-lg.jpg');
-    background-size: 1440px 1080px;
-  }
-  @media (min-width: 1441px) {
+  @media (min-width: $screen-sm-min) {
     background-image: image-url('bkg-waterworld-xlg.jpg');
-    background-size: 1980px 1485px;
   }
-  @media (min-width: 1981px) { background-size: cover; }
 
   a { color: $mono-10; }
   hr { border-top-color: $mono-10; }
