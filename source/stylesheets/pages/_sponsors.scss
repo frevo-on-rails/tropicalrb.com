@@ -201,6 +201,12 @@ body.sponsors {
   }
 }
 
+.gold {
+  .blurb {
+    @media (min-width: $screen-md-min) { padding: 0 45px; }
+  }
+}
+
 .silver {
   .blurb {
     @media (min-width: $screen-md-min) { padding: 0 20px; }
