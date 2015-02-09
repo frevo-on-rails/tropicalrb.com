@@ -177,7 +177,7 @@ main.hero {
   .greetings {
     position: absolute;
     display: block;
-    background-image: inline-image('graph-hello-en@2x.png');
+    background-image: image-url('graph-hello-en@2x.png');
     text-indent: -9999px;
 
     @media (max-width: 480px) {
