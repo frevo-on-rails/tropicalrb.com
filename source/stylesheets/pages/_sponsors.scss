@@ -218,41 +218,24 @@ body.sponsors {
   }
 }
 
-/*... Specific Layouting ...*/
+.ambassadors {
+  @media (max-width: $screen-xs-max) {
+    margin-left: 0;
+    margin-right: 0;
 
-.sponsors-area {
-  section {
-    &.bronze {
-      .dnsimple { @include make-sm-column-offset(3); }
+    h2 {
+      span {
+        display: inline-block;
+        white-space: nowrap;
+
+        &:before { content: '-'; }
+      }
     }
+  }
 
-    &.supporters {
-      .supporters-special {
-        .sponsors-brand {
-          @include make-xs-column(4);
-          @include make-sm-column(2);
-          @include make-sm-column-offset(0);
-        }
-
-        .ruby-central,
-        .casaeventos { @include make-xs-column-offset(2); }
-        .ruby-central { @include make-sm-column-offset(2); }
-        .casaeventos { @include make-sm-column-offset(0); }
-        @media (max-width: $screen-xs-max) {
-          h4 { margin-bottom: 0; }
-          .ruby-central,
-          .impact-hub-advisory {
-              .sponsors-image { margin-bottom: 5px; }
-          }
-        }
-      }
-
-      .aws { @include make-sm-column-offset(2); }
-
-      .say2me {
-        @include make-xs-column-offset(4);
-        @include make-sm-column-offset(0);
-      }
+  @media (min-width: $screen-sm-min) {
+    h2 {
+      span { display: inline; }
     }
   }
 }
@@ -263,6 +246,8 @@ body.sponsors {
   @include make-md-column(3);
   text-align: center;
   margin-bottom: 30px;
+
+  @media (max-width: $screen-xs-max) { padding: 0; }
 
   a {
     display: block;
@@ -303,4 +288,45 @@ body.sponsors {
   line-height: 18px;
   margin: 0;
   text-decoration: none;
+}
+
+/*... Specific Layouting ...*/
+
+.sponsors-area {
+  section {
+    &.bronze {
+      .dnsimple { @include make-sm-column-offset(3); }
+    }
+
+    &.supporters {
+      .supporters-special {
+        margin: 0;
+
+        .sponsors-brand {
+          @include make-xs-column(4);
+          @include make-sm-column(2);
+          @include make-sm-column-offset(0);
+        }
+
+        .ruby-central,
+        .casaeventos { @include make-xs-column-offset(2); }
+        .ruby-central { @include make-sm-column-offset(2); }
+        .casaeventos { @include make-sm-column-offset(0); }
+        @media (max-width: $screen-xs-max) {
+          h4 { margin-bottom: 0; }
+          .ruby-central,
+          .impact-hub-advisory {
+              .sponsors-image { margin-bottom: 5px; }
+          }
+        }
+      }
+
+      .aws { @include make-sm-column-offset(2); }
+
+      .say2me {
+        @include make-xs-column-offset(4);
+        @include make-sm-column-offset(0);
+      }
+    }
+  }
 }
