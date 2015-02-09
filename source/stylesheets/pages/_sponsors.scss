@@ -13,6 +13,7 @@ body.sponsors {
 .sponsors-area {
   @extend .motion-fade-in;
   @extend .container;
+  margin-bottom: 20px;
 
   section {
     header {
@@ -28,6 +29,10 @@ body.sponsors {
     &.bronze header { margin-top: 50px; }
     &.organizers header { margin-top: 40px; }
     &.supporters header { margin-top: 50px; }
+    &.ambassadors header {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -244,4 +249,52 @@ body.sponsors {
       }
     }
   }
+}
+
+.ambassador {
+  @include make-xs-column(6);
+  @include make-sm-column(4);
+  @include make-md-column(3);
+  text-align: center;
+  margin-bottom: 30px;
+
+  a {
+    display: block;
+    margin: 0 auto;
+    @media (min-width: $screen-sm-min) { width: 140px; }
+
+    &:hover,
+    &:focus { animation: none !important; }
+  }
+
+  &.thiago {
+    @include make-xs-column-offset(3);
+    @include make-sm-column-offset(4);
+    @include make-md-column-offset(0);
+  }
+}
+
+.ambassador-photo {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+
+  @media (max-width: $screen-xs-max) { @include square(80px); }
+  @media (min-width: $screen-sm-min) { @include square(110px); }
+}
+
+.ambassador-name {
+  @include titillium-semi-bold;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.ambassador-location,
+.ambassador-handler {
+  @include titillium-web;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  text-decoration: none;
 }
