@@ -295,7 +295,14 @@ body.sponsors {
 .sponsors-area {
   section {
     &.bronze {
-      .dnsimple { @include make-sm-column-offset(3); }
+      .dnsimple {
+        @media (min-width: $screen-sm-min) { margin-left: 12.5%; }
+      }
+
+      .zertico {
+        @include make-xs-column-offset(3);
+        @include make-sm-column-offset(0);
+      }
     }
 
     &.supporters {
@@ -312,6 +319,7 @@ body.sponsors {
         .casaeventos { @include make-xs-column-offset(2); }
         .ruby-central { @include make-sm-column-offset(2); }
         .casaeventos { @include make-sm-column-offset(0); }
+
         @media (max-width: $screen-xs-max) {
           h4 { margin-bottom: 0; }
           .ruby-central,
@@ -321,11 +329,19 @@ body.sponsors {
         }
       }
 
-      .aws { @include make-sm-column-offset(2); }
+      .aws {
+        @media (min-width: $screen-sm-min) { margin-left: 8.5%; }
+      }
 
       .say2me {
-        @include make-xs-column-offset(4);
+        @include make-xs-column-offset(2);
         @include make-sm-column-offset(0);
+      }
+    }
+
+    &.ambassadors {
+      .lucas {
+        @media (min-width: $screen-md-min) { margin-left: 12.5%; }
       }
     }
   }
