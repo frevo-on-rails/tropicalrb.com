@@ -238,10 +238,12 @@ body.index {
     padding-bottom: 370px;
 
     @media (max-width: $screen-sm-max) {
-      @include gradient-vertical-three-colors(transparentize($poly-08,1), $poly-08, 55%, $poly-08);
+      @include gradient-vertical-three-colors(transparentize($poly-08,1), $poly-08, 45%, $poly-08);
     }
-
     @media (min-width: $screen-sm-min) { padding-bottom: 200px; }
+    @media (min-width: $screen-md-min) {
+      @include gradient-vertical-three-colors(transparentize($poly-08,1), $poly-08, 91%, $poly-08);
+    }
     @media (min-width: $screen-lg-min) { padding-bottom: 180px; }
 
     .coconut {
