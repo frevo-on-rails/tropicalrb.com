@@ -111,16 +111,16 @@ main.schedule {
 }
 
 .icon-recife {
-  background-image: image-url('schedule-graph-mobi-recife@2x.png');
+  background-image: inline-image('schedule-graph-mobi-recife@2x.png');
   @media (min-width: $screen-sm-min) {
-    background-image: image-url('schedule-graph-desk-recife@2x.png');
+    background-image: inline-image('schedule-graph-desk-recife@2x.png');
   }
 }
 
 .icon-porto {
-  background-image: image-url('schedule-graph-mobi-porto@2x.png');
+  background-image: inline-image('schedule-graph-mobi-porto@2x.png');
   @media (min-width: $screen-sm-min) {
-    background-image: image-url('schedule-graph-desk-porto@2x.png');
+    background-image: inline-image('schedule-graph-desk-porto@2x.png');
   }
 }
 
@@ -129,7 +129,7 @@ main.schedule {
     @extend .motion-fade-in;
     @include square(120px);
     animation-delay: .2s;
-    background-image: image-url('schedule-graph-mobi-bkg-active@2x.png');
+    background-image: inline-image('schedule-graph-mobi-bkg-active@2x.png');
     background-size: 120px 120px;
     background-repeat: no-repeat;
     content: '';
@@ -140,7 +140,7 @@ main.schedule {
 
     @media (min-width: $screen-sm-min) {
       @include square(160px);
-      background-image: image-url('schedule-graph-desk-bkg-active@2x.png');
+      background-image: inline-image('schedule-graph-desk-bkg-active@2x.png');
       background-size: 160px 160px;
       top: -40px;
       left: -40px;
@@ -152,10 +152,10 @@ main.schedule.day-one {
   .nav-event.one {
     .icon-recife {
       @extend %nav-event-active-bkg;
-      background-image: image-url('schedule-graph-mobi-recife-active@2x.png');
+      background-image: inline-image('schedule-graph-mobi-recife-active@2x.png');
 
       @media (min-width: $screen-sm-min) {
-        background-image: image-url('schedule-graph-desk-recife-active@2x.png');
+        background-image: inline-image('schedule-graph-desk-recife-active@2x.png');
       }
     }
 
@@ -167,10 +167,10 @@ main.schedule.day-two {
   .nav-event.two {
     .icon-porto {
       @extend %nav-event-active-bkg;
-      background-image: image-url('schedule-graph-mobi-porto-active@2x.png');
+      background-image: inline-image('schedule-graph-mobi-porto-active@2x.png');
 
       @media (min-width: $screen-sm-min) {
-        background-image: image-url('schedule-graph-desk-porto-active@2x.png');
+        background-image: inline-image('schedule-graph-desk-porto-active@2x.png');
       }
     }
 
@@ -182,9 +182,9 @@ main.schedule.day-three {
   .nav-event.three {
     .icon-porto {
       @extend %nav-event-active-bkg;
-      background-image: image-url('schedule-graph-mobi-porto-active@2x.png');
+      background-image: inline-image('schedule-graph-mobi-porto-active@2x.png');
       @media (min-width: $screen-sm-min) {
-        background-image: image-url('schedule-graph-desk-porto-active@2x.png');
+        background-image: inline-image('schedule-graph-desk-porto-active@2x.png');
       }
     }
     h4, .nav-event-time { @include titillium-bold; }
@@ -199,9 +199,9 @@ main.schedule.day-four {
   .nav-event.four {
     .icon-porto {
       @extend %nav-event-active-bkg;
-      background-image: image-url('schedule-graph-mobi-porto-active@2x.png');
+      background-image: inline-image('schedule-graph-mobi-porto-active@2x.png');
       @media (min-width: $screen-sm-min) {
-        background-image: image-url('schedule-graph-desk-porto-active@2x.png');
+        background-image: inline-image('schedule-graph-desk-porto-active@2x.png');
       }
     }
 
@@ -213,29 +213,29 @@ main.schedule.day-four {
   @include size(14px, 5px);
   background-size: 14px 5px;
   background-repeat: no-repeat;
-  background-image: image-url('schedule-graph-connector-mobi@2x.png');
+  background-image: inline-image('schedule-graph-connector-mobi@2x.png');
   display: block;
   position: absolute;
   top: (30px - 3px);
 
   @media (min-width: $screen-sm-min) {
     @include size(52px, 10px);
-    background-image: image-url('schedule-graph-connector-desk@2x.png');
+    background-image: inline-image('schedule-graph-connector-desk@2x.png');
     background-size: 52px 10px;
     top: (40px - 6px);
   }
 
   &.end {
     &.left {
-      background-image: image-url('schedule-graph-connector-mobi-end-left@2x.png');
+      background-image: inline-image('schedule-graph-connector-mobi-end-left@2x.png');
       @media (min-width: $screen-sm-min) {
-        background-image: image-url('schedule-graph-connector-desk-end-left@2x.png');
+        background-image: inline-image('schedule-graph-connector-desk-end-left@2x.png');
       }
     }
     &.right {
-      background-image: image-url('schedule-graph-connector-mobi-end-right@2x.png');
+      background-image: inline-image('schedule-graph-connector-mobi-end-right@2x.png');
       @media (min-width: $screen-sm-min) {
-        background-image: image-url('schedule-graph-connector-desk-end-right@2x.png');
+        background-image: inline-image('schedule-graph-connector-desk-end-right@2x.png');
       }
     }
   }
@@ -253,7 +253,7 @@ main.schedule.day-four {
 .icon-car {
   @media (min-width: $screen-sm-min) {
     @include square(44px);
-    background-image: image-url('schedule-graph-car@2x.png');
+    background-image: inline-image('schedule-graph-car@2x.png');
     background-size: 44px 44px;
     display: block;
     position: absolute;
@@ -317,13 +317,13 @@ main.schedule.day-four {
   }
 
   .icon-translation {
-    background-image: image-url('icon-med-translation-white@2x.png');
+    background-image: inline-image('icon-med-translation-white@2x.png');
     margin-right: 6px;
   }
 }
 
-.icon-calendar { background-image: image-url('icon-med-calendar@2x.png'); }
-.icon-geolocal { background-image: image-url('icon-med-geolocal@2x.png'); }
+.icon-calendar { background-image: inline-image('icon-med-calendar@2x.png'); }
+.icon-geolocal { background-image: inline-image('icon-med-geolocal@2x.png'); }
 
 /*... Schedule Timeline (Events) ...*/
 

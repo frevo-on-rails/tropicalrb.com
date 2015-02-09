@@ -107,8 +107,8 @@ main.hero {
   vertical-align: middle;
 }
 
-.icon-translation { background-image: image-url('icon-med-translation-red@2x.png'); }
-.icon-transportation { background-image: image-url('icon-med-transportation-red@2x.png'); }
+.icon-translation { background-image: inline-image('icon-med-translation-red@2x.png'); }
+.icon-transportation { background-image: inline-image('icon-med-transportation-red@2x.png'); }
 
 .hero-social {
   @include make-xs-column(12);
@@ -143,7 +143,7 @@ main.hero {
         position: relative;
         display: block;
         text-indent: -9999px;
-        background-image: image-url('octagon-small-red@2x.png');
+        background-image: inline-image('octagon-small-red@2x.png');
         background-size: 44px;
 
         @media (max-width: $screen-xs-max) {
@@ -165,11 +165,11 @@ main.hero {
           content: '';
         }
 
-        &.email:before { background-image: image-url('icon-small-contact-red@2x.png'); }
-        &.facebook:before { background-image: image-url('icon-small-facebook-red@2x.png'); }
-        &.github:before { background-image: image-url('icon-small-github-red@2x.png'); }
-        &.lanyrd:before { background-image: image-url('icon-small-lanyrd-red@2x.png'); }
-        &.twitter:before { background-image: image-url('icon-small-twitter-red@2x.png'); }
+        &.email:before { background-image: inline-image('icon-small-contact-red@2x.png'); }
+        &.facebook:before { background-image: inline-image('icon-small-facebook-red@2x.png'); }
+        &.github:before { background-image: inline-image('icon-small-github-red@2x.png'); }
+        &.lanyrd:before { background-image: inline-image('icon-small-lanyrd-red@2x.png'); }
+        &.twitter:before { background-image: inline-image('icon-small-twitter-red@2x.png'); }
       }
     }
   }
@@ -177,7 +177,7 @@ main.hero {
   .greetings {
     position: absolute;
     display: block;
-    background-image: image-url('graph-hello-en@2x.png');
+    background-image: inline-image('graph-hello-en@2x.png');
     text-indent: -9999px;
 
     @media (max-width: 480px) {

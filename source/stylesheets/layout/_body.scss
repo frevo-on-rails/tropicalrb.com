@@ -64,7 +64,7 @@ body.colophon {
 
   @media (max-width: $screen-xs-max) { background-image: image-url('bkg-fire-xs.jpg'); }
   @media (min-width: $screen-sm-min) {
-    // It causes flickering to the background. Oh god why?!
+    // This causes flickering to the background. Oh god why?!
     // background-image: image-url('bkg-fire-lg.jpg'), linear-gradient(to bottom, transparentize($poly-09,1) 0%, $poly-09 70%, $poly-09 100%);
     background-image: image-url('bkg-fire-lg.jpg');
   }

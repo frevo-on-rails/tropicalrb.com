@@ -126,14 +126,14 @@ body.index,
 body.code-of-conduct,
 body.colophon {
   .navbar-toggle {
-    background-image: image-url('octagon-small-red@2x.png');
+    background-image: inline-image('octagon-small-red@2x.png');
     .icon-bar { background-color: $poly-11 !important; }
   }
 }
 
 body.schedule {
   .navbar-toggle {
-    background-image: image-url('octagon-small-white@2x.png');
+    background-image: inline-image('octagon-small-white@2x.png');
     .icon-bar { background-color: $mono-10 !important; }
   }
 
@@ -148,7 +148,7 @@ body.schedule {
 
 body.sponsors {
   .navbar-toggle {
-    background-image: image-url('octagon-small-grey@2x.png');
+    background-image: inline-image('octagon-small-grey@2x.png');
     .icon-bar { background-color: $mono-04 !important; }
   }
 
@@ -163,7 +163,7 @@ body.sponsors {
 
 body.venue {
   .navbar-toggle {
-    background-image: image-url('octagon-small-red@2x.png');
+    background-image: inline-image('octagon-small-red@2x.png');
     .icon-bar { background-color: $mono-01 !important; }
   }
 
@@ -404,7 +404,7 @@ body.colophon {
       color: $poly-11;
       &.link-tickets {
         border-color: $poly-11;
-        &:after { background-image: image-url('icon-med-ticket-red@2x.png'); }
+        &:after { background-image: inline-image('icon-med-ticket-red@2x.png'); }
       }
       &:hover,
       &:focus { color: $poly-11; }
@@ -419,7 +419,7 @@ body.schedule {
       color: $mono-10;
       &.link-tickets {
         border-color: $mono-10;
-        &:after { background-image: image-url('icon-med-ticket-white@2x.png'); }
+        &:after { background-image: inline-image('icon-med-ticket-white@2x.png'); }
       }
       &:hover,
       &:focus { color: $mono-10; }
@@ -434,7 +434,7 @@ body.sponsors {
       color: $mono-04;
       &.link-tickets {
         border-color: $mono-04;
-        &:after { background-image: image-url('icon-med-ticket-grey@2x.png'); }
+        &:after { background-image: inline-image('icon-med-ticket-grey@2x.png'); }
       }
       &:hover,
       &:focus { color: $mono-04; }
@@ -449,7 +449,7 @@ body.venue {
       color: $mono-01;
       &.link-tickets {
         border-color: $mono-01;
-        &:after { background-image: image-url('icon-tag-venue.png'); }
+        &:after { background-image: inline-image('icon-med-ticket-grey@2x.png'); }
       }
       &:hover,
       &:focus { color: $mono-01; }
