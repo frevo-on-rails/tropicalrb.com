@@ -216,6 +216,11 @@ main.hero {
 .hero-speaker {
   text-align: center;
 
+  a {
+    &:hover,
+    &:focus { animation: none !important; }
+  }
+
   @media (max-width: 480px) { width: 50%; }
   @media (min-width: 481px) { width: 25%; }
   @media (max-width: $screen-sm-max) { float: left; }
