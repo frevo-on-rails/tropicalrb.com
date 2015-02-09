@@ -567,7 +567,7 @@ main.schedule.day-four {
 }
 
 .event-minor {
-  margin-top: 5px;
+  .event-local { float: none !important; }
 
   @media (max-width: $screen-xs-max) {
     .event-image {
@@ -576,10 +576,20 @@ main.schedule.day-four {
       display: block;
       margin: -7px auto 0;
     }
+
+    .event-local {
+      display: block;
+      text-align: center;
+      height: 24px;
+      padding: 0;
+
+      &:last-child { margin-bottom: 10px; }
+    }
   }
 
   @media (min-width: $screen-sm-min) {
     .event-image { margin-top: -16px; }
+    .event-local { display: block; }
   }
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -589,19 +599,40 @@ main.schedule.day-four {
       &:before { display: none; }
       &:after {
         top: 76px;
-        height: 44px;
+        height: 70px;
       }
     }
   }
 
   @media (min-width: $screen-md-min) {
+    margin-top: 5px;
     min-height: 105px;
 
     .time-line {
       &:before {
         top: 76px;
-        height: 29px;
+        height: 50px;
       }
+
+      &:after { display: none; }
     }
+  }
+}
+
+.transportation {
+  @media (max-width: $screen-xs-max) { margin-bottom: 32px; }
+
+  @media (min-width: $screen-sm-min) {
+    .event-time { margin-top: 10px; }
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    height: 126px;
+    .time-line:after { height: 80px }
+  }
+
+  @media (min-width: $screen-md-min) {
+    height: 131px;
+    .time-line:before { height: 65px }
   }
 }
