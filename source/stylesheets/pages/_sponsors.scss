@@ -228,15 +228,21 @@ body.sponsors {
 
     &.supporters {
       .supporters-special {
-        margin: 0;
+        .sponsors-brand {
+          @include make-xs-column(4);
+          @include make-sm-column(2);
+          @include make-sm-column-offset(0);
+        }
+
+        .ruby-central,
+        .casaeventos { @include make-xs-column-offset(2); }
         .ruby-central { @include make-sm-column-offset(2); }
-
+        .casaeventos { @include make-sm-column-offset(0); }
         @media (max-width: $screen-xs-max) {
-          .sponsors-brand {
-            padding: 0;
-
-            &:first-child { padding-left: 15px; }
-            &:last-child { padding-right: 15px; }
+          h4 { margin-bottom: 0; }
+          .ruby-central,
+          .impact-hub-advisory {
+              .sponsors-image { margin-bottom: 5px; }
           }
         }
       }
