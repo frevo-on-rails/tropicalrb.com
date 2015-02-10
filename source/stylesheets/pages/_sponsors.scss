@@ -294,6 +294,11 @@ body.sponsors {
 
 .sponsors-area {
   section {
+    &.gold {
+      .mandrill {
+        @include make-sm-column-offset(3);
+      }
+    }
     &.bronze {
       .dnsimple {
         @media (min-width: $screen-sm-min) { margin-left: 12.5%; }

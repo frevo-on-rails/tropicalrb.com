@@ -105,9 +105,17 @@ body.schedule {
 
     .gold {
       a {
-        @include size(240px, 130px);
-        background-size: 240px 130px;
-        margin-top: -15px;
+        @include size(240px, 105px);
+        background-size: 240px 105px;
+
+        @media (max-width: $screen-xs-max) {
+          &.engine-yard,
+          &.mandrill { margin-top: -5px; }
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+          &.mandrill { margin-top: -15px; }
+        }
+        @media (min-width: $screen-md-min) { margin-bottom: 5px; }
       }
     }
 
@@ -115,7 +123,6 @@ body.schedule {
       a {
         @include size(150px, 100px);
         background-size: 150px 100px;
-        margin-top: -5px;
       }
     }
 
@@ -151,8 +158,9 @@ body.index,
 body.code-of-conduct,
 body.colophon {
   .footer-brands {
-    .engine-yard      { background-image: image-url('brand-big-engineyard-red@2x.png'); }
     .nic              { background-image: image-url('brand-big-nic-red@2x.png'); }
+    .engine-yard      { background-image: image-url('brand-big-engineyard-red@2x.png'); }
+    .mandrill         { background-image: image-url('brand-big-mandrill-red@2x.png'); }
     .github           { background-image: image-url('brand-med-github-red@2x.png'); }
     .tempest          { background-image: image-url('brand-med-tempest-red@2x.png'); }
     .cers             { background-image: image-url('brand-med-cers-red@2x.png'); }
@@ -166,8 +174,9 @@ body.colophon {
 
 body.schedule {
   .footer-brands {
-    .engine-yard      { background-image: image-url('brand-big-engineyard-white@2x.png'); }
     .nic              { background-image: image-url('brand-big-nic-white@2x.png'); }
+    .engine-yard      { background-image: image-url('brand-big-engineyard-white@2x.png'); }
+    .mandrill         { background-image: image-url('brand-big-mandrill-white@2x.png'); }
     .github           { background-image: image-url('brand-med-github-white@2x.png'); }
     .tempest          { background-image: image-url('brand-med-tempest-white@2x.png'); }
     .cers             { background-image: image-url('brand-med-cers-white@2x.png'); }
@@ -183,6 +192,7 @@ body.venue {
   .footer-brands {
     .engine-yard      { background-image: image-url('brand-big-engineyard-yellow@2x.png'); }
     .nic              { background-image: image-url('brand-big-nic-yellow@2x.png'); }
+    .mandrill         { background-image: image-url('brand-big-mandrill-yellow@2x.png'); }
     .github           { background-image: image-url('brand-med-github-yellow@2x.png'); }
     .tempest          { background-image: image-url('brand-med-tempest-yellow@2x.png'); }
     .cers             { background-image: image-url('brand-med-cers-yellow@2x.png'); }
