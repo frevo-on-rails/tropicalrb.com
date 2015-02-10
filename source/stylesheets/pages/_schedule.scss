@@ -567,7 +567,6 @@ main.schedule.day-four {
 }
 
 .event-minor {
-  .event-local { float: none !important; }
 
   @media (max-width: $screen-xs-max) {
     .event-image {
@@ -578,7 +577,6 @@ main.schedule.day-four {
     }
 
     .event-local {
-      display: block;
       text-align: center;
       height: 24px;
       padding: 0;
@@ -589,7 +587,6 @@ main.schedule.day-four {
 
   @media (min-width: $screen-sm-min) {
     .event-image { margin-top: -16px; }
-    .event-local { display: block; }
   }
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -620,10 +617,20 @@ main.schedule.day-four {
 }
 
 .transportation {
-  @media (max-width: $screen-xs-max) { margin-bottom: 32px; }
+  h3 span { white-space: nowrap; }
+  .event-local { margin-top: 5px; }
 
-  @media (min-width: $screen-sm-min) {
-    .event-time { margin-top: 10px; }
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 32px;
+    padding-top: 5px;
+
+    .event-time {
+      position: relative;
+      left: 0;
+      margin-left: 0;
+      width: auto;
+      &:before, &:after { display: none; }
+    }
   }
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
