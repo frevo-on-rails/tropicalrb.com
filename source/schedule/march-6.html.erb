@@ -26,9 +26,11 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Buggy Ride -->
         <li class="event" id="buggy-ride">
           <h3 class="event-title">Buggy Ride</h3>
-          <%= image_tag 'event-activity-buggy@2x.png', class: 'event-image' %>
-          <a class="event-local" href="https://goo.gl/maps/d9Wxo" title="View it in Google Maps." target="_blank">Leaving from Summerville Beach Resort</a>
-          <time class="event-time">8<span>am</span> to 11<span>am</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-activity-buggy@2x.png', class: 'event-image' %>
+            <a class="event-local" href="https://goo.gl/maps/d9Wxo" title="View it in Google Maps." target="_blank">Leaving from Summerville Beach Resort</a>
+            <time class="event-time">8<span>am</span> to 11<span>am</span></time>
+          </div>
           <p class="event-description">
             <span>Have fun on this off-road adventure across the white sand beaches of Muro Alto, Cupe, Porto de Galinhas and Maracaípe.</span>
           </p>
@@ -38,9 +40,11 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Raft Boat Sail -->
         <li class="event" id="raft-boat-sail">
           <h3 class="event-title">Raft Boat Sail</h3>
-          <%= image_tag 'event-activity-sail@2x.png', class: 'event-image' %>
-          <a class="event-local" href="https://goo.gl/maps/qZZsi" title="View it in Google Maps." target="_blank">Leaving from Porto de Galinhas Square</a>
-          <time class="event-time">9<span>am</span> to 10<span>am</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-activity-sail@2x.png', class: 'event-image' %>
+            <a class="event-local" href="https://goo.gl/maps/qZZsi" title="View it in Google Maps." target="_blank">Leaving from Porto de Galinhas Square</a>
+            <time class="event-time">9<span>am</span> to 10<span>am</span></time>
+          </div>
           <p class="event-description">
             <span>Sail over the famous natural pools of Porto de Galinhas on a traditional raft boat used by local fishermen.</span>
           </p>
@@ -87,22 +91,26 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Nick Sutterer -->
         <li class="event" id="nick-sutterer">
           <h3 class="event-title">Keynote: See You On The Trail!</h3>
-          <%= image_tag 'event-speaker-nick@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhfxf/" title="See Nick at Lanyrd." target="_blank">Nick Sutterer</a>
-          </h4>
-          <time class="event-time">1<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-nick@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhfxf/" title="See Nick at Lanyrd." target="_blank">Nick Sutterer</a>
+            </h4>
+            <time class="event-time">1<span>pm</span></time>
+          </div>
           <span class="time-line"></span>
         </li>
 
         <!-- Simone Carletti -->
         <li class="event" id="simone-carletti">
           <h3 class="event-title">Maintaining a 5yo Ruby project</h3>
-          <%= image_tag 'event-speaker-simone@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhpwp/" title="See author at Lanyrd." target="_blank">Simone Carletti</a>
-          </h4>
-          <time class="event-time">1:40<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-simone@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhpwp/" title="See author at Lanyrd." target="_blank">Simone Carletti</a>
+            </h4>
+            <time class="event-time">1:40<span>pm</span></time>
+          </div>
           <p class="event-description">
             <span class="first-words">
               Maintaining a young, small Ruby product is simple, but time passes and your code becomes harder to maintain day after day. This talk illustrates the development
@@ -118,11 +126,13 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Christopher Rigor -->
         <li class="event" id="christopher-rigor">
           <h3 class="event-title">Cryptography for Rails Developers</h3>
-          <%= image_tag 'event-speaker-christopher@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhfxp/" title="See Christopher at Lanyrd." target="_blank">Christopher Rigor</a>
-          </h4>
-          <time class="event-time">2:10<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-christopher@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhfxp/" title="See Christopher at Lanyrd." target="_blank">Christopher Rigor</a>
+            </h4>
+            <time class="event-time">2:10<span>pm</span></time>
+          </div>
           <p class="event-description">
             <span class="first-words">
               You know HTTPS keeps your website secure but do you know how? Ruby just released a new version to address a vulnerability with SSL but do you know your app might

@@ -334,7 +334,7 @@ main.schedule.day-four {
   @include make-sm-column(9);
   @include make-sm-column-offset(3);
   @include clearfix();
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     margin-bottom: 30px;
@@ -345,7 +345,7 @@ main.schedule.day-four {
     margin-bottom: 5px;
     min-height: 140px;
   }
-  @media (max-width: $screen-xs-max) { padding-top: 34px; }
+  @media (max-width: $screen-xs-max) { padding-top: 12px; }
 
   &:last-child {
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { margin-bottom: 15px; }
@@ -419,6 +419,14 @@ main.schedule.day-four {
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { text-align: left; }
 }
 
+.event-header {
+  @media (max-width: $screen-xs-max) {
+    @include clearfix();
+    width: 240px;
+    margin: 12px auto;
+  }
+}
+
 .event-image {
   @include square(60px);
   float: left;
@@ -434,19 +442,12 @@ main.schedule.day-four {
 }
 
 .event-author {
-  @include size(210px,60px);
   @include titillium-semi-bold;
   font-size: 18px;
   line-height: 18px;
-  height: 60px;
-  margin: 0 0 0 70px;
-  padding-top: 20px;
   vertical-align: middle;
 
-  &.long {
-    @media (max-width: $screen-xs-max) { padding-top: 12px; }
-  }
-
+  @media (max-width: $screen-xs-max) { margin-top: 5px; }
   @media (min-width: $screen-sm-min) {
     display: inline-block;
     width: auto;
@@ -462,11 +463,13 @@ main.schedule.day-four {
   @include opacity(.75);
   border: 2px solid rgba(255,255,255,.5);
   border-radius: 2px;
-  display: inline-block;
+  display: block;
   height: 24px;
   padding: 0 6px;
   line-height: 19px;
   text-align: center;
+  width: 96px;
+  margin-left: 70px;
 
   span {
     display: inline-block;
@@ -477,41 +480,21 @@ main.schedule.day-four {
     vertical-align: baseline;
   }
 
-  @media (max-width: $screen-xs-max) {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 110px;
-    margin-left: -55px;
-
-    &:before, &:after {
-      @include size(25px,2px);
-      content: '';
-      background-color: rgba(255,255,255,.5);
-      display: inline;
-      position: absolute;
-      vertical-align: middle;
-      top: 11px;
-    }
-
-    &:before { left: -35px; }
-    &:after { right: -35px; }
-  }
-
   @media (min-width: $screen-sm-min) {
     display: inline-block;
-    height: 24px;
+    margin-left: 0;
   }
 }
 
 .event-local {
-  display: inline-block;
-  padding-top: 15px;
-  line-height: 24px;
+  display: block;
+  line-height: 19px;
   height: 60px;
   margin-right: 10px;
 
   @media (min-width: $screen-sm-min) {
+    display: inline-block;
+    padding-top: 15px;
     height: 24px;
     padding-top: 0;
   }
@@ -520,6 +503,8 @@ main.schedule.day-four {
 .event-description {
   margin-top: 5px;
   margin-bottom: 0;
+
+  @media (max-width: $screen-xs-max) { text-align: center; }
 
   .expander {
     @include titillium-semi-bold;
@@ -567,7 +552,6 @@ main.schedule.day-four {
 }
 
 .event-minor {
-
   @media (max-width: $screen-xs-max) {
     .event-image {
       @include square(80px);
@@ -583,6 +567,8 @@ main.schedule.day-four {
 
       &:last-child { margin-bottom: 10px; }
     }
+
+    .event-time { margin: 0 auto; }
   }
 
   @media (min-width: $screen-sm-min) {
@@ -618,19 +604,11 @@ main.schedule.day-four {
 
 .transportation {
   h3 span { white-space: nowrap; }
-  .event-local { margin-top: 5px; }
+  .event-local { margin-top: 8px; }
 
   @media (max-width: $screen-xs-max) {
     margin-bottom: 32px;
     padding-top: 5px;
-
-    .event-time {
-      position: relative;
-      left: 0;
-      margin-left: 0;
-      width: auto;
-      &:before, &:after { display: none; }
-    }
   }
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
