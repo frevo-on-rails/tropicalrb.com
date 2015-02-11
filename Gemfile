@@ -17,3 +17,5 @@ gem "middleman-autoprefixer", "~> 2.3.0"
 gem "rails-assets-jquery", "~> 2.1.3"
 
 gem "middleman-deploy", "~> 1.0"
+
+gem "middleman-alias", "~> 0.0.9"
