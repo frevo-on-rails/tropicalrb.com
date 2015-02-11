@@ -26,9 +26,11 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Scuba Diving -->
         <li class="event" id="scuba-diving">
           <h3 class="event-title">Scuba Diving</h3>
-          <%= image_tag 'event-activity-scuba@2x.png', class: 'event-image' %>
-          <a class="event-local" href="https://goo.gl/maps/qZZsi" title="View it in Google Maps." target="_blank">Leaving from Porto de Galinhas Square</a>
-          <time class="event-time">8<span>am</span> to 11<span>am</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-activity-scuba@2x.png', class: 'event-image' %>
+            <a class="event-local" href="https://goo.gl/maps/qZZsi" title="View it in Google Maps." target="_blank">Leaving from Porto de Galinhas Square</a>
+            <time class="event-time long">8<span>am</span> to 11<span>am</span></time>
+          </div>
           <p class="event-description">
             <span>Explore the gorgeous marine fauna and flora of Porto de Galinhas in this baptism diving accompanied by an SSI certified instructor.</span>
           </p>
@@ -57,8 +59,8 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <li class="event event-minor transportation" id="recife-porto">
           <h3 class="event-title">Transfer from Recife <span>to Porto de Galinhas</span></h3>
           <%= image_tag 'schedule-talk-transportation@2x.png', class: 'event-image' %>
-          <a class="event-local" href="https://goo.gl/maps/C6Zno" title="View it in Google Maps." target="_blank">Leaving from Derby Square</a><time class="event-time">5:30<span>am</span> &amp; 10<span>am</span></time><br>
-          <a class="event-local" href="https://goo.gl/maps/Hf8My" title="View it in Google Maps." target="_blank">Leaving from Recife Int. Airpot</a><time class="event-time">6<span>am</span> &amp; 10:30<span>am</span></time>
+          <a class="event-local" href="https://goo.gl/maps/C6Zno" title="View it in Google Maps." target="_blank">Leaving from Derby Square</a><time class="event-time long">5:30<span>am</span> &amp; 10<span>am</span></time><br>
+          <a class="event-local" href="https://goo.gl/maps/Hf8My" title="View it in Google Maps." target="_blank">Leaving from Recife Int. Airpot</a><time class="event-time long">6<span>am</span> &amp; 10:30<span>am</span></time>
           <span class="time-line"></span>
         </li>
 
@@ -73,22 +75,26 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Rodrigo Franco -->
         <li class="event" id="rodrigo-franco">
           <h3 class="event-title">Keynote: Better Programmers</h3>
-          <%= image_tag 'event-speaker-rodrigo@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhfxg/" title="See Rodrigo Franco at Lanyrd." target="_blank">Rodrigo Franco</a>
-          </h4>
-          <time class="event-time">1<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-rodrigo@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhfxg/" title="See Rodrigo Franco at Lanyrd." target="_blank">Rodrigo Franco</a>
+            </h4>
+            <time class="event-time">1<span>pm</span></time>
+          </div>
           <span class="time-line"></span>
         </li>
 
         <!-- John Crepezzi -->
         <li class="event" id="john-crepezzi">
           <h3 class="event-title">On Memory</h3>
-          <%= image_tag 'event-speaker-john@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhpwy/" title="See John at Lanyrd." target="_blank">John Crepezzi</a>
-          </h4>
-          <time class="event-time">1:40<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-john@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhpwy/" title="See John at Lanyrd." target="_blank">John Crepezzi</a>
+            </h4>
+            <time class="event-time">1:40<span>pm</span></time>
+          </div>
           <p class="event-description">
             <span class="first-words">
               The fact that Ruby doesn't require developers to manage memory provides us a much less frustrating day-to-day. Still, there are scenarios where losing sight of the
@@ -104,11 +110,13 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Netto Farah -->
         <li class="event" id="netto-farah">
           <h3 class="event-title">Building a Single Page App. One Page at a Time.</h3>
-          <%= image_tag 'event-speaker-netto@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhfyd/" title="See Netto at Lanyrd." target="_blank">Netto Farah</a>
-          </h4>
-          <time class="event-time">2:10<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-netto@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhfyd/" title="See Netto at Lanyrd." target="_blank">Netto Farah</a>
+            </h4>
+            <time class="event-time">2:10<span>pm</span></time>
+          </div>
           <p class="event-description">
             <span class="first-words">
               It may sound simple to build a single page app these days with so many tools such as AngularJs, Knockout, Backbone, etc. But very little is said about transforming an
@@ -126,11 +134,13 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Fabiano Beselga -->
         <li class="event" id="fabiano-beselga">
           <h3 class="event-title">Clean Architecture</h3>
-          <%= image_tag 'event-speaker-fabiano@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhpwz/" title="See Fabiano at Lanyrd." target="_blank">Fabiano Beselga</a>
-          </h4>
-          <time class="event-time">2:50<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-fabiano@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhpwz/" title="See Fabiano at Lanyrd." target="_blank">Fabiano Beselga</a>
+            </h4>
+            <time class="event-time">2:50<span>pm</span></time>
+          </div>
           <p class="event-description">
             <span class="first-words">
               Rails is an awesome framework to build something fast from scratch, but when the app starts to grow it becomes harder to maintain if you keep following only the folders that
@@ -156,11 +166,13 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Carlos Antonio -->
         <li class="event" id="carlos-antonio">
           <h3 class="event-title">Contributing to Open Source: From the Beginning to Lessons Learned</h3>
-          <%= image_tag 'event-speaker-carlos@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhpxb/" title="See Carlos at Lanyrd." target="_blank">Carlos Antonio</a>
-          </h4>
-          <time class="event-time">3:50<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-carlos@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhpxb/" title="See Carlos at Lanyrd." target="_blank">Carlos Antonio</a>
+            </h4>
+            <time class="event-time">3:50<span>pm</span></time>
+          </div>
           <p class="event-description">
             <span class="first-words">
               Many people have difficulties to do a first contribution to open source, while others try to keep actively contributing. They do not feel confident enough, wondering
@@ -176,11 +188,13 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Andrew Rosa -->
         <li class="event" id="andrew-rosa">
           <h3 class="event-title">Property Testing on Rails</h3>
-          <%= image_tag 'event-speaker-andrew@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhfxt/" title="See Andrew at Lanyrd." target="_blank">Andrew Rosa</a>
-          </h4>
-          <time class="event-time">4:20<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-andrew@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhfxt/" title="See Andrew at Lanyrd." target="_blank">Andrew Rosa</a>
+            </h4>
+            <time class="event-time">4:20<span>pm</span></time>
+          </div>
           <p class="event-description">
             <span class="first-words">
               The Ruby community is known by its strong culture of testing, but this is not an excuse to refuse alternative approaches. One of these are Property Testing. In those tools we do
@@ -196,11 +210,13 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Thiago Scalone -->
         <li class="event" id="thiago-scalone">
           <h3 class="event-title">MRuby: Change the Embedded Development Way</h3>
-          <%= image_tag 'event-speaker-thiago@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhfxq/" title="See Thiago at Lanyrd." target="_blank">Thiago Scalone</a>
-          </h4>
-          <time class="event-time">4:50<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-thiago@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhfxq/" title="See Thiago at Lanyrd." target="_blank">Thiago Scalone</a>
+            </h4>
+            <time class="event-time">4:50<span>pm</span></time>
+          </div>
           <p class="event-description">
             <span class="first-words">
               MRuby (Minimalistc Ruby) is a new Ruby implementation made with resources saving in mind. MRuby is a perfect fit for embedded systems world and for limited responsibility
@@ -216,11 +232,13 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Marcos Matos -->
         <li class="event" id="marcos-matos">
           <h3 class="event-title">Micro Problems!</h3>
-          <%= image_tag 'event-speaker-marcos@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhfxr/" title="See Marcos at Lanyrd." target="_blank">Marcos Matos</a>
-          </h4>
-          <time class="event-time">5:20<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-marcos@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhfxr/" title="See Marcos at Lanyrd." target="_blank">Marcos Matos</a>
+            </h4>
+            <time class="event-time">5:20<span>pm</span></time>
+          </div>
           <p class="event-description">
             <span class="first-words">
               Micro services are trend. It's a magic cure for complex projects. The problem is in the details! Like every trend topic, the problems and complications around this style
@@ -244,11 +262,13 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- PJ Hagerty -->
         <li class="event" id="pj-hagerty">
           <h3 class="event-title">Urban Legends: What You Code Makes You Who You Are</h3>
-          <%= image_tag 'event-speaker-pj@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhpxc/" title="See PJ at Lanyrd." target="_blank">PJ Hagerty</a>
-          </h4>
-          <time class="event-time">6:20<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-pj@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhpxc/" title="See PJ at Lanyrd." target="_blank">PJ Hagerty</a>
+            </h4>
+            <time class="event-time">6:20<span>pm</span></time>
+          </div>
           <p class="event-description">
             <span class="first-words">
               If you were a carpenter, would your skills at building be more important than the tools you use to build? Skills, right? Tools are just a means to an end. So why do
@@ -264,11 +284,13 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <!-- Avdi Grimm -->
         <li class="event" id="avdi-grimm">
           <h3 class="event-title">Keynote: Legacy</h3>
-          <%= image_tag 'event-speaker-avdi@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhpxd/" title="See Avdi at Lanyrd." target="_blank">Avdi Grimm</a>
-          </h4>
-          <time class="event-time">6:50<span>pm</span></time>
+          <div class="event-header">
+            <%= image_tag 'event-speaker-avdi@2x.png', class: 'event-image' %>
+            <h4 class="event-author">
+              <a href="http://lanyrd.com/2015/tropicalrb/sdhpxd/" title="See Avdi at Lanyrd." target="_blank">Avdi Grimm</a>
+            </h4>
+            <time class="event-time">6:50<span>pm</span></time>
+          </div>
           <span class="time-line"></span>
         </li>
 
@@ -276,9 +298,9 @@ title: Tropical Ruby 2015 — Schedule — March 5th to 8th at Porto de Galinhas
         <li class="event event-minor transportation" id="recife-porto">
           <h3 class="event-title">Transfer from Porto de Galinhas<span> to Recife</span></h3>
           <%= image_tag 'schedule-talk-transportation@2x.png', class: 'event-image' %>
-          <a class="event-local" href="https://goo.gl/maps/Dhjuz" title="View it in Google Maps." target="_blank">Leaving from Summerville</a><time class="event-time">8<span>pm</span></time><br>
-          <a class="event-local" href="https://goo.gl/maps/C6Zno" title="View it in Google Maps." target="_blank">Arriving at Derby Square</a><time class="event-time">9:30<span>pm</span></time><br>
-          <a class="event-local" href="https://goo.gl/maps/Hf8My" title="View it in Google Maps." target="_blank">Arriving at Recife Int. Airpot</a><time class="event-time">10<span>pm</span></time>
+          <a class="event-local" href="https://goo.gl/maps/Dhjuz" title="View it in Google Maps." target="_blank">Leaving from Summerville</a><time class="event-time long">8<span>pm</span></time><br>
+          <a class="event-local" href="https://goo.gl/maps/C6Zno" title="View it in Google Maps." target="_blank">Arriving at Derby Square</a><time class="event-time long">9:30<span>pm</span></time><br>
+          <a class="event-local" href="https://goo.gl/maps/Hf8My" title="View it in Google Maps." target="_blank">Arriving at Recife Int. Airpot</a><time class="event-time long">10<span>pm</span></time>
           <span class="time-line"></span>
         </li>
 

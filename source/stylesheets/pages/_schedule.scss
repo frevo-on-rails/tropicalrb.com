@@ -288,11 +288,7 @@ main.schedule.day-four {
 /*... Schedule Area ...*/
 
 .schedule-area {
-  header {
-    margin: 20px auto 25px;
-
-    @media (min-width: $screen-sm-min) { margin: 30px auto; }
-  }
+  header { margin: 30px auto; }
 }
 
 /*... Schedule Header ...*/
@@ -334,15 +330,15 @@ main.schedule.day-four {
   @include make-sm-column(9);
   @include make-sm-column-offset(3);
   @include clearfix();
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding-right: 50px;
-    min-height: 111px;
+    min-height: 101px;
   }
   @media (min-width: $screen-md-min) {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     min-height: 140px;
   }
   @media (max-width: $screen-xs-max) { padding-top: 12px; }
@@ -357,34 +353,42 @@ main.schedule.day-four {
   }
 
   &:nth-child(odd) {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      .event-image { margin-left: 0; }
+    }
     @media (min-width: $screen-md-min) {
       width: 43.8%;
       margin-left: 56.2%;
 
       .event-image { margin-right: 0; }
-      .event-title { text-align: left; }
+      .event-title,
+      .event-description { text-align: left; }
       .time-line:before, .time-line:after { left: -65px; }
     }
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-      .event-image { left: -118px; }
+      .event-image { left: -130px; }
     }
     @media (min-width: $screen-lg-min) {
       width: 44.8%;
       margin-left: 55.2%;
 
-      .event-image { left: -119px; }
+      .event-image { left: -131px; }
     }
   }
 
   &:nth-child(even) {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      .event-image { margin-left: 0; }
+    }
     @media (min-width: $screen-md-min) {
       width: 43.8%;
       margin-left: 0;
       margin-right: 56.2%;
       text-align: right;
 
-      .event-title { text-align: right; }
       .event-image { margin-right: 0; }
+      .event-title,
+      .event-description { text-align: right; }
       .event-author, .event-local {
         @include clearfix();
         float: right;
@@ -393,15 +397,15 @@ main.schedule.day-four {
       }
     }
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-      .time-line:before, .time-line:after { right: -58px; }
-      .event-image { right: -113px; }
+      .time-line:before, .time-line:after { right: -57px; }
+      .event-image { right: -111px; }
     }
     @media (min-width: $screen-lg-min) {
       width: 44.8%;
       margin-left: 0;
       margin-right: 55.2%;
 
-      .time-line:before, .time-line:after { right: -59px; }
+      .time-line:before, .time-line:after { right: -58px; }
       .event-image { right: -113px; }
     }
   }
@@ -423,13 +427,14 @@ main.schedule.day-four {
   @media (max-width: $screen-xs-max) {
     @include clearfix();
     width: 240px;
-    margin: 12px auto;
+    margin: 15px auto 12px;
   }
 }
 
 .event-image {
   @include square(60px);
   float: left;
+  margin-left: 12px;
   margin-right: 10px;
   z-index: 3;
 
@@ -447,14 +452,13 @@ main.schedule.day-four {
   line-height: 18px;
   vertical-align: middle;
 
-  @media (max-width: $screen-xs-max) { margin-top: 5px; }
+  @media (max-width: $screen-xs-max) { margin-top: 1px; }
   @media (min-width: $screen-sm-min) {
     display: inline-block;
     width: auto;
     height: 24px;
-    margin-left: 0;
     padding-top: 1px;
-    margin-right: 10px;
+    margin: 0 10px 0 0;
   }
 }
 
@@ -468,8 +472,8 @@ main.schedule.day-four {
   padding: 0 6px;
   line-height: 19px;
   text-align: center;
-  width: 96px;
-  margin-left: 70px;
+  width: 70px;
+  margin-left: 84px;
 
   span {
     display: inline-block;
@@ -484,19 +488,21 @@ main.schedule.day-four {
     display: inline-block;
     margin-left: 0;
   }
+
+  &.long { width: 110px; }
 }
 
 .event-local {
   display: block;
   line-height: 19px;
-  height: 60px;
-  margin-right: 10px;
+  margin-bottom: 10px;
 
   @media (min-width: $screen-sm-min) {
     display: inline-block;
-    padding-top: 15px;
     height: 24px;
     padding-top: 0;
+    margin-right: 10px;
+    margin-bottom: 0;
   }
 }
 
@@ -543,11 +549,11 @@ main.schedule.day-four {
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     &:before, &:after { left: -66px; }
-    &:after { height: 30px; }
+    &:after { height: 40px; }
   }
 
   @media (min-width: $screen-md-min) {
-    &:after { height: 10px; }
+    &:after { height: 20px; }
   }
 }
 
@@ -557,15 +563,15 @@ main.schedule.day-four {
       @include square(80px);
       float: none;
       display: block;
-      margin: -7px auto 0;
+      margin: 0 auto;
     }
 
     .event-local {
       text-align: center;
       height: 24px;
       padding: 0;
-
-      &:last-child { margin-bottom: 10px; }
+      margin-top: 0;
+      margin-bottom: 5px;
     }
 
     .event-time { margin: 0 auto; }
@@ -604,20 +610,25 @@ main.schedule.day-four {
 
 .transportation {
   h3 span { white-space: nowrap; }
-  .event-local { margin-top: 8px; }
+  .event-local { margin-top: -8px; }
 
   @media (max-width: $screen-xs-max) {
     margin-bottom: 32px;
     padding-top: 5px;
+    .event-image { margin-bottom: 8px; }
   }
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     height: 126px;
-    .time-line:after { height: 80px }
+    .time-line:after { height: 90px }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .event-local { height: 30px; }
   }
 
   @media (min-width: $screen-md-min) {
     height: 131px;
-    .time-line:before { height: 65px }
+    .time-line:before { height: 75px }
   }
 }
