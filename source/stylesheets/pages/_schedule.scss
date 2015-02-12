@@ -483,8 +483,9 @@ main.schedule.day-four {
 .event-author {
   @include titillium-semi-bold;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 24px;
   vertical-align: middle;
+  cursor: pointer;
 
   @media (max-width: $screen-xs-max) { margin-top: 1px; }
   @media (min-width: $screen-sm-min) {
