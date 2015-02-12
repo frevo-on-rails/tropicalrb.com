@@ -214,9 +214,7 @@ body.venue {
   }
 }
 
-body.index,
-body.code-of-conduct,
-body.colophon {
+body.index {
   .navbar-brand {
     color: $poly-11;
 
@@ -234,6 +232,13 @@ body.colophon {
       }
     }
   }
+}
+
+body.code-of-conduct,
+body.colophon {
+  .navbar-brand,
+  .navbar-brand:hover,
+  .navbar-brand:focus { color: $poly-11; }
 }
 
 body.schedule {
