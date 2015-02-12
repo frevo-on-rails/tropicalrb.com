@@ -12,3 +12,7 @@ $('.schedule-events .expander').click(function(e) {
   $this.text(alternativeLabel);
   $this.data('alternative-label', currentLabel);
 });
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
