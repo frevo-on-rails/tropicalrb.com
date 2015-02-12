@@ -9,8 +9,8 @@ alias: schedule.html
   <%= partial "schedule-nav" %>
 
   <article class="schedule-area">
-
     <section class="workshops">
+
       <header>
         <h2>Workshops</h2>
           <div class="schedule-subtitles">
@@ -22,87 +22,103 @@ alias: schedule.html
             </a>
           </div>
       </header>
-      <ol class="schedule-events row">
+
+      <ol class="schedule-events">
 
         <!-- Julio Faerman & Rafael Lopes -->
         <li class="event" id="julio-faerman-and-rafael-lopes">
-          <h3 class="event-title">Reactive Development and Operations in Ruby</h3>
-          <%= image_tag 'event-workshop-rafael-julio@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhfyk/" title="See Julio and Rafael at Lanyrd." target="_blank">Julio Faerman &amp; Rafael Lopes</a>
-          </h4>
-          <time class="event-time">8<span>am</span> to 6<span>pm</span></time>
-          <p class="event-description">
-            <span class="first-words">
-              Reactive Programming, as stated in its manifesto, proposes the development of systems that are "Responsive, Resilient, Elastic and Message Oriented". Considering these properties desirable to any software, why not apply them to operations software as we do to applications?
-            </span>
-            <span class="last-words">
-              This is a tutorial about reactive development and infrastructure as code. It assumes only a basic understanding of the Ruby programming language and fundamental AWS services, such as S3 and EC2. Understanding of Reactive Programming with the Rx.rb library is also helpful, but you can pick it up as you go.
-              <br/>
-              There are four sections in this tutorial. First, we'll write a simple reactive application and the deployment scripts to publish it to Amazon S3 and Amazon EC2. Then we'll improve the administration of the system using Elastic Beanstalk. Afterwards, we'll add a reactive and scalable data tier using DynamoDB. Then it's time to move beyond EC2 to managed services, such as Amazon Kinesis. Finally, we'll conclude with takeaways and followups.
-              <br/>
-              Concluding this tutorial, you will have the practice and the code to deploy responsive, resilient, elastic and message oriented applications using Ruby. From dev to ops.
-            </span>
-            <a class="expander" href="#author-name" data-alternative-label="Less">More</a>
-          </p>
-          <span class="time-line"></span>
+          <div class="event-content">
+            <h3 class="event-title">Reactive Development and Operations in Ruby</h3>
+            <div class="event-header">
+              <%= image_tag 'event-workshop-rafael-julio@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Technical Evangelist at Amazon Web Services</h5>Julio Faerman is a software engineer and teacher, among other labels. Works at Amazon Web Services as a Technical Evangelist, exploring the cloud with Latin American developers and bringing back the experiences from the road. Before that, worked at Red Hat, Borland and government and telecomunications organizations. Also innovates in open-source e-learning projects at Craftware, edits content for InfoQ and QCon, teaches a post-graduate course at UNITRI and co-leads the UAI Java User Group.<br><a class='web' href='http://www.linkedin.com/x/profile/mzxuqox8qbcf/AFJLcGmieV' target='_blank'></a>">Julio Faerman</a> &amp; <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Technical Trainer at Amazon Web Services</h5>Rafael Lopes is an infrastructure engineer with a bachelor's degree in information systems. He works as a Technical Trainer at Amazon, where teaches courses and webinars in addition to participating and speaking at events and lectures for AWS users around the world. Having witnessed the birth of cloud computing with a close relationship to the subject, Lopes can speak from experience about its value and added benefits. And, with previous experience managing infrastructure on the same traditional model as Cloud Computing, he is now determined to spread content and encourage new people and companies to join this technology by taking full advantage of its capabilities.<br><a class='twitter' href='https://twitter.com/bobeirasa' target='_blank'></a>">Rafael Lopes</a>
+              </h4>
+              <time class="event-time long">8<span>am</span> to 6<span>pm</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                Reactive Programming, as stated in its manifesto, proposes the development of systems that are "Responsive, Resilient, Elastic and Message Oriented". Considering these properties desirable to any software, why not apply them to operations software as we do to applications?
+              </span>
+              <span class="last-words">
+                This is a tutorial about reactive development and infrastructure as code. It assumes only a basic understanding of the Ruby programming language and fundamental AWS services, such as S3 and EC2. Understanding of Reactive Programming with the Rx.rb library is also helpful, but you can pick it up as you go.
+                <br>
+                <br>
+                There are four sections in this tutorial. First, we'll write a simple reactive application and the deployment scripts to publish it to Amazon S3 and Amazon EC2. Then we'll improve the administration of the system using Elastic Beanstalk. Afterwards, we'll add a reactive and scalable data tier using DynamoDB. Then it's time to move beyond EC2 to managed services, such as Amazon Kinesis. Finally, we'll conclude with takeaways and followups.
+                <br>
+                <br>
+                Concluding this tutorial, you will have the practice and the code to deploy responsive, resilient, elastic and message oriented applications using Ruby. From dev to ops.
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Less">More</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
         </li>
 
         <!-- Noelia Cabane -->
         <li class="event" id="noelia-cabane">
-          <h3 class="event-title">The Path to Modular UI</h3>
-          <%= image_tag 'event-workshop-noelia@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhfyh/" title="See Noelia at Lanyrd." target="_blank">Noelia Cabane</a>
-          </h4>
-          <time class="event-time">8<span>am</span> to 12<span>pm</span></time>
-          <p class="event-description">
-            <span class="first-words">
-              Why a CSS refactor? Does it involve redesign? Does all your CSS ends up in the junk drawer? You have SASS in your project but the CSS output sucks? Worry Not! You still have some hope!
-              <br/>
-              Take the pain out of CSS/HTML refactors by learning some modular principles in design and front-end.
-            </span>
-            <span class="last-words">
-              <br/>
-              You will learn to identify design patterns and to build a stronger system of building blocks to reuse in all your project.
-            </span>
-            <a class="expander" href="#author-name" data-alternative-label="Less">More</a>
-          </p>
-          <span class="time-line"></span>
+          <div class="event-content">
+            <h3 class="event-title">The Path to Modular UI</h3>
+            <div class="event-header">
+              <%= image_tag 'event-workshop-noelia@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Product Designer and Front-end Developer at Restorando</h5>Noelia is a graphic designer from Universidad de Buenos Aires that got started with print design until she discovered her passion for user centered design and site building. As Restorando’s Product Designer and Front-end Developer she works on mobile applications, the public site and the tools for the restaurants. It is there where she discovered the potential of Sass combined with object oriented CSS. She is also the Organizer of RailsGirls Buenos Aires.<br><a class='github' href='https://github.com/noeliacabane' target='_blank'></a><a class='twitter' href='http://twitter.com/noeliacabane' target='_blank'></a><a class='web' href='https://www.linkedin.com/in/noeliacabane' target='_blank'></a>">Noelia Cabane</a>
+              </h4>
+              <time class="event-time long">8<span>am</span> to 12<span>pm</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                Why a CSS refactor? Does it involve redesign? Does all your CSS ends up in the junk drawer? You have SASS in your project but the CSS output sucks? Worry Not! You still have some hope!
+              </span>
+              <span class="last-words">
+                <br>
+                <br>
+                Take the pain out of CSS/HTML refactors by learning some modular principles in design and front-end. You will learn to identify design patterns and to build a stronger system of building blocks to reuse in all your project.
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Less">More</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
         </li>
 
         <!-- Celso Fernandes & Nick Sutterer -->
         <li class="event" id="celso-fernandes-and-nick-sutterer">
-          <h3 class="event-title">Architecture Matters: An Appetizing Introduction to Trailblazer</h3>
-          <%= image_tag 'event-workshop-nick-celso@2x.png', class: 'event-image' %>
-          <h4 class="event-author">
-            <a href="http://lanyrd.com/2015/tropicalrb/sdhgxx/" title="See Celso and Nick at Lanyrd." target="_blank">Celso Fernandes &amp; Nick Sutterer</a>
-          </h4>
-          <time class="event-time">2<span>pm</span> to 6<span>pm</span></time>
-          <p class="event-description">
-            <span class="first-words">
-              Trailblazer is an extension framework on top of Rails. It provides desperately needed, new abstraction layers, decent encapsulation and a better maintainable architecture. In this workshop we're gonna learn the basics about designing your domain, encapsulating business logic in operations, form objects and view models, and a different take on the persistence layer.
-            </span>
-            <span class="last-words">
-              <br/>
-              After a compact introducing presentation by Celso Fernandes and Nick Sutterer, we'll dive into the code, write a small Trailblazer/Rails app and learn all the nice things about this alternative architecture over a cold bottle of beer.
-            </span>
-            <a class="expander" href="#author-name" data-alternative-label="Less">More</a>
-          </p>
-          <span class="time-line"></span>
+          <div class="event-content">
+            <h3 class="event-title">Architecture Matters: An Appetizing Introduction to Trailblazer</h3>
+            <div class="event-header">
+              <%= image_tag 'event-workshop-nick-celso@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>CEO at Zertico</h5>Hacking on Zertico since founded on 2010, as company CEO he has been focused on management but always driving technological advancement on cloud, xen, puppet and rails! Actually is contributor on some open source projects like fog (maintaining xenserver and softlayer modules), trailblazer, #cobra and example42 (puppet modules).<br><a class='github' href='https://github.com/fernandes' target='_blank'></a><a class='twitter' href='http://twitter.com/celsovjf' target='_blank'></a>">Celso Fernandes</a> &amp; <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Creator of Trailblazer, Roar and Cells</h5><a class='twitter' href='http://twitter.com/apotonick' target='_blank'></a>">Nick Sutterer</a>
+              </h4>
+              <time class="event-time long">2<span>pm</span> to 6<span>pm</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                Trailblazer is an extension framework on top of Rails. It provides desperately needed, new abstraction layers, decent encapsulation and a better maintainable architecture. In this workshop we're gonna learn the basics about designing your domain, encapsulating business logic in operations, form objects and view models, and a different take on the persistence layer.
+              </span>
+              <span class="last-words">
+                <br>
+                <br>
+                After a compact introducing presentation by Celso Fernandes and Nick Sutterer, we'll dive into the code, write a small Trailblazer/Rails app and learn all the nice things about this alternative architecture over a cold bottle of beer.
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Less">More</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
         </li>
 
         <!-- Devbeer -->
         <li class="event event-minor" id="registration">
-          <h3 class="event-title">Devbeers by Twitter</h3>
-          <%= image_tag 'schedule-talk-beer@2x.png', class: 'event-image' %>
-          <time class="event-time">6<span>pm</span></time>
-          <span class="time-line"></span>
+          <div class="event-content">
+            <h3 class="event-title">Devbeers by Twitter</h3>
+            <%= image_tag 'schedule-talk-beer@2x.png', class: 'event-image' %>
+            <time class="event-time">6<span>pm</span></time>
+            <span class="time-line"></span>
+          </div>
         </li>
 
       </ol>
     </section>
-
   </article>
 </main>
 

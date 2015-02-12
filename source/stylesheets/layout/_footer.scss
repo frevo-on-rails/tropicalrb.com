@@ -110,7 +110,7 @@ body.schedule {
 
         @media (max-width: $screen-xs-max) {
           &.engine-yard,
-          &.mandrill { margin-top: -5px; }
+          &.mandrill { margin-top: -15px; }
         }
         @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
           &.mandrill { margin-top: -15px; }

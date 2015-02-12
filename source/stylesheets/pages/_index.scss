@@ -117,7 +117,7 @@ main.hero {
 
   ul {
     @include list-unstyled;
-    @include clearfix();
+    @include clearfix;
 
     @media (max-width: $screen-xs-max) {
       width: 280px;

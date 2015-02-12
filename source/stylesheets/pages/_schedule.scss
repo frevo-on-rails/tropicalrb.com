@@ -7,8 +7,8 @@ main.schedule {
   @extend .container;
   margin-bottom: 0;
 
-  @media (min-width: $screen-sm-min) { margin-bottom: 15px; }
-  @media (min-width: $screen-md-min) { margin-bottom: 30px; }
+  @media (min-width: $screen-sm-min) { margin-bottom: 20px; }
+  @media (min-width: $screen-md-min) { margin-bottom: 40px; }
 }
 
 .schedule-area {
@@ -19,7 +19,7 @@ main.schedule {
 /*... Navigation ...*/
 
 .nav-schedule {
-  @include clearfix();
+  @include clearfix;
   display: block;
   margin: 35px auto 0;
   width: (70px * 4);
@@ -32,7 +32,7 @@ main.schedule {
 
   ol {
     @include list-unstyled;
-    @include clearfix();
+    @include clearfix;
   }
 }
 
@@ -289,9 +289,15 @@ main.schedule.day-four {
 
 .schedule-area {
   header {
-    margin: 20px auto 25px;
+    margin: 30px auto;
 
-    @media (min-width: $screen-sm-min) { margin: 30px auto; }
+    @media (max-width: $screen-xs-max) { margin: 15px auto; }
+  }
+
+  .talks {
+    header {
+      @media (max-width: $screen-xs-max) { margin-top: 30px; }
+    }
   }
 }
 
@@ -330,22 +336,7 @@ main.schedule.day-four {
 .schedule-events { @include list-unstyled; }
 
 .event {
-  @include make-xs-column(12);
-  @include make-sm-column(9);
-  @include make-sm-column-offset(3);
-  @include clearfix();
-  margin-bottom: 35px;
-
-  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    margin-bottom: 30px;
-    padding-right: 50px;
-    min-height: 111px;
-  }
-  @media (min-width: $screen-md-min) {
-    margin-bottom: 5px;
-    min-height: 140px;
-  }
-  @media (max-width: $screen-xs-max) { padding-top: 34px; }
+  @include make-row;
 
   &:last-child {
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { margin-bottom: 15px; }
@@ -357,54 +348,101 @@ main.schedule.day-four {
   }
 
   &:nth-child(odd) {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      .event-image { margin-left: 0; }
+    }
+
     @media (min-width: $screen-md-min) {
-      width: 43.8%;
-      margin-left: 56.2%;
+      .event-content {
+        width: 43.8%;
+        margin-left: 56.2%;
+      }
 
       .event-image { margin-right: 0; }
-      .event-title { text-align: left; }
+      .event-title,
+      .event-description { text-align: left; }
       .time-line:before, .time-line:after { left: -65px; }
     }
-    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-      .event-image { left: -118px; }
-    }
-    @media (min-width: $screen-lg-min) {
-      width: 44.8%;
-      margin-left: 55.2%;
 
-      .event-image { left: -119px; }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      .event-image { left: -130px; }
+    }
+
+    @media (min-width: $screen-lg-min) {
+      .event-content {
+        width: 44.8%;
+        margin-left: 55.2%;
+        padding-right: 60px;
+      }
+
+      .event-title { padding-right: 40px; }
+      .event-image { left: -131px; }
     }
   }
 
   &:nth-child(even) {
-    @media (min-width: $screen-md-min) {
-      width: 43.8%;
-      margin-left: 0;
-      margin-right: 56.2%;
-      text-align: right;
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      .event-image { margin-left: 0; }
+    }
 
-      .event-title { text-align: right; }
+    @media (min-width: $screen-md-min) {
+      .event-content {
+        width: 43.8%;
+        margin-left: 0;
+        margin-right: 56.2%;
+        text-align: right;
+      }
+
       .event-image { margin-right: 0; }
+      .event-title,
+      .event-description { text-align: right; }
+
       .event-author, .event-local {
-        @include clearfix();
+        @include clearfix;
         float: right;
         margin-right: 0;
         margin-left: 10px;
       }
     }
-    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-      .time-line:before, .time-line:after { right: -58px; }
-      .event-image { right: -113px; }
-    }
-    @media (min-width: $screen-lg-min) {
-      width: 44.8%;
-      margin-left: 0;
-      margin-right: 55.2%;
 
-      .time-line:before, .time-line:after { right: -59px; }
-      .event-image { right: -113px; }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      .time-line:before, .time-line:after { right: -57px; }
+      .event-image { right: -111px; }
+    }
+
+    @media (min-width: $screen-lg-min) {
+      .event-content {
+        width: 44.8%;
+        padding-left: 60px;
+        margin-left: 0;
+        margin-right: 55.2%;
+      }
+
+      .event-title { padding-left: 40px; }
+      .time-line:before, .time-line:after { right: -58px; }
+      .event-image { right: -112px; }
     }
   }
+}
+
+.event-content {
+  @include make-xs-column(12);
+  @include make-sm-column(9);
+  @include make-sm-column-offset(3);
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    margin-bottom: 40px;
+    padding-right: 50px;
+    min-height: 101px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    margin-bottom: 15px;
+    min-height: 140px;
+  }
+
+  @media (max-width: $screen-xs-max) { padding-top: 12px; }
 }
 
 .event-title {
@@ -419,9 +457,18 @@ main.schedule.day-four {
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { text-align: left; }
 }
 
+.event-header {
+  @media (max-width: $screen-xs-max) {
+    @include clearfix;
+    width: 240px;
+    margin: 10px auto 8px;
+  }
+}
+
 .event-image {
   @include square(60px);
   float: left;
+  margin-left: 12px;
   margin-right: 10px;
   z-index: 3;
 
@@ -434,26 +481,19 @@ main.schedule.day-four {
 }
 
 .event-author {
-  @include size(210px,60px);
   @include titillium-semi-bold;
   font-size: 18px;
-  line-height: 18px;
-  height: 60px;
-  margin: 0 0 0 70px;
-  padding-top: 20px;
+  line-height: 24px;
   vertical-align: middle;
+  cursor: pointer;
 
-  &.long {
-    @media (max-width: $screen-xs-max) { padding-top: 12px; }
-  }
-
+  @media (max-width: $screen-xs-max) { margin-top: 1px; }
   @media (min-width: $screen-sm-min) {
     display: inline-block;
     width: auto;
     height: 24px;
-    margin-left: 0;
     padding-top: 1px;
-    margin-right: 10px;
+    margin: 0 10px 0 0;
   }
 }
 
@@ -462,11 +502,13 @@ main.schedule.day-four {
   @include opacity(.75);
   border: 2px solid rgba(255,255,255,.5);
   border-radius: 2px;
-  display: inline-block;
+  display: block;
   height: 24px;
   padding: 0 6px;
   line-height: 19px;
   text-align: center;
+  width: 70px;
+  margin-left: 84px;
 
   span {
     display: inline-block;
@@ -477,49 +519,33 @@ main.schedule.day-four {
     vertical-align: baseline;
   }
 
-  @media (max-width: $screen-xs-max) {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 110px;
-    margin-left: -55px;
-
-    &:before, &:after {
-      @include size(25px,2px);
-      content: '';
-      background-color: rgba(255,255,255,.5);
-      display: inline;
-      position: absolute;
-      vertical-align: middle;
-      top: 11px;
-    }
-
-    &:before { left: -35px; }
-    &:after { right: -35px; }
+  @media (min-width: $screen-sm-min) {
+    display: inline-block;
+    margin-left: 0;
   }
+
+  &.long { width: 110px; }
+}
+
+.event-local {
+  display: block;
+  line-height: 19px;
+  margin-bottom: 10px;
 
   @media (min-width: $screen-sm-min) {
     display: inline-block;
     height: 24px;
-  }
-}
-
-.event-local {
-  display: inline-block;
-  padding-top: 15px;
-  line-height: 24px;
-  height: 60px;
-  margin-right: 10px;
-
-  @media (min-width: $screen-sm-min) {
-    height: 24px;
     padding-top: 0;
+    margin-right: 10px;
+    margin-bottom: 0;
   }
 }
 
 .event-description {
   margin-top: 5px;
   margin-bottom: 0;
+
+  @media (max-width: $screen-xs-max) { text-align: center; }
 
   .expander {
     @include titillium-semi-bold;
@@ -558,31 +584,33 @@ main.schedule.day-four {
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     &:before, &:after { left: -66px; }
-    &:after { height: 30px; }
+    &:after { height: 40px; }
   }
 
   @media (min-width: $screen-md-min) {
-    &:after { height: 10px; }
+    &:after { height: 20px; }
   }
 }
 
 .event-minor {
-
   @media (max-width: $screen-xs-max) {
+    .event-title { margin-bottom: -3px; }
     .event-image {
       @include square(80px);
       float: none;
       display: block;
-      margin: -7px auto 0;
+      margin: 0 auto;
     }
 
     .event-local {
       text-align: center;
       height: 24px;
       padding: 0;
-
-      &:last-child { margin-bottom: 10px; }
+      margin-top: -3px;
+      margin-bottom: 5px;
     }
+
+    .event-time { margin: -3px auto 0; }
   }
 
   @media (min-width: $screen-sm-min) {
@@ -590,7 +618,7 @@ main.schedule.day-four {
   }
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    min-height: 90px;
+    .event-content { min-height: 90px; }
 
     .time-line {
       &:before { display: none; }
@@ -602,8 +630,10 @@ main.schedule.day-four {
   }
 
   @media (min-width: $screen-md-min) {
-    margin-top: 5px;
-    min-height: 105px;
+    .event-content {
+      margin-top: 5px;
+      min-height: 105px;
+    }
 
     .time-line {
       &:before {
@@ -618,28 +648,36 @@ main.schedule.day-four {
 
 .transportation {
   h3 span { white-space: nowrap; }
-  .event-local { margin-top: 5px; }
+  .event-local { margin-top: -8px; }
 
   @media (max-width: $screen-xs-max) {
-    margin-bottom: 32px;
-    padding-top: 5px;
-
-    .event-time {
-      position: relative;
-      left: 0;
-      margin-left: 0;
-      width: auto;
-      &:before, &:after { display: none; }
+    .event-content {
+      margin-bottom: 20px;
+      padding-top: 5px;
     }
+    .event-image { margin-bottom: 8px; }
   }
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    height: 126px;
-    .time-line:after { height: 80px }
+    .event-content { height: 126px; }
+    .time-line:after { height: 90px }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .event-local { height: 30px; }
   }
 
   @media (min-width: $screen-md-min) {
-    height: 131px;
-    .time-line:before { height: 65px }
+    .event-content { height: 131px; }
+    .time-line:before { height: 75px }
+  }
+}
+
+/*... Specific Layouting ...*/
+
+#julio-faerman-and-rafael-lopes,
+#netto-farah {
+  @media (min-width: $screen-lg-min) {
+    .event-title { padding-right: 60px; }
   }
 }

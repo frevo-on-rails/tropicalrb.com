@@ -1,0 +1,44 @@
+/*––––––––––––––––––––––––––––––––––––––––––––––––––
+      Popover
+––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+.popover {
+  @include titillium-web;
+  @include box-shadow(0 1px 0 $poly-01);
+  border-radius: 2px;
+  border: 1px solid $poly-01;
+  cursor: default;
+  color: $mono-02;
+  font-size: 14px;
+  line-height: 18px;
+  width: 260px;
+
+  &.top > .arrow { border-top-color: white; }
+  &.bottom > .arrow { border-bottom-color: white; }
+
+  h5 {
+    @include titillium-semi-bold;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  a { display: inline-block; }
+
+  .facebook,
+  .github,
+  .twitter,
+  .web, {
+    @include size(24px,24px);
+    content: '';
+    background-size: 24px 24px;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+
+  .facebook  { background-image: inline-image('icon-small-facebook-green@2x.png'); }
+  .github    { background-image: inline-image('icon-small-github-green@2x.png'); }
+  .twitter   { background-image: inline-image('icon-small-twitter-green@2x.png'); }
+  .web       { background-image: inline-image('icon-small-link-green@2x.png'); }
+}
