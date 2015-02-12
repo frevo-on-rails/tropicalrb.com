@@ -299,16 +299,6 @@ body.sponsors {
         @include make-sm-column-offset(3);
       }
     }
-    &.bronze {
-      .dnsimple {
-        @media (min-width: $screen-sm-min) { margin-left: 12.5%; }
-      }
-
-      .zertico {
-        @include make-xs-column-offset(3);
-        @include make-sm-column-offset(0);
-      }
-    }
 
     &.supporters {
       .supporters-special {
