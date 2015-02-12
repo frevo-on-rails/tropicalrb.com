@@ -7,8 +7,8 @@ main.schedule {
   @extend .container;
   margin-bottom: 0;
 
-  @media (min-width: $screen-sm-min) { margin-bottom: 15px; }
-  @media (min-width: $screen-md-min) { margin-bottom: 30px; }
+  @media (min-width: $screen-sm-min) { margin-bottom: 20px; }
+  @media (min-width: $screen-md-min) { margin-bottom: 40px; }
 }
 
 .schedule-area {
@@ -288,7 +288,17 @@ main.schedule.day-four {
 /*... Schedule Area ...*/
 
 .schedule-area {
-  header { margin: 30px auto; }
+  header {
+    margin: 30px auto;
+
+    @media (max-width: $screen-xs-max) { margin: 15px auto; }
+  }
+
+  .talks {
+    header {
+      @media (max-width: $screen-xs-max) { margin-top: 30px; }
+    }
+  }
 }
 
 /*... Schedule Header ...*/
@@ -362,8 +372,10 @@ main.schedule.day-four {
       .event-content {
         width: 44.8%;
         margin-left: 55.2%;
+        padding-right: 60px;
       }
 
+      .event-title { padding-right: 40px; }
       .event-image { left: -131px; }
     }
   }
@@ -401,10 +413,12 @@ main.schedule.day-four {
     @media (min-width: $screen-lg-min) {
       .event-content {
         width: 44.8%;
+        padding-left: 60px;
         margin-left: 0;
         margin-right: 55.2%;
       }
 
+      .event-title { padding-left: 40px; }
       .time-line:before, .time-line:after { right: -58px; }
       .event-image { right: -112px; }
     }
@@ -415,7 +429,7 @@ main.schedule.day-four {
   @include make-xs-column(12);
   @include make-sm-column(9);
   @include make-sm-column-offset(3);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     margin-bottom: 40px;
@@ -447,7 +461,7 @@ main.schedule.day-four {
   @media (max-width: $screen-xs-max) {
     @include clearfix;
     width: 240px;
-    margin: 15px auto 12px;
+    margin: 10px auto 8px;
   }
 }
 
@@ -579,6 +593,7 @@ main.schedule.day-four {
 
 .event-minor {
   @media (max-width: $screen-xs-max) {
+    .event-title { margin-bottom: -3px; }
     .event-image {
       @include square(80px);
       float: none;
@@ -590,11 +605,11 @@ main.schedule.day-four {
       text-align: center;
       height: 24px;
       padding: 0;
-      margin-top: 0;
+      margin-top: -3px;
       margin-bottom: 5px;
     }
 
-    .event-time { margin: 0 auto; }
+    .event-time { margin: -3px auto 0; }
   }
 
   @media (min-width: $screen-sm-min) {
@@ -636,7 +651,7 @@ main.schedule.day-four {
 
   @media (max-width: $screen-xs-max) {
     .event-content {
-      margin-bottom: 32px;
+      margin-bottom: 20px;
       padding-top: 5px;
     }
     .event-image { margin-bottom: 8px; }
@@ -654,5 +669,14 @@ main.schedule.day-four {
   @media (min-width: $screen-md-min) {
     .event-content { height: 131px; }
     .time-line:before { height: 75px }
+  }
+}
+
+/*... Specific Layouting ...*/
+
+#julio-faerman-and-rafael-lopes,
+#netto-farah {
+  @media (min-width: $screen-lg-min) {
+    .event-title { padding-right: 60px; }
   }
 }
