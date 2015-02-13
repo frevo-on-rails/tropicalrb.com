@@ -379,12 +379,12 @@ body.venue {
 
         &:after {
           @include square(24px);
+          content: '';
+          background-size: 24px;
+          display: block;
           position: absolute;
           bottom: -21px;
           right: -21px;
-          display: block;
-          background-size: 24px;
-          content: '';
         }
       }
 

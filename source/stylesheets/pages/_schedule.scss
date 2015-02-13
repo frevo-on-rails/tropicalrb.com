@@ -362,6 +362,12 @@ main.schedule.day-four {
       .event-title,
       .event-description { text-align: left; }
       .time-line:before, .time-line:after { left: -65px; }
+
+      .btn-buy {
+        margin-left: 0;
+
+        &:after { right: -21px; }
+      }
     }
 
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
@@ -402,6 +408,15 @@ main.schedule.day-four {
         float: right;
         margin-right: 0;
         margin-left: 10px;
+      }
+
+      .btn-buy {
+        margin-right: 0;
+
+        &:after {
+          @include rotateY(180deg);
+          left: -21px;
+        }
       }
     }
 
@@ -672,6 +687,42 @@ main.schedule.day-four {
     .time-line:before { height: 75px }
   }
 }
+
+.btn-buy {
+  border: 2px solid $mono-10;
+  border-radius: $border-radius-small;
+  display: block;
+  height: 36px;
+  font-size: 18px;
+  line-height: 31px;
+  padding: 0 10px 3px;
+  margin: 10px auto 25px;
+  transition: .2s border-color;
+  text-align: center;
+  width: 110px;
+  text-transform: capitalize;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    margin-left: 0;
+    &:after { right: -21px; }
+  }
+
+  &:after {
+    @include square(24px);
+    background-image: inline-image('icon-med-ticket-white@2x.png');
+    background-size: 24px;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -21px;
+  }
+}
+
+html[class*="pt"] {
+  .btn-buy { width: 160px; }
+}
+
+.provider { white-space: nowrap; }
 
 /*... Specific Layouting ...*/
 
