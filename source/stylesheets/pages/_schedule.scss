@@ -88,10 +88,6 @@ main.schedule {
     display: block;
     text-decoration: none;
     overflow: visible;
-
-    &:hover {
-      .icon-nav, .nav-event-time { @extend .motion-wobble-vertical; }
-    }
   }
 }
 

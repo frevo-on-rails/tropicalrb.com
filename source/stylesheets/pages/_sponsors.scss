@@ -253,9 +253,6 @@ body.sponsors {
     display: block;
     margin: 0 auto;
     @media (min-width: $screen-sm-min) { width: 140px; }
-
-    &:hover,
-    &:focus { animation: none !important; }
   }
 
   &.thiago {

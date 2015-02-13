@@ -2,27 +2,23 @@
       Animations
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
-a { @extend .motion-wobble-vertical; }
+a { @extend .motion-pressed; }
 
 %motion-hacks {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transform: translate3d(0,0,0);
 }
 
 .motion-wobble-vertical {
   @extend %motion-hacks;
-  transform: translate3d(0,0,0);
-
-  &:hover,
-  &:focus {
-    animation-name: motion-wobble-vertical;
-    animation-duration: .8s;
-    animation-delay: 0;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-  }
+  animation-name: motion-wobble-vertical;
+  animation-duration: .8s;
+  animation-delay: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }
 
 .motion-fade-in {
@@ -36,17 +32,37 @@ a { @extend .motion-wobble-vertical; }
   animation-iteration-count: 1;
 }
 
+.motion-pressed {
+  @extend %motion-hacks;
+
+  &:active {
+    transform-origin: center;
+    animation-name: motion-pressed;
+    animation-duration: .15s;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    animation-iteration-count: 1
+  }
+}
+
 /*... Keyframes ...*/
 
 @keyframes motion-wobble-vertical {
-  16.65% { transform: translate3d(0,-3.5px,0); }
+  0% { opacity: 0; }
+  16.65% { transform: translate3d(0,-300px,0); }
   33.3% { transform: translate3d(0,3.5px,0); }
   49.95% { transform: translate3d(0,-2.5px,0); }
   66.6% { transform: translate3d(0,1.5px,0); }
   83.25% { transform: translate3d(0,0,0); }
-  100% { transform: translate3d(0,0,0); }
+  100% { opacity: 1;; }
 }
 
 @keyframes motion-fade-in {
   100% { @include opacity(1); }
+}
+
+@keyframes motion-pressed {
+  0% { transform: scale(1); }
+  50% { transform: scale(.75); }
+  100% { transform: scale(1); }
 }

@@ -139,7 +139,7 @@ main.hero {
 
       a {
         @include square(44px);
-        @extend .motion-wobble-vertical;
+        @extend .motion-pressed;
         position: relative;
         display: block;
         text-indent: -9999px;
@@ -216,11 +216,7 @@ main.hero {
 .hero-speaker {
   text-align: center;
 
-  a {
-    &:hover,
-    &:focus { animation: none !important; }
-  }
-
+  a { display: block; }
   @media (max-width: 480px) { width: 50%; }
   @media (min-width: 481px) { width: 25%; }
   @media (max-width: $screen-sm-max) { float: left; }
