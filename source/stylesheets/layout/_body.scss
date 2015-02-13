@@ -6,12 +6,12 @@ body { @include titillium-web; }
 
 body.index {
   color: $poly-11;
-  background-color: $poly-07;
+  background-color: $poly-08;
   background-position: top center;
   background-repeat: no-repeat;
 
   @media (max-width: $screen-xs-max) {
-    background-image: image-url('bkg-sunrise-xs.jpg');
+    background-image: linear-gradient(to top, transparentize($poly-08,1) 0%, transparentize($poly-08,1) 98%, $poly-08 100%), image-url('bkg-sunrise-xs.jpg');
   }
   @media (min-width: $screen-sm-min) and (max-width: 1440px) {
     background-image: image-url('bkg-sunrise-lg.jpg');
@@ -60,7 +60,7 @@ body.code-of-conduct,
 body.colophon {
   @include titillium-web-light;
   color: $poly-11;
-  background-color: $poly-07;
+  background-color: $poly-08;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;

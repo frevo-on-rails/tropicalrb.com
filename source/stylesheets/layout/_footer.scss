@@ -311,3 +311,10 @@ body.sponsors {
     .brands { display: none; }
   }
 }
+
+body.colophon,
+body.code-of-conduct {
+  .footer {
+    @include gradient-vertical-three-colors(transparentize($poly-08,1), transparentize($poly-08,1), 70%, $poly-08);
+  }
+}

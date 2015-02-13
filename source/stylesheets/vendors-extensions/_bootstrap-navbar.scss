@@ -37,8 +37,11 @@ body.index {
   .navbar {
     @media (max-width: $screen-xs-max) {
       min-height: 0;
-
       hr { display: none; }
+    }
+
+    @media (min-width: $screen-sm-min) {
+      @include gradient-vertical-three-colors($poly-08, transparentize($poly-08,1), 94%, transparentize($poly-08,1));
     }
 
     hr { border-top-color: $poly-11 !important; }
@@ -56,6 +59,15 @@ body.venue {
 }
 body.index {
   .navbar hr { border-top-color: $poly-11 !important; }
+}
+
+body.colophon,
+body.code-of-conduct {
+  .navbar {
+    @media (min-width: $screen-sm-min) {
+      @include gradient-vertical-three-colors($poly-08, transparentize($poly-08,1), 94%, transparentize($poly-08,1));
+    }
+  }
 }
 
 /*... Scaffolding ...*/
