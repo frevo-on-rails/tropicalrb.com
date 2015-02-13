@@ -715,6 +715,8 @@ main.schedule.day-four {
     display: block;
     position: absolute;
     bottom: -21px;
+
+    @media (max-width: $screen-xs-max) { right: -21px; }
   }
 }
 
