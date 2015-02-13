@@ -151,7 +151,7 @@ body.schedule {
 
   .navbar-collapse {
     .link-schedule {
-      @include titillium-bold;
+      @include titillium-black;
       font-size: 19px;
       text-decoration: none;
     }
@@ -166,7 +166,7 @@ body.sponsors {
 
   .navbar-collapse {
     .link-sponsors {
-      @include titillium-bold;
+      @include titillium-black;
       font-size: 19px;
       text-decoration: none;
     }
@@ -181,7 +181,7 @@ body.venue {
 
   .navbar-collapse {
     .link-venue {
-      @include titillium-bold;
+      @include titillium-black;
       font-size: 19px;
       text-decoration: none;
     }
