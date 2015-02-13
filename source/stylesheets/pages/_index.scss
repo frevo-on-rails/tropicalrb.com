@@ -296,3 +296,53 @@ main.hero {
   font-size: 18px;
   line-height: 18px;
 }
+
+/*... Temporary ...*/
+
+.lodge {
+  @include size(290px, 36px);
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  border: 2px solid $poly-11;
+  border-radius: 3px;
+  padding: 4px 2px 4px 10px;
+  position: absolute;
+  margin-left: -145px;
+  left: 50%;
+  top: 290px;
+  @media (min-width: $screen-sm-min) { top: 262px; }
+}
+
+.icon-bed {
+  background-image: inline-image('icon-med-bed@2x.png');
+  margin-right: 8px;
+}
+
+.hero-data {
+  margin-bottom: 35px;
+  margin-top: 85px;
+  @media (min-width: $screen-sm-min) { margin-top: 56px; }
+}
+
+.hero-speaker {
+  &:nth-child(1) {
+    @media (min-width: $screen-md-min) { top: (-284px - 56px); }
+    @media (min-width: $screen-lg-min) { top: (-412px - 56px); }
+  }
+
+  &:nth-child(2) {
+    @media (min-width: $screen-md-min) { top: (-412px - 56px); }
+    @media (min-width: $screen-lg-min) { top: (-412px - 56px); }
+  }
+
+  &:nth-child(3) {
+    @media (min-width: $screen-md-min) { top: (-412px - 56px); }
+    @media (min-width: $screen-lg-min) { top: (-412px - 56px); }
+  }
+
+  &:nth-child(4) {
+    @media (min-width: $screen-md-min) { top: (-284px - 56px); }
+    @media (min-width: $screen-lg-min) { top: (-412px - 56px); }
+  }
+}
