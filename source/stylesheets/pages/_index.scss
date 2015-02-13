@@ -3,7 +3,6 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 main.hero {
-  @extend .motion-fade-in;
   @extend .container;
   position: relative;
 
@@ -16,11 +15,15 @@ main.hero {
   @media (max-width: $screen-sm-max) { margin-bottom: 40px; }
 }
 
-.hero-area { @include make-xs-column(12); }
+.hero-area {
+  @include make-xs-column(12);
+  @extend .motion-fade-in;
+}
 
 /*... Scaffolding ...*/
 
 .hero-logo {
+  @extend .motion-wobble-up;
   position: absolute;
   left: 50%;
   text-indent: -9999px;
@@ -42,6 +45,7 @@ main.hero {
 }
 
 .hero-data {
+  @extend .motion-wobble-up;
   margin-top: 0;
   margin-right: auto;
   margin-left: auto;
@@ -227,8 +231,9 @@ main.hero {
   }
 
   &:nth-child(1) {
-    @media (max-width: 480px) { margin-bottom: 20px; }
+    @extend .motion-wobble-left;
 
+    @media (max-width: 480px) { margin-bottom: 20px; }
     @media (min-width: $screen-md-min) {
       top: -284px;
       left: 15px;
@@ -240,8 +245,9 @@ main.hero {
   }
 
   &:nth-child(2) {
-    @media (max-width: 480px) { margin-bottom: 20px; }
+    @extend .motion-wobble-left;
 
+    @media (max-width: 480px) { margin-bottom: 20px; }
     @media (min-width: $screen-md-min) {
       top: -412px;
       left: 133px;
@@ -253,6 +259,8 @@ main.hero {
   }
 
   &:nth-child(3) {
+    @extend .motion-wobble-right;
+
     @media (min-width: $screen-md-min) {
       top: -412px;
       right: 133px;
@@ -265,6 +273,8 @@ main.hero {
   }
 
   &:nth-child(4) {
+    @extend .motion-wobble-right;
+
     @media (min-width: $screen-md-min) {
       top: -284px;
       right: 15px;
@@ -296,6 +306,7 @@ main.hero {
 /*... Temporary ...*/
 
 .lodge {
+  @extend .motion-wobble-up;
   @include size(290px, 36px);
   display: block;
   font-size: 18px;

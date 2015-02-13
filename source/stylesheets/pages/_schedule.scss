@@ -37,6 +37,7 @@ main.schedule {
 }
 
 .nav-event {
+  @extend .motion-wobble-up;
   @include size(70px, 128px);
   float: left;
   overflow: visible;
@@ -89,6 +90,18 @@ main.schedule {
     text-decoration: none;
     overflow: visible;
   }
+
+  &.one { animation-delay: .0s; }
+  &.two { animation-delay: .06s; }
+  &.three { animation-delay: .12s; }
+  &.four { animation-delay: .18s; }
+
+  @media (max-width: $screen-xs-max) {
+    &.one { animation-delay: 0s; }
+    &.two { animation-delay: .15s; }
+    &.three { animation-delay: .3s; }
+    &.four { animation-delay: .45s; }
+  }
 }
 
 .icon-nav {
@@ -124,7 +137,7 @@ main.schedule {
   &:before {
     @extend .motion-fade-in;
     @include square(120px);
-    animation-delay: .2s;
+    animation-delay: .3s;
     background-image: inline-image('schedule-graph-mobi-bkg-active@2x.png');
     background-size: 120px 120px;
     background-repeat: no-repeat;

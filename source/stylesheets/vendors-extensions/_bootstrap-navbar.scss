@@ -152,7 +152,8 @@ body.schedule {
   .navbar-collapse {
     .link-schedule {
       @include titillium-black;
-      font-size: 19px;
+      font-size: 20px;
+      margin-top: -1px;
       text-decoration: none;
     }
   }
@@ -167,7 +168,8 @@ body.sponsors {
   .navbar-collapse {
     .link-sponsors {
       @include titillium-black;
-      font-size: 19px;
+      font-size: 20px;
+      margin-top: -1px;
       text-decoration: none;
     }
   }
@@ -182,7 +184,8 @@ body.venue {
   .navbar-collapse {
     .link-venue {
       @include titillium-black;
-      font-size: 19px;
+      font-size: 20px;
+      margin-top: -1px;
       text-decoration: none;
     }
   }
@@ -471,5 +474,20 @@ body.venue {
       &:hover,
       &:focus { color: $mono-01; }
     }
+  }
+}
+
+.collapsing {
+  opacity: 0;
+  transition-duration: .2s;
+}
+
+.collapse.in {
+  opacity: 1;
+
+  .navbar-nav {
+    @extend .motion-wobble-up;
+    animation-delay: 0s;
+    animation-duration: .4s;
   }
 }

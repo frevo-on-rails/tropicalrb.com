@@ -37,6 +37,7 @@ body.sponsors {
 }
 
 .prospectus {
+  @extend .motion-wobble-up;
   @include size(200px, 36px);
   display: block;
   font-size: 18px;
