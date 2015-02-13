@@ -4,104 +4,32 @@
 
 /*... Molle ...*/
 
-@font-face {
-  font-family: 'Molle';
-  src: font-url('molle-regular.eot');
-  src: font-url('molle-regular.eot?#iefix') format('embedded-opentype'),
-       font-url('molle-regular.woff') format('woff'),
-       font-url('molle-regular.ttf') format('truetype'),
-       font-url('molle-regular.svg#b20b02739244cefc6333f763418d04ef') format('svg');
-  font-style: normal;
-  font-weight: 400;
-}
-
 @mixin molle {
-  font-family: 'Molle', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Molle', 'Georgia', serif;
+  font-style: italic;
   font-weight: 400;
 }
 
 /*... Titillium Web ...*/
 
-@font-face {
-  font-family: 'Titillium Web Light';
-  src: font-url('titillium-web-light.eot');
-  src: font-url('titillium-web-light.eot?#iefix') format('embedded-opentype'),
-       font-url('titillium-web-light.woff') format('woff'),
-       font-url('titillium-web-light.ttf') format('truetype'),
-       font-url('titillium-web-light.svg#cdd87a94360686e1994175b4b172573a') format('svg');
-  font-style: normal;
-  font-weight: 200;
-}
-
-@font-face {
-  font-family: 'Titillium Web';
-  src: font-url('titillium-web-regular.eot');
-  src: font-url('titillium-web-regular.eot?#iefix') format('embedded-opentype'),
-       font-url('titillium-web-regular.woff') format('woff'),
-       font-url('titillium-web-regular.ttf') format('truetype'),
-       font-url('titillium-web-regular.svg#8f8cc378d5e27ff97ce375f0d4447023') format('svg');
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Titillium Web Semi Bold';
-  src: font-url('titillium-web-semi-bold.eot');
-  src: font-url('titillium-web-semi-bold.eot?#iefix') format('embedded-opentype'),
-       font-url('titillium-web-semi-bold.woff') format('woff'),
-       font-url('titillium-web-semi-bold.ttf') format('truetype'),
-       font-url('titillium-web-semi-bold.svg#da1b6ccc957018b7fbe97ccdb479c13b') format('svg');
-  font-style: normal;
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Titillium Web Bold';
-  src: font-url('titillium-web-bold.eot');
-  src: font-url('titillium-web-bold.eot?#iefix') format('embedded-opentype'),
-       font-url('titillium-web-bold.woff') format('woff'),
-       font-url('titillium-web-bold.ttf') format('truetype'),
-       font-url('titillium-web-bold.svg#e883045892083b0cd9674c704cf89b47') format('svg');
-  font-style: normal;
-  font-weight: 700;
-}
-
 @mixin titillium-web-light {
-  font-family: 'Titillium Web Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 200;
+  font-family: 'Titillium Web', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-weight: 300;
 }
 
 @mixin titillium-web {
-  font-family: 'Titillium Web', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Titillium Web', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: 400;
 }
 
 @mixin titillium-semi-bold {
-  font-family: 'Titillium Web Semi Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Titillium Web', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: 600;
 }
 
 @mixin titillium-bold {
-  font-family: 'Titillium Web Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Titillium Web', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: 700;
-}
-
-/*... Xilosa ...*/
-
-@font-face {
-  font-family: 'Xilosa';
-  src: font-url('xilosa-regular.eot');
-  src: font-url('xilosa-regular.eot?#iefix') format('embedded-opentype'),
-       font-url('xilosa-regular.woff') format('woff'),
-       font-url('xilosa-regular.ttf') format('truetype'),
-       font-url('xilosa-regular.svg#b5938315ae4290f3b726612d33ea5490') format('svg');
-  font-style: normal;
-  font-weight: 400;
-}
-
-@mixin xilosa {
-  font-family: 'Xilosa', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  font-weight: 400;
 }
 
 /*... Typographic Settings ...*/
