@@ -32,6 +32,11 @@
   font-weight: 700;
 }
 
+@mixin titillium-black {
+  font-family: 'Titillium Web', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-weight: 900;
+}
+
 /*... Typographic Settings ...*/
 
 main {
