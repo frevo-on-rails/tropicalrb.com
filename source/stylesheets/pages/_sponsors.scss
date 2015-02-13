@@ -295,8 +295,13 @@ body.sponsors {
 .sponsors-area {
   section {
     &.gold {
-      .engine-yard {
-        @include make-sm-column-offset(3);
+      .engine-yard { @include make-sm-column-offset(3); }
+    }
+
+    &.bronze {
+      .impact-hub {
+        @include make-xs-column-offset(3);
+        @media (min-width: $screen-sm-min) { margin-left: 37.5%; }
       }
     }
 
