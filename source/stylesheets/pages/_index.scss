@@ -165,11 +165,11 @@ main.hero {
           content: '';
         }
 
-        &.email:before { background-image: inline-image('icon-small-contact-red@2x.png'); }
-        &.facebook:before { background-image: inline-image('icon-small-facebook-red@2x.png'); }
-        &.github:before { background-image: inline-image('icon-small-github-red@2x.png'); }
-        &.lanyrd:before { background-image: inline-image('icon-small-lanyrd-red@2x.png'); }
-        &.twitter:before { background-image: inline-image('icon-small-twitter-red@2x.png'); }
+        &.email:before { background-image: inline-image('icon-med-contact-red@2x.png'); }
+        &.facebook:before { background-image: inline-image('icon-med-facebook-red@2x.png'); }
+        &.github:before { background-image: inline-image('icon-med-github-red@2x.png'); }
+        &.lanyrd:before { background-image: inline-image('icon-med-lanyrd-red@2x.png'); }
+        &.twitter:before { background-image: inline-image('icon-med-twitter-red@2x.png'); }
       }
     }
   }
