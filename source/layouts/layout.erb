@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en-us">
+<html lang="<%= I18n.locale %>">
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -32,7 +32,7 @@
     <%= javascript_include_tag "main" %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes_without_locale %>">
     <%= partial "navbar" %>
     <%= yield %>
     <%= partial "footer" %>
