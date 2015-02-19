@@ -294,6 +294,12 @@ main.schedule.day-four {
   }
 }
 
+html[lang*="pt"] {
+  .nav-event-time {
+    span { margin-right: 2px; }
+  }
+}
+
 /*... Schedule Area ...*/
 
 .schedule-area {
@@ -762,6 +768,10 @@ main.schedule.day-four {
   }
 }
 
+html[lang*="pt"] {
+  .btn-buy { width: 160px; }
+}
+
 .provider { white-space: nowrap; }
 
 /*... Specific Layouting ...*/
@@ -787,8 +797,4 @@ main.schedule.day-four {
   @media (min-width: $screen-md-min) {
     .event-time { margin-top: 10px; }
   }
-}
-
-html[lang*="pt"] {
-  .btn-buy { width: 160px; }
 }
