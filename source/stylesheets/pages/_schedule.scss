@@ -762,10 +762,6 @@ main.schedule.day-four {
   }
 }
 
-html[class*="pt"] {
-  .btn-buy { width: 160px; }
-}
-
 .provider { white-space: nowrap; }
 
 /*... Specific Layouting ...*/
@@ -791,4 +787,8 @@ html[class*="pt"] {
   @media (min-width: $screen-md-min) {
     .event-time { margin-top: 10px; }
   }
+}
+
+html[lang*="pt"] {
+  .btn-buy { width: 160px; }
 }
