@@ -1,0 +1,38 @@
+<nav class="nav-schedule">
+  <ol>
+    <li class="nav-event one">
+      <h4><%= t 'schedule.nav.workshops' %></h4>
+      <% link_to "/#{I18n.locale}/schedule/march-5.html" do %>
+        <span class="icon-nav icon-recife"></span>
+        <span class="graph-connector end left"></span>
+        <time class="nav-event-time" date="2015-03-5"><%= t 'schedule.nav.march_5' %></time>
+      <% end %>
+    </li>
+    <li class="nav-event two">
+      <h4><%= t 'schedule.nav.activities' %> &amp; <%= t 'schedule.nav.talks' %></h4>
+      <% link_to "/#{I18n.locale}/schedule/march-6.html" do %>
+        <span class="icon-nav icon-porto"></span>
+        <span class="graph-nav icon-car"></span>
+        <span class="graph-connector left"></span>
+        <time class="nav-event-time" date="2015-03-6"><%= t 'schedule.nav.march_6' %></time>
+      <% end %>
+    </li>
+    <li class="nav-event three">
+      <h4><%= t 'schedule.nav.activities' %> &amp; <%= t 'schedule.nav.talks' %></h4>
+      <% link_to "/#{I18n.locale}/schedule/march-7.html" do %>
+        <span class="icon-nav icon-porto"></span>
+        <span class="graph-connector left"></span>
+        <span class="graph-connector right"></span>
+        <time class="nav-event-time" date="2015-03-7"><%= t 'schedule.nav.march_7' %></time>
+      <% end %>
+    </li>
+    <li class="nav-event four">
+      <h4><%= t 'schedule.nav.activity' %></h4>
+      <% link_to "/#{I18n.locale}/schedule/march-8.html" do %>
+        <span class="icon-nav icon-porto"></span>
+        <span class="graph-connector end right"></span>
+        <time class="nav-event-time" date="2015-03-8"><%= t 'schedule.nav.march_8' %></time>
+      <% end %>
+    </li>
+  </ol>
+</nav>
