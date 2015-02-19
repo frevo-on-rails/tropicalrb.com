@@ -41,11 +41,12 @@
 # end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def page_classes_without_locale
+    locale = I18n.locale.to_s
+    page_classes.gsub(/#{locale}_/, '')
+  end
+end
 
 set :css_dir, 'stylesheets'
 
@@ -53,9 +54,20 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+activate :i18n, mount_at_root: false
+
 activate :autoprefixer
 
 activate :directory_indexes
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  # Optional Settings
+  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  # deploy.branch   = 'custom-branch' # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
+end
 
 # Build-specific configuration
 configure :build do
@@ -73,15 +85,6 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
-end
-
-activate :deploy do |deploy|
-  deploy.method = :git
-  # Optional Settings
-  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
-  # deploy.branch   = 'custom-branch' # default: gh-pages
-  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
 
 activate :alias
