@@ -798,3 +798,9 @@ html[class*="pt"] {
     }
   }
 }
+
+#panel {
+  @media (min-width: $screen-md-min) {
+    .event-time { margin-top: 10px; }
+  }
+}
