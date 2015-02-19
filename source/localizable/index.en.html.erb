@@ -18,7 +18,7 @@ title: Tropical Ruby 2015 — March 5th to 8th at Porto de Galinhas, Brazil
     <section class="about row">
       <div class="hero-description">
         <h3>The Beach Ruby Conference</h3>
-        <p>Enjoy amazing conversations, stunning landscapes and a superb nature. Come and talk with some of the best Rubyists in this tropical conference.</p>
+        <p>Enjoy amazing conversations, stunning landscapes and a superb nature. Come and talk with some of the best Rubyists in this tropical paradise.</p>
         <ul class="hero-advantages">
           <li title="Simultaneous translation from Portuguese to English and English to Portuguese.">
             <span class="icon-medium icon-translation"></span>Simultaneous translation
@@ -32,19 +32,19 @@ title: Tropical Ruby 2015 — March 5th to 8th at Porto de Galinhas, Brazil
         <span class="greetings"></span>
         <ul>
           <li>
-            <a class="lanyrd" href="http://lanyrd.com/2015/tropicalrb/" target="_blank">Foursquare</a>
+            <a class="lanyrd" href="http://lanyrd.com/2015/tropicalrb/" target="_blank" title="Lanyrd">Lanyrd</a>
           </li>
           <li>
-            <a class="github" href="https://github.com/frevo-on-rails/tropicalrb.com" target="_blank">GitHub</a>
+            <a class="github" href="https://github.com/frevo-on-rails/tropicalrb.com" target="_blank" title="Github">GitHub</a>
           </li>
           <li>
-            <a class="facebook" href="https://facebook.com/tropicalrb" target="_blank">Facebook</a>
+            <a class="facebook" href="https://facebook.com/tropicalrb" target="_blank" title="Facebook">Facebook</a>
           </li>
           <li>
-            <a class="twitter" href="https://twitter.com/tropicalrb" target="_blank">Twitter</a>
+            <a class="twitter" href="https://twitter.com/tropicalrb" target="_blank" title="Twitter">Twitter</a>
           </li>
           <li>
-            <a class="email" href="mailto:info@tropicalrb.com">E-mail</a>
+            <a class="email" href="mailto:info@tropicalrb.com" title="Contact us via e-mail.">E-mail</a>
           </li>
         </ul>
 
@@ -55,7 +55,7 @@ title: Tropical Ruby 2015 — March 5th to 8th at Porto de Galinhas, Brazil
             <div style="position: absolute; left: -5000px;">
               <input type="text" name="b_91f07f556bcf88c39c98457f7_12c348ff6f" tabindex="-1" value="">
             </div>
-            <button class="btn btn-default newsletter-submit" type="submit">Cadastrar</button>
+            <button class="btn btn-default newsletter-submit" type="submit">Signup</button>
           </div>
         </form>
       </div>
@@ -63,28 +63,28 @@ title: Tropical Ruby 2015 — March 5th to 8th at Porto de Galinhas, Brazil
 
     <section class="speakers">
       <div class="hero-speaker">
-        <a href="/schedule/march-7#avdi-grimm" title="See more about Avdi Grimm's talk.">
-          <%= image_tag 'event-speaker-avdi@2x.png', class: 'hero-speaker-photo', alt: 'Avdi Green' %>
+        <% link_to '/schedule/march-7.html#avdi-grimm', title: "See more about Avdi Grimm's talk." do %>
+          <%= image_tag 'event-speaker-avdi@2x.png', class: 'hero-speaker-photo', alt: 'Avdi Grimm' %>
           <strong class="hero-speaker-name">Avdi Grimm</strong>
-        </a>
+        <% end %>
       </div>
       <div class="hero-speaker">
-        <a href="/schedule/march-6#nick-sutterer" title="See more about Nick Sutterer's talk.">
+        <% link_to '/schedule/march-6.html#nick-sutterer', title: "See more about Nick Sutterer's talk." do %>
           <%= image_tag 'event-speaker-nick@2x.png', class: 'hero-speaker-photo', alt: 'Nick Sutterer' %>
           <strong class="hero-speaker-name">Nick Sutterer</strong>
-        </a>
+        <% end %>
       </div>
       <div class="hero-speaker">
-        <a href="/schedule/march-7#rodrigo-franco" title="See more about Rodrigo Franco's talk.">
+        <% link_to '/schedule/march-7.html#rodrigo-franco', title: "See more about Rodrigo Franco's talk." do %>
           <%= image_tag 'event-speaker-rodrigo@2x.png', class: 'hero-speaker-photo', alt: 'Rodrigo Franco' %>
           <strong class="hero-speaker-name">Rodrigo Franco</strong>
-        </a>
+        <% end %>
       </div>
       <div class="hero-speaker">
-        <a href="/schedule/march-7#carlos-antonio" title="See more about Carlos Antonios' talk.">
+        <% link_to '/schedule/march-7.html#carlos-antonio', title: "See more about Carlos Antonio's talk." do %>
           <%= image_tag 'event-speaker-carlos@2x.png', class: 'hero-speaker-photo', alt: 'Carlos Antonio' %>
           <strong class="hero-speaker-name">Carlos Antonio</strong>
-        </a>
+        <% end %>
       </div>
     </section>
 

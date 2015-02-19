@@ -2,9 +2,9 @@
   <div class="container">
     <div class="brands row">
       <div class="gold">
-        <h4 class="footer-title">Gold Sponsors</h4>
+        <h4 class="footer-title"><%= t 'footer.gold_sponsors' %></h4>
         <div class="footer-brands">
-          <a class="nic" href="http://www.nic.br/" target="_blank">
+          <a class="nic" href="<%= t 'footer.nic_url' %>" target="_blank">
             NIC.br — Núcleo de Informação e Coordenação do Ponto BR
           </a>
           <a class="mandrill" href="http://mandrill.com" target="_blank">
@@ -16,13 +16,13 @@
         </div>
       </div>
       <div class="silver">
-        <h4 class="footer-title">Silver Sponsors</h4>
+        <h4 class="footer-title"><%= t 'footer.silver_sponsors' %></h4>
         <div class="footer-brands">
           <a class="github" href="https://github.com/" target="_blank">
             GitHub
           </a>
-          <a class="tempest" href="http://tempest.com.br/" target="_blank">
-            Tempest — Security Intelligence
+          <a class="tempest" href="<%= t 'footer.tempest_url' %>" target="_blank">
+            Tempest Security Intelligence
           </a>
           <a class="cers" href="http://www.cers.com.br/" target="_blank">
             CERS Cursos Online
@@ -32,9 +32,9 @@
     </div>
     <div class="brands row">
       <div class="organizers">
-        <h4 class="footer-title">Organizers</h4>
+        <h4 class="footer-title"><%= t 'footer.organizers' %></h4>
         <div class="footer-brands">
-          <a class="guava-software" href="http://guava.com.br/" target="_blank">
+          <a class="guava-software" href="http://guava.com.br/<%= I18n.locale %>/" target="_blank">
             Guava
           </a>
           <a class="eloquent-studio" href="https://pt-br.facebook.com/geteloquent" target="_blank">
@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="advisory">
-        <h4 class="footer-title">Advisory Support</h4>
+        <h4 class="footer-title"><%= t 'footer.advisory_support' %></h4>
         <div class="footer-brands">
           <a class="ruby-central-inc" href="http://rubycentral.org/" target="_blank">
             Ruby Central Inc.
@@ -60,27 +60,35 @@
     <div class="copy">
       <div class="previous-editions row">
         <div class="column">
-          <h4 class="footer-title">Previous Editions:</h4>
+          <h4 class="footer-title"><%= t 'footer.previous_editions' %>:</h4>
         </div>
         <div class="column">
           <p>
             <a href='/2012/'><strong>2012</strong></a> <span>•</span>
             <a href='/2013/'><strong>2013</strong></a> <span>•</span>
-            <a href='/2014/en/'><strong>2014</strong></a>
+            <a href='/2014/<%= I18n.locale %>/'><strong>2014</strong></a>
           </p>
         </div>
       </div>
       <hr>
       <p>
-        <a href="/code-of-conduct"><strong>Code of Conduct</strong></a>
+        <% link_to "/#{I18n.locale}/code-of-conduct.html" do %>
+          <strong><%= t 'footer.code_of_conduct' %></strong>
+        <% end %>
         <br class='visible-xs-block'><span class='hidden-xs'>•</span>
-        <a href="/colophon"><strong>Colophon</strong></a>
+        <% link_to "/#{I18n.locale}/colophon.html" do %>
+          <strong><%= t 'footer.colophon' %></strong>
+        <% end %>
         <br class='visible-xs-block'><span class='hidden-xs'>•</span>
-        <a href="/files/mediakit.zip" target="_blank"><strong>Media Kit</strong></a>
+        <% link_to '/files/mediakit.zip' do %>
+          <strong><%= t 'footer.media_kit' %></strong>
+        <% end %>
         <br class='visible-xs-block'><span class='hidden-xs'>•</span>
-        <a href="/files/prospectus.pdf" target="_blank"><strong>Sponsor Prospectus</strong></a>
+        <% link_to '/files/prospectus.pdf' do %>
+          <strong><%= t 'footer.sponsor_prospectus' %></strong>
+        <% end %>
         <br class="guava-signature">
-        Design, copy &amp; frontend by <a href="http://guava.com.br/" target="_blank"><strong>Guava Software</strong></a>
+        <%= t 'footer.signature' %> <a href="http://guava.com.br/<%= I18n.locale %>/" target="_blank"><strong>Guava Software</strong></a>
     </div>
   </div>
   <div class="coconut"></div>
