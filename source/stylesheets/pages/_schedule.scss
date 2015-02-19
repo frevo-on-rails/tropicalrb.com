@@ -21,7 +21,7 @@ main.schedule {
 .nav-schedule {
   @include clearfix;
   display: block;
-  margin: 35px auto 0;
+  margin: 45px auto 0;
   width: (70px * 4);
   overflow: visible;
 
@@ -300,19 +300,35 @@ main.schedule.day-four {
   header {
     margin: 30px auto;
 
-    @media (max-width: $screen-xs-max) { margin: 15px auto; }
+    @media (max-width: $screen-xs-max) {
+      margin: 15px auto;
+
+      h2 {
+        text-align: left;
+        margin-left: 52px;
+      }
+    }
   }
 
   .talks {
-    header {
-      @media (max-width: $screen-xs-max) { margin-top: 30px; }
-    }
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 45px;
+
+      header {
+        margin-top: 30px;
+      }
+     }
   }
 }
 
 /*... Schedule Header ...*/
 
 .schedule-subtitles {
+  @media (max-width: $screen-xs-max) {
+    text-align: left;
+    margin-left: 41px;
+  }
+
   text-align: center;
   margin-top: 2px;
 }
@@ -349,7 +365,7 @@ main.schedule.day-four {
 
   &:last-child {
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { margin-bottom: 15px; }
-    @media (min-width: $screen-sm-min) {
+    @media (min-width: $screen-xs-min) {
       .time-line {
         &:before, &:after { display: none !important; }
       }
@@ -365,12 +381,13 @@ main.schedule.day-four {
       .event-content {
         width: 43.8%;
         margin-left: 56.2%;
+        padding-left: 8px;
       }
 
       .event-image { margin-right: 0; }
       .event-title,
       .event-description { text-align: left; }
-      .time-line:before, .time-line:after { left: -65px; }
+      .time-line:before, .time-line:after { left: -66px; }
 
       .btn-buy {
         margin-left: 0;
@@ -380,7 +397,7 @@ main.schedule.day-four {
     }
 
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-      .event-image { left: -130px; }
+      .event-image { left: -110px; }
     }
 
     @media (min-width: $screen-lg-min) {
@@ -391,7 +408,7 @@ main.schedule.day-four {
       }
 
       .event-title { padding-right: 40px; }
-      .event-image { left: -131px; }
+      .event-image { left: -111px; }
     }
   }
 
@@ -421,6 +438,7 @@ main.schedule.day-four {
 
       .btn-buy {
         margin-right: 0;
+        margin-left: auto;
 
         &:after {
           @include rotateY(180deg);
@@ -430,7 +448,7 @@ main.schedule.day-four {
     }
 
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-      .time-line:before, .time-line:after { right: -57px; }
+      .time-line:before, .time-line:after { right: -56px; }
       .event-image { right: -111px; }
     }
 
@@ -458,6 +476,7 @@ main.schedule.day-four {
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     margin-bottom: 40px;
     padding-right: 50px;
+    padding-left: 10px;
     min-height: 101px;
   }
 
@@ -473,10 +492,11 @@ main.schedule.day-four {
   @include titillium-semi-bold;
   font-size: 24px;
   line-height: 24px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 5px;
   width: 100%;
 
+  @media (max-width: $screen-xs-max) { padding-left: 58px; }
   @media (min-width: $screen-sm-min) { margin-bottom: 10px; }
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { text-align: left; }
 }
@@ -485,20 +505,21 @@ main.schedule.day-four {
   @media (max-width: $screen-xs-max) {
     @include clearfix;
     width: 240px;
-    margin: 10px auto 8px;
+    margin: 10px auto 8px 0;
   }
 }
 
 .event-image {
   @include square(60px);
   float: left;
-  margin-left: 12px;
+  position: absolute;
+  margin-left: -10px;
   margin-right: 10px;
   z-index: 3;
+  top: 15px;
 
   @media (min-width: $screen-sm-min) {
     @include square(110px);
-    position: absolute;
     top: -1px
   }
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { left: -120px; }
@@ -511,7 +532,10 @@ main.schedule.day-four {
   vertical-align: middle;
   cursor: pointer;
 
-  @media (max-width: $screen-xs-max) { margin-top: 1px; }
+  @media (max-width: $screen-xs-max) {
+    margin-top: 1px;
+    margin-left: 58px;
+  }
   @media (min-width: $screen-sm-min) {
     display: inline-block;
     width: auto;
@@ -532,7 +556,7 @@ main.schedule.day-four {
   line-height: 19px;
   text-align: center;
   width: 70px;
-  margin-left: 84px;
+  margin-left: 58px;
 
   span {
     display: inline-block;
@@ -556,6 +580,8 @@ main.schedule.day-four {
   line-height: 19px;
   margin-bottom: 10px;
 
+  @media (max-width: $screen-xs-max) { margin-left: 58px; }
+
   @media (min-width: $screen-sm-min) {
     display: inline-block;
     height: 24px;
@@ -568,8 +594,9 @@ main.schedule.day-four {
 .event-description {
   margin-top: 5px;
   margin-bottom: 0;
+  text-align: left;
 
-  @media (max-width: $screen-xs-max) { text-align: center; }
+  @media (max-width: $screen-xs-max) { padding-left: 58px; }
 
   .expander {
     @include titillium-semi-bold;
@@ -589,7 +616,7 @@ main.schedule.day-four {
 .time-line {
   z-index: 1;
 
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-xs-min) {
     &:before, &:after {
       background-color: rgba(255,255,255,.65);
       content: '';
@@ -606,6 +633,15 @@ main.schedule.day-four {
     &:after { top: 100%; }
   }
 
+  @media (max-width: $screen-xs-max) {
+    &:before, &:after { left: 34px; }
+    &:before { top: 15px; }
+    &:after {
+      height: 20px;
+      margin-top: 15px;
+    }
+  }
+
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     &:before, &:after { left: -66px; }
     &:after { height: 40px; }
@@ -618,23 +654,27 @@ main.schedule.day-four {
 
 .event-minor {
   @media (max-width: $screen-xs-max) {
-    .event-title { margin-bottom: -3px; }
+    .event-title { margin-bottom: 8px; }
     .event-image {
       @include square(80px);
       float: none;
       display: block;
       margin: 0 auto;
+      left: -5px;
+      top: 3px;
     }
 
     .event-local {
-      text-align: center;
+      text-align: left;
       height: 24px;
       padding: 0;
       margin-top: -3px;
       margin-bottom: 5px;
     }
 
-    .event-time { margin: -3px auto 0; }
+    .event-time { margin: 10px auto 0 58px; }
+    .time-line:before { display: none; }
+    .time-line-after { margin-top: 4px; }
   }
 
   @media (min-width: $screen-sm-min) {
@@ -675,11 +715,16 @@ main.schedule.day-four {
   .event-local { margin-top: -8px; }
 
   @media (max-width: $screen-xs-max) {
+    .event-title { margin-bottom: 18px; }
     .event-content {
       margin-bottom: 20px;
       padding-top: 5px;
     }
     .event-image { margin-bottom: 8px; }
+    .time-line:after {
+      top: 56px;
+      height: 155px;
+    }
   }
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -705,7 +750,7 @@ main.schedule.day-four {
   font-size: 18px;
   line-height: 31px;
   padding: 0 10px 3px;
-  margin: 10px auto 25px;
+  margin: 10px auto 25px 58px;
   transition: .2s border-color;
   text-align: center;
   width: 110px;
@@ -741,5 +786,15 @@ html[class*="pt"] {
 #netto-farah {
   @media (min-width: $screen-lg-min) {
     .event-title { padding-right: 60px; }
+  }
+}
+
+#registration,
+#coffee-break {
+  @media (max-width: $screen-xs-max) {
+    .time-line:after {
+      height: 34px;
+      margin-top: 1px;
+    }
   }
 }
