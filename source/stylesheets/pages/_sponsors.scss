@@ -48,6 +48,10 @@ body.sponsors {
   padding: 4px 4px 4px 10px;
 }
 
+html[lang*="pt"] {
+  .prospectus { width: 186px; }
+}
+
 .icon-fist-bump {
   background-image: inline-image('icon-med-fist-bump@2x.png');
   margin-right: 6px;

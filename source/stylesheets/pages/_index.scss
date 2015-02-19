@@ -61,14 +61,26 @@ main.hero {
 
   @media (max-width: $screen-xs-max) {
     @include size(258px, 211px);
-    background-image: image-url('logo-porto-vert@2x.png');
     background-size: 258px 211px;
   }
 
   @media (min-width: $screen-sm-min) {
     @include size(531px, 155px);
-    background-image: image-url('logo-porto-horiz@2x.png');
     background-size: 531px 155px;
+  }
+}
+
+html[lang*="en"] {
+  .hero-data {
+    @media (max-width: $screen-xs-max) { background-image: image-url('logo-porto-vert-en@2x.png'); }
+    @media (min-width: $screen-sm-min) { background-image: image-url('logo-porto-horiz-en@2x.png'); }
+  }
+}
+
+html[lang*="pt"] {
+  .hero-data {
+    @media (max-width: $screen-xs-max) { background-image: image-url('logo-porto-vert-pt@2x.png'); }
+    @media (min-width: $screen-sm-min) { background-image: image-url('logo-porto-horiz-pt@2x.png'); }
   }
 }
 
@@ -181,7 +193,6 @@ main.hero {
   .greetings {
     position: absolute;
     display: block;
-    background-image: image-url('graph-hello-en@2x.png');
     text-indent: -9999px;
 
     @media (max-width: 480px) {
@@ -212,6 +223,18 @@ main.hero {
     }
 
     @media (min-width: $screen-lg-min) { right: 215px; }
+  }
+}
+
+html[lang*="en"] {
+  .hero-social {
+    .greetings { background-image: image-url('graph-hello-en@2x.png'); }
+  }
+}
+
+html[lang*="pt"] {
+  .hero-social {
+    .greetings { background-image: image-url('graph-hello-pt@2x.png'); }
   }
 }
 
