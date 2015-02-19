@@ -299,24 +299,13 @@ main.schedule.day-four {
 .schedule-area {
   header {
     margin: 30px auto;
-
-    @media (max-width: $screen-xs-max) {
-      margin: 15px auto;
-
-      h2 {
-        text-align: left;
-        margin-left: 52px;
-      }
-    }
+    @media (max-width: $screen-xs-max) {  margin: 15px auto; }
   }
 
-  .talks {
+  section {
     @media (max-width: $screen-xs-max) {
-      margin-bottom: 45px;
-
-      header {
-        margin-top: 30px;
-      }
+      margin-bottom: 30px;
+      header { margin-top: 30px; }
      }
   }
 }
@@ -493,7 +482,7 @@ main.schedule.day-four {
   font-size: 24px;
   line-height: 24px;
   text-align: left;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   width: 100%;
 
   @media (max-width: $screen-xs-max) { padding-left: 58px; }
@@ -529,18 +518,17 @@ main.schedule.day-four {
   @include titillium-semi-bold;
   font-size: 18px;
   line-height: 24px;
-  vertical-align: middle;
+  vertical-align: -6%;
   cursor: pointer;
 
   @media (max-width: $screen-xs-max) {
-    margin-top: 1px;
+    margin-top: -2px;
     margin-left: 58px;
   }
   @media (min-width: $screen-sm-min) {
     display: inline-block;
     width: auto;
     height: 24px;
-    padding-top: 1px;
     margin: 0 10px 0 0;
   }
 }
