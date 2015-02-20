@@ -1,10 +1,30 @@
-<!doctype html>
+<html>
 
-<html lang="<%= I18n.locale %>">
   <head>
     <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <title><%= current_page.data.title || "Tropical Ruby 2015" %></title>
+    <title>Tropical Ruby 2015</title>
+
+    <script type="text/javascript">
+      var DEFAULT_LANGUAGE = 'en',
+        selected = DEFAULT_LANGUAGE;
+      try {
+        if(document.cookie && document.cookie.match(/preferred_language=/)) {
+          if(document.cookie.match(/preferred_language=pt/)) {
+            selected = 'pt';
+          } else {
+            selected = 'en';
+          }
+        } else {
+          var locale = window.navigator.userLanguage || window.navigator.language;
+          if(locale == 'pt' || locale.match(/^pt/)) {
+            selected = 'pt';
+          } else {
+            selected = 'en';
+          }
+        }
+      } catch(e) {}
+      window.location = '/' + selected;
+    </script>
 
     <meta name="description" content="Enjoy amazing conversations, stunning landscapes and superb nature. Come and talk with some of the best Rubyists in this tropical conference in Porto de Galinhas.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,22 +40,11 @@
     <meta name="twitter:description" content="Enjoy amazing conversations, stunning landscapes and superb nature. Come and talk with some of the best Rubyists in this tropical conference in Porto de Galinhas.">
     <meta name="twitter:image:src" content="http://f.cl.ly/items/3b2b3w250u0g0S0s3d0b/logo-tropical-opengraph@2x.png">
 
-    <%= favicon_tag "favicon.ico", rel: "icon", type: "image/x-icon" %>
-    <%= favicon_tag "touch-icon-ipad.png", rel: "apple-touch-icon", sizes:"76x76" %>
-    <%= favicon_tag "touch-icon@2x.png", rel: "apple-touch-icon", sizes:"120x120" %>
-    <%= favicon_tag "touch-icon-ipad@2x.png", rel: "apple-touch-icon", sizes:"152x152" %>
-
-    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600,700,900" %>
-    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Molle:400italic" %>
-    <%= stylesheet_link_tag "main" %>
-
-    <%= javascript_include_tag "main" %>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/en"/>
+    </noscript>
   </head>
 
-  <body class="<%= page_classes_without_locale %>">
-    <%= partial "navbar" %>
-    <%= yield %>
-    <%= partial "footer" %>
-    <%= partial "analytics" %>
+  <body>
   </body>
 </html>

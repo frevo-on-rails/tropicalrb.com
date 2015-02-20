@@ -1,0 +1,37 @@
+pt:
+  navbar:
+    schedule: Programação
+    venue: Local
+    sponsors: Patrocinadores
+    tickets: Ingressos
+    other_language:
+      name: English
+      path: /en
+    toggle_navigation: Mudar navegação
+
+  footer:
+    gold_sponsors: Patrocinadores Ouro
+    silver_sponsors: Patrocinadores Prata
+    organizers: Organizadores
+    advisory_support: Assessoria
+    previous_editions: Edições Anteriores
+    code_of_conduct: Código de Conduta
+    colophon: Créditos
+    media_kit: Media Kit
+    sponsor_prospectus: Prospecto para Patrocinadores
+    signature: Design, texto & frontend por
+    nic_url: http://www.nic.br/
+    tempest_url: http://tempest.com.br/
+
+  schedule:
+    nav:
+      workshops: Workshops
+      activities: Atividades
+      talks: Palestras
+      activity: Atividade
+      march_5: <span>5</span> de março
+      march_6: <span>6</span> de março
+      march_7: <span>7</span> de março
+      march_8: <span>8</span> de março
+
+  tickets_link: http://www.eventick.com.br/tropicalrb-2015

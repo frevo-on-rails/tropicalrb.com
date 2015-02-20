@@ -1,0 +1,37 @@
+en:
+  navbar:
+    schedule: Schedule
+    venue: Venue
+    sponsors: Sponsors
+    tickets: Tickets
+    other_language:
+      name: Português
+      path: /pt
+    toggle_navigation: Toggle navigation
+
+  footer:
+    gold_sponsors: Gold Sponsors
+    silver_sponsors: Silver Sponsors
+    organizers: Organizers
+    advisory_support: Advisory Support
+    previous_editions: Previous Editions
+    code_of_conduct: Code of Conduct
+    colophon: Colophon
+    media_kit: Media Kit
+    sponsor_prospectus: Sponsor Prospectus
+    signature: Design, copy & frontend by
+    nic_url: http://www.nic.br/english/
+    tempest_url: http://tempest.com.br/en/
+
+  schedule:
+    nav:
+      workshops: Workshops
+      activities: Activities
+      talks: Talks
+      activity: Activity
+      march_5: <span>5<sup>th</sup></span> March
+      march_6: <span>6<sup>th</sup></span> March
+      march_7: <span>7<sup>th</sup></span> March
+      march_8: <span>8<sup>th</sup></span> March
+
+  tickets_link: https://tropicalrb-2015.eventbrite.com

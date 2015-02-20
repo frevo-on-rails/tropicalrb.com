@@ -1,0 +1,371 @@
+---
+title: Tropical Ruby 2015 — Programação — 5 a 8 de março em Porto de Galinhas, Brasil
+---
+
+<main class="schedule day-two">
+
+  <h1>Programação: 6 de Março, Atividades &amp; Palestras</h1>
+  <%= partial "schedule-nav" %>
+
+  <article class="schedule-area">
+    <section class="activities">
+
+      <header>
+        <h2>Atividades</h2>
+          <div class="schedule-subtitles">
+            <small class="schedule-subtitle">
+              <span class="icon-medium icon-calendar"></span><time date="2015-03-06">6 de Março • Manhã</time>
+            </small>
+            <a class="schedule-subtitle" href="https://goo.gl/maps/BDtI3" title="Veja no Google Maps." target="_blank">
+              <span class="icon-medium icon-geolocal"></span><address>Porto de Galinhas</address>
+            </a>
+          </div>
+      </header>
+
+      <ol class="schedule-events">
+
+        <!-- Buggy Ride -->
+        <li class="event" id="buggy-ride">
+          <div class="event-content">
+            <h3 class="event-title">Passeio de Buggy</h3>
+            <div class="event-header">
+              <%= image_tag 'event-activity-buggy@2x.png', class: 'event-image' %>
+              <a class="event-local" href="https://goo.gl/maps/d9Wxo" title="Veja no Google Maps." target="_blank">Saindo do Summerville Beach Resort</a>
+              <time class="event-time long">8<span>h</span> às 11<span>h</span></time>
+            </div>
+            <p class="event-description">
+              <span>Curta esta aventura off-road pelas praias de areia branca de Muro Alto, Cupe, Porto de Galinhas e Maracaípe. <span class="provider">Realizada pela <a href="http://www.pontestur.com.br/" target="_blank">PontesTur</a>.</span></span>
+            </p>
+            <a class="btn-buy" href="http://www.eventick.com.br/tropicalrb-2015" target="_blank">Comprar ingresso</a>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Raft Boat Sail -->
+        <li class="event" id="raft-boat-sail">
+          <div class="event-content">
+            <h3 class="event-title">Passeio de Jangada</h3>
+            <div class="event-header">
+              <%= image_tag 'event-activity-sail@2x.png', class: 'event-image' %>
+              <a class="event-local" href="https://goo.gl/maps/qZZsi" title="Veja no Google Maps." target="_blank">Saindo do Centro de Porto de Galinhas</a>
+              <time class="event-time long">9<span>h</span> às 10<span>h</span></time>
+            </div>
+            <p class="event-description">
+              <span>Navegue pelas famosas piscinas naturais de Porto de Galinhas no tradicional barco a vela usado pelos pescadores nordestinos. <span class="provider">Realizada pela <a href="http://www.pontestur.com.br/" target="_blank">PontesTur</a>.</span></span>
+            </p>
+            <a class="btn-buy" href="http://www.eventick.com.br/tropicalrb-2015" target="_blank">Comprar ingresso</a>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+    <section class="talks">
+
+      <header>
+        <h2>Palestras</h2>
+          <div class="schedule-subtitles">
+            <small class="schedule-subtitle">
+              <span class="icon-medium icon-calendar"></span><time date="2015-03-6">6 de Março • Tarde</time>
+            </small>
+            <small class="schedule-subtitle">
+              <span class="icon-medium icon-translation"></span>Tradução Simultânea
+            </small>
+            <a class="schedule-subtitle" href="https://goo.gl/maps/d9Wxo" title="Veja no Google Maps." target="_blank">
+              <span class="icon-medium icon-geolocal"></span><address>Summerville Beach Resort</address>
+            </a>
+          </div>
+      </header>
+
+      <ol class="schedule-events">
+
+        <!-- Transportation -->
+        <li class="event event-minor transportation" id="recife-porto">
+          <div class="event-content">
+            <h3 class="event-title">Ônibus de Recife <span>para Porto de Galinhas</span></h3>
+            <%= image_tag 'schedule-talk-transportation@2x.png', class: 'event-image' %>
+            <a class="event-local" href="https://goo.gl/maps/C6Zno" title="Veja no Google Maps." target="_blank">Saindo da Praça do Derby</a><time class="event-time long">5:30<span>h</span> &amp; 10<span>h</span></time><br>
+            <a class="event-local" href="https://goo.gl/maps/Hf8My" title="Veja no Google Maps." target="_blank">Saindo do Aeroporto</a><time class="event-time long">6<span>h</span> &amp; 10:30<span>h</span></time>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Registration -->
+        <li class="event event-minor" id="registration">
+          <div class="event-content">
+            <h3 class="event-title">Credenciamento</h3>
+            <%= image_tag 'schedule-talk-registration@2x.png', class: 'event-image' %>
+            <time class="event-time">12<span>h</span></time>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Nick Sutterer -->
+        <li class="event" id="nick-sutterer">
+          <div class="event-content">
+            <h3 class="event-title">Keynote: Nos Encontramos na Trilha!</h3>
+            <div class="event-header">
+              <%= image_tag 'event-speaker-nick@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Criador do Trailblazer, Roar e Cells</h5><a class='twitter' href='http://twitter.com/apotonick' target='_blank'></a>">Nick Sutterer</a>
+              </h4>
+              <time class="event-time">13<span>h</span></time>
+            </div>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Simone Carletti -->
+        <li class="event" id="simone-carletti">
+          <div class="event-content">
+            <h3 class="event-title">Mantendo um Projeto Ruby de 5 Anos</h3>
+            <div class="event-header">
+              <%= image_tag 'event-speaker-simone@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Desenvolvedor de Software no DNSimple</h5>Simone Carletti é um desenvolvedor de software que trabalha com Ruby profissionalmente desde 2006. Apaixonado por qualidade de código e boas prátricas,  está envolvido com FOSS  (free/open source software) há mais de uma década, contribuindo com projetos e bibliotecas em diversas linguagens de programação. Atualmente, é desenvolvedor de software no DNSimple<br><a class='github' href='https://github.com/weppos' target='_blank'></a><a class='twitter' href='http://twitter.com/weppos' target='_blank'></a><a class='web' href='http://www.linkedin.com/in/weppos' target='_blank'></a>">Simone Carletti</a>
+              </h4>
+              <time class="event-time">13:40<span>h</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                Manter uma base de código Ruby pequena é simples, porém conforme o tempo passa o seu código irá se tornará mais difícil de manter. Nesta palestra serão
+              </span>
+              <span class="last-words">
+                 mostradas diversas técnicas de desenvolvimento, padrões e boas práticas utilizadas pela equipe do DNSimple para desenvolver novas funcionalidades sem prejudicar a manutenção a longo prazo da base de código.
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Menos">Mais</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Christopher Rigor -->
+        <li class="event" id="christopher-rigor">
+          <div class="event-content">
+            <h3 class="event-title">Criptografia para Desenvolvedores Rails</h3>
+            <div class="event-header">
+              <%= image_tag 'event-speaker-christopher@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Líder da Equipe de Suporte na Engine Yard</h5>Christopher Rigor possui graduação em Ciência da Computação e Matemática. É um desenvolvedor Rails e administrador de sistemas e atualmente líder do time de Suporte da EngineYard Asia Pacífic.<br><a class='twitter' href='http://twitter.com/crigor' target='_blank'></a>">Christopher Rigor</a>
+              </h4>
+              <time class="event-time">14:10<span>h</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                Você sabe que HTTPS mantém o seu website seguro mas você não sabe como? Ruby acaba de lançar uma nova versão que corrige uma vulnerabilidade
+              </span>
+              <span class="last-words">
+                SSL mas você sabe que sua aplicação ainda pode estar vulnerável? Criptografia é um difícil e imenso tema e esta palestra irá lhe dar uma ótima introdução. Você não precisa ter conhecimento prévio de criptografia, apenas uma mente aberta! Você aprenderá sobre criptografia de chave pública, SSL/TLS e dicas de Ruby que deixarão sua aplicação segura.
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Menos">Mais</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Alex Coles -->
+        <li class="event" id="alex-coles">
+          <div class="event-content">
+            <h3 class="event-title">Frontend Choices</h3>
+            <div class="event-header">
+              <%= image_tag 'event-speaker-alex@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Engenheiro de Software e Consultor na Finn GmbH</h5>Alex não tem vergonha do chapeu de &quot;generalista&quot;. Bastante ativo na comunidade Ruby, ele é fundador da conferências eurucamp e JRubyConf EU. Também tem contribuído para vários projetos open source como OpenProject, RefineryCMS e DataMapper.<br><a class='github' href='https://github.com/myabc' target='_blank'></a><a class='twitter' href='http://twitter.com/myabc' target='_blank'></a><a class='web' href='http://www.linkedin.com/in/alexbcoles' target='_blank'></a>">Alex Coles</a>
+              </h4>
+              <time class="event-time">14:40<span>h</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                Rails nasceu em 2004 na época da chamada "Revolução AJAX". Com ajuda de um pouco de Prototype.js, Scriptaculous e RJS, o Rails deixou sua marca pois
+              </span>
+              <span class="last-words">
+                facilitou a criação de interfaces bonitas e altamente interativas em pouquissimo tempo.
+                <br/>
+                Pulando para 2015, quando frameworks como Meteor e Hoddie estão cada vez mais capturando o senso comum no desenvolvimento Web. Nós estamos na década do JavaScript? O "Rails Way" continua sendo relevante para o mundo do frontend?
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Menos">Mais</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <li class="event event-minor" id="coffee-break">
+          <div class="event-content">
+            <h3 class="event-title">Coffee Break</h3>
+            <%= image_tag 'schedule-talk-coffee@2x.png', class: 'event-image' %>
+            <time class="event-time">15:10<span>h</span></time>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Ricardo Nacif -->
+        <li class="event" id="ricardo-nacif">
+          <div class="event-content">
+            <h3 class="event-title">Escrevendo sua DSL em Ruby</h3>
+            <div class="event-header">
+              <%= image_tag 'event-speaker-ricardo@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Engenheiro de Automação de QA na Avenue Code</h5><a class='web' href='https://www.linkedin.com/in/ricardonacif' target='_blank'></a>">Ricardo Nacif</a>
+              </h4>
+              <time class="event-time">15:40<span>h</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                Nessa apresentação iremos ver alguns conceitos da linguagem Ruby que irão nos ajudar a escrever a nossa própria Linguagem de Domínio Específico (DSL).
+              </span>
+              <span class="last-words">
+                É uma apresentação bastante prática. Vamos trabalhar com classes dinamicas, métodos dinamicos, blocos, procs e encadeamento de métodos, mas nosso objetivo principal é escrever (e aprender como) a nossa própria DSL para gerar um Cardápio de Pizzas.
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Menos">Mais</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Marcelo De Polli -->
+        <li class="event" id="marcelo-de-polli">
+          <div class="event-content">
+            <h3 class="event-title">POROs para o Resgate</h3>
+            <div class="event-header">
+              <%= image_tag 'event-speaker-marcelo@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Desenvolvedor de Software na Chargify</h5>Marcelo é desenvolvedor de software na Chargify, onde trabalha numa base de código utilizada por mais de 1.500 empresas e milhões de pessoas. Fruto da mistura entre design e tecnologia, ele passou vários anos pensando em interfaces gráficas enquanto escrevia código.<br><a class='twitter' href='http://twitter.com/mdepolli' target='_blank'></a>">Marcelo De Polli</a>
+              </h4>
+              <time class="event-time">16:10<span>h</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                Tornar uma base de código legada em algo gerenciável é uma tarefa que todos nós já fomos desafiados a realizar. Nos últimos 10 anos, desde quando começamos
+              </span>
+              <span class="last-words">
+                a escrever aplicações em Ruby, muito mudou em relação a arquitetura e padrões de projetos. Como você transformaria um código legado em algo mais atual utilizando práticas como POROs (Plain Old Ruby Objects), modelos magros, presenters e decorators? Esta palestra irá mostrar como sobreviver à viagem no tempo para contar a história.
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Menos">Mais</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Lucas Allan -->
+        <li class="event" id="lucas-allan">
+          <div class="event-content">
+            <h3 class="event-title">Ruby-Concorrente: Programação Concorrente com Ruby</h3>
+            <div class="event-header">
+              <%= image_tag 'event-speaker-lucas@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Engenheiro de Software na Mogo</h5>Lucas Allan tem trabalhado com desenvolvimento de software por 7 anos e atualmente é Engenheiro de Software no Mogo em Vancouver, no Canadá. Nos últimos 6 anos tem trabalhado principalmente com Ruby, mas recentemente Clojure e Scala foram adicionados ao seu arsenal. No seu tempo livre gosta de contribuir com alguns projetos open-source como JRuby e concurrent-ruby e também é o criador do LuaTruffle (versão de Lua implementado em cima da JVM - ainda em desenvolvimento).<br><a class='github' href='https://github.com/lucasallan' target='_blank'></a><a class='twitter' href='http://twitter.com/lucasallan' target='_blank'></a>">Lucas Allan</a>
+              </h4>
+              <time class="event-time">4:40<span>pm</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                Há rumores dizendo que é impossível escrever aplicações concorrentes com Ruby, assim como há muito tempo atrás as pessoas acreditam que a terra era plana
+              </span>
+              <span class="last-words">
+                e todos nós sabemos como isso terminou… Entre as threads nativas introduzidas no MRI 1.9 e todo o poder da JVM (disponível para JRuby), Ruby se tornou uma plataforma válida para o desenvolvimento de aplicações concorrentes. Porém, concorrência ainda é um assunto complicado e Ruby não possuía as mesmas ferramentas que linguagens como Clojure, Scala, Erlang e GO possuiam. Mas isso é passado.
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Menos">Mais</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Rafael França -->
+        <li class="event" id="rafael-frança">
+          <div class="event-content">
+            <h3 class="event-title">Projeto Orientado a Objetos, Rails e Porque Você Deveria Pensar Duas Vezes Antes de Abandonar o <em>Rails Way</em></h3>
+            <div class="event-header">
+              <%= image_tag 'event-speaker-rafael-franca@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Desenvolvedor de Software na Plataformatec e Membro do Rails Core Team</h5>Rafael França é desenvolvedor de software na Plataformatec e membro do Rails Core Team. Contribui para diversos projetos open source, com destaque para o Simple Form, do qual é mantenedor.<br><a class='twitter' href='http://twitter.com/rafaelfranca' target='_blank'></a>">Rafael França</a>
+              </h4>
+              <time class="event-time">17:10<span>h</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                A comunidade de Ruby tem sido bombardeada por discussões excessivas sobre boas práticas de projeto de software. Acrônimos como SOLID, DCI e SOA estão
+              </span>
+              <span class="last-words">
+                em pauta na comunidade, todos prometendo materializar o fantasma manutenção de software. O que poucas destas discussões falam é que a aplicação destes princípios e técnicas também causa impacto na manutenção do software.
+                <br>
+                Nesta palestra eu irei apresentar alguns deste conceitos e mostrar os sintomas que eles podem causar em seus projetos se forem aplicados incorretamente.
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Menos">Mais</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Coffee Break -->
+        <li class="event event-minor" id="coffee-break">
+          <div class="event-content">
+            <h3 class="event-title">Coffee Break</h3>
+            <%= image_tag 'schedule-talk-coffee@2x.png', class: 'event-image' %>
+            <time class="event-time">17:50<span>h</span></time>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Yasodara Córdova -->
+        <li class="event" id="yasodara-córdova">
+          <div class="event-content">
+            <h3 class="event-title">25 Minutes of Semantic Web</h3>
+            <div class="event-header">
+              <%= image_tag 'event-speaker-yasodara@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Líder de Projeto na W3C Brasil</h5>Yaso é líder de projetos no escritório do W3C no Brasil e também chair do Working Group Data on the Web Best Practices do W3C (#dwbp FTW!). Graduada em Desenho Industrial e desenvolvedora autodidata, prestou consultoria para UNESCO em diversos projetos de inovação para países em desenvolvimento, além de ter trabalhado com jornalismo e visualização de dados, fazendo parte das equipes que ganharam o prêmio Vladimir Herzog nos anos 2008 e 2009 na categoria Internet. Seu trabalho no W3C consiste em pensar situações e softwares que mostrem para as pessoas como a Web pode ser mais aberta, acessível e livre.<br><a class='twitter' href='http://twitter.com/yaso' target='_blank'></a><a class='web' href='http://www.linkedin.com/in/yasodara' target='_blank'></a>">Yasodara Córdova</a>
+              </h4>
+              <time class="event-time">18:20<span>h</span></time>
+            </div>
+            <p class="event-description">
+              A promessa é: explicar em 10 minutos porque usar a conceitos da Web Semântica na hora de construir a sua aplicação ou site. Nos 15 minutos restantes, a idéia é mostrar 15 exemplos, um por minuto, de aplicações que tiram proveito do poder da Web Semântica :-)
+            </p>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+
+        <!-- Panel -->
+        <li class="event" id="panel">
+          <div class="event-content">
+            <h3 class="event-title">Panel: The Rails Way vs. Trailblazer</h3>
+            <div class="event-header">
+              <%= image_tag 'event-panel@2x.png', class: 'event-image' %>
+              <h4 class="event-author">
+                <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Desenvolvedor de Software na Plataformatec e Membro do Rails Core Team</h5>Rafael França é desenvolvedor de software na Plataformatec e membro do Rails Core Team. Contribui para diversos projetos open source, com destaque para o Simple Form, do qual é mantenedor.<br><a class='twitter' href='http://twitter.com/rafaelfranca' target='_blank'></a>">Rafael França</a>, <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Desenvolvedor na Enjoei e Membro do Rails Core Team</h5>Desenvolvedor na Enjoei, membro do Rails Core Team, amante do Open Source, Hacking Beautiful Code.<br><a class='twitter' href='http://twitter.com/cantoniodasilva' target='_blank'></a>">Carlos Antonio</a> &amp; <a role="button" target="_blank" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" tabindex="0" data-content="<h5>Criador do Trailblazer, Roar e Cells</h5><a class='twitter' href='http://twitter.com/apotonick' target='_blank'></a>">Nick Sutterer</a>
+              </h4>
+              <time class="event-time">18:50<span>h</span></time>
+            </div>
+            <p class="event-description">
+              <span class="first-words">
+                A melhor forma de organizar e estruturar aplicações Rails tem sido alvo de muitas discussões nos últimos anos na comunidade. Enquanto uns acham necessário criar
+              </span>
+              <span class="last-words">
+                novas camadas de abstração em busca de uma arquitetura mais sustentável, outros defendem que nós não devemos abandonar o Rails Way por causa de suas convenções e compatibilidade.
+                <br>
+                Neste painel <em>core commiters</em> do Rails e o criador do Trailblazer irão discutir ambas abordagens, seus pontos de vista, porque escolheram seguir diferentes caminhos e porque continuam a ser amigos.
+              </span>
+              <a class="expander" href="#author-name" data-alternative-label="Menos">Mais</a>
+            </p>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+        <!-- Transportation -->
+        <li class="event event-minor transportation" id="recife-porto">
+          <div class="event-content">
+            <h3 class="event-title">Ônibus de Porto de Galinhas<span> para Recife</span></h3>
+            <%= image_tag 'schedule-talk-transportation@2x.png', class: 'event-image' %>
+            <a class="event-local" href="https://goo.gl/maps/Dhjuz" title="Veja no Google Maps." target="_blank">Saindo do Summerville</a><time class="event-time">20<span>h</span></time><br>
+            <a class="event-local" href="https://goo.gl/maps/C6Zno" title="Veja no Google Maps." target="_blank">Chegando na Praça do Derby</a><time class="event-time">21:30<span>h</span></time><br>
+            <a class="event-local" href="https://goo.gl/maps/Hf8My" title="Veja no Google Maps." target="_blank">Chegando no Aeroporto</a><time class="event-time">22<span>h</span></time>
+            <span class="time-line"></span>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+  </article>
+</main>
+
+<%= javascript_include_tag 'schedule' %>

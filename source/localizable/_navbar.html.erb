@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="row">
+
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-target="#main-nav" data-toggle="collapse" type="button">
+          <span class="sr-only"><%= t 'toggle_navigation' %></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <% link_to "/#{I18n.locale}", class: 'navbar-brand' do %>
+          Tropical <span>Ruby</span>
+        <% end %>
+      </div>
+      <hr>
+      <div class="navbar-collapse collapse" id="main-nav">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to t('navbar.schedule'), "/#{I18n.locale}/schedule/march-5.html", class: 'square link-schedule' %>
+          </li>
+          <!-- <li>
+            <%= link_to t('navbar.venue'), "/#{I18n.locale}/venue.html", class: 'square link-venue' %>
+          </li> -->
+          <li>
+            <%= link_to t('navbar.sponsors'), "/#{I18n.locale}/sponsors.html", class: 'square link-sponsors' %>
+          </li>
+          <li>
+            <%= link_to t('navbar.tickets'), t('tickets_link'), class: 'square link-tickets' %>
+          </li>
+          <li>
+            <%= link_to t('navbar.other_language.name'), t('navbar.other_language.path'), class: 'language' %>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</nav>
