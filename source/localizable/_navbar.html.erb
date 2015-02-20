@@ -37,3 +37,17 @@
     </div>
   </div>
 </nav>
+
+<script type="text/javascript">
+  $('nav a.language').click(function(e) {
+    try {
+      var today = new Date(),
+        ONE_YEAR = 1000 * 60 * 60 * 24 * 365;
+        expires = new Date(today.getTime() + ONE_YEAR),
+        language = $(this).attr('href').substr(1);
+      document.cookie = 'preferred_language=' + language +
+        ';expires=' + expires.toGMTString() +
+        ';path=/';
+    } catch(e) {}
+  });
+</script>
