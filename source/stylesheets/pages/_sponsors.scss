@@ -331,13 +331,9 @@ html[lang*="pt"] {
         }
       }
 
-      .aws {
-        @media (min-width: $screen-sm-min) { margin-left: 8.5%; }
-      }
-
-      .say2me {
+      .jetbrains {
         @include make-xs-column-offset(2);
-        @include make-sm-column-offset(0);
+        @include make-sm-column-offset(4);
       }
     }
 
