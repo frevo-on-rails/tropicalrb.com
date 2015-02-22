@@ -109,13 +109,20 @@ body.schedule {
         background-size: 240px 105px;
 
         @media (max-width: $screen-xs-max) {
-          &.engine-yard,
-          &.mandrill { margin-top: -15px; }
+          &.mandrill,
+          &.tw { margin-top: -15px; }
+          &.engine-yard { margin-top: -24px; }
         }
-        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-          &.mandrill { margin-top: -15px; }
+        @media (min-width: $screen-sm-min) {
+          &.engine-yard,
+          &.tw { margin-top: -15px; }
         }
         @media (min-width: $screen-md-min) { margin-bottom: 5px; }
+      }
+
+      .footer-brands {
+        max-width: 720px;
+        margin: 0 auto;
       }
     }
 
@@ -123,6 +130,11 @@ body.schedule {
       a {
         @include size(150px, 100px);
         background-size: 150px 100px;
+
+        @media (max-width: $screen-xs-max) {
+          &.tempest,
+          &.cers { margin-top: -10px; }
+        }
       }
     }
 
@@ -161,6 +173,7 @@ body.colophon {
     .nic              { background-image: image-url('brand-big-nic-red@2x.png'); }
     .engine-yard      { background-image: image-url('brand-big-engineyard-red@2x.png'); }
     .mandrill         { background-image: image-url('brand-big-mandrill-red@2x.png'); }
+    .tw               { background-image: image-url('brand-big-thoughtworks-red@2x.png'); }
     .github           { background-image: image-url('brand-med-github-red@2x.png'); }
     .tempest          { background-image: image-url('brand-med-tempest-red@2x.png'); }
     .cers             { background-image: image-url('brand-med-cers-red@2x.png'); }
@@ -177,6 +190,7 @@ body.schedule {
     .nic              { background-image: image-url('brand-big-nic-white@2x.png'); }
     .engine-yard      { background-image: image-url('brand-big-engineyard-white@2x.png'); }
     .mandrill         { background-image: image-url('brand-big-mandrill-white@2x.png'); }
+    .tw               { background-image: image-url('brand-big-thoughtworks-white@2x.png'); }
     .github           { background-image: image-url('brand-med-github-white@2x.png'); }
     .tempest          { background-image: image-url('brand-med-tempest-white@2x.png'); }
     .cers             { background-image: image-url('brand-med-cers-white@2x.png'); }
@@ -193,6 +207,7 @@ body.venue {
     .engine-yard      { background-image: image-url('brand-big-engineyard-yellow@2x.png'); }
     .nic              { background-image: image-url('brand-big-nic-yellow@2x.png'); }
     .mandrill         { background-image: image-url('brand-big-mandrill-yellow@2x.png'); }
+    .tw               { background-image: image-url('brand-big-thoughtworks-yellow@2x.png'); }
     .github           { background-image: image-url('brand-med-github-yellow@2x.png'); }
     .tempest          { background-image: image-url('brand-med-tempest-yellow@2x.png'); }
     .cers             { background-image: image-url('brand-med-cers-yellow@2x.png'); }
@@ -252,7 +267,7 @@ body.index {
     }
     @media (min-width: $screen-sm-min) { padding-bottom: 200px; }
     @media (min-width: $screen-md-min) {
-      @include gradient-vertical-three-colors(transparentize($poly-08,1), $poly-08, 91%, $poly-08);
+      @include gradient-vertical-three-colors(transparentize($poly-08,1), $poly-08, 75%, $poly-08);
     }
     @media (min-width: $screen-lg-min) { padding-bottom: 180px; }
 
