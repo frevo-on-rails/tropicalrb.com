@@ -110,10 +110,15 @@ hr {
 }
 
 main {
+  &.venue {
+    h2 {
+      color: $poly-07;
+      &:before, &:after { background-color: $poly-07; }
+    }
+  }
   &.sponsors {
     h2 {
       color: $mono-05;
-
       &:before, &:after { background-color: $mono-05; }
     }
   }

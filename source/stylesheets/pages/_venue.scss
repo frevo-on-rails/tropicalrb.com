@@ -1,3 +1,111 @@
 /*––––––––––––––––––––––––––––––––––––––––––––––––––
       Venue
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+.bkg-watermark {
+  display: block;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+
+  @media (max-width: $screen-xs-max) {
+    background-image: image-url('bkg-watermark-xs@2x.png');
+    background-size: 402px 384px;
+    height: 384px;
+    top: 67px;
+  }
+  @media (min-width: $screen-sm-min) {
+    background-image: image-url('bkg-watermark-lg@2x.png');
+    background-size: 595px 570px;
+    height: 570px;
+    top: 102px;
+  }
+}
+
+main.venue {
+  z-index: 3;
+
+  blockquote { z-index: 3; }
+  section { z-index: 3; }
+}
+
+.venue-area { @extend .container; }
+
+.quote,
+.quote-author {
+  @include titillium-web-light;
+  font-size: 30px;
+  line-height: 30px;
+  font-style: normal;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1px;
+  }
+}
+
+.quote {
+  @include make-xs-column(12);
+  @include make-md-column(10);
+  @include make-md-column-offset(1);
+  display: block;
+  border-left: 0;
+  margin-top: 40px;
+  padding: 0;
+  text-align: center;
+}
+
+.quote-author {
+  @include clearfix;
+  display: block;
+  margin: 20px auto;
+  text-align: left;
+  width: 100%;
+
+  @media (min-width: $screen-sm-min) { width: 350px; }
+
+  a {
+    display: block;
+    margin-top: 5px;
+    @media (min-width: $screen-sm-min) { margin-top: 24px; }
+  }
+}
+
+.quote-author-image {
+  @include square(60px);
+  margin-right: 15px;
+  float: left;
+
+  @media (min-width: $screen-sm-min) { @include square(110px); }
+}
+
+.quote-author-title {
+  @include titillium-web;
+  color: $poly-07;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+
+  @media (min-width: $screen-sm-min) { line-height: 36px; }
+  &:before { content: none; }
+}
+
+.venue-remarks {
+  @include make-xs-column(12);
+  padding: 0;
+}
+
+.remark-item {
+  @include make-xs-column(12);
+  @include make-sm-column(6);
+  @include make-md-column(3);
+}
+
+.venue-about {
+  @include make-xs-column(12);
+}

@@ -83,6 +83,13 @@ body.colophon {
   }
 }
 
+body.venue {
+  .footer-title {
+    &:before,
+    &:after { background-color: $poly-07; }
+  }
+}
+
 body.schedule {
   .footer-title {
     &:before,
