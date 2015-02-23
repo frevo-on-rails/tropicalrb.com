@@ -48,6 +48,9 @@ body.index {
   }
 }
 
+body.index {
+  .navbar hr { border-top-color: $poly-11 !important; }
+}
 body.schedule {
   .navbar hr { border-top-color: $mono-10 !important; }
 }
@@ -55,10 +58,7 @@ body.sponsors {
   .navbar hr { border-top-color: $mono-04 !important; }
 }
 body.venue {
-  .navbar hr { border-top-color: $mono-01 !important; }
-}
-body.index {
-  .navbar hr { border-top-color: $poly-11 !important; }
+  .navbar hr { border-top-color: $poly-07 !important; }
 }
 
 body.colophon,
@@ -177,8 +177,8 @@ body.sponsors {
 
 body.venue {
   .navbar-toggle {
-    background-image: inline-image('octagon-small-red@2x.png');
-    .icon-bar { background-color: $mono-01 !important; }
+    background-image: inline-image('octagon-small-yellow@2x.png');
+    .icon-bar { background-color: $poly-07 !important; }
   }
 
   .navbar-collapse {
@@ -271,7 +271,7 @@ body.sponsors {
 body.venue {
   .navbar-brand,
   .navbar-brand:hover,
-  .navbar-brand:focus { color: $mono-01; }
+  .navbar-brand:focus { color: $poly-07; }
 }
 
 /*... Navbar (Collapse) ...*/
@@ -323,8 +323,8 @@ body.sponsors {
 
 body.venue {
   .navbar-collapse {
-    @media (max-width: $screen-xs-max) { background-color: transparentize($mono-01, .1); }
-    @media (min-width: $screen-sm-min) { border-bottom-color: $mono-01 !important; }
+    @media (max-width: $screen-xs-max) { background-color: transparentize($poly-02, .1); }
+    @media (min-width: $screen-sm-min) { border-bottom-color: $poly-07 !important; }
   }
 }
 
@@ -464,15 +464,15 @@ body.sponsors {
 
 body.venue {
   .navbar-nav {
-    @media (max-width: $screen-xs-max) { border-top-color: $mono-01 !important; }
+    @media (max-width: $screen-xs-max) { border-top-color: $poly-07 !important; }
     a {
-      color: $mono-01;
+      color: $poly-07;
       &.link-tickets {
-        border-color: $mono-01;
-        &:after { background-image: inline-image('icon-med-ticket-grey@2x.png'); }
+        border-color: $poly-07;
+        &:after { background-image: inline-image('icon-med-ticket-yellow@2x.png'); }
       }
       &:hover,
-      &:focus { color: $mono-01; }
+      &:focus { color: $poly-07; }
     }
   }
 }
