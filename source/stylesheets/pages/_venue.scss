@@ -134,6 +134,7 @@ main.venue {
     position: relative;
     padding-left: 32px;
     margin-bottom: 12px;
+    @media (max-width: 330px) { padding-right: 40px; }
 
     span {
       position: absolute;
@@ -144,18 +145,11 @@ main.venue {
       @media (min-width: $screen-lg-min) { margin-top: 15px; }
     }
   }
-
-  &.food {
-    h3 {
-      @media (max-width: 330px) { padding-right: 40px; }
-    }
-  }
 }
 
 .venue-about {
   @include make-xs-column(12);
-  padding-left: 15px;
-  @media (min-width: $screen-sm-min) { padding: 0; }
+  padding: 0;
 
   h2 {
     margin-top: 40px;
@@ -174,6 +168,7 @@ main.venue {
     @include make-lg-column-offset(5);
     position: relative;
 
+    @media (max-width: $screen-xs-max) { padding-right: 0; }
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
       padding: 0 80px;
 
