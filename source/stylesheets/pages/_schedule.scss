@@ -7,8 +7,7 @@ main.schedule {
   @extend .container;
   margin-bottom: 0;
 
-  @media (min-width: $screen-sm-min) { margin-bottom: 20px; }
-  @media (min-width: $screen-md-min) { margin-bottom: 40px; }
+  @media (min-width: $screen-sm-min) { margin-bottom: 10px; }
 }
 
 .schedule-area {
