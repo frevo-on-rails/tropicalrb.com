@@ -8,7 +8,7 @@
   background-color: transparent;
   border: none;
   border-radius: 0;
-  z-index: 3;
+  z-index: 10;
 
   @media (max-width: $screen-xs-max) {
     min-height: 64px;
@@ -82,7 +82,7 @@ body.code-of-conduct {
 .navbar-toggle {
   @include square(44px);
   position: absolute;
-  z-index: 2;
+  z-index: 9;
   top: 10px;
   right: -10px;
   margin-top: 0;
@@ -198,7 +198,7 @@ body.venue {
   @include molle;
   display: block;
   position: absolute;
-  z-index: 2;
+  z-index: 9;
   text-align: center;
   text-decoration: none;
   transition: .3s color, .3s opacity;
@@ -289,7 +289,7 @@ body.venue {
     padding-left: 35px;
     text-align: center;
     border-top: none;
-    z-index: 1;
+    z-index: 8;
   }
 
   @media (min-width: $screen-sm-min) {
@@ -344,7 +344,7 @@ body.venue {
     position: absolute;
     top: 22px;
     right: 20px;
-    z-index: 2;
+    z-index: 9;
     margin-right: 0;
   }
 
