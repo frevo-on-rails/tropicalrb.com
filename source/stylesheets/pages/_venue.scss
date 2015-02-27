@@ -3,12 +3,12 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
 
 .bkg-watermark {
+  @extend .motion-wobble-up;
   display: block;
   width: 100%;
   position: absolute;
   background-repeat: no-repeat;
   background-position: top center;
-  z-index: 1;
 
   @media (max-width: $screen-xs-max) {
     background-image: image-url('bkg-watermark-xs@2x.png');
@@ -25,10 +25,13 @@
 }
 
 main.venue {
+  @extend .motion-fade-in;
+  margin-bottom: 60px;
   z-index: 3;
 
   blockquote { z-index: 3; }
   section { z-index: 3; }
+  p { margin-bottom: 0; }
 }
 
 .venue-area { @extend .container; }
@@ -97,7 +100,8 @@ main.venue {
 
 .venue-remarks {
   @include make-xs-column(12);
-  padding: 0;
+  padding-left: 15px;
+  @media (min-width: $screen-sm-min) { padding: 0; }
 }
 
 .remark-item {
@@ -105,7 +109,7 @@ main.venue {
   @include make-sm-column(6);
   @include make-lg-column(3);
   @include make-lg-column-offset(0);
-  margin-top: 30px;
+  margin-top: 25px;
 
   @media (max-width: $screen-xs-max) { padding: 0; }
   @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
@@ -121,15 +125,83 @@ main.venue {
     span {
       position: absolute;
       margin-left: -32px;
-      @media (max-width: $screen-xs-max) { margin-top: 5px; }
+      @media (max-width: 330px) { margin-top: 15px; }
+      @media (min-width: 331px) and (max-width: $screen-xs-max) { margin-top: 5px; }
       @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) { margin-top: 5px; }
       @media (min-width: $screen-lg-min) { margin-top: 15px; }
+    }
+  }
+
+  &.food {
+    h3 {
+      @media (max-width: 330px) { padding-right: 40px; }
     }
   }
 }
 
 .venue-about {
   @include make-xs-column(12);
+  padding-left: 15px;
+  @media (min-width: $screen-sm-min) { padding: 0; }
+
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    margin-top: 24px;
+    span { white-space: nowrap; }
+  }
+
+  .venue-about-text {
+    @include make-md-column(6);
+    @include make-md-column-offset(4);
+    @include make-lg-column(5);
+    @include make-lg-column-offset(5);
+    position: relative;
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      padding: 0 80px;
+
+      h3, h4, p { padding-left: 30px; }
+    }
+  }
+
+  .venue-porto-map {
+    img {
+      @include size(240px, 268px);
+      margin: 0 auto 20px;
+    }
+  }
+  .venue-porto-photo,
+  .venue-recife-photo {
+    img {
+      @include square(240px);
+      margin: 20px auto;
+    }
+  }
+
+  .venue-porto-map,
+  .venue-porto-photo,
+  .venue-recife-photo {
+    display: block;
+    img { display: block; }
+
+    @media (min-width: $screen-md-min) { position: absolute; }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { left: -260px; }
+    @media (min-width: $screen-lg-min) { left: -300px; }
+  }
+
+  .venue-porto-map {
+    @media (min-width: $screen-md-min) { top: 10px; }
+  }
+  .venue-porto-photo {
+   @media (min-width: $screen-md-min) { top: 270px; }
+  }
+  .venue-recife-photo {
+   @media (min-width: $screen-md-min) { top: 530px; }
+  }
 }
 
 .icon-transportation-yellow { background-image: inline-image('icon-med-transportation-yellow@2x.png'); }
