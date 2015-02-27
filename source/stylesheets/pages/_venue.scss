@@ -51,14 +51,18 @@ main.venue {
 }
 
 .quote {
+  @include make-row;
+  border-left: 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.quote-content {
   @include make-xs-column(12);
   @include make-md-column(10);
   @include make-md-column-offset(1);
   display: block;
-  border-left: 0;
-  margin-top: 40px;
   padding: 0;
-  text-align: center;
 }
 
 .quote-author {
@@ -99,9 +103,15 @@ main.venue {
 }
 
 .venue-remarks {
-  @include make-xs-column(12);
   padding-left: 15px;
   @media (min-width: $screen-sm-min) { padding: 0; }
+
+  h2 { position: relative; }
+}
+
+.remark {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .remark-item {
