@@ -24,7 +24,7 @@ a { @extend .motion-pressed; }
   @extend %motion-entrance;
   animation-name: motion-wobble-up;
   animation-duration: .7s;
-  animation-delay: .1s;
+  animation-delay: .3s;
 }
 
 .motion-wobble-left {

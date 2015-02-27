@@ -91,16 +91,16 @@ main.schedule {
     overflow: visible;
   }
 
-  &.one { animation-delay: .0s; }
-  &.two { animation-delay: .06s; }
-  &.three { animation-delay: .12s; }
-  &.four { animation-delay: .18s; }
+  &.one { animation-delay: .2s; }
+  &.two { animation-delay: .3s; }
+  &.three { animation-delay: .4s; }
+  &.four { animation-delay: .5s; }
 
   @media (max-width: $screen-xs-max) {
-    &.one { animation-delay: 0s; }
-    &.two { animation-delay: .15s; }
-    &.three { animation-delay: .3s; }
-    &.four { animation-delay: .45s; }
+    &.one { animation-delay: .3s; }
+    &.two { animation-delay: .4s; }
+    &.three { animation-delay: .5; }
+    &.four { animation-delay: .6s; }
   }
 }
 
