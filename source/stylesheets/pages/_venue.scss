@@ -110,8 +110,11 @@ main.venue {
 }
 
 .remark {
-  padding-left: 15px;
-  padding-right: 15px;
+  @media (max-width: $screen-md-max) {
+    @include make-row;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .remark-item {
