@@ -7,8 +7,7 @@ main.schedule {
   @extend .container;
   margin-bottom: 0;
 
-  @media (min-width: $screen-sm-min) { margin-bottom: 20px; }
-  @media (min-width: $screen-md-min) { margin-bottom: 40px; }
+  @media (min-width: $screen-sm-min) { margin-bottom: 10px; }
 }
 
 .schedule-area {
@@ -70,6 +69,13 @@ main.schedule {
   &.two h4, {
     width: 140px;
 
+    @media (max-width: $screen-xs-max) {
+      height: 36px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: -18px;
+    }
+
     @media (min-width: $screen-sm-min) { width: 126px; }
   }
 
@@ -91,16 +97,16 @@ main.schedule {
     overflow: visible;
   }
 
-  &.one { animation-delay: .0s; }
-  &.two { animation-delay: .06s; }
-  &.three { animation-delay: .12s; }
-  &.four { animation-delay: .18s; }
+  &.one { animation-delay: .2s; }
+  &.two { animation-delay: .3s; }
+  &.three { animation-delay: .4s; }
+  &.four { animation-delay: .5s; }
 
   @media (max-width: $screen-xs-max) {
-    &.one { animation-delay: 0s; }
-    &.two { animation-delay: .15s; }
-    &.three { animation-delay: .3s; }
-    &.four { animation-delay: .45s; }
+    &.one { animation-delay: .3s; }
+    &.two { animation-delay: .4s; }
+    &.three { animation-delay: .5; }
+    &.four { animation-delay: .6s; }
   }
 }
 
