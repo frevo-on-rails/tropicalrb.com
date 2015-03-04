@@ -176,6 +176,12 @@ main.venue {
     }
   }
 
+  .venue-porto-photo + p {
+    @media (min-width: $screen-md-min) {
+      margin-top: 24px;
+    }
+  }
+
   .venue-porto-map {
     img {
       @include size(240px, 268px);
