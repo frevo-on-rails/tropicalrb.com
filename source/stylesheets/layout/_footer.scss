@@ -135,10 +135,20 @@ body.schedule {
 
     .silver {
       a {
-        @include size(150px, 100px);
-        background-size: 150px 100px;
+        @include size(130px, 86px);
+        background-size: 130px 86px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
 
-        @media (max-width: $screen-xs-max) {
+        @media (min-width: 414px) {
+          @include size(150px, 100px);
+          background-size: 150px 100px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        @media (min-width: 414px) and (max-width: $screen-xs-max) {
           &.tempest,
           &.cers,
           &.genius,
