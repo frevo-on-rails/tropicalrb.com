@@ -340,7 +340,10 @@ html[lang*="pt"] {
         }
       }
 
-      .jetbrains { @include make-sm-column-offset(3); }
+      .compose {
+        @include make-xs-column-offset(2);
+        @include make-sm-column-offset(4);
+      }
     }
 
     &.ambassadors {
