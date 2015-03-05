@@ -437,6 +437,16 @@ html[lang*="pt"] {
         margin-left: 10px;
       }
 
+      .workshop-local {
+        @include clearfix;
+
+        .icon-geolocal {
+          float: right;
+          margin-left: 5px;
+          margin-right: 0;
+        }
+      }
+
       .btn-buy {
         margin-right: 0;
         margin-left: auto;
@@ -587,6 +597,18 @@ html[lang*="pt"] {
     height: 24px;
     padding-top: 0;
     margin-right: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.workshop-local {
+  margin-top: 10px;
+  padding-left: 58px;
+  @media (min-width: $screen-sm-min) { padding-left: 0; }
+
+  .event-local {
+    display: inline-block;
+    margin-left: 0;
     margin-bottom: 0;
   }
 }
