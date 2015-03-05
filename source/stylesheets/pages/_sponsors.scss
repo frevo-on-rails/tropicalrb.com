@@ -104,6 +104,10 @@ html[lang*="pt"] {
         @include make-sm-column(4);
         @include make-sm-column-offset(0);
 
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { min-height: 325px; }
+        @media (min-width: $screen-md-min) and (max-width: $screen-md-max) { min-height: 324px; }
+        @media (min-width: $screen-lg-min) { min-height: 288px; }
+
         img {
           @media (max-width: $screen-sm-max) {
             @include size(182px,97px);
