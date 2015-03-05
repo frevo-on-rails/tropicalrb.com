@@ -5,9 +5,9 @@
 main.schedule {
   @extend .motion-fade-in;
   @extend .container;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 
-  @media (min-width: $screen-sm-min) { margin-bottom: 10px; }
+  @media (min-width: $screen-sm-min) { margin-bottom: 60px; }
 }
 
 .schedule-area {
