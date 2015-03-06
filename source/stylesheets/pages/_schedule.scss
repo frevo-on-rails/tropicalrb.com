@@ -97,17 +97,10 @@ main.schedule {
     overflow: visible;
   }
 
-  &.one { animation-delay: .2s; }
+  &.one { animation-delay: .1s; }
   &.two { animation-delay: .3s; }
-  &.three { animation-delay: .4s; }
-  &.four { animation-delay: .5s; }
-
-  @media (max-width: $screen-xs-max) {
-    &.one { animation-delay: .3s; }
-    &.two { animation-delay: .4s; }
-    &.three { animation-delay: .5; }
-    &.four { animation-delay: .6s; }
-  }
+  &.three { animation-delay: .6s; }
+  &.four { animation-delay: .9s; }
 }
 
 .icon-nav {
