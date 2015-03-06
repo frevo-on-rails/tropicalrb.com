@@ -98,9 +98,9 @@ main.schedule {
   }
 
   &.one { animation-delay: .1s; }
-  &.two { animation-delay: .3s; }
-  &.three { animation-delay: .6s; }
-  &.four { animation-delay: .9s; }
+  &.two { animation-delay: .2s; }
+  &.three { animation-delay: .3s; }
+  &.four { animation-delay: .4s; }
 }
 
 .icon-nav {
@@ -575,7 +575,7 @@ html[lang*="pt"] {
     margin-left: 0;
   }
 
-  &.long { width: 110px; }
+  &.long { width: 120px; }
 }
 
 .event-local {
@@ -738,7 +738,7 @@ html[lang*="pt"] {
     .event-image { margin-bottom: 8px; }
     .time-line:after {
       top: 56px;
-      height: 155px;
+      height: 225px;
     }
   }
 
