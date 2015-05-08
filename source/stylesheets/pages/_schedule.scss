@@ -815,6 +815,7 @@ html[lang*="pt"] {
 }
 
 #panel {
+  .event-author a { white-space: nowrap; }
   @media (min-width: $screen-md-min) {
     .event-time { margin-top: 10px; }
   }
