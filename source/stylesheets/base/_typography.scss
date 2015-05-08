@@ -43,7 +43,8 @@ main {
   &.schedule,
   &.venue,
   &.sponsors,
-  &.appendix {
+  &.appendix,
+  &.videos {
     h1 { display: none; }
   }
 }
@@ -110,7 +111,8 @@ hr {
 }
 
 main {
-  &.venue {
+  &.venue,
+  &.videos {
     h2 {
       color: $poly-07;
       &:before, &:after { background-color: $poly-07; }

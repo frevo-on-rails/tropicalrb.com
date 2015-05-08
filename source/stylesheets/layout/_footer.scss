@@ -83,7 +83,8 @@ body.colophon {
   }
 }
 
-body.venue {
+body.venue,
+body.videos {
   .footer-title {
     &:before,
     &:after { background-color: $poly-07; }
@@ -233,7 +234,8 @@ body.schedule {
   }
 }
 
-body.venue {
+body.venue,
+body.videos {
   .footer-brands {
     .engine-yard      { background-image: image-url('brand-big-engineyard-yellow@2x.png'); }
     .nic              { background-image: image-url('brand-big-nic-yellow@2x.png'); }

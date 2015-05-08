@@ -58,7 +58,8 @@ body.schedule {
 body.sponsors {
   .navbar hr { border-top-color: $mono-04 !important; }
 }
-body.venue {
+body.venue,
+body.videos {
   .navbar hr { border-top-color: $poly-07 !important; }
 }
 
@@ -192,6 +193,22 @@ body.venue {
   }
 }
 
+body.videos {
+  .navbar-toggle {
+    background-image: inline-image('octagon-small-yellow@2x.png');
+    .icon-bar { background-color: $poly-07 !important; }
+  }
+
+  .navbar-collapse {
+    .link-videos {
+      @include titillium-black;
+      font-size: 20px;
+      margin-top: -1px;
+      text-decoration: none;
+    }
+  }
+}
+
 /*... Navbar (Brand) ...*/
 
 .navbar-brand {
@@ -269,7 +286,8 @@ body.sponsors {
   .navbar-brand:focus { color: $mono-04; }
 }
 
-body.venue {
+body.venue,
+body.videos {
   .navbar-brand,
   .navbar-brand:hover,
   .navbar-brand:focus { color: $poly-07; }
@@ -322,7 +340,8 @@ body.sponsors {
   }
 }
 
-body.venue {
+body.venue,
+body.videos {
   .navbar-collapse {
     @media (max-width: $screen-xs-max) { background-color: transparentize($poly-02, .1); }
     @media (min-width: $screen-sm-min) { border-bottom-color: $poly-07 !important; }
@@ -463,7 +482,8 @@ body.sponsors {
   }
 }
 
-body.venue {
+body.venue,
+body.videos {
   .navbar-nav {
     @media (max-width: $screen-xs-max) { border-top-color: $poly-07 !important; }
     a {
