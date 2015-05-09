@@ -770,6 +770,7 @@ html[lang*="pt"] {
   text-align: center;
   width: 110px;
   text-transform: capitalize;
+  opacity: .4;
 
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     margin-left: 0;
