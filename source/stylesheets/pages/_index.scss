@@ -126,6 +126,7 @@ html[lang*="pt"] {
   vertical-align: middle;
 }
 
+.icon-video { background-image: inline-image('icon-med-video-red@2x.png'); }
 .icon-translation { background-image: inline-image('icon-med-translation-red@2x.png'); }
 .icon-transportation { background-image: inline-image('icon-med-transportation-red@2x.png'); }
 
@@ -245,10 +246,11 @@ html[lang*="pt"] {
 
 .hero-speaker {
   text-align: center;
+  min-height: 114px;
 
   a { display: block; }
-  @media (max-width: 480px) { width: 50%; }
-  @media (min-width: 481px) { width: 25%; }
+  @media (max-width: $screen-xs-max) { width: 50%; }
+  @media (min-width: $screen-sm-min) { width: 25%; }
   @media (max-width: $screen-sm-max) { float: left; }
 
   @media (min-width: $screen-md-min) {
@@ -259,7 +261,7 @@ html[lang*="pt"] {
   &:nth-child(1) {
     @extend .motion-wobble-left;
 
-    @media (max-width: 480px) { margin-bottom: 20px; }
+    @media (max-width: $screen-xs-max) { margin-bottom: 20px; }
     @media (min-width: $screen-md-min) {
       top: -284px;
       left: 15px;
@@ -273,7 +275,7 @@ html[lang*="pt"] {
   &:nth-child(2) {
     @extend .motion-wobble-left;
 
-    @media (max-width: 480px) { margin-bottom: 20px; }
+    @media (max-width: $screen-xs-max) { margin-bottom: 20px; }
     @media (min-width: $screen-md-min) {
       top: -412px;
       left: 133px;
