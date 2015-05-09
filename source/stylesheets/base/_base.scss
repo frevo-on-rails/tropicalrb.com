@@ -38,7 +38,8 @@ body.sponsors {
   }
 }
 
-body.venue {
+body.venue,
+body.videos {
   mark,
   ::selection {
     background: $brand-01 !important;
