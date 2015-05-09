@@ -47,6 +47,23 @@ main.videos {
   @include make-sm-column(6);
   position: relative;
   margin-bottom: 40px;
+
+  &:nth-child(odd) {
+    @extend .motion-wobble-left;
+    @media (max-width: $screen-xs-max) {
+      animation: none;
+      transform: translate3d(0,0,0);
+      opacity: 1;
+    }
+  }
+  &:nth-child(even) {
+    @extend .motion-wobble-right;
+    @media (max-width: $screen-xs-max) {
+      animation: none;
+      transform: translate3d(0,0,0);
+      opacity: 1;
+    }
+  }
 }
 
 .video-embed {
