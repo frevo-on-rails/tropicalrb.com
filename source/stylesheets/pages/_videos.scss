@@ -1,3 +1,82 @@
 /*––––––––––––––––––––––––––––––––––––––––––––––––––
       Videos
 ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+body.videos {
+  .navbar {
+    margin-bottom: 30px;
+    @media (min-width: $screen-sm-min) { margin-bottom: 40px; }
+  }
+}
+
+main.videos {
+  @extend .motion-fade-in;
+  margin-bottom: 30px;
+}
+
+.videos-area {
+  @extend .container;
+}
+
+.video-content {
+  @include make-xs-column(12);
+  @include make-sm-column(6);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.video-embed {
+  margin-bottom: 15px;
+}
+
+.video-description {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-description-left,
+.video-description-right {
+  vertical-align: middle;
+  display: inline-block;
+  min-height: 64px;
+}
+
+main.videos .video-description-right {
+  .video-author {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.author-image {
+  @include square(60px);
+  margin-right: 10px;
+}
+
+.video-author {
+  a { cursor: pointer; }
+}
+
+.video-time {
+  @include titillium-semi-bold;
+  @include opacity(.75);
+  border: 2px solid transparentize($poly-07,.5);
+  border-radius: 2px;
+  display: inline-block;
+  height: 24px;
+  padding: 0 6px;
+  line-height: 19px;
+  text-align: center;
+  width: 100px;
+  float: left;
+
+  span {
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+    text-transform: uppercase;
+    vertical-align: baseline;
+  }
+}
