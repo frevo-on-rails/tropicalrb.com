@@ -80,3 +80,20 @@ main.videos .video-description-right {
     vertical-align: baseline;
   }
 }
+
+.heads-up {
+  margin: 15px auto;
+  text-align: center;
+  width: 200px;
+  @media (min-width: $screen-sm-min) {
+    width: 100%;
+  }
+  p {
+    border: 2px solid $poly-07;
+    border-radius: 3px;
+    padding: 8px 12px;
+    display: inline-block;
+
+    strong { white-space: nowrap; }
+  }
+}
