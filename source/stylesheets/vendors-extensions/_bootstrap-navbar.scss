@@ -406,12 +406,10 @@ body.videos {
           @include square(24px);
           content: '';
           background-size: 24px;
-          // TODO: Add a video icon later.
-          // display: block;
-          display: none;
+          display: block;
           position: absolute;
-          bottom: -21px;
-          right: -21px;
+          bottom: -22px;
+          right: -5px;
         }
       }
 
@@ -448,7 +446,7 @@ body.colophon {
       color: $poly-11;
       &.link-videos {
         border-color: $poly-11;
-        &:after { background-image: inline-image('icon-med-ticket-red@2x.png'); }
+        &:after { background-image: inline-image('icon-med-video-red@2x.png'); }
       }
       &:hover,
       &:focus { color: $poly-11; }
@@ -463,7 +461,7 @@ body.schedule {
       color: $mono-10;
       &.link-videos {
         border-color: $mono-10;
-        &:after { background-image: inline-image('icon-med-ticket-white@2x.png'); }
+        &:after { background-image: inline-image('icon-med-video-white@2x.png'); }
       }
       &:hover,
       &:focus { color: $mono-10; }
@@ -478,7 +476,7 @@ body.sponsors {
       color: $mono-04;
       &.link-videos {
         border-color: $mono-04;
-        &:after { background-image: inline-image('icon-med-ticket-grey@2x.png'); }
+        &:after { background-image: inline-image('icon-med-video-grey@2x.png'); }
       }
       &:hover,
       &:focus { color: $mono-04; }
@@ -494,7 +492,7 @@ body.videos {
       color: $poly-07;
       &.link-videos {
         border-color: $poly-07;
-        &:after { background-image: inline-image('icon-med-ticket-yellow@2x.png'); }
+        &:after { background-image: inline-image('icon-med-video-yellow@2x.png'); }
       }
       &:hover,
       &:focus { color: $poly-07; }
