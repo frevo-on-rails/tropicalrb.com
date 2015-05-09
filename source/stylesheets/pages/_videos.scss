@@ -11,7 +11,14 @@ body.videos {
 
 main.videos {
   @extend .motion-fade-in;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+}
+
+.videos-area {
+  @extend .container;
+  header {
+    margin-bottom: 45px;
+  }
 }
 
 .video-subtitle {
@@ -35,18 +42,11 @@ main.videos {
   }
 }
 
-.videos-area {
-  @extend .container;
-  header {
-    margin-bottom: 40px;
-  }
-}
-
 .video-content {
   @include make-xs-column(12);
   @include make-sm-column(6);
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .video-embed {
