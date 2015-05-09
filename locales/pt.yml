@@ -3,7 +3,7 @@ pt:
     schedule: Programação
     venue: Local
     sponsors: Patrocinadores
-    tickets: Ingressos
+    videos: Vídeos
     other_language:
       name: English
       path: /en

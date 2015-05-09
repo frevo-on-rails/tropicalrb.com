@@ -3,7 +3,7 @@ en:
     schedule: Schedule
     venue: Venue
     sponsors: Sponsors
-    tickets: Tickets
+    videos: Videos
     other_language:
       name: Português
       path: /pt
