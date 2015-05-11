@@ -17,16 +17,18 @@
       <div class="navbar-collapse collapse" id="main-nav">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <%= link_to t('navbar.schedule'), "/#{I18n.locale}/schedule/march-6.html", class: 'square link-schedule' %>
+            <%= link_to t('navbar.schedule'), "/#{I18n.locale}/schedule/march-6", class: 'square link-schedule' %>
           </li>
           <li>
-            <%= link_to t('navbar.venue'), "/#{I18n.locale}/venue.html", class: 'square link-venue' %>
+            <%= link_to t('navbar.venue'), "/#{I18n.locale}/venue", class: 'square link-venue' %>
           </li>
           <li>
-            <%= link_to t('navbar.sponsors'), "/#{I18n.locale}/sponsors.html", class: 'square link-sponsors' %>
+            <%= link_to t('navbar.sponsors'), "/#{I18n.locale}/sponsors", class: 'square link-sponsors' %>
           </li>
           <li>
-            <%= link_to t('navbar.videos'), "/#{I18n.locale}/videos.html",  class: 'square link-videos' %>
+            <% link_to "/#{I18n.locale}/videos",  class: 'square link-videos' do %>
+              <span class="icon-medium icon-video"></span><%= t('navbar.videos') %>
+            <% end %>
           </li>
           <li>
             <%= link_to t('navbar.other_language.name'), t('navbar.other_language.path'), class: 'language' %>

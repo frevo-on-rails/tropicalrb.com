@@ -118,14 +118,6 @@ html[lang*="pt"] {
   }
 }
 
-.icon-medium {
-  @include square(24px);
-  background-size: 24px;
-  display: inline-block;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
 .icon-video { background-image: inline-image('icon-med-video-red@2x.png'); }
 .icon-translation { background-image: inline-image('icon-med-translation-red@2x.png'); }
 .icon-transportation { background-image: inline-image('icon-med-transportation-red@2x.png'); }

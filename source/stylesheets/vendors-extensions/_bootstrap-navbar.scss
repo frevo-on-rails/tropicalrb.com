@@ -378,7 +378,7 @@ body.videos {
       &:focus { text-decoration: underline; }
 
       &.square {
-        padding: 0 14px;
+        padding: 0 14px 0 7px;
         font-size: 18px;
         line-height: 18px;
         border-style: solid;
@@ -401,16 +401,6 @@ body.videos {
 
       &.link-videos {
         position: relative;
-
-        &:after {
-          @include square(24px);
-          content: '';
-          background-size: 24px;
-          display: block;
-          position: absolute;
-          bottom: -22px;
-          right: -5px;
-        }
       }
 
       &.language {
@@ -446,7 +436,7 @@ body.colophon {
       color: $poly-11;
       &.link-videos {
         border-color: $poly-11;
-        &:after { background-image: inline-image('icon-med-video-red@2x.png'); }
+        .icon-video { background-image: inline-image('icon-med-video-red@2x.png'); }
       }
       &:hover,
       &:focus { color: $poly-11; }
@@ -461,7 +451,7 @@ body.schedule {
       color: $mono-10;
       &.link-videos {
         border-color: $mono-10;
-        &:after { background-image: inline-image('icon-med-video-white@2x.png'); }
+        .icon-video { background-image: inline-image('icon-med-video-white@2x.png'); }
       }
       &:hover,
       &:focus { color: $mono-10; }
@@ -476,7 +466,7 @@ body.sponsors {
       color: $mono-04;
       &.link-videos {
         border-color: $mono-04;
-        &:after { background-image: inline-image('icon-med-video-grey@2x.png'); }
+        .icon-video { background-image: inline-image('icon-med-video-grey@2x.png'); }
       }
       &:hover,
       &:focus { color: $mono-04; }
@@ -492,7 +482,7 @@ body.videos {
       color: $poly-07;
       &.link-videos {
         border-color: $poly-07;
-        &:after { background-image: inline-image('icon-med-video-yellow@2x.png'); }
+        .icon-video { background-image: inline-image('icon-med-video-yellow@2x.png'); }
       }
       &:hover,
       &:focus { color: $poly-07; }

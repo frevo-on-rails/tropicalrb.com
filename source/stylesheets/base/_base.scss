@@ -95,3 +95,11 @@ textarea {
     max-width: 420px;
   }
 }
+
+.icon-medium {
+  @include square(24px);
+  background-size: 24px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+}
