@@ -308,12 +308,14 @@ html[lang*="pt"] {
 
   &.video {
     &:after {
+      opacity: 0;
       position: absolute;
       content: '';
       display: block;
       cursor: pointer;
       background-image: inline-image('icon-big-play@2x.png');
       left: 50%;
+      transition: opacity .3s ease;
       @media (max-width: $screen-xs-max) {
         @include square(24px);
         background-size: 24px;
@@ -326,6 +328,9 @@ html[lang*="pt"] {
         top: 39px;
         margin-left: -16px;
       }
+    }
+    &:hover {
+      &:after { opacity: 1; }
     }
   }
 }
