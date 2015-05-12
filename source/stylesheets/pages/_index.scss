@@ -305,6 +305,28 @@ html[lang*="pt"] {
       right: 55px;
     }
   }
+
+  &.video {
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      background-image: inline-image('icon-big-play@2x.png');
+      left: 50%;
+      @media (max-width: $screen-xs-max) {
+        @include square(24px);
+        background-size: 24px;
+        top: 28px;
+        margin-left: -12px;
+      }
+      @media (min-width: $screen-sm-min) {
+        @include square(32px);
+        background-size: 32px;
+        top: 39px;
+        margin-left: -16px;
+      }
+    }
+  }
 }
 
 .hero-speaker-photo {
