@@ -311,6 +311,7 @@ html[lang*="pt"] {
       position: absolute;
       content: '';
       display: block;
+      cursor: pointer;
       background-image: inline-image('icon-big-play@2x.png');
       left: 50%;
       @media (max-width: $screen-xs-max) {
