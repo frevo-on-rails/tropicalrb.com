@@ -171,7 +171,7 @@ main.schedule.day-one {
       }
     }
 
-    h4, .nav-event-time { @include titillium-black; }
+    h4, .nav-event-time { @include titillium-bold; }
   }
 }
 
@@ -186,7 +186,7 @@ main.schedule.day-two {
       }
     }
 
-    h4, .nav-event-time { @include titillium-black; }
+    h4, .nav-event-time { @include titillium-bold; }
   }
 }
 
@@ -199,11 +199,11 @@ main.schedule.day-three {
         background-image: inline-image('schedule-graph-desk-porto-active@2x.png');
       }
     }
-    h4, .nav-event-time { @include titillium-black; }
+    h4, .nav-event-time { @include titillium-bold; }
   }
 
   @media (max-width: $screen-xs-max) {
-    .nav-event.two h4 { @include titillium-black; }
+    .nav-event.two h4 { @include titillium-bold; }
   }
 }
 
@@ -217,7 +217,7 @@ main.schedule.day-four {
       }
     }
 
-    h4, .nav-event-time { @include titillium-black; }
+    h4, .nav-event-time { @include titillium-bold; }
   }
 }
 
