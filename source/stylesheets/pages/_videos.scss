@@ -22,10 +22,6 @@ main.videos {
 }
 
 .video-subtitle {
-  @media (max-width: $screen-xs-max) {
-    text-align: left;
-    margin-left: 41px;
-  }
   margin-top: 2px;
   text-align: center;
 
@@ -38,7 +34,7 @@ main.videos {
     vertical-align: middle;
     text-align: center;
 
-    strong { white-space: nowrap; }
+    strong, span { white-space: nowrap; }
   }
 }
 
@@ -83,12 +79,7 @@ main.videos {
   min-height: 64px;
 }
 
-main.videos .video-description-right {
-  .video-author {
-    display: inline-block;
-    text-align: left;
-  }
-}
+main.videos .video-description-right { text-align: left; }
 
 .author-image {
   @include square(60px);
@@ -96,28 +87,14 @@ main.videos .video-description-right {
 }
 
 .video-author {
+  display: inline-block;
   a { cursor: pointer; }
 }
 
 .video-time {
-  @include titillium-semi-bold;
-  @include opacity(.75);
-  border: 2px solid transparentize($poly-07,.5);
-  border-radius: 2px;
+  @include titillium-web;
   display: inline-block;
   height: 24px;
-  padding: 0 6px;
+  font-size: 14px;
   line-height: 19px;
-  text-align: center;
-  width: 100px;
-  float: left;
-
-  span {
-    display: inline-block;
-    font-size: 10px;
-    margin-left: 1px;
-    margin-right: 1px;
-    text-transform: uppercase;
-    vertical-align: baseline;
-  }
 }
