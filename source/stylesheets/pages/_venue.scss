@@ -63,6 +63,11 @@ main.venue {
   @include make-md-column-offset(1);
   display: block;
   padding: 0;
+
+  @media (min-width: $screen-sm-min) { padding: 0 20px; }
+  @media (min-width: $screen-md-min) { padding: 0 140px; }
+
+  span { white-space: nowrap; }
 }
 
 .quote-author {
