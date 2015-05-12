@@ -788,6 +788,10 @@ html[lang*="pt"] {
 
     @media (max-width: $screen-xs-max) { right: -21px; }
   }
+
+  &.disabled {
+    text-decoration: line-through;
+  }
 }
 
 html[lang*="pt"] {
