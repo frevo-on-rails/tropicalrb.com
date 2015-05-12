@@ -62,6 +62,14 @@ main.videos {
   }
 }
 
+main.videos .video-content {
+  h3 {
+    @media (min-width: $screen-lg-min) {
+      padding: 0 25px;
+    }
+  }
+}
+
 .video-embed {
   margin-bottom: 15px;
 
@@ -93,7 +101,7 @@ main.videos {
   min-height: 64px;
 }
 
-main.videos .video-description-right { text-align: left; }
+.video-description-right { text-align: left; }
 
 .author-image {
   @include square(60px);
@@ -111,4 +119,13 @@ main.videos .video-description-right { text-align: left; }
   height: 24px;
   font-size: 14px;
   line-height: 19px;
+}
+
+#panel {
+  .video-author a { white-space: nowrap; }
+  .video-description-right {
+    @media (max-width: $screen-md-max) {
+      width: 70%;
+    }
+  }
 }
