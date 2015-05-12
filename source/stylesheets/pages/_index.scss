@@ -151,7 +151,6 @@ html[lang*="pt"] {
 
       a {
         @include square(44px);
-        @extend .motion-pressed;
         position: relative;
         display: block;
         text-indent: -9999px;

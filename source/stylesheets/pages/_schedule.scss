@@ -43,6 +43,10 @@ main.schedule {
   z-index: 1;
   @media (min-width: $screen-sm-min) { @include size(126px, 149px); }
 
+  a {
+    position: relative;
+  }
+
   h4 {
     height: 18px;
     font-size: 14px;
@@ -760,6 +764,7 @@ html[lang*="pt"] {
 .btn-buy {
   border: 2px solid $mono-10;
   border-radius: $border-radius-small;
+  position: relative;
   display: block;
   height: 36px;
   font-size: 18px;
