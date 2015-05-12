@@ -42,3 +42,10 @@
   .twitter   { background-image: inline-image('icon-med-twitter-green@2x.png'); }
   .web       { background-image: inline-image('icon-med-link-green@2x.png'); }
 }
+
+body.videos {
+  .popover {
+    @include box-shadow(0 1px 0 $poly-02);
+    border: 1px solid $poly-02;
+  }
+}
