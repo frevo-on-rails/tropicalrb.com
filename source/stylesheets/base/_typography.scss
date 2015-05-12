@@ -116,7 +116,6 @@ main {
       color: $poly-07;
       &:before, &:after { background-color: $poly-07; }
     }
-
     h4 {
       @include titillium-semi-bold;
       font-size: 18px;
@@ -126,12 +125,12 @@ main {
       text-transform: uppercase;
     }
   }
+
   &.videos {
     h2 {
       color: $poly-07;
       &:before, &:after { background-color: $poly-07; }
     }
-
     h3 {
       margin-top: 15px;
       margin-bottom: 10px;
@@ -140,15 +139,15 @@ main {
         padding: 0 20px;
       }
     }
-
     h4 {
       @include titillium-semi-bold;
       font-size: 18px;
       line-height: 24px;
-      margin-top: 1px;
-      margin-bottom: 5px;
+      margin-top: 5px;
+      margin-bottom: 0;
     }
   }
+
   &.sponsors {
     h2 {
       color: $mono-05;
