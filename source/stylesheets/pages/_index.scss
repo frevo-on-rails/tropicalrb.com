@@ -312,6 +312,7 @@ html[lang*="pt"] {
       content: '';
       display: block;
       cursor: pointer;
+      pointer-events: none;
       background-image: inline-image('icon-big-play@2x.png');
       left: 50%;
       transition: opacity .3s ease;
