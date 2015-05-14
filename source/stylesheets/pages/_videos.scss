@@ -44,6 +44,8 @@ main.videos {
   position: relative;
   margin-bottom: 40px;
 
+  &.centered { @include make-sm-column-offset(3); }
+
   &:nth-child(odd) {
     @extend .motion-wobble-left;
     @media (max-width: $screen-xs-max) {
