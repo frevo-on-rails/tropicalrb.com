@@ -98,13 +98,14 @@ main.videos .video-content {
 .video-description-right {
   vertical-align: middle;
   display: inline-block;
-  min-height: 64px;
+  min-height: 70px;
 }
 
 .video-description-right { text-align: left; }
 
 .author-image {
   @include square(60px);
+  margin-top: 8px;
   margin-right: 10px;
 }
 
@@ -119,6 +120,17 @@ main.videos .video-content {
   height: 24px;
   font-size: 14px;
   line-height: 19px;
+}
+
+.video-language {
+  @include titillium-semi-bold;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 10px;
+  text-transform: uppercase;
+  padding: 4px 10px 3px;
+  border: 2px solid transparentize($poly-07,.5);
+  border-radius: 2px;
 }
 
 #panel {
