@@ -138,11 +138,6 @@ main {
       @media (min-width: $screen-md-min) {
         padding: 0 20px;
       }
-      small {
-        font-size: 10px;
-        display: inline-block;
-        text-transform: uppercase;
-      }
     }
     h4 {
       @include titillium-semi-bold;
