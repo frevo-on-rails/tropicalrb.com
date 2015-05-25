@@ -350,3 +350,24 @@ html[lang*="pt"] {
   font-size: 18px;
   line-height: 18px;
 }
+
+.video-call {
+  @extend .motion-wobble-up;
+  display: none;
+  @media (max-width: $screen-xs-max) {
+    display: block;
+    margin: 5px auto 35px;
+    width: 240px;
+    height: 40px;
+    padding: 6px 14px 0 7px;
+    font-size: 18px;
+    line-height: 18px;
+    border-radius: $border-radius-small;
+    border: 2px solid $poly-11;
+    vertical-align: middle;
+    text-align: center;
+    transition: .2s border-color;
+
+    span { vertical-align: -32%; }
+  }
+}
