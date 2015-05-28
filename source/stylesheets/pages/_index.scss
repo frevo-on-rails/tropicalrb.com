@@ -245,7 +245,7 @@ html[lang*="pt"] {
   @media (max-width: $screen-sm-max) { float: left; }
 
   @media (min-width: $screen-md-min) {
-    width: 128px;
+    width: 150px;
     position: absolute;
   }
 
@@ -255,11 +255,11 @@ html[lang*="pt"] {
     @media (max-width: $screen-xs-max) { margin-bottom: 20px; }
     @media (min-width: $screen-md-min) {
       top: -284px;
-      left: 15px;
+      left: 4px;
     }
     @media (min-width: $screen-lg-min) {
       top: -412px;
-      left: 55px;
+      left: 44px;
     }
   }
 
@@ -269,11 +269,11 @@ html[lang*="pt"] {
     @media (max-width: $screen-xs-max) { margin-bottom: 20px; }
     @media (min-width: $screen-md-min) {
       top: -412px;
-      left: 133px;
+      left: 144px;
     }
     @media (min-width: $screen-lg-min) {
       top: -412px;
-      left: 233px;
+      left: 222px;
     }
   }
 
@@ -282,12 +282,12 @@ html[lang*="pt"] {
 
     @media (min-width: $screen-md-min) {
       top: -412px;
-      right: 133px;
+      right: 144px;
     }
 
     @media (min-width: $screen-lg-min) {
       top: -412px;
-      right: 233px;
+      right: 222px;
     }
   }
 
@@ -296,12 +296,12 @@ html[lang*="pt"] {
 
     @media (min-width: $screen-md-min) {
       top: -284px;
-      right: 15px;
+      right: 4px;
     }
 
     @media (min-width: $screen-lg-min) {
       top: -412px;
-      right: 55px;
+      right: 44px;
     }
   }
 
