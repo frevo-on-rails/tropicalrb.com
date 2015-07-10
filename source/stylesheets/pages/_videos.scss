@@ -144,3 +144,27 @@ main.videos .video-content {
     }
   }
 }
+
+.disclaimer {
+  @include make-xs-column(12);
+  @include make-sm-column(6);
+  @include make-sm-column-offset(3);
+  small {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    strong {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    &:before {
+      background-color: $poly-07;
+      content: '';
+      display: block;
+      width: 120px;
+      height: 1px;
+      margin: 0 auto 15px;
+    }
+  }
+}
