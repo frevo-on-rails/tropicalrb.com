@@ -147,8 +147,8 @@ main.videos .video-content {
 
 .disclaimer {
   @include make-xs-column(12);
-  @include make-sm-column(6);
-  @include make-sm-column-offset(3);
+  @include make-sm-column(5);
+  @include make-sm-column-offset(3.5);
   small {
     display: inline-block;
     text-align: center;
