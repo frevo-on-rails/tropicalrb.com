@@ -1,0 +1,50 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Tropical Ruby 2015</title>
+
+    <script type="text/javascript">
+      var DEFAULT_LANGUAGE = 'en',
+        selected = DEFAULT_LANGUAGE;
+      try {
+        if(document.cookie && document.cookie.match(/preferred_language=/)) {
+          if(document.cookie.match(/preferred_language=pt/)) {
+            selected = 'pt';
+          } else {
+            selected = 'en';
+          }
+        } else {
+          var locale = window.navigator.userLanguage || window.navigator.language;
+          if(locale == 'pt' || locale.match(/^pt/)) {
+            selected = 'pt';
+          } else {
+            selected = 'en';
+          }
+        }
+      } catch(e) {}
+      window.location = '/' + selected;
+    </script>
+
+    <meta name="description" content="Enjoy amazing conversations, stunning landscapes and superb nature. Come and talk with some of the best Rubyists in this tropical conference in Porto de Galinhas.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://tropicalrb.com">
+    <meta property="og:title" content="Tropical Ruby 2015">
+    <meta property="og:image" content="http://f.cl.ly/items/3b2b3w250u0g0S0s3d0b/logo-tropical-opengraph@2x.png">
+    <meta property="og:description" content="Enjoy amazing conversations, stunning landscapes and superb nature. Come and talk with some of the best Rubyists in this tropical conference in Porto de Galinhas.">
+    <meta name="twitter:card" value="summary_large_image">
+    <meta name="twitter:creator" value="@tropicalrb">
+    <meta name="twitter:site" value="@tropicalrb">
+    <meta name="twitter:title" content="The Tropical Ruby Conference">
+    <meta name="twitter:description" content="Enjoy amazing conversations, stunning landscapes and superb nature. Come and talk with some of the best Rubyists in this tropical conference in Porto de Galinhas.">
+    <meta name="twitter:image:src" content="http://f.cl.ly/items/3b2b3w250u0g0S0s3d0b/logo-tropical-opengraph@2x.png">
+
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/en"/>
+    </noscript>
+  </head>
+
+  <body style="background-color: #ffdca3;">
+  </body>
+</html>

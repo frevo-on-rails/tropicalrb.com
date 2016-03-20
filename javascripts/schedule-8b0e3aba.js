@@ -1,0 +1,1 @@
+$(".schedule-events .expander").click(function(e){e.preventDefault();var t=$(this),a=t.parents(".event"),l=t.text(),n=t.data("alternative-label");a.toggleClass("expanded"),a.find(".last-words").toggle(),t.text(n),t.data("alternative-label",l)}),$(function(){$('[data-toggle="popover"]').popover()});
