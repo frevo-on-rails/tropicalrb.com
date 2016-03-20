@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 
 gem "middleman", "~> 3.4.1"
 gem "middleman-autoprefixer", "~> 2.7.0"
-gem "middleman-deploy", "~> 1.0"
+gem "middleman-gh-pages", "~> 0.3.0"
 
 gem "bootstrap-sass", "~> 3.3.1"
 
