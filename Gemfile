@@ -1,11 +1,15 @@
 # If you do not have OpenSSL installed, update
 # the following line to use "http://" instead
-source 'https://rubygems.org'
-source 'https://rails-assets.org'
+ruby '2.3.0'
 
-gem "middleman", "~> 3.3.8"
-gem "middleman-autoprefixer", "~> 2.4.3"
+source 'https://rubygems.org'
+
+gem "middleman", "~> 3.4.1"
+gem "middleman-autoprefixer", "~> 2.7.0"
 gem "middleman-deploy", "~> 1.0"
 
 gem "bootstrap-sass", "~> 3.3.1"
-gem "rails-assets-jquery", "~> 2.1.3"
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-jquery", "~> 2.1.3"
+end
